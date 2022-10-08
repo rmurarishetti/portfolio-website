@@ -1,0 +1,42 @@
+.card {
+    margin: 1rem;
+    padding: 1.5rem;
+    text-align: left;
+    text-decoration: none;
+    border: var(--border);
+    border-radius: 10px;
+    max-width: 300px;
+
+    a {
+        color: inherit;
+    }
+
+    h2 {
+        margin: 0 0 1rem 0;
+        font-size: 1.5rem;
+    }
+
+    p {
+        margin: 0;
+        font-size: 1.25rem;
+        line-height: 1.5;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: var(--color-accent);
+        border-color: var(--color-accent);
+    }
+}
+
+@media (max-width: 600px) {
+    .card {
+        width: 100%;
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,49 @@
+:root {
+  /* Your default theme */
+  --color-bg: black;
+  --color-bg-disable: #111;
+  --color-text: white;
+  --color-border: #222;
+  --color-accent: #0070f3;
+}
+
+[data-theme='light'] {
+  --color-bg: white;
+  --color-bg-disable: #fafafa;
+  --color-text: black;
+  --color-border: #eaeaea;
+  --color-accent: #0070f3;
+}
+
+:root {
+  /* global */
+  --font-fam-default: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  --font-fam-code: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
+  --border: 1px solid var(--color-border);
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-fam-default);
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: underline;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
