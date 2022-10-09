@@ -2,17 +2,21 @@
   /* Your default theme */
   --color-bg: black;
   --color-bg-disable: #111;
-  --color-text: white;
+  --color-text-primary: white;
+  --color-text-secondary: #ababab;
   --color-border: #222;
-  --color-accent: #0070f3;
+  --color-accent-primary: #8168ff;
+  --color-accent-secondary: #4c00ff;
 }
 
 [data-theme='light'] {
   --color-bg: white;
   --color-bg-disable: #fafafa;
-  --color-text: black;
+  --color-text-primary: black;
+  --color-text-secondary: #4f4f4ffd;
   --color-border: #eaeaea;
-  --color-accent: #0070f3;
+  --color-accent-primary: #0070f3;
+  --color-accent-secondary: #f300cf;
 }
 
 :root {
@@ -21,7 +25,7 @@
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   --font-fam-code: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
     Bitstream Vera Sans Mono, Courier New, monospace;
-  --border: 1px solid var(--color-border);
+  --border: 3px solid var(--color-border);
 }
 
 html,
@@ -29,21 +33,30 @@ body {
   padding: 0;
   margin: 0;
   font-family: var(--font-fam-default);
-  color: var(--color-text);
+  color: var(--color-text-primary);
   background: var(--color-bg);
+
+  ::selection {
+    background: var(--color-accent-secondary);
+  }
 }
 
 a {
-  color: var(--color-accent);
+  color: var(--color-accent-primary);
   text-decoration: none;
 
   &:hover,
   &:focus,
   &:active {
-    text-decoration: underline;
+    color: var(--color-accent-secondary);
   }
 }
 
 * {
   box-sizing: border-box;
+}
+
+em {
+  color: var(--color-text-primary);
+  font-style: normal;
 }
