@@ -6,6 +6,7 @@ import { HomeCard } from '../components/cards';
 import TextTransition, { presets } from "react-text-transition";
 import profilePic from '../public/images/Profile/profile.jpeg'
 
+
 export default function Home() {
   const designerTextArray = [
     "UI / UX",
@@ -35,13 +36,14 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
+
         <div className={styles.header}>
           <div className={styles.text}>
             <h1 className={styles.title}>
               Rohit Nag
             </h1>
             <div className={styles.role}>
-              A Mechanical Engineering student at <a href="">Imperial College</a>.
+              A Mechanical Engineering student at <a href="https://www.imperial.ac.uk/ " target="_blank">Imperial College</a>.
             </div>
             <div className={styles.description}>
               Passionate about merging <em>engineering</em>, <em>computing</em> and <em>design</em> with an interest in embedded systems, physics modelling and AI.

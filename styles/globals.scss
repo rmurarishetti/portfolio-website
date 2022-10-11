@@ -25,7 +25,10 @@
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   --font-fam-code: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
     Bitstream Vera Sans Mono, Courier New, monospace;
-  --border: 3px solid var(--color-border);
+  --border-primary: 3px solid var(--color-border);
+  --border-secondary: 1px solid var(--color-border);
+  --shadow-glow: 0px 0px 10px var(--color-accent-primary);
+  --shadow-glow-large: 0px 0px 20px var(--color-accent-primary);
 }
 
 html,
@@ -44,6 +47,7 @@ body {
 a {
   color: var(--color-accent-primary);
   text-decoration: none;
+  transition: all 0.2s;
 
   &:hover,
   &:focus,
