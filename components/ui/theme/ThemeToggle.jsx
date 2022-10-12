@@ -1,7 +1,14 @@
 import { useTheme } from 'next-themes';
 import styles from './ThemeToggle.module.scss'
+import { useState, useEffect } from 'react';
 
 function ThemeToggle() {
+    const [isMounted, setIsMounted] = useState(false)
+
+    useEffect(() => {
+        setIsMounted(true)
+    }, [])
+
     const getSystemTheme = () => window.matchMedia("(prefers-color-scheme: dark)").matches ? 'dark' : 'light';
 
     const getFormattedTheme = (curTheme) => {
@@ -23,7 +30,7 @@ function ThemeToggle() {
     }
 
     return (
-        <div onClick={toggleTheme} className={[styles.themeToggle, themeClass].join(' ')}>
+        isMounted && <div onClick={toggleTheme} className={[styles.themeToggle, themeClass].join(' ')}>
             <div className={styles.sun}>🌞</div>
             <div className={styles.moon}>🌚</div>
         </div>
