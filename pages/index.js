@@ -1,10 +1,10 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.scss';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { HomeCard } from '../components/cards';
 import TextTransition, { presets } from "react-text-transition";
-import profilePic from '../public/images/Profile/profile.jpeg'
+import profilePic from '../public/images/Profile/profile.jpeg';
 
 
 export default function Home() {
@@ -46,7 +46,7 @@ export default function Home() {
               A Mechanical Engineering student at <a href="https://www.imperial.ac.uk/ " target="_blank">Imperial College</a>.
             </div>
             <div className={styles.description}>
-              Passionate about merging <em>engineering</em>, <em>computing</em> and <em>design</em> with an interest in embedded systems, physics modelling and AI.
+              Passionate about merging <em>Engineering</em>, <em>Computing</em> and <em>Design</em> with an interest in embedded systems, physics modelling and AI.
               <br />
               Also a questionable &nbsp;
               <TextTransition inline springConfig={presets.slow}>
@@ -55,7 +55,7 @@ export default function Home() {
               &nbsp; designer on the side 😁.
             </div>
           </div>
-          {/* <img src="/images/Profile/profile.JPEG" alt="" /> */}
+
           <div className={styles.profile}>
             <Image
               src={profilePic}
@@ -89,10 +89,6 @@ export default function Home() {
             description="Learn about my background, experiences and skills." />
         </div>
       </main>
-
-      <footer className={styles.footer}>
-        © 2022 Rohit Nag
-      </footer>
     </div>
   )
 }

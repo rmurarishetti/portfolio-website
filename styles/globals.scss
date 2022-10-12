@@ -1,22 +1,26 @@
 :root {
   /* Your default theme */
   --color-bg: black;
-  --color-bg-disable: #111;
+  --color-bg-disable: rgb(27, 27, 27);
   --color-text-primary: white;
   --color-text-secondary: #ababab;
   --color-border: #222;
   --color-accent-primary: #8168ff;
   --color-accent-secondary: #4c00ff;
+  --color-glass: rgba(0, 0, 0, 0.7);
+  --shadow: 0 0px 20px rgba(255, 255, 255, 0.15);
 }
 
 [data-theme='light'] {
   --color-bg: white;
-  --color-bg-disable: #fafafa;
+  --color-bg-disable: #f0f0f0;
   --color-text-primary: black;
-  --color-text-secondary: #4f4f4ffd;
+  --color-text-secondary: #636363fd;
   --color-border: #eaeaea;
   --color-accent-primary: #0070f3;
   --color-accent-secondary: #f300cf;
+  --color-glass: rgba(255, 255, 255, 0.12);
+  --shadow: 0 0px 20px rgba(0, 0, 0, 0.1);
 }
 
 :root {
@@ -27,8 +31,10 @@
     Bitstream Vera Sans Mono, Courier New, monospace;
   --border-primary: 3px solid var(--color-border);
   --border-secondary: 1px solid var(--color-border);
+  --border-glass: 3px solid var(--color-glass);
   --shadow-glow: 0px 0px 10px var(--color-accent-primary);
   --shadow-glow-large: 0px 0px 20px var(--color-accent-primary);
+  --blur-glass: blur(30px);
 }
 
 html,
@@ -47,7 +53,7 @@ body {
 a {
   color: var(--color-accent-primary);
   text-decoration: none;
-  transition: all 0.2s;
+  transition: color 0.2s;
 
   &:hover,
   &:focus,

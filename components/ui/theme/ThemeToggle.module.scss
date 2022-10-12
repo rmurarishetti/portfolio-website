@@ -1,0 +1,40 @@
+.themeToggle {
+    position: relative;
+    width: 1.4rem;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    cursor: pointer;
+    overflow-Y: hidden;
+    flex-direction: column;
+    transition: all 0.2s;
+    padding: auto;
+
+    * {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        user-select: none;
+        transition: transform 0.2s, top 0.4s;
+    }
+
+    &.dark {
+        .moon {
+            top: 100%;
+            transform: translate(-50%, 0%);
+        }
+    }
+
+    &.light {
+        .sun {
+            top: 100%;
+            transform: translate(-50%, 0%);
+        }
+    }
+
+    &:hover {
+        * {
+            font-size: 1.1rem;
+        }
+    }
+}
