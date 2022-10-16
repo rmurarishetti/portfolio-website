@@ -1,3 +1,3 @@
-import HomeCard from "./HomeCard/HomeCard";
+import HomeCard from "./HomeCard";
 
 export { HomeCard }; 

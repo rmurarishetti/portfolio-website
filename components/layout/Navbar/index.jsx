@@ -3,7 +3,7 @@ import React from 'react'
 import NavItem from './NavItem'
 import styles from './Navbar.module.scss'
 import MenuToggle from './MenuToggle'
-import { ThemeToggle } from '../../../ui'
+import { ThemeToggle } from '../../ui'
 import { useState } from 'react'
 import { useRouter } from 'next/router';
 

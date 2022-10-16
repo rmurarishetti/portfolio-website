@@ -1,8 +1,7 @@
 import '../styles/globals.scss'
-import { ThemeProvider } from 'next-themes'
-import { Navbar } from '../components/layout/navs';
-import Footer from '../components/layout/Footer';
 import { useState, useEffect } from "react"
+import { ThemeProvider } from 'next-themes'
+import { Navbar, Footer } from '../components/layout'
 
 
 function MyApp({ Component, pageProps }) {

@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.scss';
 import { useState, useEffect, useContext } from 'react';
 import { HomeCard } from '../components/cards';
 import TextTransition, { presets } from "react-text-transition";
-import profilePic from '../public/images/Profile/profile.jpeg';
+import profilePic from '../public/images/profile/profile.jpeg';
 
 
 export default function Home() {
@@ -32,7 +32,7 @@ export default function Home() {
       <Head>
         <title>Rohit Nag</title>
         <meta name="Rohit Nag" content="Engineer, Developer, Designer" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
@@ -48,11 +48,11 @@ export default function Home() {
             <div className={styles.description}>
               Passionate about merging <em>Engineering</em>, <em>Computing</em> and <em>Design</em> with an interest in embedded systems, physics modelling and AI.
               <br />
-              Also a questionable &nbsp;
-              <TextTransition inline springConfig={presets.slow}>
+              Also a questionable&nbsp;
+              <TextTransition inline springConfig={presets.slow} direction='down'>
                 {text}
               </TextTransition>
-              &nbsp; designer on the side 😁.
+              &nbsp;designer on the side 😁.
             </div>
           </div>
 
@@ -88,7 +88,7 @@ export default function Home() {
             title="💡 About"
             description="Learn about my background, experiences and skills." />
         </div>
-      </main>
-    </div>
+      </main >
+    </div >
   )
 }
