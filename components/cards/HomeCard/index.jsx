@@ -1,7 +1,8 @@
 import styles from './HomeCard.module.scss'
 import Tilt from 'react-parallax-tilt';
+import Link from 'next/link';
 
-function HomeCard({ link, title, description, image }) {
+function HomeCard({ link, title, emoji, description }) {
     return (
         <Tilt
             tiltReverse
@@ -13,10 +14,12 @@ function HomeCard({ link, title, description, image }) {
             glareMaxOpacity={0.7}
             glareBorderRadius={10}
             className={styles.card}>
-            <a href={link} >
-                <h2>{title} &rarr;</h2>
-                <p>{description}</p>
-            </a>
+            <Link href={link}>
+                <a>
+                    <h2>{emoji} {title} &rarr;</h2>
+                    <p>{description}</p>
+                </a>
+            </Link>
         </Tilt>
     )
 }

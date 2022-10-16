@@ -2,11 +2,11 @@ import Link from 'next/link'
 import React from 'react'
 import styles from './Navbar.module.scss'
 
-function NavItem({ href, text, active }) {
+function NavItem({ link, title, active }) {
     return (
-        <Link href={href}>
+        <Link href={link}>
             <a className={`${active ? styles.active : ""}`}>
-                {text}
+                {title}
             </a>
         </Link>
     )

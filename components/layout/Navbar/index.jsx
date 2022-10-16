@@ -6,29 +6,7 @@ import MenuToggle from './MenuToggle'
 import { ThemeToggle } from '../../ui'
 import { useState } from 'react'
 import { useRouter } from 'next/router';
-
-const MENU_LIST = [
-    {
-        text: "Home",
-        href: "/"
-    },
-    {
-        text: "Projects",
-        href: "/projects"
-    },
-    {
-        text: "Art",
-        href: "/art"
-    },
-    {
-        text: "Graphics",
-        href: "/graphics"
-    },
-    {
-        text: "About",
-        href: "/about"
-    }
-]
+import { pagesData } from '../../../data/pagesData';
 
 function Navbar() {
     const [collapsed, setCollapsed] = useState(true);
@@ -48,7 +26,7 @@ function Navbar() {
         <nav className={[styles.nav, nav_class].join(' ')}>
             <MenuToggle onclick_event={toggleMenu} />
 
-            <Link href={"/"}>
+            <Link href="/">
                 <a className={styles.logo}>
                     Rohit Nag
                 </a>
@@ -56,10 +34,10 @@ function Navbar() {
 
             <div className={
                 styles.nav__menu_list}>
-                {MENU_LIST.map((menu, idx) => {
+                {pagesData.map((page, idx) => {
                     return (
-                        <div key={menu.text} className={styles.nav__item} onClick={toggleMenu}>
-                            <NavItem href={menu.href} text={menu.text} active={router.asPath == menu.href} />
+                        <div key={page.title} className={styles.nav__item} onClick={toggleMenu}>
+                            <NavItem link={page.link} title={page.title} active={router.asPath == page.link} />
                         </div>
                     )
                 })}

@@ -5,7 +5,7 @@ import { useState, useEffect, useContext } from 'react';
 import { HomeCard } from '../components/cards';
 import TextTransition, { presets } from "react-text-transition";
 import profilePic from '../public/images/profile/profile.jpeg';
-
+import { pagesData } from '../data/pagesData';
 
 export default function Home() {
   const designerTextArray = [
@@ -15,11 +15,12 @@ export default function Home() {
   ];
 
   const [index, setIndex] = useState(0);
+  const textTransitionTime = 1500;
 
   useEffect(() => {
     const timer = setInterval(() => {
       setIndex(index => index + 1)
-    }, 1500);
+    }, textTransitionTime);
     return () => {
       clearTimeout(timer);
     };
@@ -68,25 +69,16 @@ export default function Home() {
         </div>
 
         <div className={styles.grid}>
-          <HomeCard
-            link=""
-            title="🚀 Projects"
-            description="Explore some of university and side projects." />
-
-          <HomeCard
-            link=""
-            title="🖌 Art"
-            description="View my recent art pieces." />
-
-          <HomeCard
-            link=""
-            title="🖼 Graphics"
-            description="View some of the posters and logos I've made." />
-
-          <HomeCard
-            link=""
-            title="💡 About"
-            description="Learn about my background, experiences and skills." />
+          {pagesData.slice(1).map((page, idx) => {
+            return (
+              <HomeCard
+                key={page.title}
+                link={page.link}
+                title={page.title}
+                emoji={page.emoji}
+                description={page.description} />
+            )
+          })}
         </div>
       </main >
     </div >
