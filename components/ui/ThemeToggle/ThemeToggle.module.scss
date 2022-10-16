@@ -26,7 +26,6 @@
 
     &.dark {
         .icon.sun {
-            // transform: translateY(100%);
             z-index: 0;
             transform: rotate(0deg);
             animation: halfSpin2 0.5s 1;

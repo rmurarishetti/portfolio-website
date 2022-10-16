@@ -72,3 +72,9 @@ em {
   color: var(--color-text-primary);
   font-style: normal;
 }
+
+code {
+  background: var(--color-bg-disable);
+  font-size: 0.9rem;
+  font-family: var(--font-fam-code);
+}
