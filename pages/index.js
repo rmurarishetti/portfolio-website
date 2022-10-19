@@ -32,7 +32,7 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>Rohit Nag</title>
-        <meta name="Rohit Nag" content="Engineer, Developer, Designer" />
+        <meta name="keywords" content="Engineer, Developer, Designer, Portfolio" />
         <link rel="icon" type="image/png" href="/favicon.ico" />
       </Head>
 

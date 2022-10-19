@@ -55,13 +55,15 @@
     }
 
     .logo {
+        padding: 5px;
         flex: 1;
         font-size: 0.9rem;
         font-weight: 600;
         color: var(--color-text-secondary);
 
         &:hover {
-            color: var(--color-accent-primary);
+            text-shadow: var(--shadow-glow);
+            color: var(--color-text-primary);
         }
     }
 

@@ -28,7 +28,7 @@ function Navbar() {
 
             <Link href="/">
                 <a className={styles.logo}>
-                    Rohit Nag
+                    RN
                 </a>
             </Link>
 
