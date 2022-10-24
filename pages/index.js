@@ -6,8 +6,10 @@ import { HomeCard } from '../components/cards';
 import TextTransition, { presets } from "react-text-transition";
 import profilePic from '../public/images/profile/profile.jpeg';
 import { pagesData } from '../data/pagesData';
+import WinchScene from '../components/3d/WinchScene';
 
 export default function Home() {
+
   const designerTextArray = [
     "UI / UX",
     "Graphic",
@@ -29,58 +31,85 @@ export default function Home() {
   const text = index ? designerTextArray[index % designerTextArray.length] : '';
 
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Rohit Nag</title>
-        <meta name="keywords" content="Engineer, Developer, Designer, Portfolio" />
-        <link rel="icon" type="image/png" href="/favicon.ico" />
-      </Head>
+    <>
+      <div className={styles.container}>
+        <Head>
+          <title>Rohit Nag</title>
+          <meta name="keywords" content="Engineer, Developer, Designer, Portfolio" />
+          <link rel="icon" type="image/png" href="/favicon.ico" />
+        </Head>
 
-      <main className={styles.main}>
-
-        <div className={styles.header}>
-          <div className={styles.text}>
-            <h1 className={styles.title}>
-              Rohit Nag
-            </h1>
-            <div className={styles.role}>
-              A Mechanical Engineering student at <a href="https://www.imperial.ac.uk/ " target="_blank">Imperial College</a>.
+        <main className={styles.main}>
+          <div className={styles.header}>
+            <div className={styles.text}>
+              <h1 className={styles.title}>
+                Rohit Nag
+              </h1>
+              <div className={styles.role}>
+                A Mechanical Engineering student at <a href="https://www.imperial.ac.uk/ " target="_blank">Imperial College</a>.
+              </div>
+              <div className={styles.description}>
+                Passionate about merging <em>Engineering</em>, <em>Computing</em> and <em>Design</em> with an interest in embedded systems, physics modelling and AI.
+                <br />
+                Also a questionable&nbsp;
+                <TextTransition inline springConfig={presets.slow} direction='down'>
+                  {text}
+                </TextTransition>
+                &nbsp;designer on the side 😁.
+              </div>
             </div>
-            <div className={styles.description}>
-              Passionate about merging <em>Engineering</em>, <em>Computing</em> and <em>Design</em> with an interest in embedded systems, physics modelling and AI.
-              <br />
-              Also a questionable&nbsp;
-              <TextTransition inline springConfig={presets.slow} direction='down'>
-                {text}
-              </TextTransition>
-              &nbsp;designer on the side 😁.
+            <div className={styles.profile}>
+              <Image
+                src={profilePic}
+                alt="Picture of Rohit Nag"
+                placeholder='blur'
+                objectFit='cover'
+                layout='fill' />
             </div>
           </div>
 
-          <div className={styles.profile}>
-            <Image
-              src={profilePic}
-              alt="Picture of Rohit Nag"
-              placeholder='blur'
-              objectFit='cover'
-              layout='fill' />
+          <div className={styles.grid}>
+            {pagesData.slice(1).map((page, idx) => {
+              return (
+                <HomeCard
+                  key={page.title}
+                  link={page.link}
+                  title={page.title}
+                  emoji={page.emoji}
+                  description={page.description} />
+              )
+            })}
           </div>
-
-        </div>
-
-        <div className={styles.grid}>
-          {pagesData.slice(1).map((page, idx) => {
-            return (
-              <HomeCard
-                key={page.title}
-                link={page.link}
-                title={page.title}
-                emoji={page.emoji}
-                description={page.description} />
-            )
-          })}
-        </div>
-      </main >
-    </div >
+          <WinchScene />
+          <div className={styles.header}>
+            <div className={styles.text}>
+              <h1 className={styles.title}>
+                Rohit Nag
+              </h1>
+              <div className={styles.role}>
+                A Mechanical Engineering student at <a href="https://www.imperial.ac.uk/ " target="_blank">Imperial College</a>.
+              </div>
+              <div className={styles.description}>
+                Passionate about merging <em>Engineering</em>, <em>Computing</em> and <em>Design</em> with an interest in embedded systems, physics modelling and AI.
+                <br />
+                Also a questionable&nbsp;
+                <TextTransition inline springConfig={presets.slow} direction='down'>
+                  {text}
+                </TextTransition>
+                &nbsp;designer on the side 😁.
+              </div>
+            </div>
+            <div className={styles.profile}>
+              <Image
+                src={profilePic}
+                alt="Picture of Rohit Nag"
+                placeholder='blur'
+                objectFit='cover'
+                layout='fill' />
+            </div>
+          </div>
+        </main >
+      </div >
+    </>
   )
 }

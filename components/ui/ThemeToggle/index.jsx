@@ -15,7 +15,7 @@ function ThemeToggle() {
         setTheme(theme == 'dark' ? 'light' : 'dark');
     }
 
-    let themeClass = theme == 'dark' ? styles.dark : styles.light;
+    const themeClass = theme == 'dark' ? styles.dark : styles.light;
 
     return (
         isMounted && <div onClick={toggleTheme} className={[styles.themeToggle, themeClass].join(' ')}>
