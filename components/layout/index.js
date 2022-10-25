@@ -1,4 +1,5 @@
 import Footer from "./Footer";
 import Navbar from "./Navbar";
+import { HScrollDiv } from "./HScrollDiv";
 
-export { Footer, Navbar };
+export { Footer, Navbar, HScrollDiv };

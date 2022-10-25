@@ -7,6 +7,7 @@ import TextTransition, { presets } from "react-text-transition";
 import profilePic from '../public/images/profile/profile.jpeg';
 import { pagesData } from '../data/pagesData';
 import WinchScene from '../components/3d/WinchScene';
+import { HScrollDiv } from '../components/layout';
 
 export default function Home() {
 
@@ -81,32 +82,13 @@ export default function Home() {
             })}
           </div>
           <WinchScene />
-          <div className={styles.header}>
-            <div className={styles.text}>
-              <h1 className={styles.title}>
-                Rohit Nag
-              </h1>
-              <div className={styles.role}>
-                A Mechanical Engineering student at <a href="https://www.imperial.ac.uk/ " target="_blank">Imperial College</a>.
-              </div>
-              <div className={styles.description}>
-                Passionate about merging <em>Engineering</em>, <em>Computing</em> and <em>Design</em> with an interest in embedded systems, physics modelling and AI.
-                <br />
-                Also a questionable&nbsp;
-                <TextTransition inline springConfig={presets.slow} direction='down'>
-                  {text}
-                </TextTransition>
-                &nbsp;designer on the side 😁.
-              </div>
-            </div>
-            <div className={styles.profile}>
-              <Image
-                src={profilePic}
-                alt="Picture of Rohit Nag"
-                placeholder='blur'
-                objectFit='cover'
-                layout='fill' />
-            </div>
+          <div className={styles.block}>
+            <h2>Featured Projects</h2>
+            <HScrollDiv />
+          </div>
+          <div className={styles.block}>
+            <h2>Featured Projects</h2>
+            <HScrollDiv />
           </div>
         </main >
       </div >
