@@ -1,59 +1,74 @@
 import * as THREE from 'three'
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useFrame } from '@react-three/fiber'
 import { useGLTF, PerspectiveCamera, useAnimations, Effects, BakeShadows } from "@react-three/drei";
 import ThemedSpotlight from './ThemedLight';
-import { UnrealBloomPass } from 'three-stdlib'
+import { useSpring } from '@react-spring/core'
+import { a } from '@react-spring/three'
+
 
 function Winch(props) {
     const group = useRef();
     const { nodes, materials, animations } = useGLTF("/cad/winch.gltf");
     const { actions } = useAnimations(animations, group);
 
+    // Paused animations
     useEffect(() => {
         for (const action in actions) {
             void (actions[action].play().paused = true);
         }
     }, [actions])
 
-    useFrame((state, delta) => {
-        const offset = props.scroll
-        for (const action in actions) {
-            actions[action].time = THREE.MathUtils.damp(actions[action].time, (actions[action].getClip().duration) * offset, 100, delta);
-        }
+    const [active, setActive] = useState(0)
+    const [hovered, setHovered] = useState(0)
+    const { spring: activeSpring } = useSpring({
+        spring: active,
+        config: { mass: 5, tension: 400, friction: 50, precision: 0.0001 }
+    })
+    const { spring: hoverSpring } = useSpring({
+        spring: hovered,
+        config: { mass: 1, tension: 400, friction: 50, precision: 0.0001 }
     })
 
+    const color = hoverSpring.to([0, 1], ['#fff', '#9e8bff'])
+    const opacity = activeSpring.to([0, 1], [0.5, 1])
+    const y = (0.203 * props.scroll * props.scroll) - (0.325 * props.scroll) + 0.13
+    const shellPosition = [0, props.scroll < 0.8 ? y : 0, 0];
+
+
     return (
-        <group ref={group} {...props} dispose={null}>
+        <a.group
+            {...props}
+            ref={group}
+            dispose={null}>
             <group name="set_origin">
-                {/* <spotLight angle={0.14} color="#cba2ff" penumbra={1} position={[0, 1, 0.1]} castshadow intensity={1} /> */}
                 <ThemedSpotlight />
-                {/* <fog attach="fog" args={['#202030', 10, 25]} /> */}
-                {/* <hemisphereLight intensity={0.2} color="#8168ff" groundColor="#8168ff" /> */}
-                {/* <directionalLight castShadow intensity={0.2} shadow-mapSize={[1024, 1024]} shadow-bias={-0.0001} position={[10, 10, -10]} /> */}
                 <group
-                    name="Camera"
-                    position={[0, 0.11, 0.57]}
-                    rotation={[1.43, 0, 0]}
-                    scale={0.2}
-                >
+                    name="Camera">
                     <PerspectiveCamera
                         name="Camera_Orientation"
                         makeDefault={true}
-                        far={1000}
-                        near={0.1}
-                        fov={22.9}
-                        rotation={[-Math.PI / 2, 0, 0]}
+                        far={4}
+                        near={1}
+                        fov={17}
+                        rotation={[-Math.PI / 2 + 0.1, 0, 0]}
+                        position={[0, 0, 0.22]}
                     />
                 </group>
-                <group name="winchShell" position={[0, 0.08, 0]}>
-                    <mesh
+                <a.group
+                    name="winchShell"
+                    position={shellPosition}
+                    onClick={() => setActive(Number(!active))}
+                    onPointerEnter={() => setHovered(1)}
+                    onPointerLeave={() => setHovered(0)}>
+                    <a.mesh
                         name="winchShell_1"
                         castShadow
                         receiveShadow
                         geometry={nodes.winchShell_1.geometry}
-                        material={materials["satin_finish_aluminum-8.001"]}
-                    />
+                        material={materials["satin_finish_aluminum-8.001"]}>
+                        <a.meshPhongMaterial color={color} opacity={opacity} transparent />
+                    </a.mesh>
                     <mesh
                         name="winchShell_2"
                         castShadow
@@ -61,7 +76,7 @@ function Winch(props) {
                         geometry={nodes.winchShell_2.geometry}
                         material={materials["satin_finish_stainless_steel.001"]}
                     />
-                </group>
+                </a.group>
                 <group name="winchBase">
                     <mesh
                         name="winchBase_1"
@@ -69,28 +84,29 @@ function Winch(props) {
                         receiveShadow
                         geometry={nodes.winchBase_1.geometry}
                         material={materials.satin_finish_stainless_steel}
-                    />
+                    ></mesh>
                     <mesh
                         name="winchBase_2"
                         castShadow
                         receiveShadow
                         geometry={nodes.winchBase_2.geometry}
                         material={materials["matte_rubber-2"]}
-                    />
+                    ></mesh>
                     <mesh
                         name="winchBase_3"
                         castShadow
                         receiveShadow
                         geometry={nodes.winchBase_3.geometry}
-                        material={materials["satin_finish_aluminum-8"]}
-                    />
+                        material={materials["satin_finish_aluminum-8"]}>
+                        {/* <meshPhongMaterial color="#000" opacity={0.5} transparent /> */}
+                    </mesh>
                     <mesh
                         name="winchBase_4"
                         castShadow
                         receiveShadow
                         geometry={nodes.winchBase_4.geometry}
                         material={materials.satin_finish_aluminum}
-                    />
+                    ></mesh>
                     <mesh
                         name="winchBase_5"
                         castShadow
@@ -128,7 +144,7 @@ function Winch(props) {
                     />
                 </group>
             </group>
-        </group>
+        </a.group>
     );
 }
 

@@ -11,13 +11,13 @@ function ThemedSpotlight() {
 
     const lightModeProps = {
         color: "white",
-        position: [0, 0, 1],
-        intensity: 2,
+        position: [0, 10, 1],
+        intensity: 4,
     }
 
     const darkModeProps = {
         color: "#cba2ff",
-        position: [0, 1, 0.1],
+        position: [0, 1, 0.06],
         intensity: 1,
     }
 
