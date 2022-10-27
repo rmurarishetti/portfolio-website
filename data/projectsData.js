@@ -1,12 +1,13 @@
-const ProjectsData = [
+export const ProjectsData = [
     {
+        id: "ebike-frame",
         name: "E-Bike Frame",
         subtitle: "Yr3 Design Project",
-        start: new Date(20, 8),
-        end: new Date(21, 6),
-        featured: false,
+        start: new Date(2020, 8),
+        end: new Date(2021, 6),
+        featured: true,
         type: "Engineering",
-        technologies: ["Ansys", "Solidworks", "BikeCAD", "CES Selector"],
+        tags: ["Ansys", "SolidWorks", "BikeCAD", "CES Selector"],
         thumbnail: {
             href: "/images/uniProjects/EBike/ebike_thumbnail.jpg",
             alt: "E-Bike Render"
@@ -122,13 +123,14 @@ const ProjectsData = [
         description: "Worked with a group of third year mechanical engineering students to design, make, and test an urban electric bike from the ground up. Was specifically responsible for the engineering design, validation, manufacturing, and testing of the frame in a 5-member subgroup.\nThe bespoke geometry is designed around human anthropometrics under urban commuting conditions. In the most basic form, the frame is dual triangular in structure with silver brazed steel tubing. The cold-drawn, low-carbon Omnicom tubes provide high tensile strength, fatigue resistance and transition temperature. Each tube is butted for added thermal resistance near braze joints while saving material weight elsewhere.\nTo be compatible with disc brake callipers while having a chain-tensioning mechanism, custom sliding rear dropouts were designed. The three-piece design allows the entire rear wheel assembly to move horizontally without conflicting with other parts. Furthermore, motor and battery integrations were achieved through a square-sectioned seat tube and downtube for increased easier manufacturing.\nExtensive Finite Elements analysis and incremental load tests using strain gauges were used to iterate and validate the design."
     },
     {
+        id: "mine-rescue-buggy",
         name: "Mine Rescue Buggy",
         subtitle: "Yr3 Embedded C for Microcontrollers Project",
-        start: new Date(21, 2),
-        end: new Date(21, 3),
-        featured: false,
+        start: new Date(2021, 2),
+        end: new Date(2021, 3),
+        featured: true,
         type: "Hardware",
-        technologies: ["C", "PIC Microcontroller"],
+        tags: ["C", "PIC Microcontroller"],
         thumbnail: {
             href: "/images/uniProjects/Buggy/buggy_thumbnail.jpg",
             alt: "Mine Rescue Buggy"
@@ -185,13 +187,14 @@ const ProjectsData = [
         description: "As part of the final project of the Embedded-C for Microcontrollers module, we developed an autonomous mine rescue robot. The buggy can navigate a conceptual mine using a set of instructions coded in coloured cards and return to its starting position - simulating a scenario of determining the location of trapped miners.\nEnjoy exploring the set of slides which explain the key functionalities and features of the buggy. Slides 4 onwards have calibration demos before a full demo run on the final slide.\nHardware: PIC18F67K40 microchip, Clicker-2 PCB, Tricolour LED, TCS3471 Colour Light-to-digital convertor, 3.7V 2000mA LiPo battery, DRV833RTY differential motor drivers.\nSix core functions: movement, colour-detection, lighting, memory, calibration, and a set of fail-safes."
     },
     {
+        id: "mobula-ray",
         name: "Mobula Ray",
         subtitle: "Yr2 Design Week Project",
-        start: new Date(20, 1),
-        end: new Date(20, 1),
-        featured: false,
+        start: new Date(2020, 1),
+        end: new Date(2020, 1),
+        featured: true,
         type: "Engineering",
-        technologies: ["SolidWorks", "CES Selector"],
+        tags: ["SolidWorks", "CES Selector"],
         thumbnail: {
             href: "/images/uniProjects/Mobula Ray/1_mobula_render.jpg",
             alt: "Mobula Ray Render 1"
@@ -261,13 +264,14 @@ const ProjectsData = [
         description: "Mobula ray is a personal underwater propulsion device rated for a depth of 15m. Powered by a dual-motor drive train and lithium-ion batteries, it is designed to have a battery life of 2hrs for an average speed of 2 kph.\nI worked with a highly talented team to complete the entire design process in one week, from the initial idea to the final engineering delivery. See our final pitching poster below."
     },
     {
+        id: "heat-diff-model",
         name: "2D Heat Diffusion Model",
         subtitle: "Yr2 Computing Project",
-        start: new Date(20, 1),
-        end: new Date(20, 1),
-        featured: false,
+        start: new Date(2020, 1),
+        end: new Date(2020, 1),
+        featured: true,
         type: "Computing",
-        technologies: ["Python"],
+        tags: ["Python"],
         thumbnail: {
             href: "/images/uniProjects/Heat Diffusion/heatmodel_thumbnail.jpg",
             alt: "2D Heat Diffusion Graph"
@@ -294,66 +298,67 @@ const ProjectsData = [
         description: "Worked as a pair to perform a heat transfer analysis of a hot long rectangular rod being quenched in a cold fluid. Using python, we modelled the temperature distribution through the rod in the x - y directions, as it changes with time.\nA mixed composition of brick and steel (AISI 1010) was chosen for the rod, although this could be modified to fit any composition. The rod was long enough that the heat transfer along the longest length could be neglected, hence was modelled in two space dimensions, and time.\nThe location and area of the secondary material was chosen to be a small rectangle, slightly offset from the centre, however, could easily be adjusted to model different problems.\nWe assumed each section of the rod to have uniform density, uniform specific heat, and no internal heat generation. Overall, the model was described by a 3rd order parabolic partial derivative equation."
     },
     {
+        id: "sonic",
         name: "SONIC",
         subtitle: "Yr2 Design & Manufacture Project",
-        start: new Date(19, 9),
-        end: new Date(19, 11),
-        featured: false,
+        start: new Date(2019, 9),
+        end: new Date(2019, 11),
+        featured: true,
         type: "Engineering",
-        technologies: ["SolidWorks, Manufacturing"],
+        tags: ["SolidWorks", "Manufacturing"],
         thumbnail: {
-            href: "public/images/uniProjects/Sonic/1_sonic_render.jpg",
+            href: "/images/uniProjects/Sonic/1_sonic_render.jpg",
             alt: "SONIC Render"
         },
         media: [
             {
                 type: "image",
-                href: "public/images/uniProjects/Sonic/1_sonic_render.jpg",
+                href: "/images/uniProjects/Sonic/1_sonic_render.jpg",
                 alt: "SONIC Render 1"
             },
             {
                 type: "image",
-                href: "public/images/uniProjects/Sonic/2_sonic_render.jpg",
+                href: "/images/uniProjects/Sonic/2_sonic_render.jpg",
                 alt: "SONIC Render 2"
             },
             {
                 type: "image",
-                href: "public/images/uniProjects/Sonic/3_sonic_render.jpg",
+                href: "/images/uniProjects/Sonic/3_sonic_render.jpg",
                 alt: "SONIC Render 3"
             },
             {
                 type: "image",
-                href: "public/images/uniProjects/Sonic/4_sonic_render.jpg",
+                href: "/images/uniProjects/Sonic/4_sonic_render.jpg",
                 alt: "SONIC Render 4"
             },
             {
                 type: "image",
-                href: "public/images/uniProjects/Sonic/5_sonic_ed.jpg",
+                href: "/images/uniProjects/Sonic/5_sonic_ed.jpg",
                 alt: "SONIC Engineering Drawing 1"
             },
             {
                 type: "image",
-                href: "public/images/uniProjects/Sonic/6_sonic_ed.jpg",
+                href: "/images/uniProjects/Sonic/6_sonic_ed.jpg",
                 alt: "SONIC Engineering Drawing 2"
             },
             {
                 type: "image",
-                href: "public/images/uniProjects/Sonic/7_sonic_real.jpg",
+                href: "/images/uniProjects/Sonic/7_sonic_real.jpg",
                 alt: "SONIC Manufactured 1"
             },
             {
                 type: "image",
-                href: "public/images/uniProjects/Sonic/8_sonic_real.jpg",
+                href: "/images/uniProjects/Sonic/8_sonic_real.jpg",
                 alt: "SONIC Manufactured 2"
             },
             {
                 type: "video",
-                href: "public/images/uniProjects/Sonic/9_sonic_run.mp4",
+                href: "/images/uniProjects/Sonic/9_sonic_run.mp4",
                 alt: "SONIC Demo"
             },
             {
                 type: "image",
-                href: "public/images/uniProjects/Sonic/10_sonic_me.jpg",
+                href: "/images/uniProjects/Sonic/10_sonic_me.jpg",
                 alt: "SONIC Manufactured 3"
             },
         ],
@@ -384,31 +389,32 @@ const ProjectsData = [
         description: "As part of a 5-member team, we designed, manufactured and tested a miniature motorised car to race against 30 other teams in the cohort. Sonic is an ultra light, rear-wheel-drive car featuring an all plastic spur gear drive transmission. Design elements were carefully considered to maximise the ease of manufacturing, reduce the race completion time and many other criteria. Find out more about the complete design and manufacturing journey down below."
     },
     {
+        id: "lift-door",
         name: "Lift Door Transmission",
         subtitle: "Yr1 Drive Tranimission Project",
-        start: new Date(19, 0),
-        end: new Date(19, 2),
-        featured: false,
+        start: new Date(2019, 0),
+        end: new Date(2019, 2),
+        featured: true,
         type: "Engineering",
-        technologies: ["SolidWorks"],
+        tags: ["SolidWorks"],
         thumbnail: {
-            href: "public/images/uniProjects/Lift Door/1_liftdoor.jpg",
+            href: "/images/uniProjects/Lift Door/1_liftdoor.jpg",
             alt: "Lift Door Tranmission Render"
         },
         media: [
             {
                 type: "image",
-                href: "public/images/uniProjects/Lift Door/1_liftdoor.jpg",
+                href: "/images/uniProjects/Lift Door/1_liftdoor.jpg",
                 alt: "Lift Door Tranmission Render 1"
             },
             {
                 type: "image",
-                href: "public/images/uniProjects/Lift Door/2_liftdoor.jpg",
+                href: "/images/uniProjects/Lift Door/2_liftdoor.jpg",
                 alt: "Lift Door Tranmission Render 2"
             },
             {
                 type: "image",
-                href: "public/images/uniProjects/Lift Door/3_liftdoor.jpg",
+                href: "/images/uniProjects/Lift Door/3_liftdoor.jpg",
                 alt: "Lift Door Tranmission Render 3"
             }
         ],

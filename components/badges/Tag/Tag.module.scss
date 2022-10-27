@@ -1,0 +1,13 @@
+.tag {
+    display: flex;
+    background: var(--color-glass);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: var(--color-text-secondary);
+    padding: 0.2rem 0.4rem;
+    font-size: 0.7rem;
+    text-align: center;
+    border-radius: 0.2rem;
+    border: var(--border-secondary);
+    box-shadow: var(--shadow);
+}

@@ -7,61 +7,9 @@ export const HScrollDiv = ({ width = '100%', children }) => {
         <div className={styles.container}>
             <div className={styles.fade}></div>
             <div ref={scrollRef} className={styles.scroll}>
-                <div>
-                    I will definitely overflow due to the small width of my parent container.
-                </div>
-                <div>
-                    I will definitely overflow due to the small width of my parent container.
-                </div>
-                <div>
-                    I will definitely overflow due to the small width of my parent container.
-                </div>
-                <div>
-                    I will definitely overflow due to the small width of my parent container.
-                </div>
-                <div>
-                    I will definitely overflow due to the small width of my parent container.
-                </div>
-                <div>
-                    I will definitely overflow due to the small width of my parent container.
-                </div>
-                <div>
-                    I will definitely overflow due to the small width of my parent container.
-                </div>
-                <div>
-                    I will definitely overflow due to the small width of my parent container.
-                </div>
-                <div>
-                    I will definitely overflow due to the small width of my parent container.
-                </div>
-                <div>
-                    I will definitely overflow due to the small width of my parent container.
-                </div>
-                <div>
-                    I will definitely overflow due to the small width of my parent container.
-                </div>
-                <div>
-                    I will definitely overflow due to the small width of my parent container.
-                </div>
-                <div>
-                    I will definitely overflow due to the small width of my parent container.
-                </div>
-                <div>
-                    I will definitely overflow due to the small width of my parent container.
-                </div>
-                <div>
-                    I will definitely overflow due to the small width of my parent container.
-                </div>
-                <div>
-                    I will definitely overflow due to the small width of my parent container.
-                </div>
-                <div>
-                    I will definitely overflow due to the small width of my parent container.
-                </div>
-                <div>
-                    I will definitely overflow due to the small width of my parent container.
-                </div>
+                <div className={styles.padding} />
                 {children}
+                <div className={styles.padding} />
             </div>
         </div>
     );

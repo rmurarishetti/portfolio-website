@@ -1,3 +1,4 @@
 import HomeCard from "./HomeCard";
+import ProjectCard from "./ProjectCard";
 
-export { HomeCard }; 
+export { HomeCard, ProjectCard }; 

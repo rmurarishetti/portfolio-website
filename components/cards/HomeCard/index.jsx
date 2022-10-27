@@ -13,6 +13,8 @@ function HomeCard({ link, title, emoji, description }) {
             glareColor='var(--color-accent-primary)'
             glareMaxOpacity={0.7}
             glareBorderRadius={10}
+            glarePosition="all"
+            transitionSpeed={500}
             className={styles.card}>
             <Link href={link}>
                 <a>

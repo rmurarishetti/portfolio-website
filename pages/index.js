@@ -2,10 +2,11 @@ import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.scss';
 import { useState, useEffect, useContext } from 'react';
-import { HomeCard } from '../components/cards';
+import { HomeCard, ProjectCard } from '../components/cards';
 import TextTransition, { presets } from "react-text-transition";
 import profilePic from '../public/images/profile/profile.jpeg';
 import { pagesData } from '../data/pagesData';
+import { ProjectsData } from '../data/projectsData';
 import WinchScene from '../components/3d/WinchScene';
 import { HScrollDiv } from '../components/layout';
 
@@ -70,25 +71,23 @@ export default function Home() {
           </div>
 
           <div className={styles.grid}>
-            {pagesData.slice(1).map((page, idx) => {
+            {pagesData.slice(1).map((pageData, idx) => {
               return (
                 <HomeCard
-                  key={page.title}
-                  link={page.link}
-                  title={page.title}
-                  emoji={page.emoji}
-                  description={page.description} />
+                  key={pageData.title} {...pageData} />
               )
             })}
           </div>
           <WinchScene />
           <div className={styles.block}>
-            <h2>Featured Projects</h2>
-            <HScrollDiv />
-          </div>
-          <div className={styles.block}>
-            <h2>Featured Projects</h2>
-            <HScrollDiv />
+            <h1>Featured Projects</h1>
+            <HScrollDiv>
+              {ProjectsData.filter(projectData => projectData.featured).map((projectData, idx) => {
+                return (
+                  <ProjectCard key={projectData.id} {...projectData} />
+                )
+              })}
+            </HScrollDiv>
           </div>
         </main >
       </div >

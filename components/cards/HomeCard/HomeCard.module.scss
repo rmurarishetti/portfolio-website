@@ -1,14 +1,13 @@
 .card {
     margin: 1rem;
     border: var(--border-primary);
-    border-radius: 10px;
+    border-radius: 1rem;
     background: var(--color-glass);
     border: var(--border-primary);
     box-shadow: var(--shadow);
     backdrop-filter: blur(10.8px);
     -webkit-backdrop-filter: blur(10.8px);
     overflow: none;
-    // z-index: 1;
 
     a {
         color: inherit;
