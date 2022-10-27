@@ -59,8 +59,14 @@ function Winch(props) {
                     name="winchShell"
                     position={shellPosition}
                     onClick={() => setActive(Number(!active))}
-                    onPointerEnter={() => setHovered(1)}
-                    onPointerLeave={() => setHovered(0)}>
+                    onPointerEnter={() => {
+                        setHovered(1);
+                        document.body.style.cursor = "pointer";
+                    }}
+                    onPointerLeave={() => {
+                        setHovered(0);
+                        document.body.style.cursor = "default";
+                    }}>
                     <a.mesh
                         name="winchShell_1"
                         castShadow
