@@ -1,4 +1,4 @@
-export const ProjectsData = [
+export const projectsData = [
     {
         id: "ebike-frame",
         name: "E-Bike Frame",

@@ -54,6 +54,7 @@ html {
     font-family: var(--font-fam-default);
     color: var(--color-text-primary);
     background: var(--color-bg);
+    transition: background-color 0.2s;
 
     ::selection {
       background: var(--color-accent-secondary);

@@ -6,9 +6,10 @@ import { HomeCard, ProjectCard } from '../components/cards';
 import TextTransition, { presets } from "react-text-transition";
 import profilePic from '../public/images/profile/profile.jpeg';
 import { pagesData } from '../data/pagesData';
-import { ProjectsData } from '../data/projectsData';
+import { projectsData } from '../data/projectsData';
 import WinchScene from '../components/3d/WinchScene';
 import { HScrollDiv } from '../components/layout';
+import Link from 'next/link';
 
 export default function Home() {
 
@@ -82,12 +83,32 @@ export default function Home() {
           <div className={styles.block}>
             <h1>Featured Projects</h1>
             <HScrollDiv>
-              {ProjectsData.filter(projectData => projectData.featured).map((projectData, idx) => {
+              {projectsData.filter(projectData => projectData.featured).map((projectData, idx) => {
                 return (
                   <ProjectCard key={projectData.id} {...projectData} />
                 )
               })}
             </HScrollDiv>
+            <Link href={pagesData.filter((pageData => pageData.title == 'Projects'))[0].link}>
+              <a className={styles.link}>
+                {pagesData.filter((pageData => pageData.title == 'Projects'))[0].emoji} All projects &rarr;
+              </a>
+            </Link>
+          </div>
+          <div className={styles.block}>
+            <h1>New Artwork</h1>
+            {/* <HScrollDiv>
+              {projectsData.filter(projectData => projectData.featured).map((projectData, idx) => {
+                return (
+                  <ProjectCard key={projectData.id} {...projectData} />
+                )
+              })}
+            </HScrollDiv> */}
+            <Link href={pagesData.filter((pageData => pageData.title == 'Art'))[0].link}>
+              <a className={styles.link}>
+                {pagesData.filter((pageData => pageData.title == 'Art'))[0].emoji} All artwork &rarr;
+              </a>
+            </Link>
           </div>
         </main >
       </div >

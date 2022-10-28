@@ -1,15 +1,11 @@
 import styles from './TypeTag.module.scss'
+import { projectTypeStyleClasses } from '../../../data/projectTypeStyleClasses';
 
 function TypeTag({ type }) {
-    const typesDict = {
-        "Engineering": styles.engineering,
-        "Hardware": styles.hardware,
-        "Computing": styles.computing,
-    }
 
 
     return (
-        <div className={[styles.tag, typesDict[type]].join(' ')}>
+        <div className={[styles.tag, projectTypeStyleClasses(styles, type)].join(' ')}>
             {type}
         </div>
     );

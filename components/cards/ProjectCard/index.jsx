@@ -3,13 +3,9 @@ import styles from './ProjectCard.module.scss'
 import Tilt from 'react-parallax-tilt';
 import Link from 'next/link';
 import { Tag, DateDiv, TypeTag } from '../../badges';
+import { projectTypeStyleClasses } from '../../../data/projectTypeStyleClasses';
 
 function ProjectCard({ id, name, subtitle, start, end, featured, type, tags, thumbnail }) {
-    const typesDict = {
-        "Engineering": styles.engineering,
-        "Hardware": styles.hardware,
-        "Computing": styles.computing,
-    }
     return (
         <Tilt
             tiltReverse
@@ -23,7 +19,7 @@ function ProjectCard({ id, name, subtitle, start, end, featured, type, tags, thu
             glareBorderRadius={10}
             perspective={500}
             transitionSpeed={500}
-            className={[styles.card, styles.featured, typesDict[type]].join(' ')}>
+            className={[styles.card, styles.featured, projectTypeStyleClasses(styles, type)].join(' ')}>
             <Link href={`/projects/${id}`}>
                 <a>
                     <div className={styles.thumbnail}>

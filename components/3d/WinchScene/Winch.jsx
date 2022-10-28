@@ -104,7 +104,6 @@ function Winch(props) {
                         receiveShadow
                         geometry={nodes.winchBase_3.geometry}
                         material={materials["satin_finish_aluminum-8"]}>
-                        {/* <meshPhongMaterial color="#000" opacity={0.5} transparent /> */}
                     </mesh>
                     <mesh
                         name="winchBase_4"
