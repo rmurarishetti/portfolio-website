@@ -14,7 +14,11 @@ function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider themes={['light', 'dark']} enableSystem={true} defaultTheme={'system'} >
       <Navbar />
-      {isMounted && <Component {...pageProps} />}
+      <div className="container">
+        <main className="main">
+          {isMounted && <Component {...pageProps} />}
+        </main>
+      </div>
       <Footer />
     </ThemeProvider>
   )

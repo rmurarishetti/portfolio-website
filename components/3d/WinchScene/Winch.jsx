@@ -32,9 +32,8 @@ function Winch(props) {
 
     const color = hoverSpring.to([0, 1], ['#fff', '#9e8bff'])
     const opacity = activeSpring.to([0, 1], [0.5, 1])
-    const y = (0.203 * props.scroll * props.scroll) - (0.325 * props.scroll) + 0.13
-    const shellPosition = [0, props.scroll < 0.8 ? y : 0, 0];
-
+    let y = (0.203 * props.scroll * props.scroll) - (0.325 * props.scroll) + 0.13
+    const shellPosition = [0, props.scroll < 0.8 ? Math.min(y, 0.13) : 0, 0];
 
     return (
         <a.group

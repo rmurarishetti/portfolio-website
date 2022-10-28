@@ -1,5 +1,6 @@
 import { useHorizontalScroll } from "../../../helpers";
-import styles from './HScrollDiv.module.scss'
+import styles from './HScrollDiv.module.scss';
+import { useMemo } from "react";
 
 export const HScrollDiv = ({ width = '100%', children }) => {
     const scrollRef = useHorizontalScroll();
