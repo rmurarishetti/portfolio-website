@@ -1,8 +1,8 @@
 :root {
   /* Your default theme */
   --color-bg: black;
-  --color-bg-disable: rgb(27, 27, 27);
-  --color-text-primary: rgb(255, 255, 255);
+  --color-bg-disable: #1b1b1b;
+  --color-text-primary: #ffffff;
   --color-text-secondary: #b1b1b1;
   --color-border: rgba(126, 126, 126, 0.2);
   --color-accent-primary: #8168ff;
@@ -54,7 +54,7 @@ html {
     font-family: var(--font-fam-default);
     color: var(--color-text-primary);
     background: var(--color-bg);
-    transition: background-color 0.2s;
+    transition: background-color 0.1s;
 
     .container {
       padding: 0 2rem;

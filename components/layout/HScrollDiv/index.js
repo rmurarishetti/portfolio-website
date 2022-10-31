@@ -1,4 +1,4 @@
-import { useHorizontalScroll } from "../../../helpers";
+import { useHorizontalScroll } from '../../../helpers/ui';
 import styles from './HScrollDiv.module.scss';
 import { useMemo } from "react";
 

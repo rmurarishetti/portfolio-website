@@ -1,15 +1,15 @@
-import * as THREE from 'three'
 import React, { useEffect, useRef, useState } from "react";
-import { useFrame } from '@react-three/fiber'
-import { useGLTF, PerspectiveCamera, useAnimations, Effects, BakeShadows } from "@react-three/drei";
+import { useGLTF, PerspectiveCamera, useAnimations } from "@react-three/drei";
 import ThemedSpotlight from './ThemedLight';
 import { useSpring } from '@react-spring/core'
 import { a } from '@react-spring/three'
-
+import { Canvas, useFrame, useThree } from '@react-three/fiber'
+import { colors } from "../../../helpers/format";
+import { Object3D } from "three";
 
 function Winch(props) {
     const group = useRef();
-    const { nodes, materials, animations } = useGLTF("/cad/winch.gltf");
+    const { nodes, materials, animations } = useGLTF("/3d/winch.gltf");
     const { actions } = useAnimations(animations, group);
 
     // Paused animations
@@ -21,19 +21,17 @@ function Winch(props) {
 
     const [active, setActive] = useState(0)
     const [hovered, setHovered] = useState(0)
-    const { spring: activeSpring } = useSpring({
-        spring: active,
-        config: { mass: 5, tension: 400, friction: 50, precision: 0.0001 }
-    })
-    const { spring: hoverSpring } = useSpring({
-        spring: hovered,
-        config: { mass: 1, tension: 400, friction: 50, precision: 0.0001 }
-    })
 
-    const color = hoverSpring.to([0, 1], ['#fff', '#9e8bff'])
-    const opacity = activeSpring.to([0, 1], [0.5, 1])
-    let y = (0.203 * props.scroll * props.scroll) - (0.325 * props.scroll) + 0.13
-    const shellPosition = [0, props.scroll < 0.8 ? Math.min(y, 0.13) : 0, 0];
+    const { color } = useSpring({ color: hovered ? '#9e8bff' : '#fff' })
+    const { opacity } = useSpring({ opacity: active ? 1 : 0.5 })
+
+    const shellRef = useRef()
+
+    useFrame(() => {
+        let y = (0.203 * props.scroll * props.scroll) - (0.325 * props.scroll) + 0.13
+        y = y < 0.13 ? (props.scroll < 0.8 ? Math.min(y, 0.13) : 0) : shellRef.current.position.y;
+        shellRef.current.position.y = y;
+    })
 
     return (
         <a.group
@@ -55,8 +53,11 @@ function Winch(props) {
                     />
                 </group>
                 <a.group
+                    ref={shellRef}
                     name="winchShell"
-                    position={shellPosition}
+                    castShadow
+                    receiveShadow
+                    position={[0, 0.13, 0]}
                     onClick={() => setActive(Number(!active))}
                     onPointerEnter={() => {
                         setHovered(1);
@@ -82,7 +83,10 @@ function Winch(props) {
                         material={materials["satin_finish_stainless_steel.001"]}
                     />
                 </a.group>
-                <group name="winchBase">
+                <group
+                    name="winchBase"
+                    castShadow
+                    receiveShadow>
                     <mesh
                         name="winchBase_1"
                         castShadow
@@ -154,4 +158,4 @@ function Winch(props) {
 
 export default Winch;
 
-useGLTF.preload("/cad/winch.gltf");
+useGLTF.preload("/3d/winch.gltf");

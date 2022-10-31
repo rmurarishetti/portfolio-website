@@ -28,6 +28,7 @@ function ThemedSpotlight() {
             angle={0.14}
             penumbra={1}
             castShadow
+            receiveShadow
             {...themedLightProps} />
     );
 }

@@ -1,4 +1,4 @@
-import { formatDuration } from '../../../helpers';
+import { formatDuration } from "../../../helpers/format";
 
 function DateDiv({ start = new Date(), end = null, duration = true }) {
     const dateOptions = { year: '2-digit', month: 'short' };
