@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.scss';
 import { useState, useEffect } from 'react';
 import { HomeCard } from '../components/cards';
 import TextTransition, { presets } from "react-text-transition";
-import profilePic from '../public/images/profile/profile.jpeg';
+// import profilePic from '../public/images/profile/profile.jpeg';
 import { pagesData } from '../data/pagesData';
 import { projectsData } from '../data/projectsData';
 import WinchScene from '../components/3d/WinchScene';
@@ -61,9 +61,8 @@ export default function Home() {
         </div>
         <div className={styles.profile}>
           <Image
-            src={profilePic}
+            src={'/images/profile/profile.jpeg'}
             alt="Picture of Rohit Nag"
-            placeholder='blur'
             objectFit='cover'
             layout='fill' />
         </div>
