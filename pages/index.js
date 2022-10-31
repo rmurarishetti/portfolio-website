@@ -47,7 +47,7 @@ export default function Home() {
             Rohit Nag
           </h1>
           <div className={styles.role}>
-            A Mechanical Engineering student at <a href="https://www.imperial.ac.uk/ " target="_blank">Imperial College</a>.
+            A Mechanical Engineering student at <a href="https://www.imperial.ac.uk/ " target="_blank" rel="noreferrer">Imperial College</a>.
           </div>
           <div className={styles.description}>
             Passionate about merging <em>Engineering</em>, <em>Computing</em> and <em>Design</em> with an interest in embedded systems, physics modelling and AI.

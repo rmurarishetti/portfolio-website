@@ -12,7 +12,7 @@ export function CityPoint({ globeRadius, city, theme, type = "home", handleCityD
     useEffect(() => {
         handleCityDescription(hovered ? city.description : null)
         document.body.style.cursor = hovered ? 'help' : 'auto'
-    }, [hovered]);
+    }, []);
 
     const pointProps = type === "home" ?
         {
