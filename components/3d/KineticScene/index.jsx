@@ -1,8 +1,8 @@
-import { Suspense } from 'react'
+import { Suspense, useState } from 'react'
 import { Canvas } from '@react-three/fiber'
 import * as THREE from 'three'
 import styles from './KineticScene.module.scss'
-import { PresentationControls } from '@react-three/drei'
+import { PresentationControls, useCursor } from '@react-three/drei'
 import { useScrollPercentage } from 'react-scroll-percentage'
 import { MeshGrid } from './MeshGrid'
 import Row from './MeshGrid/Row'
@@ -13,9 +13,18 @@ function KineticScene() {
         /* Optional options */
         threshold: 0,
     })
+    const [hovered, setHover] = useState(false);
+    const [active, setActive] = useState(false);
+
+    useCursor(hovered, 'grab', 'auto')
+    useCursor(active, 'grabbing', 'auto')
     return (
         <Canvas
             ref={scrolRef}
+            onPointerDown={() => setActive(true)}
+            onPointerLeave={() => setActive(false)}
+            onPointerOver={() => setHover(true)}
+            onPointerOut={() => setHover(false)}
             className={styles.scene}
             camera={{ fov: 10, position: [0, 0, 50] }}
             dpr={[1, 2]}
@@ -23,7 +32,7 @@ function KineticScene() {
             {/* <axesHelper args={[1]} /> */}
             <Suspense fallback={null} >
                 <spotLight position={[0, 0, 20]} />
-                <PresentationControls global={true} position={[0, 0, 50]}>
+                <PresentationControls global={true} position={[0, 0, 50]} cursor={false}>
                     <MeshGrid
                         n_balls={20}
                         n_rows={20}

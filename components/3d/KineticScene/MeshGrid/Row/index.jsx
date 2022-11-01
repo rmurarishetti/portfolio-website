@@ -1,4 +1,5 @@
 import { useRef, useState, useEffect } from 'react'
+import { useCursor } from '@react-three/drei';
 import { Ball } from "./Ball";
 import { colors } from '../../../../../helpers/format';
 import { useSpring } from '@react-spring/three'
@@ -15,6 +16,8 @@ function Row({ n_balls = 15, z = 0, x_lim = 18, y_lim = 3, phase, color = '#8168
     const rowRef = useRef()
     const [hovered, setHover] = useState(false)
     const [active, setActive] = useState(false)
+
+    useCursor(hovered, 'pointer', 'auto')
 
     const colorState = hovered ?
         colors['default'].row3d.hovered :
