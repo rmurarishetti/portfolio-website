@@ -1,10 +1,8 @@
-import { useRef, useEffect, useState } from 'react';
+import { useRef, useState } from 'react';
 import { ThreeElements, useFrame, useLoader } from '@react-three/fiber';
 import { TextureLoader } from 'three/src/loaders/TextureLoader'
 import { Color, Mesh } from 'three'
-import { PresentationControls } from '@react-three/drei'
-
-
+import { PresentationControls, useCursor } from '@react-three/drei'
 import { GlowSphere } from './GlowSphere';
 import { CityPoint } from './CityPoint';
 import { FlightArc } from './FlightArc';
@@ -13,15 +11,14 @@ export function Globe({ position, theme, radius, homeCities, visitedCities, hand
     const mesh = useRef(null);
 
     const [hovered, setHover] = useState(false);
+    const [active, setActive] = useState(false);
+    useCursor(hovered, 'grab', 'auto')
+    useCursor(active, 'grabbing', 'auto')
 
     useFrame((state, delta) => {
         const dThetaY = hovered ? delta / 30 : delta / 10;
         mesh.current.rotation.y += dThetaY;
     });
-
-    useEffect(() => {
-        document.body.style.cursor = hovered ? 'grab' : 'auto'
-    }, [hovered]);
 
     const makeUrl = (file) => `./textures/${file}.jpg`;
     const [texture, bump, spec] = useLoader(TextureLoader, [makeUrl(theme === 'light' ? 'earth' : 'earth_night'), makeUrl('earth_bump'), makeUrl('earth_spec')]);
@@ -66,6 +63,8 @@ export function Globe({ position, theme, radius, homeCities, visitedCities, hand
             <mesh
                 position={position}
                 ref={mesh}
+                onPointerDown={() => setActive(true)}
+                onPointerLeave={() => setActive(false)}
                 onPointerOver={() => setHover(true)}
                 onPointerOut={() => setHover(false)}>
                 <sphereGeometry attach="geometry" args={[radius, 64, 64]} />

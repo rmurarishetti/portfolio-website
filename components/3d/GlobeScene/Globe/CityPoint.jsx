@@ -1,5 +1,6 @@
 import { useState, useEffect, FunctionComponentElement } from 'react';
 import { ThreeElements } from '@react-three/fiber';
+import { useCursor } from '@react-three/drei';
 import { Color } from 'three'
 import { coordinates2cartesian } from '../../../../helpers/math';
 import { colors } from '../../../../helpers/format';
@@ -8,10 +9,9 @@ import { colors } from '../../../../helpers/format';
 export function CityPoint({ globeRadius, city, theme, type = "home", handleCityDescription }) {
     const position = coordinates2cartesian(globeRadius, city.coordinates)
     const [hovered, setHover] = useState(false);
-
+    useCursor(hovered, 'help', 'auto')
     useEffect(() => {
         handleCityDescription(hovered ? city.description : null)
-        document.body.style.cursor = hovered ? 'help' : 'auto'
     }, []);
 
     const pointProps = type === "home" ?

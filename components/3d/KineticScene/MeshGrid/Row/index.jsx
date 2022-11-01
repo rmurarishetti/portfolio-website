@@ -31,7 +31,6 @@ function Row({ n_balls = 15, z = 0, x_lim = 18, y_lim = 3, phase, color = '#8168
             onClick={(event) => setActive(!active)}
             onPointerOver={(event) => {
                 setHover(true)
-                // document.body.style.cursor = 'pointer'
             }}
             onPointerOut={(event) => {
                 setHover(false)
