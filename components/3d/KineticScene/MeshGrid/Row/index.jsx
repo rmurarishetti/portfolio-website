@@ -1,6 +1,5 @@
 import { useRef, useState, useEffect } from 'react'
 import { Ball } from "./Ball";
-import { Group } from 'three';
 
 function Row({ n_balls = 15, z = 0, x_lim = 18, y_lim = 3, phase, color = '#8168ff' }) {
     const row = []
@@ -11,9 +10,7 @@ function Row({ n_balls = 15, z = 0, x_lim = 18, y_lim = 3, phase, color = '#8168
         coordinates.push([x, y])
     }
 
-    // This reference will give us direct access to the mesh
     const rowRef = useRef()
-    // Set up state for the hovered and active state
     const [hovered, setHover] = useState(false)
     const [active, setActive] = useState(false)
 
@@ -28,21 +25,17 @@ function Row({ n_balls = 15, z = 0, x_lim = 18, y_lim = 3, phase, color = '#8168
         colorState = 'red'
     }
 
-    // useEffect(() => {
-    //     document.body.style.cursor = hovered ? 'pointer' : 'auto'
-    // }, []);
-
     return (
         <group name="row"
             ref={rowRef}
             onClick={(event) => setActive(!active)}
             onPointerOver={(event) => {
                 setHover(true)
-                document.body.style.cursor = 'pointer'
+                // document.body.style.cursor = 'pointer'
             }}
             onPointerOut={(event) => {
                 setHover(false)
-                document.body.style.cursor = 'auto'
+                // document.body.style.cursor = 'auto'
             }}>
             {coordinates.map((coordinate, i) => {
                 return (

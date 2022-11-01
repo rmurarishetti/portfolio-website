@@ -2,6 +2,7 @@ import { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
 import * as THREE from 'three'
 import styles from './KineticScene.module.scss'
+import { OrbitControls, PresentationControls } from '@react-three/drei'
 import { useScrollPercentage } from 'react-scroll-percentage'
 import { MeshGrid } from './MeshGrid'
 import Row from './MeshGrid/Row'
@@ -22,12 +23,15 @@ function KineticScene() {
             {/* <axesHelper args={[1]} /> */}
             <Suspense fallback={null} >
                 <spotLight position={[0, 0, 20]} />
-                <MeshGrid
-                    n_balls={20}
-                    n_rows={20}
-                    x_lim={18}
-                    y_lim={3}
-                    scroll={percentage} />
+                <PresentationControls global={true} position={[0, 0, 50]}>
+                    <MeshGrid
+                        n_balls={20}
+                        n_rows={20}
+                        x_lim={18}
+                        y_lim={3}
+                        scroll={percentage} />
+                </PresentationControls>
+
             </Suspense>
         </Canvas>
     );
