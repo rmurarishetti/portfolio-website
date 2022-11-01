@@ -6,7 +6,7 @@ import styles from './GlobeScene.module.scss'
 import { useState, useEffect, useRef } from 'react';
 import { a } from '@react-spring/three'
 
-export function GlobeScene({ homeCities, visitedCities, handleCityDescription }) {
+export function GlobeScene({ homeCities, visitedCities }) {
     const [isMounted, setIsMounted] = useState(false);
     const { theme, setTheme } = useTheme();
 
@@ -41,7 +41,7 @@ export function GlobeScene({ homeCities, visitedCities, handleCityDescription })
             <a.directionalLight
                 {...themedDirectionalLightProps[theme]}
                 lookAt={[0, 0, 0]} />
-            <Globe position={[0, 0, 0]} theme={theme} radius={2.3} homeCities={homeCities} visitedCities={visitedCities} handleCityDescription={handleCityDescription} />
+            <Globe position={[0, 0, 0]} theme={theme} radius={2.3} homeCities={homeCities} visitedCities={visitedCities} />
         </Canvas>
     )
 }

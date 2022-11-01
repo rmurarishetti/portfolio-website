@@ -1,5 +1,7 @@
 import { useRef, useState, useEffect } from 'react'
 import { Ball } from "./Ball";
+import { colors } from '../../../../../helpers/format';
+import { useSpring } from '@react-spring/three'
 
 function Row({ n_balls = 15, z = 0, x_lim = 18, y_lim = 3, phase, color = '#8168ff' }) {
     const row = []
@@ -14,16 +16,11 @@ function Row({ n_balls = 15, z = 0, x_lim = 18, y_lim = 3, phase, color = '#8168
     const [hovered, setHover] = useState(false)
     const [active, setActive] = useState(false)
 
-    let colorState = color;
-    if (active & hovered) {
-        colorState = 'pink'
-    }
-    else if (active & !hovered) {
-        colorState = 'hotpink'
-    }
-    else if (!active & hovered) {
-        colorState = 'red'
-    }
+    const colorState = hovered ?
+        colors['default'].row3d.hovered :
+        active ? colors['default'].row3d.active :
+            color
+    const { scale } = useSpring({ scale: hovered ? 2 : 1 })
 
     return (
         <group name="row"
@@ -34,7 +31,6 @@ function Row({ n_balls = 15, z = 0, x_lim = 18, y_lim = 3, phase, color = '#8168
             }}
             onPointerOut={(event) => {
                 setHover(false)
-                // document.body.style.cursor = 'auto'
             }}>
             {coordinates.map((coordinate, i) => {
                 return (
@@ -43,7 +39,7 @@ function Row({ n_balls = 15, z = 0, x_lim = 18, y_lim = 3, phase, color = '#8168
                         position={[coordinate[0], coordinate[1], z]}
                         radius={0.1}
                         color={colorState}
-                        scale={hovered ? 1.4 : 1} />
+                        scale={scale} />
                 )
             })}
         </group>

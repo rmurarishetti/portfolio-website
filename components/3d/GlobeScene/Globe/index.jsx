@@ -7,8 +7,9 @@ import { GlowSphere } from './GlowSphere';
 import { CityPoint } from './CityPoint';
 import { FlightArc } from './FlightArc';
 
-export function Globe({ position, theme, radius, homeCities, visitedCities, handleCityDescription }) {
-    const mesh = useRef(null);
+export function Globe({ position, theme, radius, homeCities, visitedCities }) {
+    const groupRef = useRef(null);
+    const globeRef = useRef(null);
 
     const [hovered, setHover] = useState(false);
     const [active, setActive] = useState(false);
@@ -17,18 +18,18 @@ export function Globe({ position, theme, radius, homeCities, visitedCities, hand
 
     useFrame((state, delta) => {
         const dThetaY = hovered ? delta / 30 : delta / 10;
-        mesh.current.rotation.y += dThetaY;
+        groupRef.current.rotation.y += dThetaY;
     });
 
     const makeUrl = (file) => `./textures/${file}.jpg`;
     const [texture, bump, spec] = useLoader(TextureLoader, [makeUrl(theme === 'light' ? 'earth' : 'earth_night'), makeUrl('earth_bump'), makeUrl('earth_spec')]);
 
     const HomeCityPoints = homeCities ? homeCities.map((city) => {
-        return <CityPoint key={city.city} globeRadius={radius} city={city} theme={theme} type="home" handleCityDescription={handleCityDescription} />;
+        return <CityPoint key={city.city} globeRadius={radius} city={city} theme={theme} type="home" globeRef={globeRef} />;
     }) : undefined;
 
     const VisitedCityPoints = visitedCities ? visitedCities.map((city) => {
-        return <CityPoint key={city.city} globeRadius={radius} city={city} theme={theme} type="visited" handleCityDescription={handleCityDescription} />;
+        return <CityPoint key={city.city} globeRadius={radius} city={city} theme={theme} type="visited" globeRef={globeRef} />;
     }) : undefined;
 
     const HomeCityFlightArcs = []
@@ -50,8 +51,8 @@ export function Globe({ position, theme, radius, homeCities, visitedCities, hand
 
     return (
         <PresentationControls
-            global={false} // Spin globally or by dragging the model
-            cursor={false} // Whether to toggle cursor style on drag
+            global// Spin globally or by dragging the model
+            cursor // Whether to toggle cursor style on drag
             snap={false} // Snap-back to center (can also be a spring config)
             speed={2} // Speed factor
             zoom={1} // Zoom factor when half the polar-max is reached
@@ -62,13 +63,15 @@ export function Globe({ position, theme, radius, homeCities, visitedCities, hand
         >
             <mesh
                 position={position}
-                ref={mesh}
+                ref={groupRef}
                 onPointerDown={() => setActive(true)}
                 onPointerLeave={() => setActive(false)}
                 onPointerOver={() => setHover(true)}
                 onPointerOut={() => setHover(false)}>
-                <sphereGeometry attach="geometry" args={[radius, 64, 64]} />
-                <meshPhongMaterial attach="material" map={texture} bumpMap={bump} bumpScale={0.05} specularMap={spec} specular={new Color('#909090')} shininess={5} />
+                <mesh ref={globeRef}>
+                    <sphereGeometry attach="geometry" args={[radius, 64, 64]} />
+                    <meshPhongMaterial attach="material" map={texture} bumpMap={bump} bumpScale={0.05} specularMap={spec} specular={new Color('#909090')} shininess={5} />
+                </mesh>
                 <GlowSphere theme={theme} position={position} radius={1.1 * radius} />
                 {VisitedCityPoints}
                 {HomeCityPoints}

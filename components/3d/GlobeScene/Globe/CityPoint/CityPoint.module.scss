@@ -1,0 +1,17 @@
+.cityPoint {
+    position: absolute;
+    width: clamp(3rem, 5rem, 8rem);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 0.8rem;
+    transition: all 0.2s;
+    margin: -0.2rem;
+
+    border-width: 2px;
+    border-style: solid;
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    touch-action: none;
+    pointer-events: none;
+}

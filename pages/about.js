@@ -7,10 +7,6 @@ import { homeCitiesData } from "../data/citiesData";
 import { visitedCitiesData } from "../data/citiesData";
 
 function About() {
-    const [cityDescription, setCityDescription] = useState(null);
-    function changeCityDescription(cityDescription) {
-        setCityDescription(cityDescription);
-    }
     return (
         <>
             <Head>
@@ -22,9 +18,7 @@ function About() {
             <div className={styles.globe}>
                 <GlobeScene
                     homeCities={homeCitiesData}
-                    visitedCities={visitedCitiesData}
-                    handleCityDescription={changeCityDescription} />
-                {cityDescription && <div className={styles.cityDescription}>{cityDescription}</div>}
+                    visitedCities={visitedCitiesData} />
             </div>
         </>
     );
