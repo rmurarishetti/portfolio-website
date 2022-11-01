@@ -5,9 +5,9 @@ import { Color, Mesh } from 'three'
 import { PresentationControls } from '@react-three/drei'
 
 
-import { GlowSphere } from '../GlowSphere';
-import { CityPoint } from '../CityPoint';
-import { FlightArc } from '../FlightArc';
+import { GlowSphere } from './GlowSphere';
+import { CityPoint } from './CityPoint';
+import { FlightArc } from './FlightArc';
 
 export function Globe({ position, theme, radius, homeCities, visitedCities, handleCityDescription }) {
     const mesh = useRef(null);

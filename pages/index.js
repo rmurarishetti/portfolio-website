@@ -1,16 +1,16 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import styles from '../styles/Home.module.scss';
-import { useState, useEffect } from 'react';
-import { HomeCard } from '../components/cards';
-import TextTransition, { presets } from "react-text-transition";
-import profilePic from '../public/images/profile/profile.jpg';
-import { pagesData } from '../data/pagesData';
-import { projectsData } from '../data/projectsData';
-import WinchScene from '../components/3d/WinchScene';
 import Link from 'next/link';
-
+import { useState, useEffect } from 'react';
+import TextTransition, { presets } from "react-text-transition";
+import { HomeCard } from '../components/cards';
 import { ProjectsSwiper } from '../components/swipers';
+import WinchScene from '../components/3d/WinchScene';
+import KineticScene from '../components/3d/KineticScene';
+import styles from '../styles/Home.module.scss';
+import { projectsData } from '../data/projectsData';
+import { pagesData } from '../data/pagesData';
+import profilePic from '../public/images/profile/profile.jpg';
 
 export default function Home() {
 
@@ -80,13 +80,6 @@ export default function Home() {
       <WinchScene />
       <div className={styles.block}>
         <h1>Featured Projects</h1>
-        {/* <HScrollDiv>
-          {projectsData.filter(projectData => projectData.featured).map((projectData, idx) => {
-            return (
-              <ProjectCard key={projectData.id} {...projectData} />
-            )
-          })}
-        </HScrollDiv> */}
         <ProjectsSwiper projectsData={projectsData.filter(projectData => projectData.featured)} />
         <Link href={pagesData.filter((pageData => pageData.title == 'Projects'))[0].link}>
           <a className={styles.link}>
@@ -94,15 +87,9 @@ export default function Home() {
           </a>
         </Link>
       </div>
+      <KineticScene />
       <div className={styles.block}>
         <h1>New Artwork</h1>
-        {/* <HScrollDiv>
-              {projectsData.filter(projectData => projectData.featured).map((projectData, idx) => {
-                return (
-                  <ProjectCard key={projectData.id} {...projectData} />
-                )
-              })}
-            </HScrollDiv> */}
         <Link href={pagesData.filter((pageData => pageData.title == 'Art'))[0].link}>
           <a className={styles.link}>
             {pagesData.filter((pageData => pageData.title == 'Art'))[0].emoji} All artwork &rarr;

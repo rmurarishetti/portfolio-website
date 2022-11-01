@@ -1,6 +1,6 @@
 import { Color, AdditiveBlending, BackSide } from 'three'
 import { ThreeElements } from '@react-three/fiber';
-import { colors } from '../../../../helpers/format';
+import { colors } from '../../../../../helpers/format';
 
 import './shaderMaterials'
 
