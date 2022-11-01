@@ -5,6 +5,7 @@ import { useTheme } from 'next-themes';
 import styles from './GlobeScene.module.scss'
 import { useState, useEffect, useRef } from 'react';
 import { a } from '@react-spring/three'
+import { OrbitControls } from '@react-three/drei';
 
 export function GlobeScene({ homeCities, visitedCities }) {
     const [isMounted, setIsMounted] = useState(false);
@@ -16,7 +17,7 @@ export function GlobeScene({ homeCities, visitedCities }) {
 
     const themedDirectionalLightProps = {
         'dark': {
-            intensity: 5,
+            intensity: 1,
             position: [-100, -100, -100]
         },
         'light': {
@@ -27,7 +28,7 @@ export function GlobeScene({ homeCities, visitedCities }) {
 
     const themedAmbientLightProps = {
         'dark': {
-            intensity: 0.5
+            intensity: 0.4
         },
         'light': {
             intensity: 0.3
@@ -42,8 +43,7 @@ export function GlobeScene({ homeCities, visitedCities }) {
                 {...themedDirectionalLightProps[theme]}
                 lookAt={[0, 0, 0]} />
             <Globe position={[0, 0, 0]} theme={theme} radius={2.3} homeCities={homeCities} visitedCities={visitedCities} />
+            <OrbitControls enableRotate={false} maxDistance={6} minDistance={4} enablePan={false} />
         </Canvas>
     )
 }
-
-

@@ -13,6 +13,7 @@ export function Globe({ position, theme, radius, homeCities, visitedCities }) {
 
     const [hovered, setHover] = useState(false);
     const [active, setActive] = useState(false);
+
     useCursor(hovered, 'grab', 'auto')
     useCursor(active, 'grabbing', 'auto')
 
@@ -22,7 +23,7 @@ export function Globe({ position, theme, radius, homeCities, visitedCities }) {
     });
 
     const makeUrl = (file) => `./textures/${file}.jpg`;
-    const [texture, bump, spec] = useLoader(TextureLoader, [makeUrl(theme === 'light' ? 'earth' : 'earth_night'), makeUrl('earth_bump'), makeUrl('earth_spec')]);
+    const [texture, bump, spec] = useLoader(TextureLoader, [makeUrl(theme === 'light' ? 'earth_day' : 'earth_night'), makeUrl('earth_bump'), makeUrl('earth_spec')]);
 
     const HomeCityPoints = homeCities ? homeCities.map((city) => {
         return <CityPoint key={city.city} globeRadius={radius} city={city} theme={theme} type="home" globeRef={globeRef} />;
@@ -51,8 +52,8 @@ export function Globe({ position, theme, radius, homeCities, visitedCities }) {
 
     return (
         <PresentationControls
-            global// Spin globally or by dragging the model
-            cursor // Whether to toggle cursor style on drag
+            global={false}// Spin globally or by dragging the model
+            cursor={false} // Whether to toggle cursor style on drag
             snap={false} // Snap-back to center (can also be a spring config)
             speed={2} // Speed factor
             zoom={1} // Zoom factor when half the polar-max is reached
@@ -61,7 +62,7 @@ export function Globe({ position, theme, radius, homeCities, visitedCities }) {
             azimuth={[-Infinity, Infinity]} // Horizontal limits
             config={{ mass: 1, tension: 200, friction: 20 }} // Spring config
         >
-            <mesh
+            <group
                 position={position}
                 ref={groupRef}
                 onPointerDown={() => setActive(true)}
@@ -70,13 +71,13 @@ export function Globe({ position, theme, radius, homeCities, visitedCities }) {
                 onPointerOut={() => setHover(false)}>
                 <mesh ref={globeRef}>
                     <sphereGeometry attach="geometry" args={[radius, 64, 64]} />
-                    <meshPhongMaterial attach="material" map={texture} bumpMap={bump} bumpScale={0.05} specularMap={spec} specular={new Color('#909090')} shininess={5} />
+                    <meshPhongMaterial attach="material" map={texture} bumpMap={bump} bumpScale={0.05} specularMap={spec} specular={new Color('#909090')} shininess={20} />
                 </mesh>
                 <GlowSphere theme={theme} position={position} radius={1.1 * radius} />
                 {VisitedCityPoints}
                 {HomeCityPoints}
                 {HomeCityFlightArcs}
-            </mesh >
+            </group >
         </PresentationControls>
     );
 };
