@@ -8,8 +8,8 @@ export function GlowSphere({ theme, position, radius }) {
     const themedGlowProps = {
         'dark': {
             glowColor: new Color(colors['dark'].globeGlow),
-            c: 0.5,
-            p: 5
+            c: 0.4,
+            p: 4
         },
         'light': {
             glowColor: new Color(colors['light'].globeGlow),

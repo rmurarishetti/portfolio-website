@@ -394,7 +394,7 @@ export const projectsData = [
         subtitle: "Yr1 Drive Tranimission Project",
         start: new Date(2019, 0),
         end: new Date(2019, 2),
-        featured: true,
+        featured: false,
         type: "Engineering",
         tags: ["SolidWorks"],
         thumbnail: {

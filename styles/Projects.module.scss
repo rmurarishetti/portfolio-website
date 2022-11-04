@@ -1,0 +1,56 @@
+.projectPage {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 30rem;
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2.5rem;
+
+        h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        p {
+            color: var(--color-text-secondary);
+            font-size: 1.1rem;
+            font-weight: 400;
+            margin: 1rem 0;
+        }
+    }
+
+    .filterPane {
+        transform: translate(calc(-4rem - var(--filter-pane-width)), 0rem);
+        height: 0;
+        position: sticky;
+        top: 5rem;
+    }
+
+
+    .grid {
+        width: 100%;
+        display: grid;
+        grid-gap: 1.5rem;
+        grid-auto-rows: 1fr;
+        grid-template-columns: repeat(3, 1fr);
+        // margin: 1rem;
+        transition: all 0.5s;
+
+        .cardContainer {
+            display: flex;
+
+            &>div {
+                width: 100%;
+                height: 100%;
+            }
+
+            &:nth-child(1) {
+                grid-row: span 0 / 5;
+            }
+        }
+    }
+}

@@ -8,7 +8,10 @@
   --color-accent-primary: #8168ff;
   --color-accent-secondary: #4c00ff;
   --color-glass: rgba(0, 0, 0, 0.05);
-  --color-shadow: rgba(255, 255, 255, 0.15);
+  --color-shadow: rgba(255, 255, 255, 0.1);
+  --color-cancel: rgb(255, 0, 183);
+  --rgb-accent-primary: 129, 104, 255;
+  --rgb-accent-secondary: 76, 0, 255;
   --rgb-engineering: 208, 0, 255;
   --rgb-hardware: 73, 86, 255;
   --rgb-computing: 0, 255, 246;
@@ -24,6 +27,9 @@
   --color-accent-secondary: #9e8bff;
   --color-glass: rgba(0, 0, 0, 0.01);
   --color-shadow: rgba(0, 0, 0, 0.15);
+  --color-cancel: rgb(255, 122, 217);
+  --rgb-accent-primary: 128, 102, 255;
+  --rgb-accent-secondary: 158, 139, 255;
   --rgb-engineering: 136, 0, 214;
   --rgb-hardware: 0, 0, 182;
   --rgb-computing: 0, 154, 180;
@@ -35,17 +41,24 @@
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   --font-fam-code: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
     Bitstream Vera Sans Mono, Courier New, monospace;
-  --border-primary: 3px solid var(--color-border);
-  --border-secondary: 1px solid var(--color-border);
-  --border-glass: 3px solid var(--color-glass);
+  --border-width-primary: 3px;
+  --border-width-secondary: 1px;
+  --border-primary: var(--border-width-primary) solid var(--color-border);
+  --border-secondary: var(--border-width-secondary) solid var(--color-border);
+  --border-glass: var(--border-width-primary) solid var(--color-glass);
   --shadow: 0 0px 20px var(--color-shadow);
+  --shadow-small: 0 0px 3px var(--color-shadow);
+  --shadow-small-glow: 0 0px 3px var(--color-accent-primary);
+  --shadow-small-cancel: 0 0px 3px var(--color-cancel);
   --shadow-glow: 0px 0px 10px var(--color-accent-primary);
   --shadow-glow-large: 0px 0px 20px var(--color-accent-primary);
   --blur-glass: blur(30px);
+  --filter-pane-width: 15rem;
 }
 
 html {
   scroll-behavior: smooth;
+  overflow-y: scroll;
 
   &,
   body {
@@ -149,6 +162,11 @@ html {
       background: var(--color-bg-disable);
       font-size: 0.9rem;
       font-family: var(--font-fam-code);
+    }
+
+    textarea:focus,
+    input:focus {
+      outline-color: #92a8d1
     }
   }
 }

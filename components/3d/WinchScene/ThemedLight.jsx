@@ -21,7 +21,7 @@ function ThemedSpotlight() {
         intensity: 1,
     }
 
-    const themedLightProps = theme == 'dark' ? darkModeProps : lightModeProps;
+    const themedLightProps = theme == 'light' ? lightModeProps : darkModeProps;
 
     return (
         isMounted && <pointLight

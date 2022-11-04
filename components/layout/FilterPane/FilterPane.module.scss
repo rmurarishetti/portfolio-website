@@ -1,0 +1,40 @@
+.filterPane {
+    display: flex;
+    flex-direction: column;
+    width: var(--filter-pane-width);
+    // background-color: red;
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        // min-height: 1.5rem;
+
+        h3 {
+            margin: 0;
+            text-transform: capitalize;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+
+    }
+
+    .filterSection {
+        width: 100%;
+        padding-left: 0.3rem;
+        margin-top: 1rem;
+
+        h4 {
+            margin: 1rem 0rem;
+            font-size: 1rem;
+            font-weight: 300;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+        }
+    }
+}

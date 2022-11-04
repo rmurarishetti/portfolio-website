@@ -1,0 +1,26 @@
+.button {
+    user-select: none;
+    display: flex;
+    border-radius: 0.3rem;
+    padding: 0.2rem 0.5rem;
+    justify-content: center;
+    width: auto;
+    font-size: 0.7rem;
+    color: var(--color-text-secondary);
+    transition: all 0.2s;
+    text-align: center;
+
+    &.active {
+        cursor: pointer;
+        border: var(--border-secondary);
+        color: var(--color-cancel);
+        border-color: var(--color-cancel);
+        box-shadow: var(--shadow-small-cancel);
+
+        &:hover {
+            background-color: var(--color-cancel);
+            color: var(--color-text-primary);
+            box-shadow: none;
+        }
+    }
+}

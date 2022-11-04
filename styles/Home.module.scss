@@ -39,8 +39,9 @@
 
 .grid {
   display: grid;
-  grid-template-columns: auto auto;
-  gap: 1rem;
+  grid-auto-rows: 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
 }
 
 .block {

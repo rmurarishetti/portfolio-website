@@ -6,16 +6,19 @@ function ThemeToggle() {
 
     const [isMounted, setIsMounted] = useState(false);
     const { theme, setTheme } = useTheme();
+    const [themeClass, setThemeClass] = useState(theme)
 
     useEffect(() => {
         setIsMounted(true);
     }, [])
 
+    useEffect(() => {
+        setThemeClass(theme == 'dark' ? styles.dark : styles.light)
+    }, [theme])
+
     const toggleTheme = () => {
         setTheme(theme == 'dark' ? 'light' : 'dark');
     }
-
-    const themeClass = theme == 'dark' ? styles.dark : styles.light;
 
     return (
         isMounted && <div onClick={toggleTheme} className={[styles.themeToggle, themeClass].join(' ')}>

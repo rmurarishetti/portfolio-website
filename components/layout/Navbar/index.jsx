@@ -24,28 +24,30 @@ function Navbar() {
 
     return (
         <nav className={[styles.nav, nav_class].join(' ')}>
-            <MenuToggle onclick_event={toggleMenu} />
+            <div className={styles.nav_list_container}>
+                <MenuToggle onclick_event={toggleMenu} />
 
-            <Link href="/">
-                <a className={styles.logo}>
-                    RN
-                </a>
-            </Link>
+                <Link href="/">
+                    <a className={styles.logo}>
+                        Rohit Nag
+                    </a>
+                </Link>
 
-            <div className={
-                styles.nav__menu_list}>
-                {pagesData.map((page, idx) => {
-                    return (
-                        <div key={page.title} className={styles.nav__item} onClick={toggleMenu}>
-                            <NavItem link={page.link} title={page.title} active={router.asPath == page.link} />
-                        </div>
-                    )
-                })}
+                <div className={styles.nav__menu_list}>
+                    {pagesData.map((page, idx) => {
+                        return (
+                            <div key={page.title} className={styles.nav__item} onClick={toggleMenu}>
+                                <NavItem link={page.link} title={page.title} active={router.asPath == page.link} />
+                            </div>
+                        )
+                    })}
+                </div>
+
+                <div className={styles.nav__theme_toggle}>
+                    <ThemeToggle />
+                </div>
             </div>
 
-            <div className={styles.nav__theme_toggle}>
-                <ThemeToggle />
-            </div>
 
         </nav>
     )
