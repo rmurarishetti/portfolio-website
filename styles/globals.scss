@@ -19,7 +19,7 @@
 
 [data-theme='light'] {
   --color-bg: rgb(255, 255, 255);
-  --color-bg-disable: #f0f0f0;
+  --color-bg-disable: #f8f8f8;
   --color-text-primary: black;
   --color-text-secondary: #747474fd;
   --color-border: rgba(126, 126, 126, 0.2);
@@ -54,6 +54,10 @@
   --shadow-glow-large: 0px 0px 20px var(--color-accent-primary);
   --blur-glass: blur(30px);
   --filter-pane-width: 15rem;
+  --speed-fast: 0.1s;
+  --speed-medium: 0.2s;
+  --speed-slow: 0.5s;
+  --speed-extra-slow: 0.7s;
 }
 
 html {
@@ -67,7 +71,7 @@ html {
     font-family: var(--font-fam-default);
     color: var(--color-text-primary);
     background: var(--color-bg);
-    transition: background-color 0.1s;
+    transition: background-color var(--speed-fast);
 
     .container {
       padding: 0 2rem;
@@ -116,7 +120,7 @@ html {
             .swiper-pagination-bullet {
               background-color: var(--color-bg-disable);
               opacity: 1;
-              transition: width 0.2s, background-color 0.2s;
+              transition: width var(--speed-medium), background-color var(--speed-medium);
 
               &.swiper-pagination-bullet-active {
                 border-radius: 8px;
@@ -140,7 +144,7 @@ html {
     a {
       color: var(--color-accent-primary);
       text-decoration: none;
-      transition: color 0.2s;
+      transition: color var(--speed-medium);
 
       &:hover,
       &:focus,

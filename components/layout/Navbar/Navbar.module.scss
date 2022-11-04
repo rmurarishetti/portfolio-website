@@ -32,7 +32,7 @@
                 background-color: var(--color-text-secondary);
                 left: 50%;
                 transform: translate(-50%, 0%);
-                transition: all 0.2s;
+                transition: all var(--speed-medium);
             }
 
             .top_bar {
@@ -86,7 +86,7 @@
                     color: var(--color-text-secondary);
                     border-radius: 0.2rem;
                     padding: 0.3rem 0.5rem 0.3rem 0.5rem;
-                    transition: color 0.2s, background-color 0.2s;
+                    transition: color var(--speed-medium), background-color var(--speed-medium);
 
                     &:hover {
                         color: var(--color-accent-primary);

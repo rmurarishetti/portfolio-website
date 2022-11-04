@@ -5,4 +5,6 @@
     border-radius: 0.3rem;
     border: var(--border-secondary);
     box-shadow: inset var(--shadow-small);
+    background: var(--color-bg-disable);
+    transition: all var(--speed-fast);
 }

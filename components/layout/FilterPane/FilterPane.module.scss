@@ -2,13 +2,12 @@
     display: flex;
     flex-direction: column;
     width: var(--filter-pane-width);
-    // background-color: red;
 
     .header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        // min-height: 1.5rem;
+        min-height: 1.5rem;
 
         h3 {
             margin: 0;

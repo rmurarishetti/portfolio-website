@@ -7,7 +7,7 @@
     width: auto;
     font-size: 0.7rem;
     color: var(--color-text-secondary);
-    transition: all 0.2s;
+    transition: all var(--speed-medium);
     text-align: center;
 
     &.active {

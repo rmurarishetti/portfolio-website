@@ -31,6 +31,9 @@ function ProjectCard({ id, name, subtitle, start, end, featured, type, tags, thu
                         <div className={styles.typeTag}>
                             <TypeTag type={type}></TypeTag>
                         </div>
+                        <div className={styles.arrow}>
+                            &rarr;
+                        </div>
                         <div className={styles.tags}>
                             {tags.map((tag, idx) => {
                                 return (

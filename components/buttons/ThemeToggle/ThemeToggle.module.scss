@@ -20,7 +20,7 @@
 
         * {
             margin: 2px;
-            transition: font-size 0.2s;
+            transition: font-size var(--speed-medium);
         }
     }
 

@@ -8,7 +8,7 @@
     min-width: clamp(0rem, 100%, 15rem);
     background: var(--color-glass);
     cursor: pointer;
-    transition: all 0.2s;
+    transition: all var(--speed-fast);
 
     &.hidden {
         display: none;
@@ -84,6 +84,16 @@
             overflow: hidden;
             aspect-ratio: 1.5;
 
+            .arrow {
+                position: absolute;
+                margin: 0.5rem;
+                right: 0;
+                transform: translateX(2rem);
+                font-weight: 600;
+                color: var(--color-accent-primary);
+                transition: transform var(--speed-medium);
+            }
+
             .typeTag {
                 position: absolute;
                 margin: 0.5rem;
@@ -142,6 +152,12 @@
 
 
         a {
+            .thumbnail {
+                .arrow {
+                    transform: translateX(0rem);
+                }
+            }
+
             .text {
                 .title {
                     color: var(--color-accent-secondary) !important;

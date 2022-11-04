@@ -44,93 +44,114 @@ function Projects() {
         setFilterCount(count)
     }, [searchFilter, typeFilter, tagsFilter]);
 
-    const softSearchFilter = (searchTerm) => {
+    const filterHelper = (query, type) => {
+        switch (type) {
+            case 'search':
+                query = query.toLowerCase()
+                setFilteredProjects((projects) => projects.filter(projectData => {
+                    return projectData.name.toLowerCase().includes(query) || projectData.subtitle.toLowerCase().includes(query)
+                }))
+                break;
+            case 'tag':
+                setFilteredProjects((projects) => projects.filter(projectData => projectData.tags.includes(query)))
+                break;
+            case 'type':
+                setFilteredProjects((projects) => projects.filter(projectData => projectData.type === query))
+        }
+        return
+    }
+
+    const softFilterAllBySearch = (searchTerm) => {
         if (!searchTerm) {
             return
         }
-        const search = searchTerm.toLowerCase()
-        setFilteredProjects((projects) => projects.filter(projectData => {
-            return projectData.name.toLowerCase().includes(searchTerm) || projectData.subtitle.toLowerCase().includes(searchTerm)
-        }))
+        filterHelper(searchTerm, 'search')
     }
 
-    const softTagFilter = (disabledTag = null) => {
+    const softFilterAllbyTags = (enabledTag = null) => {
         for (const tag in tagsFilter) {
-            if (tagsFilter[tag] && tag !== disabledTag) {
-                setFilteredProjects((projects) => projects.filter(projectData => projectData.tags.includes(tag)))
+            if (tagsFilter[tag] && tag !== enabledTag) {
+                filterHelper(tag, 'tag')
             }
         }
     }
 
-    const softTypeFilter = (disabledType = null) => {
+    const softFilterAllByTypes = (enabledTag = null) => {
         for (const type in typeFilter) {
-            if (typeFilter[type] && type !== disabledType) {
-                setFilteredProjects((projects) => projects.filter(projectData => projectData.type === type))
-            }
-        }
-    }
+            if (typeFilter[type] && type !== enabledTag) {
+                filterHelper(type, 'type');
+            };
+        };
+    };
 
     const filterProjects = ({ searchPhrase = null, type = null, tag = null, clear = null }) => {
         if (clear) {
-            setFilteredProjects(projectsData)
-            setSearchFilter(false)
-            setTypeFilter(inititialTypesFilter)
-            setTagsFilter(inititialTagsFilter)
-            setVisibleProjects(new Set())
+            setFilteredProjects(projectsData);
+            setSearchFilter(false);
+            setTypeFilter(inititialTypesFilter);
+            setTagsFilter(inititialTagsFilter);
+            setVisibleProjects(new Set());
             return
-        }
-        if (searchPhrase) {
-            setSearchFilter(searchPhrase)
-            setFilteredProjects(projectsData)
-            softTagFilter()
-            softTypeFilter()
-            softSearchFilter(searchPhrase)
-        }
+        };
 
+        if (searchPhrase) {
+            setSearchFilter(searchPhrase);
+            setFilteredProjects(projectsData);
+            softFilterAllbyTags();
+            softFilterAllByTypes();
+            softFilterAllBySearch(searchPhrase);
+            return
+        };
+
+        // searched term cleared but there are existing tag and type filters...
         if (!searchPhrase && !tag && !type) {
-            setSearchFilter(false)
-            setFilteredProjects(projectsData)
-            softTagFilter()
-            softTypeFilter()
-        }
+            setSearchFilter(false);
+            setFilteredProjects(projectsData);
+            softFilterAllbyTags();
+            softFilterAllByTypes();
+            return
+        };
 
         if (type) {
-            let newTypeFilter = {}
+            let newTypeFilter = {};
             newTypeFilter[type] = !typeFilter[type];
             setTypeFilter(prevTypesFilterState => ({
                 ...prevTypesFilterState,
                 ...newTypeFilter,
-            }))
+            }));
             // type is disabled...
             if (!typeFilter[type]) {
-                setFilteredProjects((projects) => projects.filter(projectData => projectData.type === type))
+                filterHelper(type, 'type');
             }
             // type is enabled...
             else {
                 setFilteredProjects(projectsData);
-                softSearchFilter(searchFilter);
-                softTagFilter();
-                softTypeFilter(type);
-            }
-        }
+                softFilterAllBySearch(searchFilter);
+                softFilterAllbyTags();
+                softFilterAllByTypes(type);
+            };
+            return
+        };
+
         if (tag) {
-            let newTagFilter = {}
+            let newTagFilter = {};
             newTagFilter[tag] = !tagsFilter[tag];
             setTagsFilter(prevTagsFilterState => ({
                 ...prevTagsFilterState,
                 ...newTagFilter,
-            }))
+            }));
             // tag is disabled...
             if (!tagsFilter[tag]) {
-                setFilteredProjects((projects) => projects.filter(projectData => projectData.tags.includes(tag)))
+                filterHelper(tag, 'tag');
             }
             // tag is enabled...
             else {
                 setFilteredProjects(projectsData);
-                if (searchFilter) { softSearchFilter(searchFilter) }
-                softTypeFilter()
-                softTagFilter(tag)
-            }
+                softFilterAllBySearch(searchFilter);
+                softFilterAllByTypes();
+                softFilterAllbyTags(tag);
+            };
+            return
         }
     }
 
