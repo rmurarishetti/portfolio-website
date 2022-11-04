@@ -45,16 +45,27 @@ function Projects() {
     }, [searchFilter, typeFilter, tagsFilter]);
 
     const softSearchFilter = (searchTerm) => {
+        if (!searchTerm) {
+            return
+        }
         const search = searchTerm.toLowerCase()
         setFilteredProjects((projects) => projects.filter(projectData => {
             return projectData.name.toLowerCase().includes(searchTerm) || projectData.subtitle.toLowerCase().includes(searchTerm)
         }))
     }
 
-    const softTagFilter = () => {
+    const softTagFilter = (disabledTag = null) => {
         for (const tag in tagsFilter) {
-            if (tagsFilter[tag]) {
+            if (tagsFilter[tag] && tag !== disabledTag) {
                 setFilteredProjects((projects) => projects.filter(projectData => projectData.tags.includes(tag)))
+            }
+        }
+    }
+
+    const softTypeFilter = (disabledType = null) => {
+        for (const type in typeFilter) {
+            if (typeFilter[type] && type !== disabledType) {
+                setFilteredProjects((projects) => projects.filter(projectData => projectData.type === type))
             }
         }
     }
@@ -70,22 +81,17 @@ function Projects() {
         }
         if (searchPhrase) {
             setSearchFilter(searchPhrase)
+            setFilteredProjects(projectsData)
+            softTagFilter()
+            softTypeFilter()
             softSearchFilter(searchPhrase)
         }
 
         if (!searchPhrase && !tag && !type) {
             setSearchFilter(false)
             setFilteredProjects(projectsData)
-            for (const tag in tagsFilter) {
-                if (tagsFilter[tag]) {
-                    setFilteredProjects((projects) => projects.filter(projectData => projectData.tags.includes(tag)))
-                }
-            }
-            for (const type in typeFilter) {
-                if (typeFilter[type]) {
-                    setFilteredProjects((projects) => projects.filter(projectData => projectData.type === type))
-                }
-            }
+            softTagFilter()
+            softTypeFilter()
         }
 
         if (type) {
@@ -95,22 +101,16 @@ function Projects() {
                 ...prevTypesFilterState,
                 ...newTypeFilter,
             }))
+            // type is disabled...
             if (!typeFilter[type]) {
                 setFilteredProjects((projects) => projects.filter(projectData => projectData.type === type))
             }
+            // type is enabled...
             else {
                 setFilteredProjects(projectsData);
-                if (searchFilter) { softSearchFilter(searchFilter) }
-                for (const tag in tagsFilter) {
-                    if (tagsFilter[tag]) {
-                        setFilteredProjects((projects) => projects.filter(projectData => projectData.tags.includes(tag)))
-                    }
-                }
-                for (const typeFilter in typeFilter) {
-                    if (typeFilter[typeFilter] && type != typeFilter) {
-                        setFilteredProjects((projects) => projects.filter(projectData => projectData.type === typeFilter))
-                    }
-                }
+                softSearchFilter(searchFilter);
+                softTagFilter();
+                softTypeFilter(type);
             }
         }
         if (tag) {
@@ -120,22 +120,16 @@ function Projects() {
                 ...prevTagsFilterState,
                 ...newTagFilter,
             }))
+            // tag is disabled...
             if (!tagsFilter[tag]) {
                 setFilteredProjects((projects) => projects.filter(projectData => projectData.tags.includes(tag)))
             }
+            // tag is enabled...
             else {
                 setFilteredProjects(projectsData);
                 if (searchFilter) { softSearchFilter(searchFilter) }
-                for (const type in typeFilter) {
-                    if (typeFilter[type]) {
-                        setFilteredProjects((projects) => projects.filter(projectData => projectData.type === type))
-                    }
-                }
-                for (const tagFilter in tagsFilter) {
-                    if (tagsFilter[tagFilter] && tag != tagFilter) {
-                        setFilteredProjects((projects) => projects.filter(projectData => projectData.tags.includes(tagFilter)))
-                    }
-                }
+                softTypeFilter()
+                softTagFilter(tag)
             }
         }
     }
