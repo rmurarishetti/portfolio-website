@@ -6,3 +6,9 @@
     margin-bottom: 1rem;
     // touch-action: none;
 }
+
+@media (max-width: 800px) {
+    .scene {
+        margin-top: 2rem;
+    }
+}

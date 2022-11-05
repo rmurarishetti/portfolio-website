@@ -34,7 +34,7 @@
 
                 &.🚀 {
                     // transform: translate(4rem, -4rem);
-                    animation: land 1s ease-out 1;
+                    animation: var(--animation-land);
                 }
             }
         }
@@ -61,17 +61,17 @@
                 .emoji {
                     &.🚀 {
                         // transform: translate(4rem, -4rem);
-                        animation: takeOff var(--speed-extra-slow) ease-in both;
+                        animation: var(--animation-take-off);
                     }
 
                     &.🖌 {
-                        animation: paint var(--speed-extra-slow) ease-in-out both;
+                        animation: var(--animation-paint);
                     }
 
                     &.🖼 {
                         -webkit-transform-origin: top center;
                         transform-origin: top center;
-                        animation: swing var(--speed-extra-slow) ease both;
+                        animation: var(--animation-swing);
                     }
 
                     &.💡 {
@@ -95,76 +95,5 @@
 @media (max-width: 600px) {
     .card {
         width: auto;
-    }
-}
-
-
-@keyframes takeOff {
-    0% {
-        transform: translate(0, 0);
-    }
-
-    50% {
-        transform: translate(0.2rem, -0.2rem);
-    }
-
-    100% {
-        transform: translate(50rem, -50rem);
-    }
-}
-
-@keyframes land {
-    100% {
-        transform: translate(0, 0);
-    }
-
-    0% {
-        transform: translate(5rem, -5rem);
-    }
-}
-
-@keyframes paint {
-
-    10%,
-    90% {
-        transform: translate(-1px, 0);
-    }
-
-    20%,
-    80% {
-        transform: translate(2px, 0);
-    }
-
-    30%,
-    50%,
-    70% {
-        transform: translate(-4px, 0);
-    }
-
-    40%,
-    60% {
-        transform: translate(4px, 0);
-    }
-}
-
-@keyframes swing {
-    20% {
-        transform: rotate(15deg);
-    }
-
-    40% {
-        transform: rotate(-10deg);
-    }
-
-    60% {
-        transform: rotate(5deg);
-    }
-
-    80% {
-        transform: rotate(-5deg);
-    }
-
-    100% {
-        transform: rotate(0deg);
     }
 }

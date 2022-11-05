@@ -1,15 +1,14 @@
 import styles from './FilterPane.module.scss'
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { TagFilterToggle, ClearFilterButton } from '../../buttons';
 import { SearchBar } from '../../inputs';
 
 function FilterPane({ name, count, filterFunction, typeFilterState, tagsFilterState }) {
+    const [clearSearch, setClearSearch] = useState(false)
 
-    // const [filtersDisabled, setFiltersDisabled] = useState(!Boolean(count))
-
-    // useEffect(() => {
-    //     setFiltersDisabled(!Boolean(count))
-    // }, [count])
+    useEffect(() => {
+        setClearSearch(false)
+    }, [count])
 
     return (
         <div className={styles.filterPane}>
@@ -17,10 +16,11 @@ function FilterPane({ name, count, filterFunction, typeFilterState, tagsFilterSt
                 <h3>Filter {name}</h3>
                 <ClearFilterButton count={count} clearFilterFunction={() => {
                     filterFunction({ clear: true })
+                    setClearSearch(true)
                 }} />
             </div>
             <div className={styles.filterSection}>
-                <SearchBar filterFunction={filterFunction} />
+                <SearchBar forceClear={clearSearch} filterFunction={filterFunction} />
             </div>
             <div className={styles.filterSection}>
                 <h4>Type</h4>

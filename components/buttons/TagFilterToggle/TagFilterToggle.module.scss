@@ -25,5 +25,11 @@
         background-color: var(--color-accent-primary);
         color: var(--color-bg);
         box-shadow: var(--shadow-small-glow);
+
+        &:hover {
+            box-shadow: none;
+            opacity: 0.7;
+
+        }
     }
 }

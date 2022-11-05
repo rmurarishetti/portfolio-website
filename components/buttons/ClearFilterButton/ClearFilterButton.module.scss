@@ -9,6 +9,7 @@
     color: var(--color-text-secondary);
     transition: all var(--speed-medium);
     text-align: center;
+    border: var(--border-secondary);
 
     &.active {
         cursor: pointer;

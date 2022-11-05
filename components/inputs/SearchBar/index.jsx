@@ -1,19 +1,39 @@
 import styles from './SearchBar.module.scss'
+import { useState, useRef, useEffect } from 'react';
 
-function SearchBar({ filterFunction }) {
+function SearchBar({ filterFunction, forceClear }) {
 
-    const handleChange = (e) => {
-        filterFunction({ searchPhrase: e.target.value })
-    }
+    const inputRef = useRef(null)
+    const [message, setMessage] = useState('');
+
+    const handleChange = e => {
+        setMessage(e.target.value);
+    };
+
+    const handleClear = e => {
+        setMessage('');
+    };
+
+    useEffect(() => {
+        forceClear ? setMessage('') : null;
+    }, [forceClear]);
+
+    useEffect(() => {
+        filterFunction({ searchPhrase: message });
+    }, [message]);
 
     return (
-        <input
-            className={styles.search}
-            type="text"
-            onChange={handleChange}
-            placeholder='Title or Description...'>
+        <div className={[styles.searchBar, message ? styles.active : ''].join(' ')}>
+            <div className={styles.icon}>🔍</div>
+            <input
+                ref={inputRef}
+                type="text"
+                onChange={handleChange}
+                value={message}
+                placeholder='Title or Description...' />
+            <button onClick={handleClear}>✕</button>
 
-        </input>
+        </div>
     );
 }
 

@@ -165,7 +165,10 @@ function Projects() {
             </Head>
             <div className={styles.projectPage}>
                 <div className={styles.header}>
-                    <h1>🚀 Projects</h1>
+                    <div className={styles.title}>
+                        <div className={styles.emoji}>🚀</div>
+                        <div className={styles.text}>Projects</div>
+                    </div>
                     <p>A collection of my major projects.</p>
                 </div>
                 <div className={styles.filterPane}>
