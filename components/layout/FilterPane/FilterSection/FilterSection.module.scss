@@ -1,0 +1,103 @@
+.filterSection {
+    width: 100%;
+    // padding-left: 0.3rem;
+    margin-top: 1rem;
+    overflow: hidden;
+    transition: width var(--speed-medium);
+    border-radius: 0.3rem;
+    min-width: 4rem;
+
+    .filterSectionHeader {
+        user-select: none;
+        display: flex;
+        overflow: hidden;
+        justify-content: space-between;
+        cursor: pointer;
+        background-color: var(--color-bg);
+        z-index: 2;
+        // border-radius: 0.3rem;
+        padding: 0.4rem;
+        transition: background-color var(--speed-fast);
+
+        >div {
+            font-size: 0.9rem;
+            transition: all var(--speed-medium);
+        }
+
+        .filterSectionExpander {
+            margin-left: 0.3rem;
+        }
+
+        &:hover {
+            background-color: var(--color-bg-disable);
+
+            >div {
+                color: var(--color-text-secondary);
+            }
+        }
+    }
+
+    .tags {
+        padding: 0.4rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+        overflow: hidden;
+        transition: all var(--speed-medium);
+        // z-index: 1;
+        opacity: 1;
+    }
+
+    &.collapsed {
+        .filterSectionHeader:hover {
+            >div {
+                color: var(--color-accent-primary);
+            }
+        }
+
+        .tags {
+            padding: 0rem 0.4rem;
+            opacity: 0;
+            height: 0;
+        }
+    }
+}
+
+
+@media (max-width: 1500px) {
+    .filterSection {
+        width: 20rem;
+        margin-top: 0;
+        min-height: fit-content;
+        height: 100%;
+        border: var(--border-secondary);
+
+        .filterSectionHeader {
+            background-color: var(--color-bg-disable);
+            align-items: center;
+            padding: 0.6rem;
+
+            >div {
+                font-size: 0.8rem;
+                font-weight: 400;
+                color: var(--color-text-secondary);
+            }
+        }
+
+        .tags {
+            background-color: var(--color-bg-disable);
+        }
+
+        &.collapsed {
+            height: 100%;
+            width: 5rem;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .filterSection {
+        width: 12rem;
+        flex-grow: 1;
+    }
+}
