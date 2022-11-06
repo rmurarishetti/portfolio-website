@@ -15,7 +15,7 @@ function ProjectCard({ id, name, subtitle, start, end, featured, type, tags, thu
             tiltMaxAngleY={5}
             glareColor={featured ? `rgba(var(--rgb-${type.toLowerCase()}), 0.5)` : 'var(--color-accent-primary)'}
             glarePosition="all"
-            glareMaxOpacity={0.7}
+            glareMaxOpacity={0.3}
             glareBorderRadius={10}
             perspective={500}
             transitionSpeed={500}

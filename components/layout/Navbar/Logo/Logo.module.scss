@@ -1,0 +1,11 @@
+.navLogo {
+    padding: 5px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-text-secondary);
+
+    &:hover {
+        text-shadow: var(--shadow-glow);
+        color: var(--color-text-primary);
+    }
+}

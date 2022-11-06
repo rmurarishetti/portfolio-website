@@ -1,11 +1,9 @@
 import { Suspense, useState } from 'react'
 import { Canvas } from '@react-three/fiber'
-import * as THREE from 'three'
-import styles from './KineticScene.module.scss'
 import { PresentationControls, useCursor } from '@react-three/drei'
 import { useScrollPercentage } from 'react-scroll-percentage'
 import { MeshGrid } from './MeshGrid'
-import Row from './MeshGrid/Row'
+import styles from './KineticScene.module.scss'
 
 
 function KineticScene() {
@@ -40,7 +38,6 @@ function KineticScene() {
                         y_lim={3}
                         scroll={percentage} />
                 </PresentationControls>
-
             </Suspense>
         </Canvas>
     );

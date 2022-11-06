@@ -1,11 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useGLTF, PerspectiveCamera, useAnimations } from "@react-three/drei";
-import ThemedSpotlight from './ThemedLight';
 import { useSpring } from '@react-spring/core'
 import { a } from '@react-spring/three'
-import { Canvas, useFrame, useThree } from '@react-three/fiber'
+import { useFrame } from '@react-three/fiber'
 import { colors } from "../../../helpers/format";
-import { Object3D } from "three";
 
 function Winch(props) {
     const group = useRef();
@@ -39,7 +37,6 @@ function Winch(props) {
             ref={group}
             dispose={null}>
             <group name="set_origin">
-                <ThemedSpotlight />
                 <group
                     name="Camera">
                     <PerspectiveCamera
@@ -116,13 +113,6 @@ function Winch(props) {
                         material={materials.satin_finish_aluminum}
                     ></mesh>
                     <mesh
-                        name="winchBase_5"
-                        castShadow
-                        receiveShadow
-                        geometry={nodes.winchBase_5.geometry}
-                        material={materials["default"]}
-                    />
-                    <mesh
                         name="winchBase_6"
                         castShadow
                         receiveShadow
@@ -135,20 +125,6 @@ function Winch(props) {
                         receiveShadow
                         geometry={nodes.winchBase_7.geometry}
                         material={materials.Appearance}
-                    />
-                    <mesh
-                        name="winchBase_8"
-                        castShadow
-                        receiveShadow
-                        geometry={nodes.winchBase_8.geometry}
-                        material={materials["color(Legacy)"]}
-                    />
-                    <mesh
-                        name="winchBase_9"
-                        castShadow
-                        receiveShadow
-                        geometry={nodes.winchBase_9.geometry}
-                        material={materials.matte_rubber}
                     />
                 </group>
             </group>

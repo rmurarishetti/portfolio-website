@@ -1,7 +1,8 @@
 .filterPane {
     display: flex;
     flex-direction: column;
-    width: var(--filter-pane-width);
+    width: 100%;
+    height: fit-content;
 
     .header {
         display: flex;
@@ -21,7 +22,7 @@
 
     .filterSection {
         width: 100%;
-        padding-left: 0.3rem;
+        // padding-left: 0.3rem;
         margin-top: 1rem;
 
         h4 {
@@ -35,5 +36,11 @@
             flex-wrap: wrap;
             gap: 0.4rem;
         }
+    }
+}
+
+@media (max-width: calc(1000px + 0px)) {
+    .filterPane {
+        flex-direction: row;
     }
 }

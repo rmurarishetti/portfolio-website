@@ -1,11 +1,11 @@
 import Link from 'next/link'
-import React from 'react'
+import { useRouter } from 'next/router';
+import { useState } from 'react'
 import NavItem from './NavItem'
+import Logo from './Logo'
 import styles from './Navbar.module.scss'
 import MenuToggle from './MenuToggle'
 import { ThemeToggle } from '../../buttons'
-import { useState } from 'react'
-import { useRouter } from 'next/router';
 import { pagesData } from '../../../data/pagesData';
 
 function Navbar() {
@@ -17,33 +17,34 @@ function Navbar() {
         });
     }
 
-    let nav_class = collapsed ? styles.collapsed : styles.expanded;
-
     const router = useRouter()
 
 
     return (
-        <nav className={[styles.nav, nav_class].join(' ')}>
-            <div className={styles.nav_list_container}>
-                <MenuToggle onclick_event={toggleMenu} />
+        <nav className={[styles.navContainer, collapsed ? styles.collapsed : styles.expanded].join(' ')}>
+            <div className={styles.nav}>
+                <div className={styles.menuToggleContainer}>
+                    <MenuToggle onclick_event={toggleMenu} expanded={!collapsed} />
+                </div>
 
-                <Link href="/">
-                    <a className={styles.logo}>
-                        Rohit Nag
-                    </a>
-                </Link>
+                <div className={styles.logoContainer}>
+                    <Logo />
+                </div>
 
-                <div className={styles.nav__menu_list}>
-                    {pagesData.map((page, idx) => {
+                <div className={styles.navItems}>
+                    {pagesData.map((page) => {
                         return (
-                            <div key={page.title} className={styles.nav__item} onClick={toggleMenu}>
-                                <NavItem link={page.link} title={page.title} active={router.asPath == page.link} />
+                            <div key={page.title} onClick={toggleMenu}>
+                                <NavItem
+                                    link={page.link}
+                                    title={page.title}
+                                    active={router.asPath == page.link} />
                             </div>
                         )
                     })}
                 </div>
 
-                <div className={styles.nav__theme_toggle}>
+                <div className={styles.themeToggleContainer}>
                     <ThemeToggle />
                 </div>
             </div>

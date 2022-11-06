@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import styles from '../styles/About.module.scss';
-import { useState } from 'react';
 
 import { GlobeScene } from '../components/3d/GlobeScene';
 import { homeCitiesData } from "../data/citiesData";

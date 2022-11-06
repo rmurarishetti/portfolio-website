@@ -53,11 +53,12 @@
   --shadow-glow: 0px 0px 10px var(--color-accent-primary);
   --shadow-glow-large: 0px 0px 20px var(--color-accent-primary);
   --blur-glass: blur(30px);
-  --filter-pane-width: 15rem;
+  --filter-pane-width: 200px;
   --speed-fast: 0.1s;
   --speed-medium: 0.2s;
   --speed-slow: 0.5s;
   --speed-extra-slow: 0.7s;
+  --animation-fade-down: fadeDown var(--speed-extra-slow) ease-out 1;
   --animation-take-off: takeOff var(--speed-extra-slow) ease-in both;
   --animation-land: land 1s ease-out 1;
   --animation-paint: paint var(--speed-extra-slow) ease-in-out both;
@@ -129,11 +130,11 @@ html {
               &.swiper-pagination-bullet-active {
                 border-radius: 8px;
                 width: 24px;
-                background-color: var(--color-accent-primary);
+                background-color: var(--color-accent-secondary);
               }
 
               &:hover {
-                background-color: var(--color-accent-secondary);
+                background-color: var(--color-accent-primary);
               }
             }
           }
@@ -190,6 +191,16 @@ html {
       padding: 0;
       align-items: stretch;
     }
+  }
+}
+
+@keyframes fadeDown {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
 

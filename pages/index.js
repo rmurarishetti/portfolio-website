@@ -70,10 +70,12 @@ export default function Home() {
       </div>
 
       <div className={styles.grid}>
-        {pagesData.slice(1).map((pageData) => {
+        {pagesData.slice(1).map((pageData, i) => {
           return (
             <HomeCard
-              key={pageData.title} {...pageData} />
+              key={pageData.title}
+              animationOrder={i}
+              {...pageData} />
           )
         })}
       </div>
@@ -90,7 +92,7 @@ export default function Home() {
       <KineticScene />
       <div className={styles.block}>
         <h1>New Artwork</h1>
-        <Link href={pagesData.filter((pageData => pageData.title == 'Art'))[0].link}>
+        <Link href={pagesData.filter((pageData => pageData.title == 'Art'))[0].link} >
           <a className={styles.link}>
             {pagesData.filter((pageData => pageData.title == 'Art'))[0].emoji} All artwork &rarr;
           </a>

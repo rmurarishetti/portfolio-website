@@ -1,4 +1,4 @@
-.nav {
+.navContainer {
     position: sticky;
     top: 0;
     z-index: 20000000;
@@ -10,97 +10,30 @@
     backdrop-filter: var(--blur-glass);
     -webkit-backdrop-filter: var(--blur-glass);
 
-    .nav_list_container {
+    .nav {
         width: 100%;
         max-width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
 
-        .menu_toggle {
+        .menuToggleContainer {
             display: none;
-            position: relative;
-            width: 1.2rem;
-            border-radius: 0.2rem;
-            aspect-ratio: 1;
-
-            * {
-                position: absolute;
-                width: 70%;
-                height: 0.1rem;
-                border-radius: 0.05rem;
-                background-color: var(--color-text-secondary);
-                left: 50%;
-                transform: translate(-50%, 0%);
-                transition: all var(--speed-medium);
-            }
-
-            .top_bar {
-                top: 25%;
-            }
-
-            .bottom_bar {
-                bottom: 25%;
-            }
-
-            &:hover {
-                cursor: pointer;
-
-                * {
-                    background-color: var(--color-text-primary);
-                }
-
-                .top_bar {
-                    transform: translate(-50%, -50%);
-                }
-
-                .bottom_bar {
-                    transform: translate(-50%, 50%);
-                }
-            }
         }
 
-        .logo {
-            padding: 5px;
+        .logoContainer {
+            display: flex;
             flex: 1;
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: var(--color-text-secondary);
-
-            &:hover {
-                text-shadow: var(--shadow-glow);
-                color: var(--color-text-primary);
-            }
         }
 
-        .nav__menu_list {
+        .navItems {
             display: flex;
             flex-direction: row;
             align-items: center;
             gap: 1rem;
-
-            .nav__item {
-
-                a {
-                    font-size: 0.9rem;
-                    color: var(--color-text-secondary);
-                    border-radius: 0.2rem;
-                    padding: 0.3rem 0.5rem 0.3rem 0.5rem;
-                    transition: color var(--speed-medium), background-color var(--speed-medium);
-
-                    &:hover {
-                        color: var(--color-accent-primary);
-                        background-color: var(--color-bg-disable);
-                    }
-
-                    &.active {
-                        color: var(--color-text-primary);
-                    }
-                }
-            }
         }
 
-        .nav__theme_toggle {
+        .themeToggleContainer {
             flex: 1;
             display: flex;
             justify-content: right;
@@ -111,20 +44,19 @@
 }
 
 @media (max-width: 600px) {
-    .nav {
+    .navContainer {
         padding: 1rem;
 
-        .nav_list_container {
-            .menu_toggle {
-                z-index: 10;
+        .nav {
+            .menuToggleContainer {
                 display: flex;
             }
 
-            .logo {
+            .logoContainer {
                 display: none;
             }
 
-            .nav__menu_list {
+            .navItems {
                 background-color: var(--color-bg);
                 position: absolute;
                 max-height: 0;
@@ -142,42 +74,14 @@
 
 
         &.expanded {
-
-            .nav_list_container {
-                .menu_toggle {
-
-                    * {
-                        transform: translate(-50%, -50%);
-                    }
-
-                    .top_bar {
-                        top: 50%;
-                        rotate: 45deg;
-                        transform-origin: top left;
-                    }
-
-                    .bottom_bar {
-                        top: 50%;
-                        rotate: -45deg;
-                        transform-origin: top left;
-                    }
-
-                    &:hover {
-                        * {
-                            transform: translate(-50%, -50%);
-                        }
-                    }
-                }
-
-                .nav__menu_list {
+            .nav {
+                .navItems {
                     transform: none;
                     border-radius: 0;
                     min-height: 100vh;
                     justify-content: center;
                 }
             }
-
-
         }
     }
 }

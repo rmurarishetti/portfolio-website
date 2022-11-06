@@ -1,0 +1,25 @@
+.navItem {
+    border-radius: 0.2rem;
+    padding: 0.3rem 0.5rem;
+    transition: background-color var(--speed-medium);
+    display: flex;
+    gap: 0.5rem;
+    overflow: hidden;
+
+    >div {
+        font-size: 0.9rem;
+        color: var(--color-text-secondary);
+        transition: color var(--speed-medium);
+    }
+
+    &:hover {
+        color: var(--color-accent-primary);
+        background-color: var(--color-bg-disable);
+    }
+
+    &.active {
+        >div {
+            color: var(--color-text-primary);
+        }
+    }
+}
