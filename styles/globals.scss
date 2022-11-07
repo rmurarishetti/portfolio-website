@@ -37,8 +37,8 @@
 
 :root {
   /* global */
-  --font-fam-default: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  --font-fam-default: -apple-system, BlinkMacSystemFont, Inter, Helvetica Neue, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, sans-serif;
   --font-fam-code: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
     Bitstream Vera Sans Mono, Courier New, monospace;
   --border-width-primary: 3px;
@@ -58,7 +58,8 @@
   --speed-medium: 0.2s;
   --speed-slow: 0.5s;
   --speed-extra-slow: 0.7s;
-  --animation-fade-down: fadeDown var(--speed-extra-slow) ease-out 1;
+  --speed-stagger-delay: 200ms;
+  --animation-fade-in: fadeIn var(--speed-extra-slow) ease-out 1;
   --animation-take-off: takeOff var(--speed-extra-slow) ease-in both;
   --animation-land: land 1s ease-out 1;
   --animation-paint: paint var(--speed-extra-slow) ease-in-out both;
@@ -195,7 +196,7 @@ html {
   }
 }
 
-@keyframes fadeDown {
+@keyframes fadeIn {
   0% {
     opacity: 0;
   }

@@ -161,7 +161,6 @@ function Projects() {
             <Head>
                 <title>Rohit Nag | Projects</title>
                 <meta name="keywords" content="Engineer, Developer, Designer, Portfolio" />
-                <link rel="icon" type="image/png" href="/favicon.ico" />
             </Head>
             <div className={styles.projectPage}>
                 <div className={styles.header}>

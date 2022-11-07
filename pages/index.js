@@ -39,7 +39,6 @@ export default function Home() {
       <Head>
         <title>Rohit Nag</title>
         <meta name="keywords" content="Engineer, Developer, Designer, Portfolio" />
-        <link rel="icon" type="image/png" href="/favicon.ico" />
       </Head>
       <div className={styles.header}>
         <div className={styles.text}>

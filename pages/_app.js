@@ -3,7 +3,6 @@ import { useState, useEffect } from "react"
 import { ThemeProvider } from 'next-themes'
 import { Navbar, Footer } from '../components/layout'
 
-
 function MyApp({ Component, pageProps }) {
   const [isMounted, setIsMounted] = useState(false)
 
