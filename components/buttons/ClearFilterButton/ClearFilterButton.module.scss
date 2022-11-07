@@ -10,6 +10,7 @@
     transition: all var(--speed-medium);
     text-align: center;
     border: var(--border-secondary);
+    align-items: center;
 
     &.active {
         cursor: pointer;

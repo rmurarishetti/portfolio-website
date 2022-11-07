@@ -61,14 +61,15 @@
     .filterPane {
         flex-wrap: wrap;
         justify-content: flex-end;
+        align-items: stretch;
 
         >div {
             order: 2;
         }
 
         .header {
-            align-content: flex-end;
-            order: 1;
+            height: auto;
+            max-height: 2.2rem;
         }
 
         .searchSection {

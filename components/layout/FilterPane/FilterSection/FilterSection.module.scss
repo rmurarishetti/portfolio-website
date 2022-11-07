@@ -3,7 +3,7 @@
     // padding-left: 0.3rem;
     margin-top: 1rem;
     overflow: hidden;
-    transition: width var(--speed-medium);
+    transition: all var(--speed-medium);
     border-radius: 0.3rem;
     min-width: 4rem;
 
@@ -32,7 +32,7 @@
             background-color: var(--color-bg-disable);
 
             >div {
-                color: var(--color-text-secondary);
+                opacity: 0.5;
             }
         }
     }
@@ -50,7 +50,9 @@
 
     &.collapsed {
         .filterSectionHeader:hover {
+
             >div {
+                opacity: 1;
                 color: var(--color-accent-primary);
             }
         }
