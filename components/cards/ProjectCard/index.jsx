@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { useState, useEffect } from 'react';
 import styles from './ProjectCard.module.scss'
 import Tilt from 'react-parallax-tilt';
 import Link from 'next/link';
@@ -6,10 +7,23 @@ import { Tag, DateDiv, TypeTag } from '../../badges';
 import { projectTypeStyleClasses } from '../../../data/projectTypeStyleClasses';
 
 function ProjectCard({ id, name, subtitle, start, end, featured, type, tags, thumbnail, hidden }) {
+
+    const [mobile, setMobile] = useState(window.innerWidth < 500)
+    useEffect(() => {
+        function handleResize() {
+            setMobile(window.innerWidth < 500)
+        }
+        window.addEventListener('resize', handleResize)
+        return _ => {
+            window.removeEventListener('resize', handleResize)
+        }
+    }, [window.innerWidth])
+
+    console.log(mobile)
+
     return (
         <Tilt
             tiltReverse
-            glareEnable
             scale={1.02}
             tiltMaxAngleX={5}
             tiltMaxAngleY={5}
@@ -19,6 +33,8 @@ function ProjectCard({ id, name, subtitle, start, end, featured, type, tags, thu
             glareBorderRadius={10}
             perspective={500}
             transitionSpeed={500}
+            glareEnable
+            tiltEnable={!mobile}
             className={[styles.card, featured ? styles.featured : '', projectTypeStyleClasses(styles, type), hidden ? styles.hidden : ''].join(' ')}>
             <Link href={`/projects/${id}`}>
                 <a>

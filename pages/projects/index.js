@@ -171,7 +171,7 @@ function Projects() {
                     </div>
                     <p>A collection of my major projects.</p>
                 </div>
-                <div className={styles.filterPane}>
+                <div className={styles.filterPaneContainer}>
                     <FilterPane count={filterCount} name={'projects'} filterFunction={filterProjects} typeFilterState={typeFilter} tagsFilterState={tagsFilter} />
                 </div>
                 <div className={styles.grid}>

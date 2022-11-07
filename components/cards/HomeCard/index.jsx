@@ -3,6 +3,7 @@ import Tilt from 'react-parallax-tilt';
 import Link from 'next/link';
 
 function HomeCard({ link, title, emoji, description, animationOrder }) {
+
     return (
         <Tilt
             tiltReverse
