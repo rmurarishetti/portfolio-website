@@ -16,13 +16,14 @@ function ProjectsSwiper({ projectsData }) {
             slidesPerView={'auto'}
             pagination={{ clickable: true }}
             keyboard={{ enabled: true }}
+            initialSlide={0}
             mousewheel
             grabCursor
             rewind>
             <div className={styles.fade} />
-            {projectsData.map((projectData) => {
+            {projectsData.map((projectData, i) => {
                 return (
-                    <SwiperSlide key={projectData.id} className={styles.swiperSlide}>
+                    <SwiperSlide key={projectData.id} className={styles.swiperSlide} >
                         <ProjectCard {...projectData} />
                     </SwiperSlide>
                 )

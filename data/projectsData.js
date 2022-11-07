@@ -9,78 +9,78 @@ export const projectsData = [
         type: "Engineering",
         tags: ["Ansys", "SolidWorks", "BikeCAD", "CES Selector"],
         thumbnail: {
-            href: "/images/uniProjects/EBike/ebike_thumbnail.jpg",
+            href: "/images/projects/EBike/ebike_thumbnail.jpg",
             alt: "E-Bike Render"
         },
         media: [
             {
                 type: "image",
-                href: "/images/uniProjects/EBike/1_ebike_render.jpg",
+                href: "/images/projects/EBike/1_ebike_render.jpg",
                 alt: "E-Bike Render 1"
             },
             {
                 type: "image",
-                href: "/images/uniProjects/EBike/2_ebike_render.jpg",
+                href: "/images/projects/EBike/2_ebike_render.jpg",
                 alt: "E-Bike Render 2"
             },
             {
                 type: "image",
-                href: "/images/uniProjects/EBike/3_ebike_render.jpg",
+                href: "/images/projects/EBike/3_ebike_render.jpg",
                 alt: "E-Bike Render 3"
             },
             {
                 type: "image",
-                href: "/images/uniProjects/EBike/4_ebike_render.jpg",
+                href: "/images/projects/EBike/4_ebike_render.jpg",
                 alt: "E-Bike Render 4"
             },
             {
                 type: "image",
-                href: "/images/uniProjects/EBike/5_ebike_render.jpg",
+                href: "/images/projects/EBike/5_ebike_render.jpg",
                 alt: "E-Bike Render 5"
             },
             {
                 type: "image",
-                href: "/images/uniProjects/EBike/6_ebike_render.jpg",
+                href: "/images/projects/EBike/6_ebike_render.jpg",
                 alt: "E-Bike Render 6"
             },
             {
                 type: "image",
-                href: "/images/uniProjects/EBike/7_ebike_dimensions.jpg",
+                href: "/images/projects/EBike/7_ebike_dimensions.jpg",
                 alt: "E-Bike Dimensions"
             },
             {
                 type: "image",
-                href: "/images/uniProjects/EBike/8_ebike_materials.jpg",
+                href: "/images/projects/EBike/8_ebike_materials.jpg",
                 alt: "E-Bike Materials"
             },
             {
                 type: "image",
-                href: "/images/uniProjects/EBike/9_ebike_fea.jpg",
+                href: "/images/projects/EBike/9_ebike_fea.jpg",
                 alt: "E-Bike FEAA"
             },
             {
                 type: "image",
-                href: "/images/uniProjects/EBike/10_ebike_rearwheel.jpg",
+                href: "/images/projects/EBike/10_ebike_rearwheel.jpg",
                 alt: "E-Bike Rear Wheel"
             },
             {
                 type: "image",
-                href: "/images/uniProjects/EBike/11_ebike_welding.jpg",
+                href: "/images/projects/EBike/11_ebike_welding.jpg",
                 alt: "E-Bike Welding"
             },
             {
                 type: "image",
-                href: "/images/uniProjects/EBike/12_ebike_testsetup.jpg",
+                href: "/images/projects/EBike/12_ebike_testsetup.jpg",
                 alt: "E-Bike Test Setup"
             },
             {
                 type: "image",
-                href: "/images/uniProjects/EBike/13_ebike_locations.jpg",
+                href: "/images/projects/EBike/13_ebike_locations.jpg",
                 alt: "E-Bike Strain Gauge Locations"
             },
             {
                 type: "image",
-                href: "/images/uniProjects/EBike/14_ebike_results.jpg",
+                href: "/images/projects/EBike/14_ebike_results.jpg",
                 alt: "E-Bike Strains"
             },
         ],
@@ -132,43 +132,43 @@ export const projectsData = [
         type: "Hardware",
         tags: ["C", "PIC Microcontroller"],
         thumbnail: {
-            href: "/images/uniProjects/Buggy/buggy_thumbnail.jpg",
+            href: "/images/projects/Buggy/buggy_thumbnail.jpg",
             alt: "Mine Rescue Buggy"
         },
         media: [
             {
                 type: "image",
-                href: "/images/uniProjects/Buggy/1_buggy_functionality.jpg",
+                href: "/images/projects/Buggy/1_buggy_functionality.jpg",
                 alt: "Mine Rescue Buggy 1"
             },
             {
                 type: "image",
-                href: "/images/uniProjects/Buggy/2_buggy_colourmap.jpg",
+                href: "/images/projects/Buggy/2_buggy_colourmap.jpg",
                 alt: "Mine Rescue Buggy 2"
             },
             {
                 type: "image",
-                href: "/images/uniProjects/Buggy/3_buggy_colourlogic.jpg",
+                href: "/images/projects/Buggy/3_buggy_colourlogic.jpg",
                 alt: "Mine Rescue Buggy 3"
             },
             {
                 type: "video",
-                href: "/images/uniProjects/Buggy/4_buggy_colourcalib.mp4",
+                href: "/images/projects/Buggy/4_buggy_colourcalib.mp4",
                 alt: "Mine Rescue Buggy Video 1"
             },
             {
                 type: "video",
-                href: "/images/uniProjects/Buggy/5_buggy_turning_calib.mp4",
+                href: "/images/projects/Buggy/5_buggy_turning_calib.mp4",
                 alt: "Mine Rescue Buggy Video 2"
             },
             {
                 type: "video",
-                href: "/images/uniProjects/Buggy/6_buggy_demo.mp4",
+                href: "/images/projects/Buggy/6_buggy_demo.mp4",
                 alt: "Mine Rescue Buggy Video 3"
             },
             {
                 type: "video",
-                href: "/images/uniProjects/Buggy/7_buggy_demo.mp4",
+                href: "/images/projects/Buggy/7_buggy_demo.mp4",
                 alt: "Mine Rescue Buggy Video 4"
             },
         ],
@@ -196,48 +196,48 @@ export const projectsData = [
         type: "Engineering",
         tags: ["SolidWorks", "CES Selector"],
         thumbnail: {
-            href: "/images/uniProjects/Mobula Ray/1_mobula_render.jpg",
+            href: "/images/projects/MobulaRay/1_mobula_render.jpg",
             alt: "Mobula Ray Render 1"
         },
         media: [
             {
                 type: "image",
-                href: "/images/uniProjects/Mobula Ray/1_mobula_render.jpg",
+                href: "/images/projects/MobulaRay/1_mobula_render.jpg",
                 alt: "Mobula Ray Render 1"
             },
             {
                 type: "image",
-                href: "/images/uniProjects/Mobula Ray/2_mobula_render.jpg",
+                href: "/images/projects/MobulaRay/2_mobula_render.jpg",
                 alt: "Mobula Ray Render 2"
             },
             {
                 type: "image",
-                href: "/images/uniProjects/Mobula Ray/3_mobula_render.jpg",
+                href: "/images/projects/MobulaRay/3_mobula_render.jpg",
                 alt: "Mobula Ray Render 3"
             },
             {
                 type: "image",
-                href: "/images/uniProjects/Mobula Ray/4_mobula_render.jpg",
+                href: "/images/projects/MobulaRay/4_mobula_render.jpg",
                 alt: "Mobula Ray Render 4"
             },
             {
                 type: "image",
-                href: "/images/uniProjects/Mobula Ray/5_mobula_render.jpg",
+                href: "/images/projects/MobulaRay/5_mobula_render.jpg",
                 alt: "Mobula Ray Render 5"
             },
             {
                 type: "image",
-                href: "/images/uniProjects/Mobula Ray/6_mobula_ed.jpg",
+                href: "/images/projects/MobulaRay/6_mobula_ed.jpg",
                 alt: "Mobula Ray Engineering Drawing 1"
             },
             {
                 type: "image",
-                href: "/images/uniProjects/Mobula Ray/7_mobula_ed.jpg",
+                href: "/images/projects/MobulaRay/7_mobula_ed.jpg",
                 alt: "Mobula Ray Engineering Drawing 2"
             },
             {
                 type: "image",
-                href: "/images/uniProjects/Mobula Ray/8_mobula_group.jpg",
+                href: "/images/projects/MobulaRay/8_mobula_group.jpg",
                 alt: "Mobula Ray Group Photo"
             },
         ],
@@ -273,13 +273,13 @@ export const projectsData = [
         type: "Computing",
         tags: ["Python"],
         thumbnail: {
-            href: "/images/uniProjects/Heat Diffusion/heatmodel_thumbnail.jpg",
+            href: "/images/projects/HeatDiffusion/heatmodel_thumbnail.jpg",
             alt: "2D Heat Diffusion Graph"
         },
         media: [
             {
                 type: "video",
-                href: "/images/uniProjects/Heat Diffusion/heatmodel.mp4",
+                href: "/images/projects/HeatDiffusion/heatmodel.mp4",
                 alt: "2D Heat Diffusion Graph Animation"
             },
         ],
@@ -307,58 +307,58 @@ export const projectsData = [
         type: "Engineering",
         tags: ["SolidWorks", "Manufacturing"],
         thumbnail: {
-            href: "/images/uniProjects/Sonic/1_sonic_render.jpg",
+            href: "/images/projects/Sonic/1_sonic_render.jpg",
             alt: "SONIC Render"
         },
         media: [
             {
                 type: "image",
-                href: "/images/uniProjects/Sonic/1_sonic_render.jpg",
+                href: "/images/projects/Sonic/1_sonic_render.jpg",
                 alt: "SONIC Render 1"
             },
             {
                 type: "image",
-                href: "/images/uniProjects/Sonic/2_sonic_render.jpg",
+                href: "/images/projects/Sonic/2_sonic_render.jpg",
                 alt: "SONIC Render 2"
             },
             {
                 type: "image",
-                href: "/images/uniProjects/Sonic/3_sonic_render.jpg",
+                href: "/images/projects/Sonic/3_sonic_render.jpg",
                 alt: "SONIC Render 3"
             },
             {
                 type: "image",
-                href: "/images/uniProjects/Sonic/4_sonic_render.jpg",
+                href: "/images/projects/Sonic/4_sonic_render.jpg",
                 alt: "SONIC Render 4"
             },
             {
                 type: "image",
-                href: "/images/uniProjects/Sonic/5_sonic_ed.jpg",
+                href: "/images/projects/Sonic/5_sonic_ed.jpg",
                 alt: "SONIC Engineering Drawing 1"
             },
             {
                 type: "image",
-                href: "/images/uniProjects/Sonic/6_sonic_ed.jpg",
+                href: "/images/projects/Sonic/6_sonic_ed.jpg",
                 alt: "SONIC Engineering Drawing 2"
             },
             {
                 type: "image",
-                href: "/images/uniProjects/Sonic/7_sonic_real.jpg",
+                href: "/images/projects/Sonic/7_sonic_real.jpg",
                 alt: "SONIC Manufactured 1"
             },
             {
                 type: "image",
-                href: "/images/uniProjects/Sonic/8_sonic_real.jpg",
+                href: "/images/projects/Sonic/8_sonic_real.jpg",
                 alt: "SONIC Manufactured 2"
             },
             {
                 type: "video",
-                href: "/images/uniProjects/Sonic/9_sonic_run.mp4",
+                href: "/images/projects/Sonic/9_sonic_run.mp4",
                 alt: "SONIC Demo"
             },
             {
                 type: "image",
-                href: "/images/uniProjects/Sonic/10_sonic_me.jpg",
+                href: "/images/projects/Sonic/10_sonic_me.jpg",
                 alt: "SONIC Manufactured 3"
             },
         ],
@@ -398,23 +398,23 @@ export const projectsData = [
         type: "Engineering",
         tags: ["SolidWorks"],
         thumbnail: {
-            href: "/images/uniProjects/Lift Door/1_liftdoor.jpg",
+            href: "/images/projects/LiftDoor/1_liftdoor.jpg",
             alt: "Lift Door Tranmission Render"
         },
         media: [
             {
                 type: "image",
-                href: "/images/uniProjects/Lift Door/1_liftdoor.jpg",
+                href: "/images/projects/LiftDoor/1_liftdoor.jpg",
                 alt: "Lift Door Tranmission Render 1"
             },
             {
                 type: "image",
-                href: "/images/uniProjects/Lift Door/2_liftdoor.jpg",
+                href: "/images/projects/LiftDoor/2_liftdoor.jpg",
                 alt: "Lift Door Tranmission Render 2"
             },
             {
                 type: "image",
-                href: "/images/uniProjects/Lift Door/3_liftdoor.jpg",
+                href: "/images/projects/LiftDoor/3_liftdoor.jpg",
                 alt: "Lift Door Tranmission Render 3"
             }
         ],

@@ -1,16 +1,14 @@
-.aboutPage {
+.graphicsPage {
     display: flex;
     flex-direction: column;
     width: 100%;
     min-height: 35rem;
-    position: relative;
 
     .header {
         display: flex;
         flex-direction: column;
-        align-items: left;
+        align-items: center;
         margin-bottom: 2.5rem;
-        width: 80%;
 
         .title {
             display: flex;
@@ -18,7 +16,7 @@
             cursor: default;
 
             .emoji {
-                animation: var(--animation-paint);
+                animation: var(--animation-swing);
             }
 
             >div {
@@ -34,14 +32,5 @@
             font-weight: 400;
             margin: 1rem 0;
         }
-    }
-
-    .globe {
-        width: 110%;
-        justify-self: end;
-        aspect-ratio: 1.5;
-        background-color: none;
-        position: absolute;
-        right: -10rem;
     }
 }

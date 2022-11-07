@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import styles from '../../styles/Projects.module.scss'
 import { ProjectCard } from '../../components/cards';
 import { projectsData } from '../../data/projectsData';
-import { FilterPane } from '../../components/layout';
+import { FilterPane, DatePane } from '../../components/layout';
 
 function Projects() {
     // Get all unique tags and types and store them in objects as filtered=false state
@@ -26,6 +26,7 @@ function Projects() {
 
 
     useEffect(() => {
+        filteredProjects.sort((a, b) => b.start - a.start)
         setVisibleProjects(new Set(filteredProjects.map((project) => project.id)))
     }, [filteredProjects]);
 
@@ -172,6 +173,12 @@ function Projects() {
                 </div>
                 <div className={styles.filterPaneContainer}>
                     <FilterPane count={filterCount} name={'projects'} filterFunction={filterProjects} typeFilterState={typeFilter} tagsFilterState={tagsFilter} />
+                </div>
+                <div className={styles.datePaneContainer}>
+                    <DatePane
+                        start={filteredProjects[0] ? filteredProjects[0].end : ''}
+                        end={filteredProjects[0] ? filteredProjects[filteredProjects.length - 1].start : ''}
+                        cardCount={filteredProjects[0] ? filteredProjects.length : 1} />
                 </div>
                 <div className={styles.grid}>
                     {projectsData.map((projectData) => {

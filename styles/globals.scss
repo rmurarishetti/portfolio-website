@@ -59,7 +59,8 @@
   --speed-slow: 0.5s;
   --speed-extra-slow: 0.7s;
   --speed-stagger-delay: 200ms;
-  --animation-fade-in: fadeIn var(--speed-extra-slow) ease-out 1;
+  --animation-fade-in: fadeIn var(--speed-extra-slow) ease-out both;
+  --animation-fade-up: fadeUp var(--speed-extra-slow) ease-out both;
   --animation-take-off: takeOff var(--speed-extra-slow) ease-in both;
   --animation-land: land 1s ease-out 1;
   --animation-paint: paint var(--speed-extra-slow) ease-in-out both;
@@ -203,6 +204,18 @@ html {
 
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(5rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 

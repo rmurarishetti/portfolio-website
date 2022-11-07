@@ -1,0 +1,45 @@
+.datePane {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 0.5rem;
+    padding: 1rem 0;
+    user-select: none;
+    cursor: default;
+    transition: height var(--speed-fast);
+    max-height: 70vh;
+
+    &.long {
+        height: 40.5rem;
+    }
+
+    &.medium {
+        height: 40.5rem;
+    }
+
+    &.short {
+        height: 21rem;
+    }
+
+    >div {
+        color: var(--color-text-secondary);
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        font-size: 0.8rem;
+        pointer-events: none;
+        // opacity: 0.5;
+    }
+
+    .description {
+        opacity: 0.5;
+    }
+
+    .line {
+        width: 3px;
+        border-radius: 3px;
+        background-color: var(--color-bg-disable);
+        flex-grow: 1;
+        transition: background-color var(--speed-fast)
+    }
+}

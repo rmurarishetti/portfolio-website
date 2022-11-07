@@ -12,11 +12,19 @@ function About() {
                 <title>Rohit Nag | About</title>
                 <meta name="keywords" content="Engineer, Developer, Designer, Portfolio" />
             </Head>
-            <h1>About</h1>
-            <div className={styles.globe}>
-                <GlobeScene
-                    homeCities={homeCitiesData}
-                    visitedCities={visitedCitiesData} />
+            <div className={styles.aboutPage}>
+                <div className={styles.header}>
+                    <div className={styles.title}>
+                        <div className={styles.text}>About</div>
+                    </div>
+                    <p>Find out about my background, experience and skills.</p>
+                </div>
+
+                <div className={styles.globe}>
+                    <GlobeScene
+                        homeCities={homeCitiesData}
+                        visitedCities={visitedCitiesData} />
+                </div>
             </div>
         </>
     );
