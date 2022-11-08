@@ -1,7 +1,9 @@
 import Head from 'next/head';
-import styles from '../styles/Art.module.scss'
+import { useState } from 'react';
+import styles from '../styles/Art.module.scss';
 
 function Art() {
+    const [index, setIndex] = useState(0)
     return (
         <>
             <Head>
@@ -16,6 +18,7 @@ function Art() {
                     </div>
                     <p>A gallery of my recent art.</p>
                 </div>
+                <div className={styles.masonary}></div>
             </div>
         </>
     );

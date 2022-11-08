@@ -3,9 +3,65 @@
     font-size: 0.9rem;
     font-weight: 600;
     color: var(--color-text-secondary);
+    height: 100%;
+
+    .background {
+        height: 100%;
+        display: flex;
+        background-color: var(--color-bg-disable);
+        padding: 0.4rem;
+        border-radius: 0.4rem;
+        position: relative;
+        aspect-ratio: 1;
+
+        .text {
+            color: var(--color-text-primary);
+            transform: translateY(-0.15rem);
+            font-weight: 600;
+        }
+
+        .underline {
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            height: 0.2rem;
+            background-color: rgba(var(--rgb-accent-secondary), 0.8);
+            width: 55%;
+            margin-top: 48%;
+            border-radius: 0.2rem;
+            display: flex;
+            transition: all var(--speed-medium);
+
+            .dot {
+                height: 100%;
+                margin-left: calc(100% - 0.2rem);
+                margin-right: 0;
+                aspect-ratio: 1;
+                background-color: rgba(var(--rgb-accent-primary), 1);
+                border-radius: 0.2rem;
+                transition: margin-left var(--speed-medium);
+            }
+        }
+    }
 
     &:hover {
-        text-shadow: var(--shadow-glow);
-        color: var(--color-text-primary);
+
+        .background {
+            background-color: var(--color-bg-disable);
+
+            .text {
+                color: var(--color-accent-primary);
+            }
+
+            .underline {
+
+                .dot {
+                    margin-left: 0;
+                    margin-right: auto;
+                }
+            }
+        }
     }
 }
