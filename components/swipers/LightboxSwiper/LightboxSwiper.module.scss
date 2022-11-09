@@ -1,0 +1,24 @@
+.swiper {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+    >div {
+        max-width: 100%;
+
+        .swiperSlide {
+            max-width: 100%;
+            display: flex;
+            justify-content: center;
+            transition: opacity var(--speed-slow);
+
+            &:global(.swiper-slide) {
+                opacity: 0.2;
+
+                &:global(.swiper-slide-active) {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

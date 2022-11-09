@@ -6,7 +6,7 @@ import styles from './ArtCard.module.scss'
 import { Tag, DateDiv } from '../../badges';
 import { rgbDataURL } from '../../../helpers/format';
 
-function ArtCard({ id, title, date, mediums, image, hidden }) {
+function ArtCard({ id, index, title, date, mediums, image, hidden, setIndex, setLightbox }) {
 
     // const [mobile, setMobile] = useState(window.innerWidth < 500)
     // useEffect(() => {
@@ -21,7 +21,12 @@ function ArtCard({ id, title, date, mediums, image, hidden }) {
 
     return (
         <a className={[styles.artCard, hidden ? styles.hidden : ''].join(' ')}>
-            <div className={styles.image}>
+            <div
+                className={styles.image}
+                onClick={() => {
+                    setIndex(index)
+                    setLightbox(true)
+                }}>
                 <div className={styles.arrow}>⛶</div>
                 <Image
                     src={image.href}

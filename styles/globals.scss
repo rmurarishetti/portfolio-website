@@ -53,7 +53,8 @@
   --shadow-glow: 0px 0px 10px var(--color-accent-primary);
   --shadow-glow-large: 0px 0px 20px var(--color-accent-primary);
   --shadow-glow-extra-large: 0px 0px 80px var(--color-accent-primary);
-  --blur-glass: blur(30px);
+  --blur-glass: blur(20px);
+  --blur-glass-large: blur(200px);
   --filter-pane-width: 200px;
   --speed-fast: 0.1s;
   --speed-medium: 0.2s;
@@ -104,11 +105,11 @@ html {
         .swiper {
           max-width: 100%;
           height: auto;
-          padding-bottom: 1rem;
 
           .swiper-wrapper {
             overflow: none;
             width: fit-content;
+            padding-bottom: 2rem;
             cursor: grab;
 
             &:active {
@@ -121,7 +122,6 @@ html {
           }
 
           .swiper-pagination {
-            margin: 0;
             bottom: 0;
             z-index: 20;
 

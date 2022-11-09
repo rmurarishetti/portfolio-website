@@ -3,9 +3,11 @@ import { useState, useEffect } from 'react';
 import styles from '../styles/Art.module.scss';
 import { ArtCard } from '../components/cards';
 import { artsData } from '../data/artsData';
+import { LightboxSwiper } from '../components/swipers';
 
 function Art() {
     const [index, setIndex] = useState(0)
+    const [lightbox, setLightbox] = useState(false)
 
     const [artworks, setArtworks] = useState(artsData)
 
@@ -29,12 +31,25 @@ function Art() {
                     <p>A gallery of my recent art.</p>
                 </div>
                 <div className={styles.masonary}>
-                    {artworks.map((artData) => {
+                    {artworks.map((artData, i) => {
                         return (
-                            <ArtCard key={artData.id} {...artData} />
+                            <ArtCard key={artData.id} index={i} {...artData} setIndex={setIndex} setLightbox={setLightbox} />
                         )
                     })}
                 </div>
+                {lightbox &&
+                    <div className={styles.lightbox}>
+                        <div
+                            className={styles.exitButton}
+                            onClick={() => setLightbox(false)}>
+                            ✕
+                        </div>
+                        <LightboxSwiper
+                            artsData={artworks}
+                            initialSlide={index}
+                            setLightbox={setLightbox} />
+                    </div>
+                }
             </div>
         </>
     );

@@ -40,4 +40,34 @@
         grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
         animation: var(--animation-fade-up);
     }
+
+    .lightbox {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        padding: 4rem 0rem 2rem 1rem;
+        align-items: center;
+        // place-items: center;
+        // background-color: var(--color-bg);
+        background-color: var(--color-glass);
+        backdrop-filter: var(--blur-glass-large);
+        -webkit-backdrop-filter: var(--blur-glass-large);
+        animation: var(--animation-fade-up);
+
+        .exitButton {
+            margin-right: 1rem;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: all var(--speed-fast);
+            padding: 0.5rem;
+
+            &:hover {
+                color: var(--color-cancel)
+            }
+        }
+    }
 }
