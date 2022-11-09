@@ -1,9 +1,19 @@
 import Head from 'next/head';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styles from '../styles/Art.module.scss';
+import { ArtCard } from '../components/cards';
+import { artsData } from '../data/artsData';
 
 function Art() {
     const [index, setIndex] = useState(0)
+
+    const [artworks, setArtworks] = useState(artsData)
+
+    useEffect(() => {
+        artworks.sort((a, b) => b.date - a.date)
+    }, [artworks]);
+
+
     return (
         <>
             <Head>
@@ -18,7 +28,13 @@ function Art() {
                     </div>
                     <p>A gallery of my recent art.</p>
                 </div>
-                <div className={styles.masonary}></div>
+                <div className={styles.masonary}>
+                    {artworks.map((artData) => {
+                        return (
+                            <ArtCard key={artData.id} {...artData} />
+                        )
+                    })}
+                </div>
             </div>
         </>
     );

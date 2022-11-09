@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import React from 'react'
 import styles from './Logo.module.scss'
-import logo from '../../../../public/images/icons/favicon-32x32.png'
+import logo from '../../../../public/favicon-32x32.png'
 
 function Logo() {
     return (

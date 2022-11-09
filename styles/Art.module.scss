@@ -33,4 +33,11 @@
             margin: 1rem 0;
         }
     }
+
+    .masonary {
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+        animation: var(--animation-fade-up);
+    }
 }

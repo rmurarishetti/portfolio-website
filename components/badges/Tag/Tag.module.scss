@@ -10,4 +10,8 @@
     border-radius: 0.2rem;
     border: var(--border-secondary);
     box-shadow: var(--shadow);
+
+    &.noShadow {
+        box-shadow: none;
+    }
 }

@@ -6,7 +6,6 @@ function DatePane({ start, end, cardCount }) {
 
     let style = styles.long
     if (cardCount <= 6) {
-        console.log('jsdfhjh')
         style = styles.medium
 
         if (cardCount <= 3) {
