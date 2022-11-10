@@ -2,6 +2,11 @@
     padding-left: 5% !important;
     padding-right: 10rem !important;
 
+    &.artSwiper {
+        overflow: visible !important;
+        overflow-x: hidden;
+    }
+
     >div {
         align-items: stretch;
         margin: 1rem 0rem;

@@ -4,11 +4,9 @@ import styles from '../styles/Art.module.scss';
 import { ArtCard } from '../components/cards';
 import { artsData } from '../data/artsData';
 import { LightboxSwiper } from '../components/swipers';
+import { GalleryWLightbox } from '../components/layout';
 
 function Art() {
-    const [index, setIndex] = useState(0)
-    const [lightbox, setLightbox] = useState(false)
-
     const [artworks, setArtworks] = useState(artsData)
 
     useEffect(() => {
@@ -26,30 +24,11 @@ function Art() {
                 <div className={styles.header}>
                     <div className={styles.title}>
                         <div className={styles.emoji}>🖌️</div>
-                        <div className={styles.text}>Artwork</div>
+                        <div className={styles.text}>Art</div>
                     </div>
-                    <p>A gallery of my recent art.</p>
+                    <p>A gallery of my recent artwork.</p>
                 </div>
-                <div className={styles.masonary}>
-                    {artworks.map((artData, i) => {
-                        return (
-                            <ArtCard key={artData.id} index={i} {...artData} setIndex={setIndex} setLightbox={setLightbox} />
-                        )
-                    })}
-                </div>
-                {lightbox &&
-                    <div className={styles.lightbox}>
-                        <div
-                            className={styles.exitButton}
-                            onClick={() => setLightbox(false)}>
-                            ✕
-                        </div>
-                        <LightboxSwiper
-                            artsData={artworks}
-                            initialSlide={index}
-                            setLightbox={setLightbox} />
-                    </div>
-                }
+                <GalleryWLightbox artsData={artworks} />
             </div>
         </>
     );

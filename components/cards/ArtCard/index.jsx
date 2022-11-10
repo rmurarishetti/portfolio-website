@@ -6,27 +6,18 @@ import styles from './ArtCard.module.scss'
 import { Tag, DateDiv } from '../../badges';
 import { rgbDataURL } from '../../../helpers/format';
 
-function ArtCard({ id, index, title, date, mediums, image, hidden, setIndex, setLightbox }) {
+function ArtCard({ id, index, title, date, mediums, image, hidden, setIndex = null, setLightbox = null }) {
 
-    // const [mobile, setMobile] = useState(window.innerWidth < 500)
-    // useEffect(() => {
-    //     function handleResize() {
-    //         setMobile(window.innerWidth < 500)
-    //     }
-    //     window.addEventListener('resize', handleResize)
-    //     return _ => {
-    //         window.removeEventListener('resize', handleResize)
-    //     }
-    // }, [window.innerWidth])
+    const handleClick = () => {
+        if (setIndex) { setIndex(index) }
+        if (setLightbox) { setLightbox(true) }
+    }
 
     return (
         <a className={[styles.artCard, hidden ? styles.hidden : ''].join(' ')}>
             <div
                 className={styles.image}
-                onClick={() => {
-                    setIndex(index)
-                    setLightbox(true)
-                }}>
+                onClick={handleClick}>
                 <div className={styles.arrow}>⛶</div>
                 <Image
                     src={image.href}

@@ -54,6 +54,7 @@
   --shadow-glow-large: 0px 0px 20px var(--color-accent-primary);
   --shadow-glow-extra-large: 0px 0px 80px var(--color-accent-primary);
   --blur-glass: blur(20px);
+  --blur-glass-medium: blur(100px);
   --blur-glass-large: blur(200px);
   --filter-pane-width: 200px;
   --speed-fast: 0.1s;
@@ -90,7 +91,19 @@ html {
       align-items: center;
       height: auto;
       position: relative;
-      // margin-bottom: 5rem;
+      overflow-x: hidden;
+      margin-bottom: 5rem;
+
+      // .bgCircle {
+      //   position: fixed;
+      //   width: 15rem;
+      //   aspect-ratio: 1;
+      //   border-radius: 100%;
+      //   background-color: var(--color-accent-primary);
+      //   top: 50%;
+      //   right: 50%;
+      //   transform: translate(50%, -40%);
+      // }
 
       .main {
         padding: 2rem 0 2rem 0;
@@ -103,6 +116,7 @@ html {
         max-width: 800px;
 
         .swiper {
+          width: 100%;
           max-width: 100%;
           height: auto;
 
@@ -126,12 +140,13 @@ html {
             z-index: 20;
 
             .swiper-pagination-bullet {
-              background-color: var(--color-bg-disable);
-              opacity: 1;
-              transition: width var(--speed-medium), background-color var(--speed-medium);
+              border-radius: 10px;
+              background-color: var(--color-text-primary);
+              opacity: 0.2;
+              transition: width var(--speed-medium);
 
               &.swiper-pagination-bullet-active {
-                border-radius: 8px;
+                opacity: 1;
                 width: 24px;
                 background-color: var(--color-accent-secondary);
               }

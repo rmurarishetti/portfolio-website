@@ -13,8 +13,8 @@ export function CityPoint({ globeRadius, city, theme, type = "home", globeRef })
     const [active, setActive] = useState(false);
     useCursor(hovered, 'pointer', 'auto')
 
-
     const color = active || hovered ? colors[theme].city3d[type].active : colors[theme].city3d[type].default
+
     const size = type === "home" ? 0.04 : 0.02
     const { scale } = useSpring({ scale: hovered ? 2 : 1 })
 

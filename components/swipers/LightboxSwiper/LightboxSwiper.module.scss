@@ -10,7 +10,7 @@
             max-width: 100%;
             display: flex;
             justify-content: center;
-            transition: opacity var(--speed-slow);
+            transition: opacity var(--speed-medium);
 
             &:global(.swiper-slide) {
                 opacity: 0.2;

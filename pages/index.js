@@ -4,13 +4,16 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import TextTransition, { presets } from "react-text-transition";
 import { HomeCard } from '../components/cards';
-import { ProjectsSwiper } from '../components/swipers';
+import { ProjectsSwiper, ArtsSwiper } from '../components/swipers';
 import WinchScene from '../components/3d/WinchScene';
 import KineticScene from '../components/3d/KineticScene';
 import styles from '../styles/Home.module.scss';
 import { projectsData } from '../data/projectsData';
+import { artsData } from '../data/artsData';
 import { pagesData } from '../data/pagesData';
 import profilePic from '../public/images/profile/profile.jpg';
+import { daysDiff } from '../helpers/math';
+import { GalleryWLightbox } from '../components/layout';
 
 export default function Home() {
 
@@ -89,8 +92,12 @@ export default function Home() {
         </Link>
       </div>
       <KineticScene />
-      <div className={styles.block}>
+      <div className={[styles.block, styles.artBlock].join(' ')}>
         <h1>New Artwork</h1>
+        {/* <ArtsSwiper artsData={artsData.filter(artData => daysDiff(new Date(), artData.date) < 365)} /> */}
+        <div className={styles.galleryContainer}>
+          <GalleryWLightbox artsData={artsData.filter(artData => daysDiff(new Date(), artData.date) < 365)} />
+        </div>
         <Link href={pagesData.filter((pageData => pageData.title == 'Art'))[0].link} >
           <a className={styles.link}>
             {pagesData.filter((pageData => pageData.title == 'Art'))[0].emoji} All artwork &rarr;

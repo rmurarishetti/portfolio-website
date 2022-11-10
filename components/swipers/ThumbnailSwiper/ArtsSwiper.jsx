@@ -1,17 +1,17 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Keyboard, Pagination, Mousewheel } from 'swiper';
-import { ProjectCard } from "../../cards";
+import { ArtCard } from "../../cards";
 
-import styles from './ProjectsSwiper.module.scss'
+import styles from './ThumbnailSwiper.module.scss'
 
 import 'swiper/css/pagination';
 import 'swiper/css/mousewheel';
 import 'swiper/css';
 
-function ProjectsSwiper({ projectsData }) {
+function ArtsSwiper({ artsData }) {
     return (
         <Swiper
-            className={styles.swiper}
+            className={[styles.swiper, styles.artSwiper].join(' ')}
             modules={[Keyboard, Pagination, Mousewheel]}
             slidesPerView={'auto'}
             pagination={{ clickable: true }}
@@ -21,10 +21,10 @@ function ProjectsSwiper({ projectsData }) {
             grabCursor
             rewind>
             <div className={styles.fade} />
-            {projectsData.map((projectData, i) => {
+            {artsData.map((artData, i) => {
                 return (
-                    <SwiperSlide key={projectData.id} className={styles.swiperSlide} >
-                        <ProjectCard {...projectData} />
+                    <SwiperSlide key={artData.id} className={styles.swiperSlide} >
+                        <ArtCard {...artData} />
                     </SwiperSlide>
                 )
             })}
@@ -32,4 +32,4 @@ function ProjectsSwiper({ projectsData }) {
     );
 }
 
-export default ProjectsSwiper;
+export default ArtsSwiper;

@@ -15,6 +15,8 @@ export function GlobeScene({ homeCities, visitedCities }) {
         setIsMounted(true);
     }, [])
 
+    const correctedTheme = theme == 'system' ? 'dark' : theme
+
     const themedDirectionalLightProps = {
         'dark': {
             intensity: 1,
@@ -37,12 +39,12 @@ export function GlobeScene({ homeCities, visitedCities }) {
     return (
         isMounted && <Canvas className={styles.scene}>
             <a.ambientLight
-                {...themedAmbientLightProps[theme]}
+                {...themedAmbientLightProps[correctedTheme]}
                 position={[3, 3, 3]} />
             <a.directionalLight
-                {...themedDirectionalLightProps[theme]}
+                {...themedDirectionalLightProps[correctedTheme]}
                 lookAt={[0, 0, 0]} />
-            <Globe position={[0, 0, 0]} theme={theme} radius={2.3} homeCities={homeCities} visitedCities={visitedCities} />
+            <Globe position={[0, 0, 0]} theme={correctedTheme} radius={2.3} homeCities={homeCities} visitedCities={visitedCities} />
             <OrbitControls enableRotate={false} maxDistance={6} minDistance={4} enablePan={false} />
         </Canvas>
     )
