@@ -5,6 +5,8 @@ import { GlobeScene } from '../components/3d/GlobeScene';
 import { homeCitiesData } from "../data/citiesData";
 import { visitedCitiesData } from "../data/citiesData";
 
+import { citiesData } from "../data/citiesData";
+
 function About() {
     return (
         <>
@@ -22,8 +24,8 @@ function About() {
 
                 <div className={styles.globe}>
                     <GlobeScene
-                        homeCities={homeCitiesData}
-                        visitedCities={visitedCitiesData} />
+                        homeCities={citiesData.filter(city => city.type == 'home')}
+                        visitedCities={citiesData.filter(city => city.type == 'visited')} />
                 </div>
             </div>
         </>

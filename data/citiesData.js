@@ -1,216 +1,424 @@
-export const homeCitiesData = [
+export const citiesData = [
     {
-        city: "Bristol",
-        coordinates: [51.45379, -2.59168],
-        description: "2020: Moved for a placement year."
+        city: "Geneva",
+        country: 'Switzerland',
+        coordinates: [46.2044, 6.1432],
+        start: new Date(2022, 8),
+        type: 'visited',
     },
     {
-        city: "London",
-        coordinates: [51.5072, -0.1276],
-        description: "2018: Move to London for university."
+        city: "Lausanne",
+        country: 'Switzerland',
+        coordinates: [46.5197, 6.6323],
+        start: new Date(2022, 8),
+        type: 'visited',
     },
     {
-        city: "Doha",
-        coordinates: [25.29457, 51.51944],
-        description: "2013: Born in Qatar for high school and sixth-form."
+        city: "Lucerne",
+        country: 'Switzerland',
+        coordinates: [47.0502, 8.3093],
+        start: new Date(2022, 8),
+        type: 'visited',
     },
     {
-        city: "Bander Seri Begawan",
-        coordinates: [4.8806815, 114.92227],
-        description: "2006: Moved to Brunei for primary and middle school."
+        city: "Zurich",
+        country: 'Switzerland',
+        coordinates: [47.3769, 8.5417],
+        start: new Date(2022, 8),
+        type: 'visited',
     },
     {
-        city: "Tripoli",
-        coordinates: [32.887209, 13.191338],
-        description: "2004: Moved to Libya."
+        city: "Bern",
+        country: 'Switzerland',
+        coordinates: [46.9480, 7.4474],
+        start: new Date(2022, 8),
+        type: 'visited',
     },
     {
-        city: "Muscat",
-        coordinates: [23.585890, 58.405923],
-        description: "2001: Moved to Oman."
+        city: "Interlaken",
+        country: 'Switzerland',
+        coordinates: [46.6863, 7.8632],
+        start: new Date(2022, 8),
+        type: 'visited',
     },
     {
-        city: "Mumbai",
-        coordinates: [19.07283, 72.88261],
-        description: "2000: Moved to Mumbai."
+        city: "Sulz",
+        country: 'Switzerland',
+        coordinates: [48.3537, 8.6344],
+        start: new Date(2022, 8),
+        type: 'visited',
     },
     {
-        city: "Kolkata",
-        coordinates: [22.5726, 88.3639],
-        description: "2000: Born in Kolkata."
-    }
-]
-
-export const visitedCitiesData = [
+        city: "Basel",
+        country: 'Switzerland',
+        coordinates: [47.5596, 7.5886],
+        start: new Date(2022, 8),
+        type: 'visited',
+    },
     {
         city: "Belgrade",
+        country: 'Serbia',
         coordinates: [44.8131, 20.46326],
-        description: "2022: ."
+        start: new Date(2022, 5),
+        type: 'visited',
     },
     {
         city: "Edinburgh",
+        country: 'UK',
         coordinates: [55.95415, -3.20277],
-        description: "2022: ."
+        start: new Date(2022, 4),
+        type: 'visited',
     },
     {
         city: "Newcastle",
+        country: 'UK',
         coordinates: [54.97794, -1.61162],
-        description: "2022: ."
-    },
-    {
-        city: "Leeds",
-        coordinates: [53.79448, -1.54664],
-        description: "2022: ."
+        start: new Date(2022, 3),
+        type: 'visited',
     },
     {
         city: "Sheffield",
+        country: 'UK',
         coordinates: [53.38311, -1.46454],
-        description: "2022: ."
+        start: new Date(2022, 3),
+        type: 'visited',
     },
     {
         city: "Oxford",
+        country: 'UK',
         coordinates: [51.75629, -1.25951],
-        description: "2022: ."
+        start: new Date(2022, 1),
+        type: 'visited',
+    },
+    {
+        city: "Bristol",
+        country: 'UK',
+        coordinates: [51.45379, -2.59168],
+        start: new Date(2021, 6),
+        end: new Date(2022, 6),
+        type: 'home',
+        description: "Moved for a placement year."
+    },
+    {
+        city: "Leeds",
+        country: 'UK',
+        coordinates: [53.79448, -1.54664],
+        start: new Date(2020, 8),
+        type: 'visited',
     },
     {
         city: "Manchester",
+        country: 'UK',
         coordinates: [53.47959, -2.24874],
-        description: "2020: ."
+        start: new Date(2020, 8),
+        type: 'visited',
     },
     {
         city: "Brighton",
+        country: 'UK',
         coordinates: [50.82887, -0.13414],
-        description: "2020: ."
+        start: new Date(2019, 0),
+        type: 'visited',
     },
     {
         city: "Kathmandu",
+        country: 'Nepal',
         coordinates: [27.700769, 85.300140],
-        description: "2019: ."
+        start: new Date(2019, 6),
+        type: 'visited',
     },
     {
         city: "Pokhara",
+        country: 'Nepal',
         coordinates: [28.21223, 83.98734],
-        description: "2019: ."
+        start: new Date(2019, 6),
+        type: 'visited',
     },
     {
         city: "Mustang",
+        country: 'Nepal',
         coordinates: [28.981314, 83.85787],
-        description: "2019: ."
+        start: new Date(2019, 6),
+        type: 'visited',
+    },
+    {
+        city: "London",
+        country: 'UK',
+        coordinates: [51.5072, -0.1276],
+        start: new Date(2018, 8),
+        end: new Date(),
+        type: 'home',
+        description: "Moved for uni."
     },
     {
         city: "Kandy",
+        country: 'Sri Lanka',
         coordinates: [7.2930923, 80.63508],
-        description: "2017: ."
+        start: new Date(2016, 8),
+        type: 'visited',
     },
     {
         city: "Colombo",
+        country: 'Sri Lanka',
         coordinates: [6.938747, 79.85411],
-        description: "2017: ."
+        start: new Date(2016, 6),
+        type: 'visited',
     },
     {
         city: "Shillong",
+        country: 'India',
         coordinates: [25.57308, 91.88782],
-        description: "2016: ."
+        start: new Date(2015, 6),
+        type: 'visited',
+    },
+    {
+        city: "Guwahati",
+        country: 'India',
+        coordinates: [26.1158, 91.7086],
+        start: new Date(2015, 6),
+        type: 'visited',
     },
     {
         city: "Bokaro",
+        country: 'India',
         coordinates: [23.6892, 86.11],
-        description: "2014: ."
+        start: new Date(2015, 6),
+        type: 'visited',
     },
     {
         city: "Munich",
+        country: 'Germany',
         coordinates: [48.13641, 11.57754],
-        description: "2014: ."
+        start: new Date(2014, 8),
+        type: 'visited',
+    },
+    {
+        city: "Doha",
+        country: 'Qatar',
+        coordinates: [25.29457, 51.51944],
+        start: new Date(2013, 7),
+        end: new Date(2018, 8),
+        type: 'home',
+        description: "Stayed during high school."
+    },
+    {
+        city: "Jaipur",
+        country: 'India',
+        coordinates: [26.9124, 75.7873],
+        start: new Date(2013, 3),
+        type: 'visited',
+    },
+    {
+        city: "Udaipur",
+        country: 'India',
+        coordinates: [24.5854, 73.7125],
+        start: new Date(2013, 3),
+        type: 'visited',
     },
     {
         city: "Kuala Lumpur",
+        country: 'Malaysia',
         coordinates: [3.14777, 101.69403],
-        description: "2012: ."
-    },
-    {
-        city: "Kuching",
-        coordinates: [1.549073, 110.34417],
-        description: "2012: ."
-    },
-    {
-        city: "Langkawi",
-        coordinates: [6.373586, 99.78261],
-        description: "2012: ."
-    },
-    {
-        city: "Singapore",
-        coordinates: [1.29016, 103.852],
-        description: "2012: ."
+        start: new Date(2012, 8),
+        type: 'visited',
     },
     {
         city: "Melbourne",
+        country: 'Australia',
         coordinates: [-37.81753, 144.96715],
-        description: "2012: Visited Melbourne."
+        start: new Date(2012, 3),
+        type: 'visited',
     },
     {
         city: "Sydney",
+        country: 'Australia',
         coordinates: [-33.8696, 151.20695],
-        description: "2012: Visited Sydney."
+        start: new Date(2012, 3),
+        type: 'visited',
     },
     {
         city: "Milford Sound",
+        country: 'New Zealand',
         coordinates: [-44.608505, 167.84767],
-        description: "2012: Visited Milford Sound."
+        start: new Date(2012, 3),
+        type: 'visited',
     },
     {
         city: "Queenstown",
+        country: 'New Zealand',
         coordinates: [-45.0327, 168.658],
-        description: "2012: Visited Queenstown."
+        start: new Date(2012, 3),
+        type: 'visited',
+    },
+    {
+        city: "Ahmedabad",
+        country: 'India',
+        coordinates: [23.0225, 72.5714],
+        start: new Date(2011, 7),
+        type: 'visited',
+    },
+    {
+        city: "Daman and Diu",
+        country: 'India',
+        coordinates: [20.3974, 72.8328],
+        start: new Date(2011, 7),
+        type: 'visited',
+    },
+    {
+        city: "Kuching",
+        country: 'Malaysia',
+        coordinates: [1.549073, 110.34417],
+        start: new Date(2011, 6),
+        type: 'visited',
+    },
+    {
+        city: "Langkawi",
+        country: 'Malaysia',
+        coordinates: [6.373586, 99.78261],
+        start: new Date(2010, 6),
+        type: 'visited',
+    },
+    {
+        city: "Malacca",
+        country: 'Malaysia',
+        coordinates: [2.1896, 102.2501],
+        start: new Date(2010, 6),
+        type: 'visited',
+    },
+    {
+        city: "Singapore",
+        country: 'Singapore',
+        coordinates: [1.29016, 103.852],
+        start: new Date(2009, 5),
+        type: 'visited',
     },
     {
         city: "Paris",
+        country: 'France',
         coordinates: [48.863186, 2.339754],
-        description: "2009: ."
+        start: new Date(2010, 4),
+        type: 'visited',
     },
     {
         city: "Brussels",
+        country: 'Belgium',
         coordinates: [50.836117, 4.370607],
-        description: "2009: ."
+        start: new Date(2010, 4),
+        type: 'visited',
     },
     {
         city: "Amsterdam",
+        country: 'Netherlands',
         coordinates: [52.353218, 5.0027695],
-        description: "2009: ."
+        start: new Date(2010, 4),
+        type: 'visited',
     },
     {
         city: "The Hague",
+        country: 'Netherlands',
         coordinates: [52.0657, 4.31255],
-        description: "2009: ."
+        start: new Date(2010, 4),
+        type: 'visited',
     },
     {
         city: "Rotterdam",
+        country: 'Netherlands',
         coordinates: [51.925594, 4.485152],
-        description: "2009: ."
+        start: new Date(2010, 4),
+        type: 'visited',
     },
     {
         city: "Cologne",
+        country: 'Germany',
         coordinates: [50.9324, 6.953008],
-        description: "2009: ."
+        start: new Date(2010, 4),
+        type: 'visited',
     },
     {
         city: "Shanghai",
+        country: 'China',
         coordinates: [31.230707, 121.472916],
-        description: "2009: Visited Shanghai."
+        start: new Date(2010, 3),
+        type: 'visited',
     },
     {
         city: "Beijing",
+        country: 'China',
         coordinates: [39.904667, 116.408195],
-        description: "2009: Visited Beijing."
+        start: new Date(2010, 3),
+        type: 'visited',
+    },
+    {
+        city: "Kota Kinabalu",
+        country: 'Malaysia',
+        coordinates: [5.9804, 116.0735],
+        start: new Date(2009, 4),
+        type: 'visited',
+    },
+    {
+        city: "Miri",
+        country: 'Malaysia',
+        coordinates: [4.3995, 113.9914],
+        start: new Date(2008, 1),
+        type: 'visited',
+    },
+    {
+        city: "Panaga",
+        country: 'Brunei',
+        coordinates: [4.602037, 114.270622],
+        start: new Date(2007, 7),
+        end: new Date(2013, 6),
+        type: 'home',
+        description: "Stayed during primary and middle school."
+    },
+    {
+        city: "Tripoli",
+        country: 'Libya',
+        coordinates: [32.887209, 13.191338],
+        start: new Date(2006, 1),
+        end: new Date(2007, 6),
+        type: 'home',
+        description: "Stayed during early primary school."
     },
     {
         city: "Delhi",
+        country: 'India',
         coordinates: [28.643206, 77.11578],
-        description: "2005: ."
+        start: new Date(2004, 6),
+        type: 'visited',
     },
     {
         city: "Dubai",
+        country: 'UAE',
         coordinates: [25.20498, 55.271057],
-        description: "2002: ."
+        start: new Date(2003, 1),
+        type: 'visited',
     },
-
+    {
+        city: "Muscat",
+        country: 'Oman',
+        coordinates: [23.585890, 58.405923],
+        start: new Date(2001, 6),
+        end: new Date(2005, 11),
+        type: 'home',
+        description: "Stayed during pre-school."
+    },
+    {
+        city: "Mumbai",
+        country: 'India',
+        coordinates: [19.07283, 72.88261],
+        start: new Date(2000, 9),
+        end: new Date(2001, 5),
+        type: 'home',
+        description: "Stayed as a baby."
+    },
+    {
+        city: "Kolkata",
+        country: 'India',
+        coordinates: [22.5726, 88.3639],
+        start: new Date(2000, 6),
+        end: new Date(2000, 9),
+        type: 'home',
+        description: "Born in Kolkata."
+    },
 ]

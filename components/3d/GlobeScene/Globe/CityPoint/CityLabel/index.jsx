@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { QuadraticBezierLine } from '@react-three/drei';
 import { coordinates2cartesian } from '../../../../../../helpers/math';
 import { Html } from '@react-three/drei';
+import { DateDiv } from '../../../../../badges';
 import styles from './CityLabel.module.scss'
 
 function CityLabel({ city, color, globeRadius, globeRef }) {
@@ -29,7 +30,20 @@ function CityLabel({ city, color, globeRadius, globeRef }) {
                         borderColor: color + '20',
                         transform: `scale(${occluded ? 0.25 : 1})`
                     }}>
-                    {city.description}
+                    <div className={styles.location}>
+                        <div className={styles.city}>
+                            {city.city}
+                        </div>
+                        <div className={styles.country}>
+                            {`, ${city.country}`}
+                        </div>
+                    </div>
+                    <div className={styles.date}>
+                        <DateDiv start={city.start} end={city.end} />
+                    </div>
+                    <div className={styles.description}>
+                        {city.description}
+                    </div>
                 </div>
             </Html>
         </>

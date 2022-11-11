@@ -1,8 +1,8 @@
 .cityLabel {
     position: absolute;
-    width: clamp(3rem, 5rem, 8rem);
-    padding: 0.5rem;
-    border-radius: 0.5rem;
+    // width: clamp(3rem, 5rem, 8rem);
+    padding: 0.4rem;
+    border-radius: 0.4rem;
     font-size: 0.8rem;
     transition: all 0.2s;
     margin: -0.2rem;
@@ -15,4 +15,31 @@
     touch-action: none;
     pointer-events: none;
     user-select: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+
+    .location {
+        display: flex;
+        flex-direction: row;
+        width: max-content;
+
+        .city {
+            font-weight: 700;
+        }
+    }
+
+    .date {
+        width: max-content;
+
+        >div {
+            opacity: 0.8;
+            font-size: 0.7rem;
+        }
+    }
+
+    .description {
+        font-size: 0.7rem;
+        opacity: 0.6;
+    }
 }

@@ -58,7 +58,7 @@ export function Globe({ position, theme, radius, homeCities, visitedCities }) {
             speed={2} // Speed factor
             zoom={1} // Zoom factor when half the polar-max is reached
             rotation={[Math.PI / 6, Math.PI, 0]} // Default rotation
-            polar={[-Math.PI / 6, Math.PI / 3.5]} // Vertical limits
+            polar={[-Math.PI / 3.5, Math.PI / 10]} // Vertical limits
             azimuth={[-Infinity, Infinity]} // Horizontal limits
             config={{ mass: 1, tension: 200, friction: 20 }} // Spring config
         >
