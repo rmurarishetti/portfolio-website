@@ -10,13 +10,17 @@
             max-width: 100%;
             display: flex;
             justify-content: center;
-            transition: opacity var(--speed-medium);
+            transition: opacity var(--speed-medium), filter var(--speed-medium);
 
             &:global(.swiper-slide) {
                 opacity: 0.2;
+                filter: grayscale(100%);
+                -webkit-filter: grayscale(100%);
 
                 &:global(.swiper-slide-active) {
                     opacity: 1;
+                    filter: none;
+                    -webkit-filter: none;
                 }
             }
         }

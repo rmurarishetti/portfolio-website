@@ -22,8 +22,6 @@ function ArtCard({ id, index, title, date, mediums, image, hidden, setIndex = nu
                 <Image
                     src={image.href}
                     alt={image.alt}
-                    placeholder={blur}
-                    blurDataURL={rgbDataURL(126, 126, 126)}
                     objectFit='cover'
                     layout='fill' />
             </div>

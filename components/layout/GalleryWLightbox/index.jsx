@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ArtCard } from '../../cards';
 import { LightboxSwiper } from '../../swipers';
 import styles from './GalleryWLightbox.module.scss'
@@ -6,6 +6,11 @@ import styles from './GalleryWLightbox.module.scss'
 function GalleryWLightbox({ artsData }) {
     const [index, setIndex] = useState(0)
     const [lightbox, setLightbox] = useState(false)
+    const [lightboxTransparent, setLightboxTransparent] = useState(false)
+
+    useEffect(() => {
+        setLightboxTransparent(false)
+    }, [lightbox])
 
     return (
         <>
@@ -17,9 +22,11 @@ function GalleryWLightbox({ artsData }) {
                 })}
             </div>
             {lightbox &&
-                <div className={styles.lightbox}>
+                <div className={[styles.lightbox, lightboxTransparent ? styles.transparentMode : ''].join(' ')}>
                     <div
                         className={styles.exitButton}
+                        onPointerEnter={() => setLightboxTransparent(true)}
+                        onPointerLeave={() => setLightboxTransparent(false)}
                         onClick={() => setLightbox(false)}>
                         ✕
                     </div>

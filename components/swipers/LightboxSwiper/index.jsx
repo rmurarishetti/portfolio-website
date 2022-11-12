@@ -19,7 +19,7 @@ function LightboxSwiper({ artsData, initialSlide = 0, setLightbox, onClick }) {
         return _ => {
             window.removeEventListener('resize', handleResize)
         }
-    }, [window.innerWidth])
+    }, [])
 
     return (
         <Swiper

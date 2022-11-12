@@ -41,8 +41,6 @@ function ProjectCard({ id, name, subtitle, start, end, featured, type, tags, thu
                         <Image
                             src={thumbnail.href}
                             alt={thumbnail.alt}
-                            placeholder={blur}
-                            blurDataURL={rgbDataURL(126, 126, 126)}
                             objectFit='cover'
                             layout='fill' />
                         <div className={styles.typeTag}>
