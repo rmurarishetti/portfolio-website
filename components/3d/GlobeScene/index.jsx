@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import { Suspense } from 'react';
 import { Canvas } from "@react-three/fiber";
 import { Globe } from './Globe';
 import { useTheme } from 'next-themes';
@@ -6,14 +7,10 @@ import styles from './GlobeScene.module.scss'
 import { useState, useEffect, useRef } from 'react';
 import { a } from '@react-spring/three'
 import { OrbitControls } from '@react-three/drei';
+import { GlowSphere } from './Globe/GlowSphere';
 
 export function GlobeScene({ homeCities, visitedCities }) {
-    const [isMounted, setIsMounted] = useState(false);
     const { theme, setTheme } = useTheme();
-
-    useEffect(() => {
-        setIsMounted(true);
-    }, [])
 
     const correctedTheme = theme == 'system' ? 'dark' : theme
 
@@ -37,15 +34,23 @@ export function GlobeScene({ homeCities, visitedCities }) {
         }
     }
     return (
-        isMounted && <Canvas className={styles.scene}>
-            <a.ambientLight
-                {...themedAmbientLightProps[correctedTheme]}
-                position={[3, 3, 3]} />
-            <a.directionalLight
-                {...themedDirectionalLightProps[correctedTheme]}
-                lookAt={[0, 0, 0]} />
-            <Globe position={[0, 0, 0]} theme={correctedTheme} radius={2.3} homeCities={homeCities} visitedCities={visitedCities} />
-            <OrbitControls enableRotate={false} maxDistance={6} minDistance={4} enablePan={false} />
-        </Canvas>
+        <Suspense fallback={null}>
+            <Canvas className={styles.scene}>
+                <a.ambientLight
+                    {...themedAmbientLightProps[correctedTheme]}
+                    position={[3, 3, 3]} />
+                <a.directionalLight
+                    {...themedDirectionalLightProps[correctedTheme]}
+                    lookAt={[0, 0, 0]} />
+                <Suspense
+                    fallback={
+                        <mesh>
+                            <sphereGeometry attach="geometry" args={[2.3, 64, 64]} />
+                            <meshStandardMaterial color={theme == 'light' ? '#85bbce' : '#03071d'} attach="material" />
+                        </mesh>}>
+                    <Globe position={[0, 0, 0]} theme={correctedTheme} radius={2.3} homeCities={homeCities} visitedCities={visitedCities} />
+                </Suspense>
+            </Canvas>
+        </Suspense>
     )
 }

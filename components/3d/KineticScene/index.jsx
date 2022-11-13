@@ -18,6 +18,7 @@ function KineticScene() {
     useCursor(active, 'grabbing', 'auto')
     return (
         <Canvas
+            frameloop="demand"
             ref={scrolRef}
             onPointerDown={() => setActive(true)}
             onPointerLeave={() => setActive(false)}

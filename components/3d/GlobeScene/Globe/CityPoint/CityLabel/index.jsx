@@ -35,7 +35,7 @@ function CityLabel({ city, color, globeRadius, globeRef }) {
                             {city.city}
                         </div>
                         <div className={styles.country}>
-                            {`, ${city.country}`}
+                            {city.country}
                         </div>
                     </div>
                     <div className={styles.date}>

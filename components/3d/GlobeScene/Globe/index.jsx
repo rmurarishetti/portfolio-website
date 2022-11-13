@@ -1,13 +1,25 @@
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect, Suspense } from 'react';
 import { ThreeElements, useFrame, useLoader } from '@react-three/fiber';
 import { TextureLoader } from 'three/src/loaders/TextureLoader'
 import { Color, Mesh } from 'three'
-import { PresentationControls, useCursor } from '@react-three/drei'
+import { PresentationControls, useCursor, OrbitControls } from '@react-three/drei'
 import { GlowSphere } from './GlowSphere';
 import { CityPoint } from './CityPoint';
 import { FlightArc } from './FlightArc';
 
 export function Globe({ position, theme, radius, homeCities, visitedCities }) {
+    const [mobile, setMobile] = useState(window.innerWidth < 500)
+    useEffect(() => {
+        function handleResize() {
+            setMobile(window.innerWidth < 500)
+        }
+        window.addEventListener('resize', handleResize)
+        return _ => {
+            window.removeEventListener('resize', handleResize)
+        }
+    }, [])
+
+
     const groupRef = useRef(null);
     const globeRef = useRef(null);
 
@@ -55,11 +67,8 @@ export function Globe({ position, theme, radius, homeCities, visitedCities }) {
             global={false}// Spin globally or by dragging the model
             cursor={false} // Whether to toggle cursor style on drag
             snap={false} // Snap-back to center (can also be a spring config)
-            speed={2} // Speed factor
-            zoom={1} // Zoom factor when half the polar-max is reached
             rotation={[Math.PI / 6, Math.PI, 0]} // Default rotation
             polar={[-Math.PI / 3.5, Math.PI / 10]} // Vertical limits
-            azimuth={[-Infinity, Infinity]} // Horizontal limits
             config={{ mass: 1, tension: 200, friction: 20 }} // Spring config
         >
             <group
@@ -71,13 +80,16 @@ export function Globe({ position, theme, radius, homeCities, visitedCities }) {
                 onPointerOut={() => setHover(false)}>
                 <mesh ref={globeRef}>
                     <sphereGeometry attach="geometry" args={[radius, 64, 64]} />
-                    <meshPhongMaterial attach="material" map={texture} bumpMap={bump} bumpScale={0.05} specularMap={spec} specular={new Color('#909090')} shininess={20} />
+                    <Suspense fallback={<meshStandardMaterial color={theme == 'light' ? '#85bbce' : '#03071d'} attach="material" />}>
+                        <meshPhongMaterial attach="material" map={texture} bumpMap={bump} bumpScale={0.05} specularMap={spec} specular={new Color('#909090')} shininess={20} />
+                    </Suspense>
                 </mesh>
                 <GlowSphere theme={theme} position={position} radius={1.1 * radius} />
                 {VisitedCityPoints}
                 {HomeCityPoints}
                 {HomeCityFlightArcs}
             </group >
+            <OrbitControls enabled={hovered || mobile} enableRotate={false} maxDistance={5} minDistance={4} enablePan={false} />
         </PresentationControls>
     );
 };

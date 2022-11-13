@@ -15,7 +15,7 @@ export function CityPoint({ globeRadius, city, theme, type = "home", globeRef })
 
     const color = active || hovered ? colors[theme].city3d[type].active : colors[theme].city3d[type].default
 
-    const size = type === "home" ? 0.04 : 0.02
+    const size = type === "home" ? 0.03 : 0.02
     const { scale } = useSpring({ scale: hovered ? 2 : 1 })
 
     return (
@@ -31,8 +31,7 @@ export function CityPoint({ globeRadius, city, theme, type = "home", globeRef })
                 <meshStandardMaterial
                     color={color}
                     emissive={color}
-                    emissiveIntensity={1}
-                    roughness={1} />
+                    emissiveIntensity={1} />
             </animated.mesh>
             {(hovered || active) &&
                 <CityLabel

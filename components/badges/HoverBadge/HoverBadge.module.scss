@@ -1,0 +1,43 @@
+.text {
+    color: var(--color-accent-primary);
+    cursor: help;
+    font-size: inherit;
+    line-height: inherit;
+    // display: inline-block;
+    display: inline;
+    position: relative;
+    overflow: hidden;
+    transition: color var(--speed-fast);
+
+    .hoverText {
+        display: inline-block;
+        white-space: nowrap;
+        color: var(--color-accent-primary);
+        border-radius: 0.2rem;
+        padding: 0.2rem 0.4rem;
+        background-color: var(--color-bg);
+        box-shadow: var(--shadow-small-glow);
+        border: var(--border-secondary);
+
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+        transition: all var(--speed-fast);
+        z-index: 1;
+
+        pointer-events: none;
+
+    }
+
+    &:hover,
+    &:active {
+        color: var(--color-accent-secondary);
+        overflow: visible;
+
+        .hoverText {
+            opacity: 1;
+            transform: translateY(-1.2rem);
+        }
+    }
+}

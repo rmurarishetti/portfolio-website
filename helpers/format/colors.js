@@ -30,7 +30,7 @@ export const colors = {
         flightArc: '#622DDE',
         city3d: {
             'home': { default: '#622DDE', active: '#1900FF' },
-            'visited': { default: '#AE00FF', active: '#0059FF' }
+            'visited': { default: '#42277D', active: '#0059FF' }
         }
     },
     'default': {

@@ -25,7 +25,7 @@ export const pagesData = [
     },
     {
         title: "About",
-        emoji: "💡",
+        emoji: "👋",
         description: "Learn about my background, experiences and skills.",
         link: "/about"
     }

@@ -13,18 +13,20 @@ function WinchScene() {
         threshold: 0,
     })
     return (
-        <Canvas
-            ref={scrolRef}
-            className={styles.scene}
-            dpr={[1, 2]}
-            shadows>
-            {/* <axesHelper args={[1]} /> */}
-            <Suspense fallback={null} >
-                <directionalLight position={[0, -0.01, -0.005]} color={'#FFFFFF'} intensity={1} />
-                <ThemedSpotlight />
-                <Winch scale={0.02} position={[0, 0, 0]} scroll={percentage} />
-            </Suspense>
-        </Canvas>
+        <Suspense fallback={<div className={styles.fallback}>Loading..</div>}>
+            <Canvas
+                ref={scrolRef}
+                className={styles.scene}
+                dpr={[1, 2]}
+                shadows>
+                {/* <axesHelper args={[1]} /> */}
+                <Suspense fallback={null} >
+                    <directionalLight position={[0, -0.01, -0.005]} color={'#FFFFFF'} intensity={1} />
+                    <ThemedSpotlight />
+                    <Winch scale={0.02} position={[0, 0, 0]} scroll={percentage} />
+                </Suspense>
+            </Canvas>
+        </Suspense>
     );
 }
 
