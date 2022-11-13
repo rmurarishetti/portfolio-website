@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect, Suspense } from 'react';
-import { ThreeElements, useFrame, useLoader } from '@react-three/fiber';
+import { useFrame, useLoader } from '@react-three/fiber';
 import { TextureLoader } from 'three/src/loaders/TextureLoader'
-import { Color, Mesh } from 'three'
+import { Color } from 'three'
 import { PresentationControls, useCursor, OrbitControls } from '@react-three/drei'
 import { GlowSphere } from './GlowSphere';
 import { CityPoint } from './CityPoint';
@@ -81,7 +81,7 @@ export function Globe({ position, theme, radius, homeCities, visitedCities }) {
                 <mesh ref={globeRef}>
                     <sphereGeometry attach="geometry" args={[radius, 64, 64]} />
                     <Suspense fallback={<meshStandardMaterial color={theme == 'light' ? '#85bbce' : '#03071d'} attach="material" />}>
-                        <meshPhongMaterial attach="material" map={texture} bumpMap={bump} bumpScale={0.05} specularMap={spec} specular={new Color('#909090')} shininess={20} />
+                        <meshPhongMaterial attach="material" map={texture} bumpMap={bump} bumpScale={0.03} specularMap={spec} specular={new Color('#7300FF')} shininess={10} />
                     </Suspense>
                 </mesh>
                 <GlowSphere theme={theme} position={position} radius={1.1 * radius} />

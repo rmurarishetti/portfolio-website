@@ -4,7 +4,7 @@
     padding: 0.4rem;
     border-radius: 0.4rem;
     font-size: 0.8rem;
-    transition: all 0.2s;
+    transition: all var(--speed-medium);
     margin: -0.2rem;
 
     border-width: 2px;
@@ -12,18 +12,30 @@
     box-shadow: var(--shadow);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    touch-action: none;
-    pointer-events: none;
+    // touch-action: none;
+    // pointer-events: none;
+    cursor: zoom-out;
     user-select: none;
     display: flex;
     flex-direction: column;
     gap: 0.1rem;
+    transform-origin: top left;
+
+    &:hover {
+        scale: 0.8;
+    }
 
     .location {
         display: flex;
         flex-direction: row;
+        flex-wrap: nowrap;
         width: max-content;
         gap: 0.3rem;
+        align-items: center;
+
+        > {
+            display: inline;
+        }
 
         .city {
             font-weight: 700;

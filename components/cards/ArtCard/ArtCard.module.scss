@@ -26,21 +26,25 @@
             position: absolute;
             margin: 0.4rem;
             right: 0;
-            transform: translateX(2rem);
+            bottom: 0;
+            transform: translateY(2rem);
             font-weight: 600;
-            color: var(--color-accent-secondary);
+            color: var(--color-text-primary);
             transition: transform var(--speed-medium);
+            text-shadow: var(--shadow-glow-small);
+            // transition-delay: var(--speed-medium);
             z-index: 4;
         }
 
         &:hover {
-            scale: 1.02;
+            // scale: 1.02;
             z-index: 2;
             box-shadow: var(--shadow-glow-extra-large);
-            transform: translate(0, -0.2rem);
+            transform: translate(0, -0.5rem);
 
             .arrow {
-                transform: translateX(0rem);
+                transform: translateY(0rem);
+                transition-delay: var(--speed-medium);
             }
         }
     }

@@ -4,8 +4,7 @@
     border: var(--border-primary);
     border-radius: 1rem;
     background: var(--color-glass);
-    border: var(--border-primary);
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-small);
     backdrop-filter: blur(10.8px);
     -webkit-backdrop-filter: blur(10.8px);
     margin: 1rem;
@@ -16,6 +15,7 @@
     animation-delay: calc(var(--animation-order) * var(--speed-stagger-delay));
     animation-fill-mode: both;
     animation-timing-function: ease-in-out;
+    transition: all var(--speed-medium);
 
     a {
         color: inherit;
@@ -34,14 +34,12 @@
             >div {
                 font-size: 1.5rem;
                 font-weight: 700;
-                transition: all var(--speed-fast);
+                transition: all var(--speed-medium);
             }
 
             .emoji {
-                transition: all var(--speed-slow);
 
                 &.🚀 {
-                    // transform: translate(4rem, -4rem);
                     animation: var(--animation-land);
                 }
             }
@@ -59,8 +57,7 @@
     &:hover,
     &:focus,
     &:active {
-        // box-shadow: var(--shadow-glow);
-        box-shadow: none;
+        box-shadow: var(--shadow-glow);
         color: var(--color-accent-primary);
         border-color: var(--color-accent-primary);
 

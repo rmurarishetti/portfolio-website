@@ -8,7 +8,7 @@
     min-width: clamp(0rem, 100%, 15rem);
     background: var(--color-glass);
     cursor: pointer;
-    transition: all var(--speed-fast);
+    transition: all var(--speed-medium);
 
     &.hidden {
         display: none;

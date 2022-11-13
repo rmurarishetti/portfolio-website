@@ -13,8 +13,8 @@ export function GlowSphere({ theme, position, radius }) {
         },
         'light': {
             glowColor: new Color(colors['light'].globeGlow),
-            c: 0.5,
-            p: 4
+            c: 0.3,
+            p: 2
         }
     }
 

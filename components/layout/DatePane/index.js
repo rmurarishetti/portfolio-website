@@ -1,8 +1,7 @@
 import styles from './DatePane.module.scss'
+import { DateDiv } from '../../badges';
+
 function DatePane({ start, end, cardCount }) {
-    const options = { year: '2-digit', month: 'short' };
-    const startString = start instanceof Date ? start.toLocaleDateString("en-US", options) : '';
-    const endString = end instanceof Date ? end.toLocaleDateString("en-US", options) : '';
 
     let style = styles.long
     if (cardCount <= 6) {
@@ -13,14 +12,14 @@ function DatePane({ start, end, cardCount }) {
         }
     }
 
-    const description = (startString || endString) ? `Showing ${cardCount} projects between:` : 'No projects found.'
+    const description = (start || end) ? `Showing ${cardCount} projects between:` : 'No projects found.'
 
     return (
         <div className={[styles.datePane, style].join(' ')}>
             <div className={styles.description}>{description}</div>
-            <div className={styles.start}>{startString}</div>
-            {(startString || endString) && <div className={styles.line}></div>}
-            <div className={styles.end}>{endString}</div>
+            {start && <div className={styles.start}>{<DateDiv start={start} />}</div>}
+            {(start || end) && <div className={styles.line}></div>}
+            {end && <div className={styles.end}>{<DateDiv start={end} />}</div>}
         </div>
     );
 }

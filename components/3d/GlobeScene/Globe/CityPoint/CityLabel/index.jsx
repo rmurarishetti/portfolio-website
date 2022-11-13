@@ -5,7 +5,7 @@ import { Html } from '@react-three/drei';
 import { DateDiv } from '../../../../../badges';
 import styles from './CityLabel.module.scss'
 
-function CityLabel({ city, color, globeRadius, globeRef }) {
+function CityLabel({ city, color, globeRadius, globeRef, onClick }) {
     const [occluded, occlude] = useState()
 
     const position = coordinates2cartesian(globeRadius, city.coordinates)
@@ -23,7 +23,9 @@ function CityLabel({ city, color, globeRadius, globeRef }) {
                 position={descriptionPosition}
                 occlude={[globeRef]}
                 onOcclude={occlude}>
-                <div className={styles.cityLabel}
+                <div
+                    onClick={onClick}
+                    className={styles.cityLabel}
                     style={{
                         opacity: occluded ? 0 : 1,
                         backgroundColor: color + '10',

@@ -11,7 +11,7 @@ import 'swiper/css';
 function ProjectsSwiper({ projectsData }) {
     return (
         <Swiper
-            className={styles.swiper}
+            className={[styles.swiper, styles.projectSwiper].join(' ')}
             modules={[Keyboard, Pagination, Mousewheel]}
             slidesPerView={'auto'}
             pagination={{ clickable: true }}

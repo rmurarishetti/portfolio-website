@@ -1,12 +1,8 @@
 import Image from 'next/image';
-import Link from 'next/link';
-import { useState, useEffect } from 'react';
-import Tilt from 'react-parallax-tilt';
 import styles from './ArtCard.module.scss'
 import { Tag, DateDiv } from '../../badges';
-import { rgbDataURL } from '../../../helpers/format';
 
-function ArtCard({ id, index, title, date, mediums, image, hidden, setIndex = null, setLightbox = null }) {
+function ArtCard({ index, title, date, mediums, image, hidden, setIndex = null, setLightbox = null }) {
 
     const handleClick = () => {
         if (setIndex) { setIndex(index) }
@@ -18,7 +14,7 @@ function ArtCard({ id, index, title, date, mediums, image, hidden, setIndex = nu
             <div
                 className={styles.image}
                 onClick={handleClick}>
-                <div className={styles.arrow}>⛶</div>
+                <div className={styles.arrow}>&uarr;</div>
                 <Image
                     src={image.href}
                     alt={image.alt}

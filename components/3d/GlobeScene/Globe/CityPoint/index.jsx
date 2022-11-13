@@ -38,7 +38,8 @@ export function CityPoint({ globeRadius, city, theme, type = "home", globeRef })
                     city={city}
                     color={color}
                     globeRadius={globeRadius}
-                    globeRef={globeRef} />}
+                    globeRef={globeRef}
+                    onClick={() => setActive(false)} />}
         </>
     )
 }
