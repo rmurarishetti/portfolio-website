@@ -51,6 +51,11 @@
   margin-bottom: 3rem;
   position: relative;
 
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
   .link {
     text-align: right;
   }
@@ -83,10 +88,11 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 550px) {
 
   .grid {
     display: flex;
+    align-self: stretch;
     flex-direction: column;
     padding: 0 0.5rem;
 

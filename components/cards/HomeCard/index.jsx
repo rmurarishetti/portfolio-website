@@ -2,7 +2,7 @@ import styles from './HomeCard.module.scss'
 import Tilt from 'react-parallax-tilt';
 import Link from 'next/link';
 
-function HomeCard({ link, title, emoji, description, animationOrder }) {
+function HomeCard({ link, title, emoji, description }) {
 
     return (
         <Tilt
@@ -16,7 +16,7 @@ function HomeCard({ link, title, emoji, description, animationOrder }) {
             glareBorderRadius={10}
             glarePosition="all"
             transitionSpeed={500}
-            className={styles.card} style={{ '--animation-order': `${animationOrder}` }}>
+            className={styles.card}>
             <Link href={link}>
                 <a>
                     {/* <h2>{emoji} {title} &rarr;</h2> */}

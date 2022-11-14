@@ -23,7 +23,18 @@ function WinchScene() {
                 <Suspense fallback={null} >
                     <directionalLight position={[0, -0.01, -0.005]} color={'#FFFFFF'} intensity={1} />
                     <ThemedSpotlight />
-                    <Winch scale={0.02} position={[0, 0, 0]} scroll={percentage} />
+                    <Suspense
+                        fallback={
+                            <>
+                                <ambientLight />
+                                <mesh position={[0, 2.6, 0]}>
+                                    <boxGeometry args={[7.2, 1.6, 0.2]} />
+                                    <meshStandardMaterial color={'#555555'} opacity={0.2} transparent />
+                                </mesh>
+                            </>
+                        } >
+                        <Winch scale={0.02} position={[0, 0, 0]} scroll={percentage} />
+                    </Suspense>
                 </Suspense>
             </Canvas>
         </Suspense>
