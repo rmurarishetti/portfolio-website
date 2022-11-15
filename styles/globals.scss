@@ -1,21 +1,24 @@
 :root {
   /* Your default theme */
-  --color-bg: rgb(10, 10, 10);
+  --color-bg: rgb(15, 10, 20);
   --color-bg-disable: #131313;
   --color-text-primary: #ffffff;
   --color-text-secondary: #b1b1b1;
-  --color-border: rgba(126, 126, 126, 0.2);
+  --color-border: rgba(255, 255, 255, 0.05);
   --color-emoji: #ffcb4c;
   --color-accent-primary: #8168ff;
   --color-accent-secondary: #4c00ff;
   --color-glass: rgba(0, 0, 0, 0.1);
-  --color-shadow: rgba(255, 255, 255, 0.1);
+  --color-shadow: rgba(0, 0, 0, 0.9);
   --color-cancel: rgba(255, 48, 196, 0.7);
   --rgb-accent-primary: 129, 104, 255;
   --rgb-accent-secondary: 76, 0, 255;
-  --rgb-engineering: 208, 0, 255;
-  --rgb-hardware: 73, 86, 255;
-  --rgb-computing: 0, 255, 246;
+  --color-engineering: rgb(199, 68, 255);
+  --color-hardware: rgb(121, 106, 255);
+  --color-computing: rgb(0, 174, 218);
+  --rgb-engineering: 120, 0, 150;
+  --rgb-hardware: 50, 50, 150;
+  --rgb-computing: 0, 100, 150;
 }
 
 [data-theme='light'] {
@@ -32,9 +35,12 @@
   --color-cancel: rgb(255, 122, 186);
   --rgb-accent-primary: 128, 102, 255;
   --rgb-accent-secondary: 158, 139, 255;
-  --rgb-engineering: 136, 0, 214;
-  --rgb-hardware: 0, 0, 182;
-  --rgb-computing: 0, 154, 180;
+  --color-engineering: rgb(188, 74, 237);
+  --color-hardware: rgb(104, 91, 216);
+  --color-computing: rgb(2, 161, 201);
+  --rgb-engineering: 200, 150, 250;
+  --rgb-hardware: 150, 150, 250;
+  --rgb-computing: 150, 200, 250;
 }
 
 :root {
@@ -54,7 +60,7 @@
   --shadow-small-cancel: 0 0px 3px var(--color-cancel);
   --shadow-glow: 0px 0px 10px var(--color-accent-primary);
   --shadow-glow-large: 0px 0px 20px var(--color-accent-primary);
-  --shadow-glow-extra-large: 0px 0px 80px var(--color-accent-primary);
+  --shadow-glow-extra-large: 0px 30px 60px rgba(var(--rgb-accent-primary), 0.7);
   --blur-glass: blur(20px);
   --blur-glass-medium: blur(100px);
   --blur-glass-large: blur(200px);
@@ -73,8 +79,11 @@
 }
 
 html {
+  width: 100%;
+  height: 100%;
   scroll-behavior: smooth;
   overflow-y: scroll;
+  background-color: var(--color-bg);
 
   &,
   body {

@@ -16,21 +16,21 @@
 
     &.featured {
         border: double var(--border-width-primary) transparent;
-        background-image: linear-gradient(var(--color-bg), var(--color-bg)), radial-gradient(circle at top left, rgba(var(--rgb-accent-secondary), 0.5), rgba(var(--rgb-accent-primary), 0.5));
+        background-image: linear-gradient(var(--color-bg), var(--color-bg)), radial-gradient(circle at top left, rgba(var(--rgb-accent-secondary), 1), rgba(var(--rgb-accent-primary), 1));
         background-origin: border-box;
         background-clip: padding-box, border-box;
 
         &.engineering {
-            background-image: linear-gradient(var(--color-bg), var(--color-bg)), radial-gradient(circle at top left, rgba(var(--rgb-engineering), 0.5), rgba(var(--rgb-accent-primary), 0.5));
-            box-shadow: 0 0px 10px rgba(var(--rgb-engineering), 0.5);
+            background-image: linear-gradient(var(--color-bg), var(--color-bg)), radial-gradient(circle at top left, rgba(var(--rgb-engineering), 1), rgba(var(--rgb-accent-primary), 1));
+            box-shadow: 0 0px 10px rgba(var(--rgb-engineering), 1);
 
             &:hover {
-                border-color: rgba(var(--rgb-engineering), 0.5);
+                border-color: var(--color-engineering);
 
                 a {
                     .text {
                         .title {
-                            color: rgba(var(--rgb-engineering), 1) !important;
+                            color: var(--color-engineering) !important;
                         }
                     }
                 }
@@ -38,16 +38,16 @@
         }
 
         &.hardware {
-            background-image: linear-gradient(var(--color-bg), var(--color-bg)), radial-gradient(circle at top left, rgba(var(--rgb-hardware), 0.5), rgba(var(--rgb-accent-primary), 0.5));
-            box-shadow: 0 0px 10px rgba(var(--rgb-hardware), 0.5);
+            background-image: linear-gradient(var(--color-bg), var(--color-bg)), radial-gradient(circle at top left, rgba(var(--rgb-hardware), 1), rgba(var(--rgb-accent-primary), 1));
+            box-shadow: 0 0px 10px rgba(var(--rgb-hardware), 1);
 
             &:hover {
-                border-color: rgba(var(--rgb-hardware), 0.5);
+                border-color: var(--color-hardware);
 
                 a {
                     .text {
                         .title {
-                            color: rgba(var(--rgb-hardware), 1) !important;
+                            color: var(--color-hardware) !important;
                         }
                     }
                 }
@@ -55,16 +55,16 @@
         }
 
         &.computing {
-            background-image: linear-gradient(var(--color-bg), var(--color-bg)), radial-gradient(circle at top left, rgba(var(--rgb-computing), 0.5), rgba(var(--rgb-accent-primary), 0.5));
-            box-shadow: 0 0px 10px rgba(var(--rgb-computing), 0.5);
+            background-image: linear-gradient(var(--color-bg), var(--color-bg)), radial-gradient(circle at top left, rgba(var(--rgb-computing), 1), rgba(var(--rgb-accent-primary), 1));
+            box-shadow: 0 0px 10px rgba(var(--rgb-computing), 1);
 
             &:hover {
-                border-color: rgba(var(--rgb-computing), 0.5);
+                border-color: var(--color-computing);
 
                 a {
                     .text {
                         .title {
-                            color: rgba(var(--rgb-hardware), 1) !important;
+                            color: var(--color-computing) !important;
                         }
                     }
                 }
