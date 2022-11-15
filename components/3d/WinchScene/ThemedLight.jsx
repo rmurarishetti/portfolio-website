@@ -16,7 +16,7 @@ function ThemedSpotlight() {
     }
 
     const darkModeProps = {
-        color: "#cba2ff",
+        color: "#B5A6FE",
         position: [0, 1, 0.06],
         intensity: 1,
     }

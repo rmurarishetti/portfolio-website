@@ -9,7 +9,7 @@ export const colors = {
         accentSecondary: '#4c00ff',
         glass: 'rgba(0, 0, 0, 0.05)',
         shadow: 'rgba(255, 255, 255, 0.15)',
-        globeGlow: '#8500B1',
+        globeGlow: '#430072',
         flightArc: '#6322FB',
         city3d: {
             'home': { default: '#4c00ff', active: '#F200FF' },

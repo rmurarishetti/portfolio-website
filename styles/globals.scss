@@ -1,6 +1,6 @@
 :root {
   /* Your default theme */
-  --color-bg: #000;
+  --color-bg: rgb(10, 10, 10);
   --color-bg-disable: #131313;
   --color-text-primary: #ffffff;
   --color-text-secondary: #b1b1b1;
@@ -8,7 +8,7 @@
   --color-emoji: #ffcb4c;
   --color-accent-primary: #8168ff;
   --color-accent-secondary: #4c00ff;
-  --color-glass: rgba(0, 0, 0, 0.05);
+  --color-glass: rgba(0, 0, 0, 0.1);
   --color-shadow: rgba(255, 255, 255, 0.1);
   --color-cancel: rgba(255, 48, 196, 0.7);
   --rgb-accent-primary: 129, 104, 255;
