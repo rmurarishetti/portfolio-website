@@ -1,6 +1,3 @@
-import { FunctionComponentElement } from 'react';
-import { ThreeElements } from '@react-three/fiber';
-import { Color } from 'three'
 import { CubicBezierLine } from '@react-three/drei'
 import { cubicBezierCurve } from '../../../../helpers/math';
 import { colors } from '../../../../helpers/format';

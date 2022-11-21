@@ -1,87 +1,87 @@
 export const projectsData = [
     {
         id: "ebike-frame",
-        name: "E-Bike Frame",
+        name: "eBike Frame",
         subtitle: "Yr3 Design Project",
         start: new Date(2020, 8),
         end: new Date(2021, 6),
         featured: true,
         type: "Engineering",
-        tags: ["Ansys", "SolidWorks", "BikeCAD", "CES Selector"],
+        tags: ["Ansys", "SolidWorks", "BikeCAD", "CES Selector", "Manufacturing"],
         thumbnail: {
             href: "/images/projects/EBike/ebike_thumbnail.jpg",
-            alt: "E-Bike Render"
+            alt: "eBike Render"
         },
         media: [
             {
                 type: "image",
                 href: "/images/projects/EBike/1_ebike_render.jpg",
-                alt: "E-Bike Render 1"
+                alt: "eBike Render 1"
             },
             {
                 type: "image",
                 href: "/images/projects/EBike/2_ebike_render.jpg",
-                alt: "E-Bike Render 2"
+                alt: "eBike Render 2"
             },
             {
                 type: "image",
                 href: "/images/projects/EBike/3_ebike_render.jpg",
-                alt: "E-Bike Render 3"
+                alt: "eBike Render 3"
             },
             {
                 type: "image",
                 href: "/images/projects/EBike/4_ebike_render.jpg",
-                alt: "E-Bike Render 4"
+                alt: "eBike Render 4"
             },
             {
                 type: "image",
                 href: "/images/projects/EBike/5_ebike_render.jpg",
-                alt: "E-Bike Render 5"
+                alt: "eBike Render 5"
             },
             {
                 type: "image",
                 href: "/images/projects/EBike/6_ebike_render.jpg",
-                alt: "E-Bike Render 6"
+                alt: "eBike Render 6"
             },
             {
                 type: "image",
                 href: "/images/projects/EBike/7_ebike_dimensions.jpg",
-                alt: "E-Bike Dimensions"
+                alt: "eBike Dimensions"
             },
             {
                 type: "image",
                 href: "/images/projects/EBike/8_ebike_materials.jpg",
-                alt: "E-Bike Materials"
+                alt: "eBike Materials"
             },
             {
                 type: "image",
                 href: "/images/projects/EBike/9_ebike_fea.jpg",
-                alt: "E-Bike FEAA"
+                alt: "eBike FEAA"
             },
             {
                 type: "image",
                 href: "/images/projects/EBike/10_ebike_rearwheel.jpg",
-                alt: "E-Bike Rear Wheel"
+                alt: "eBike Rear Wheel"
             },
             {
                 type: "image",
                 href: "/images/projects/EBike/11_ebike_welding.jpg",
-                alt: "E-Bike Welding"
+                alt: "eBike Welding"
             },
             {
                 type: "image",
                 href: "/images/projects/EBike/12_ebike_testsetup.jpg",
-                alt: "E-Bike Test Setup"
+                alt: "eBike Test Setup"
             },
             {
                 type: "image",
                 href: "/images/projects/EBike/13_ebike_locations.jpg",
-                alt: "E-Bike Strain Gauge Locations"
+                alt: "eBike Strain Gauge Locations"
             },
             {
                 type: "image",
                 href: "/images/projects/EBike/14_ebike_results.jpg",
-                alt: "E-Bike Strains"
+                alt: "eBike Strains"
             },
         ],
         people: [

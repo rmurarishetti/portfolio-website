@@ -46,6 +46,9 @@ function Projects() {
     }, [searchFilter, typeFilter, tagsFilter]);
 
     const filterHelper = (query, type) => {
+        if (!query) {
+            return
+        }
         switch (type) {
             case 'search':
                 query = query.toLowerCase()
@@ -63,9 +66,6 @@ function Projects() {
     }
 
     const softFilterAllBySearch = (searchTerm) => {
-        if (!searchTerm) {
-            return
-        }
         filterHelper(searchTerm, 'search')
     }
 
@@ -172,7 +172,12 @@ function Projects() {
                     <p>A collection of my major projects.</p>
                 </div>
                 <div className={styles.filterPaneContainer}>
-                    <FilterPane count={filterCount} name={'projects'} filterFunction={filterProjects} typeFilterState={typeFilter} tagsFilterState={tagsFilter} />
+                    <FilterPane
+                        count={filterCount}
+                        name={'projects'}
+                        filterFunction={filterProjects}
+                        typeFilterState={typeFilter}
+                        tagsFilterState={tagsFilter} />
                 </div>
                 <div className={styles.datePaneContainer}>
                     <DatePane
@@ -183,7 +188,10 @@ function Projects() {
                 <div className={styles.grid}>
                     {projectsData.map((projectData) => {
                         return (
-                            <div className={styles.cardContainer} key={projectData.id} style={{ display: !visibleProjects.has(projectData.id) ? 'none' : 'flex' }}>
+                            <div
+                                className={styles.cardContainer}
+                                key={projectData.id}
+                                style={{ display: !visibleProjects.has(projectData.id) ? 'none' : 'flex' }}>
                                 <ProjectCard {...projectData} />
                             </div>
                         )

@@ -5,8 +5,10 @@ import { GlobeScene } from '../components/3d/GlobeScene';
 import { homeCitiesData } from "../data/citiesData";
 import { visitedCitiesData } from "../data/citiesData";
 import { HoverBadge } from '../components/badges';
+import { XpPane } from '../components/layout';
 
 import { citiesData } from "../data/citiesData";
+import { xpData } from '../data/xpData';
 
 function About() {
     return (
@@ -34,6 +36,10 @@ function About() {
                     <div className={styles.text}>
                         I&apos;m lucky to have grown up in Oman, Libya, Brunei, and Qatar, all of which I consider home. Somehow, I have picked up something from every place, but any languages 😆. Have fun exploring the globe to find the countries I&apos;ve lived in and the ones I&apos;ve visited.
                     </div>
+                </div>
+                <div className={styles.xp}>
+                    <h2>Experience</h2>
+                    <XpPane xpData={xpData} />
                 </div>
             </div>
         </>

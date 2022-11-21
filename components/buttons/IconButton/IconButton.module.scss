@@ -1,0 +1,45 @@
+.iconButton {
+    border: var(--border-primary);
+    border-radius: 0.8rem;
+    display: flex;
+    height: 3.5rem;
+    width: 3.5rem;
+    box-shadow: var(--shadow-small);
+    overflow: hidden;
+    justify-content: center;
+    padding: 0.8rem;
+    transition: all var(--speed-medium);
+    cursor: pointer;
+
+    .icon {
+        height: 100%;
+        opacity: 0.5;
+        transition: all var(--speed-medium);
+        filter: grayscale(100%);
+    }
+
+    &:hover {
+        box-shadow: var(--shadow-small-glow);
+        border-color: var(--color-accent-primary);
+
+        .icon {
+            opacity: 1;
+            filter: none;
+        }
+    }
+
+    &.active {
+        border: var(--border-primary);
+        border-color: var(--color-accent-secondary);
+        cursor: default;
+        background-color: var(--color-glass);
+        // border-color: var(--border-primary);
+        // border: none;
+        box-shadow: inset var(--shadow-small-glow);
+
+        .icon {
+            opacity: 1;
+            filter: none;
+        }
+    }
+}
