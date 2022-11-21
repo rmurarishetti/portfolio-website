@@ -1,7 +1,7 @@
 import { formatDuration } from "../../../helpers/format";
 import { isDateSame } from "../../../helpers/date";
 
-function DateDiv({ start = new Date(), end = null, duration = true, longDate = false }) {
+function DateDiv({ start = new Date(), end = null, duration = true, longDate = false, children }) {
     const dateOptions = { year: longDate ? 'numeric' : '2-digit', month: 'short' };
     let startStr = start.toLocaleDateString("en-US", dateOptions);
     let endStr = end && !isDateSame(end) ? end.toLocaleDateString("en-US", dateOptions) : '';
@@ -18,7 +18,7 @@ function DateDiv({ start = new Date(), end = null, duration = true, longDate = f
 
 
     return (
-        <div>{startStr}{joiner}{endStr}{durationStr}</div>
+        <div>{children} {startStr}{joiner}{endStr}{durationStr}</div>
     );
 }
 

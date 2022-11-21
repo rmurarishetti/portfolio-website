@@ -1,13 +1,9 @@
-import * as THREE from 'three';
 import { Suspense } from 'react';
 import { Canvas } from "@react-three/fiber";
 import { Globe } from './Globe';
 import { useTheme } from 'next-themes';
 import styles from './GlobeScene.module.scss'
-import { useState, useEffect, useRef } from 'react';
 import { a } from '@react-spring/three'
-import { OrbitControls } from '@react-three/drei';
-import { GlowSphere } from './Globe/GlowSphere';
 
 export function GlobeScene({ homeCities, visitedCities }) {
     const { theme, setTheme } = useTheme();
@@ -46,7 +42,7 @@ export function GlobeScene({ homeCities, visitedCities }) {
                     fallback={
                         <mesh>
                             <sphereGeometry attach="geometry" args={[2.3, 64, 64]} />
-                            <meshStandardMaterial color={theme == 'light' ? '#85bbce' : '#03071d'} attach="material" />
+                            <meshPhongMaterial color={theme == 'light' ? '#85bbce' : '#161C41'} attach="material" specular={'#7300FF'} shininess={10} />
                         </mesh>}>
                     <Globe position={[0, 0, 0]} theme={correctedTheme} radius={2.3} homeCities={homeCities} visitedCities={visitedCities} />
                 </Suspense>

@@ -31,7 +31,18 @@ function XpPane({ xpData }) {
                 })}
             </div>
             <div className={styles.xpDescription}>
-                <div className={styles.company}>{`@${selectedXp.company}`}</div>
+                <div className={styles.overview}>
+                    <a
+                        href={selectedXp.link}
+                        target={'_blank'}
+                        rel={'noreferrer'}
+                        className={styles.company}>
+                        {`@${selectedXp.company}`}
+                    </a>
+                    <div className={styles.location}>
+                        {selectedXp.location}
+                    </div>
+                </div>
                 {selectedXp.roles.map((role, i) => {
                     return (
                         <div key={i} className={styles.role}>

@@ -33,4 +33,28 @@
             margin: 1rem 0;
         }
     }
+
+    .grid {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+
+        .graphicCard {
+            display: flex;
+            flex-direction: column;
+
+            .image {
+
+                span {
+                    box-shadow: var(--shadow);
+                    border-radius: 1rem;
+                }
+            }
+
+            .description {
+                display: flex;
+            }
+        }
+    }
 }

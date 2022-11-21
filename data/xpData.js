@@ -5,6 +5,8 @@ export const xpData = [
         logo: "/images/icons/logos/microsoft_logo.svg",
         id: 'ms',
         company: "Microsoft",
+        location: "London, UK",
+        link: 'https://www.microsoft.com/en-gb/about/',
         roles: [
             {
                 position: "Software Engineer Intern",
@@ -19,6 +21,8 @@ export const xpData = [
         logo: "/images/icons/logos/rr_logo.svg",
         id: 'rr',
         company: "Rolls-Royce",
+        location: "Bristol, UK",
+        link: 'https://www.rolls-royce.com',
         roles: [
             {
                 position: "Systems Design Intern",
@@ -40,6 +44,8 @@ export const xpData = [
         logo: "/images/icons/logos/bp_logo.svg",
         id: 'bp',
         company: "BP",
+        location: "London, UK",
+        link: 'https://www.bp.com',
         roles: [
             {
                 position: "Spring Engineering Intern",
@@ -54,6 +60,8 @@ export const xpData = [
         logo: "/images/icons/logos/beckett_logo.svg",
         id: 'br',
         company: "Beckett Rankine",
+        location: "London, UK",
+        link: 'https://beckettrankine.com',
         roles: [
             {
                 position: "Marine Civil Engineering Insight",
@@ -68,6 +76,8 @@ export const xpData = [
         logo: "/images/icons/logos/shell_logo.svg",
         id: 'shell',
         company: "Shell",
+        location: "Doha, Qatar",
+        link: 'https://www.shell.com',
         roles: [
             {
                 position: "Well Engineering Insight",

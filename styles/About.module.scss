@@ -41,6 +41,11 @@
         position: relative;
         display: flex;
         flex-direction: column;
+        padding: 1rem;
+        // background-color: var(--color-glass);
+        // border-radius: 1rem;
+        // border: var(--border-primary);
+        // box-shadow: var(--shadow);
 
         .globe {
             width: 100%;
@@ -87,7 +92,7 @@
 @media (max-width: 600px) {
     .aboutPage {
         .about {
-            margin-bottom: -6rem;
+            margin-bottom: -30%;
 
             .globe {
                 order: 2;
