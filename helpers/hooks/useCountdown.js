@@ -32,7 +32,7 @@ import { useEffect, useRef, useState } from 'react';
 // export { useCountdown };
 
 
-export const useCountDown = (total, ms) => {
+const useCountDown = (total, ms) => {
     const [counter, setCountDown] = useState(total);
     const [startCountDown, setStartCountDown] = useState(false);
     // Store the created interval
@@ -57,3 +57,5 @@ export const useCountDown = (total, ms) => {
 
     return [counter, start, pause, reset];
 };
+
+export { useCountDown };
