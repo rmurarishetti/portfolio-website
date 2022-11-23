@@ -20,7 +20,7 @@ function SearchBar({ filterFunction, forceClear }) {
 
     useEffect(() => {
         filterFunction({ searchPhrase: message });
-    }, [message]);
+    }, [filterFunction, message]);
 
     return (
         <div className={[styles.searchBar, message ? styles.active : ''].join(' ')}>

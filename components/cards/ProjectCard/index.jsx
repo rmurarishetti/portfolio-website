@@ -18,7 +18,7 @@ function ProjectCard({ id, name, subtitle, start, end, featured, type, tags, thu
         return _ => {
             window.removeEventListener('resize', handleResize)
         }
-    }, [window.innerWidth])
+    })
 
     return (
         <Tilt
