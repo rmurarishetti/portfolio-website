@@ -1,5 +1,5 @@
-import ProjectsSwiper from "./ThumbnailSwiper/ProjectsSwiper";
+import FeaturedProjectsSwiper from "./ThumbnailSwiper/FeaturedProjectsSwiper";
 import ArtsSwiper from "./ThumbnailSwiper/ArtsSwiper";
 import LightboxSwiper from "./LightboxSwiper";
 
-export { ProjectsSwiper, LightboxSwiper, ArtsSwiper };
+export { FeaturedProjectsSwiper, LightboxSwiper, ArtsSwiper };

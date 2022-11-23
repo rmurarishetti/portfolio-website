@@ -4,7 +4,7 @@
     box-shadow: var(--shadow);
     backdrop-filter: blur(10.8px);
     -webkit-backdrop-filter: blur(10.8px);
-    overflow: hidden;
+    overflow: hidden !important;
     min-width: clamp(0rem, 100%, 15rem);
     background: var(--color-glass);
     cursor: pointer;

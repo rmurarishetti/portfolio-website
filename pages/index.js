@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import { HomeCard } from '../components/cards';
-import { ProjectsSwiper } from '../components/swipers';
+import { FeaturedProjectsSwiper } from '../components/swipers';
 import WinchScene from '../components/3d/WinchScene';
 import KineticScene from '../components/3d/KineticScene';
 import styles from '../styles/Home.module.scss';
@@ -68,7 +68,7 @@ export default function Home() {
       <WinchScene />
       <div className={styles.block}>
         <h2>Featured Projects</h2>
-        <ProjectsSwiper projectsData={projectsData.filter(projectData => projectData.featured)} />
+        <FeaturedProjectsSwiper projectsData={projectsData.filter(projectData => projectData.featured)} />
         <Link href={pagesData.filter((pageData => pageData.title == 'Projects'))[0].link}>
           <a className={styles.link}>
             {pagesData.filter((pageData => pageData.title == 'Projects'))[0].emoji} All projects &rarr;

@@ -24,11 +24,13 @@
             transition: margin-right var(--speed-medium);
 
             >div {
+                overflow: hidden !important;
                 box-shadow: -0.5rem 0.1rem 0.7rem var(--color-shadow) !important;
             }
 
             &:hover {
                 margin-right: 2rem;
+                z-index: 20;
                 // transform: translateY(-0.2rem);
             }
         }

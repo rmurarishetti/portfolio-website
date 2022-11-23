@@ -1,4 +1,57 @@
 .timer {
     display: flex;
     flex-direction: row;
+    position: relative;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 0.6rem;
+    overflow: hidden;
+    border: var(--border-primary);
+    border-color: rgba(var(--rgb-accent-secondary), 1);
+    transition: border-color var(--speed-medium);
+    height: 3rem;
+
+    .bg {
+        transition: width var(--speed-extra-slow), background-color var(--speed-medium);
+        position: absolute;
+        background-color: rgba(var(--rgb-accent-secondary), 0.5);
+        height: 100%;
+        z-index: 0;
+        border-radius: 0.4rem;
+    }
+
+    .text {
+        z-index: 1;
+        display: flex;
+        flex-wrap: nowrap;
+        margin: 0 1rem;
+        height: 100%;
+        align-items: center;
+
+        >div {
+            line-height: 100%;
+            text-justify: center;
+        }
+
+        .pause {
+            cursor: pointer;
+            transition: text-shadow var(--speed-medium);
+
+            &:hover {
+                text-shadow: var(--shadow);
+            }
+        }
+    }
+
+    &.paused {
+        border-color: var(--color-border);
+
+        .bg {
+            background-color: var(--color-bg-disable);
+        }
+
+        .text {
+            color: var(--color-text-secondary);
+        }
+    }
 }

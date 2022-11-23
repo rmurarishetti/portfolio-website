@@ -8,7 +8,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/mousewheel';
 import 'swiper/css';
 
-function ProjectsSwiper({ projectsData }) {
+function FeaturedProjectsSwiper({ projectsData }) {
     return (
         <Swiper
             className={[styles.swiper, styles.projectSwiper].join(' ')}
@@ -32,4 +32,4 @@ function ProjectsSwiper({ projectsData }) {
     );
 }
 
-export default ProjectsSwiper;
+export default FeaturedProjectsSwiper;

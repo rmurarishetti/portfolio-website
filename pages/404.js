@@ -3,16 +3,31 @@ import styles from '../styles/NotFound.module.scss';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
+import { useCountDown } from '../helpers/hooks';
+import { TimerCard } from '../components/cards';
 
 function NotFound() {
     const router = useRouter();
-
+    const timeOut = 5;
+    const [counter, start, pause, reset] = useCountDown(timeOut, 1000);
+    const [paused, setPaused] = useState(true)
 
     useEffect(() => {
-        setTimeout(() => {
-            router.push("/");
-        }, 3000)
-    }, [router])
+        setPaused(false)
+    }, [])
+
+    useEffect(() => {
+        paused ? pause() : start()
+    }, [paused, pause, start])
+
+    const handlePause = () => {
+        setPaused((prev) => !prev)
+    }
+
+    useEffect(() => {
+        console.log(counter)
+        counter == 0 ? router.push("/") : ''
+    }, [counter, router])
 
 
     return (
@@ -28,7 +43,7 @@ function NotFound() {
                         <div className={styles.text}>OoOps</div>
                     </div>
                     <p>This page could not be found.</p>
-                    <p>⏳ Going back to <Link href="/"><a>home</a></Link> in .</p>
+                    <TimerCard seconds={timeOut} handlePause={handlePause}>Going back to&nbsp;<Link href="/"><a>home</a></Link>&nbsp;in</TimerCard>
                 </div>
             </div>
         </>

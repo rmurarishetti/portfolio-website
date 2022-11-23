@@ -1,3 +1,3 @@
-import { useCountdown } from "./useCountdown";
+import { useCountDown } from "./useCountDown";
 
-export { useCountdown };
+export { useCountDown };
