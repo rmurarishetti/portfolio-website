@@ -9,94 +9,88 @@ export const projectsData = [
         type: "Engineering",
         tags: ["Ansys", "SolidWorks", "BikeCAD", "CES Selector", "Manufacturing"],
         thumbnail: {
-            href: "/images/projects/EBike/ebike_thumbnail.jpg",
+            href: "/images/projects/EBike/thumbnail.jpg",
             alt: "eBike Render"
         },
         media: [
             {
                 image: {
-                    href: "/images/projects/EBike/1_ebike_render.jpg",
+                    href: "/images/projects/EBike/concept.jpg",
+                    alt: "eBike Concept"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/EBike/materials.jpg",
+                    alt: "eBike Materials Choice"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/EBike/render1.jpg",
                     alt: "eBike Render 1"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/EBike/2_ebike_render.jpg",
+                    href: "/images/projects/EBike/render2.jpg",
                     alt: "eBike Render 2"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/EBike/3_ebike_render.jpg",
+                    href: "/images/projects/EBike/render3.jpg",
                     alt: "eBike Render 3"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/EBike/4_ebike_render.jpg",
+                    href: "/images/projects/EBike/render4.jpg",
                     alt: "eBike Render 4"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/EBike/5_ebike_render.jpg",
-                    alt: "eBike Render 5"
+                    href: "/images/projects/EBike/ed1.jpg",
+                    alt: "eBike Engineering Drawing 1"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/EBike/6_ebike_render.jpg",
-                    alt: "eBike Render 6"
+                    href: "/images/projects/EBike/ed2.jpg",
+                    alt: "eBike Engineering Drawing 2"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/EBike/ebike_dimensions.jpg",
-                    alt: "eBike Dimensions"
+                    href: "/images/projects/EBike/ed3.jpg",
+                    alt: "eBike Engineering Drawing 3"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/EBike/ebike_materials.jpg",
-                    alt: "eBike Materials"
+                    href: "/images/projects/EBike/testing1.jpg",
+                    alt: "eBike Strain Gauge Testing"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/EBike/ebike_fea.jpg",
-                    alt: "eBike FEAA"
+                    href: "/images/projects/EBike/testing2.jpg",
+                    alt: "eBike Stress Testing"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/EBike/ebike_rearwheel.jpg",
-                    alt: "eBike Rear Wheel"
+                    href: "/images/projects/EBike/testing3.jpg",
+                    alt: "eBike Strain Gauge Testing 2"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/EBike/ebike_welding.jpg",
-                    alt: "eBike Welding"
+                    href: "/images/projects/EBike/results.jpg",
+                    alt: "eBike Strain Gauge Results"
                 }
-            },
-            {
-                image: {
-                    href: "/images/projects/EBike/ebike_testsetup.jpg",
-                    alt: "eBike Test Setup"
-                }
-            },
-            {
-                image: {
-                    href: "/images/projects/EBike/ebike_locations.jpg",
-                    alt: "eBike Strain Gauge Locations"
-                }
-            },
-            {
-                image: {
-                    href: "/images/projects/EBike/ebike_results.jpg",
-                    alt: "eBike Strains"
-                }
-            },
+            }
         ],
         people: [
             {
