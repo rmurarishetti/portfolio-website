@@ -4,7 +4,7 @@ import styles from './LightboxSlide.module.scss'
 import { Tag, DateDiv } from '../../../badges';
 import { rgbDataURL } from '../../../../helpers/format';
 
-function LightboxSlide({ title, date, mediums, image }) {
+function LightboxSlide({ title, date, mediums, image, showDetails = True }) {
     const [ratio, setRatio] = useState(1.1) // default to 16:9
     return (
         <a className={styles.slide}>
@@ -17,7 +17,7 @@ function LightboxSlide({ title, date, mediums, image }) {
                     objectFit='contain'
                     layout="fill" />
             </div>
-            <div className={styles.footer}>
+            {showDetails && <div className={styles.footer}>
                 <div className={styles.text}>
                     <h2 className={styles.title}>
                         {title}
@@ -33,7 +33,7 @@ function LightboxSlide({ title, date, mediums, image }) {
                         )
                     })}
                 </div>
-            </div>
+            </div>}
         </a>
     )
 }

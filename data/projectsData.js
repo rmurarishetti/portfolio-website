@@ -14,74 +14,88 @@ export const projectsData = [
         },
         media: [
             {
-                type: "image",
-                href: "/images/projects/EBike/1_ebike_render.jpg",
-                alt: "eBike Render 1"
+                image: {
+                    href: "/images/projects/EBike/1_ebike_render.jpg",
+                    alt: "eBike Render 1"
+                }
             },
             {
-                type: "image",
-                href: "/images/projects/EBike/2_ebike_render.jpg",
-                alt: "eBike Render 2"
+                image: {
+                    href: "/images/projects/EBike/2_ebike_render.jpg",
+                    alt: "eBike Render 2"
+                }
             },
             {
-                type: "image",
-                href: "/images/projects/EBike/3_ebike_render.jpg",
-                alt: "eBike Render 3"
+                image: {
+                    href: "/images/projects/EBike/3_ebike_render.jpg",
+                    alt: "eBike Render 3"
+                }
             },
             {
-                type: "image",
-                href: "/images/projects/EBike/4_ebike_render.jpg",
-                alt: "eBike Render 4"
+                image: {
+                    href: "/images/projects/EBike/4_ebike_render.jpg",
+                    alt: "eBike Render 4"
+                }
             },
             {
-                type: "image",
-                href: "/images/projects/EBike/5_ebike_render.jpg",
-                alt: "eBike Render 5"
+                image: {
+                    href: "/images/projects/EBike/5_ebike_render.jpg",
+                    alt: "eBike Render 5"
+                }
             },
             {
-                type: "image",
-                href: "/images/projects/EBike/6_ebike_render.jpg",
-                alt: "eBike Render 6"
+                image: {
+                    href: "/images/projects/EBike/6_ebike_render.jpg",
+                    alt: "eBike Render 6"
+                }
             },
             {
-                type: "image",
-                href: "/images/projects/EBike/7_ebike_dimensions.jpg",
-                alt: "eBike Dimensions"
+                image: {
+                    href: "/images/projects/EBike/ebike_dimensions.jpg",
+                    alt: "eBike Dimensions"
+                }
             },
             {
-                type: "image",
-                href: "/images/projects/EBike/8_ebike_materials.jpg",
-                alt: "eBike Materials"
+                image: {
+                    href: "/images/projects/EBike/ebike_materials.jpg",
+                    alt: "eBike Materials"
+                }
             },
             {
-                type: "image",
-                href: "/images/projects/EBike/9_ebike_fea.jpg",
-                alt: "eBike FEAA"
+                image: {
+                    href: "/images/projects/EBike/ebike_fea.jpg",
+                    alt: "eBike FEAA"
+                }
             },
             {
-                type: "image",
-                href: "/images/projects/EBike/10_ebike_rearwheel.jpg",
-                alt: "eBike Rear Wheel"
+                image: {
+                    href: "/images/projects/EBike/ebike_rearwheel.jpg",
+                    alt: "eBike Rear Wheel"
+                }
             },
             {
-                type: "image",
-                href: "/images/projects/EBike/11_ebike_welding.jpg",
-                alt: "eBike Welding"
+                image: {
+                    href: "/images/projects/EBike/ebike_welding.jpg",
+                    alt: "eBike Welding"
+                }
             },
             {
-                type: "image",
-                href: "/images/projects/EBike/12_ebike_testsetup.jpg",
-                alt: "eBike Test Setup"
+                image: {
+                    href: "/images/projects/EBike/ebike_testsetup.jpg",
+                    alt: "eBike Test Setup"
+                }
             },
             {
-                type: "image",
-                href: "/images/projects/EBike/13_ebike_locations.jpg",
-                alt: "eBike Strain Gauge Locations"
+                image: {
+                    href: "/images/projects/EBike/ebike_locations.jpg",
+                    alt: "eBike Strain Gauge Locations"
+                }
             },
             {
-                type: "image",
-                href: "/images/projects/EBike/14_ebike_results.jpg",
-                alt: "eBike Strains"
+                image: {
+                    href: "/images/projects/EBike/ebike_results.jpg",
+                    alt: "eBike Strains"
+                }
             },
         ],
         people: [
@@ -120,7 +134,12 @@ export const projectsData = [
                 href: ""
             }
         ],
-        description: "Worked with a group of third year mechanical engineering students to design, make, and test an urban electric bike from the ground up. Was specifically responsible for the engineering design, validation, manufacturing, and testing of the frame in a 5-member subgroup.\nThe bespoke geometry is designed around human anthropometrics under urban commuting conditions. In the most basic form, the frame is dual triangular in structure with silver brazed steel tubing. The cold-drawn, low-carbon Omnicom tubes provide high tensile strength, fatigue resistance and transition temperature. Each tube is butted for added thermal resistance near braze joints while saving material weight elsewhere.\nTo be compatible with disc brake callipers while having a chain-tensioning mechanism, custom sliding rear dropouts were designed. The three-piece design allows the entire rear wheel assembly to move horizontally without conflicting with other parts. Furthermore, motor and battery integrations were achieved through a square-sectioned seat tube and downtube for increased easier manufacturing.\nExtensive Finite Elements analysis and incremental load tests using strain gauges were used to iterate and validate the design."
+        description: [
+            "Worked with a group of third year mechanical engineering students to design, make, and test an urban electric bike from the ground up. Was specifically responsible for the engineering design, validation, manufacturing, and testing of the frame in a 5-member subgroup. ",
+            "The bespoke geometry is designed around human anthropometrics under urban commuting conditions. In the most basic form, the frame is dual triangular in structure with silver brazed steel tubing. The cold-drawn, low-carbon Omnicom tubes provide high tensile strength, fatigue resistance and transition temperature. Each tube is butted for added thermal resistance near braze joints while saving material weight elsewhere.",
+            "To be compatible with disc brake callipers while having a chain-tensioning mechanism, custom sliding rear dropouts were designed. The three-piece design allows the entire rear wheel assembly to move horizontally without conflicting with other parts. Furthermore, motor and battery integrations were achieved through a square-sectioned seat tube and downtube for increased easier manufacturing.",
+            "Extensive Finite Elements analysis and incremental load tests using strain gauges were used to iterate and validate the design."
+        ]
     },
     {
         id: "mine-rescue-buggy",
@@ -137,19 +156,22 @@ export const projectsData = [
         },
         media: [
             {
-                type: "image",
-                href: "/images/projects/Buggy/1_buggy_functionality.jpg",
-                alt: "Mine Rescue Buggy 1"
+                image: {
+                    href: "/images/projects/Buggy/1_buggy_functionality.jpg",
+                    alt: "Mine Rescue Buggy 1"
+                }
             },
             {
-                type: "image",
-                href: "/images/projects/Buggy/2_buggy_colourmap.jpg",
-                alt: "Mine Rescue Buggy 2"
+                image: {
+                    href: "/images/projects/Buggy/2_buggy_colourmap.jpg",
+                    alt: "Mine Rescue Buggy 2"
+                }
             },
             {
-                type: "image",
-                href: "/images/projects/Buggy/3_buggy_colourlogic.jpg",
-                alt: "Mine Rescue Buggy 3"
+                image: {
+                    href: "/images/projects/Buggy/3_buggy_colourlogic.jpg",
+                    alt: "Mine Rescue Buggy 3"
+                }
             },
             {
                 type: "video",
@@ -184,7 +206,12 @@ export const projectsData = [
                 href: ""
             },
         ],
-        description: "As part of the final project of the Embedded-C for Microcontrollers module, we developed an autonomous mine rescue robot. The buggy can navigate a conceptual mine using a set of instructions coded in coloured cards and return to its starting position - simulating a scenario of determining the location of trapped miners.\nEnjoy exploring the set of slides which explain the key functionalities and features of the buggy. Slides 4 onwards have calibration demos before a full demo run on the final slide.\nHardware: PIC18F67K40 microchip, Clicker-2 PCB, Tricolour LED, TCS3471 Colour Light-to-digital convertor, 3.7V 2000mA LiPo battery, DRV833RTY differential motor drivers.\nSix core functions: movement, colour-detection, lighting, memory, calibration, and a set of fail-safes."
+        description: [
+            "As part of the final project of the Embedded-C for Microcontrollers module, we developed an autonomous mine rescue robot. The buggy can navigate a conceptual mine using a set of instructions coded in coloured cards and return to its starting position - simulating a scenario of determining the location of trapped miners.",
+            "Enjoy exploring the set of slides which explain the key functionalities and features of the buggy. Slides 4 onwards have calibration demos before a full demo run on the final slide.",
+            "Hardware: PIC18F67K40 microchip, Clicker-2 PCB, Tricolour LED, TCS3471 Colour Light-to-digital convertor, 3.7V 2000mA LiPo battery, DRV833RTY differential motor drivers.",
+            "Six core functions: movement, colour-detection, lighting, memory, calibration, and a set of fail-safes."
+        ]
     },
     {
         id: "mobula-ray",
@@ -201,44 +228,52 @@ export const projectsData = [
         },
         media: [
             {
-                type: "image",
-                href: "/images/projects/MobulaRay/1_mobula_render.jpg",
-                alt: "Mobula Ray Render 1"
+                image: {
+                    href: "/images/projects/MobulaRay/1_mobula_render.jpg",
+                    alt: "Mobula Ray Render 1"
+                }
             },
             {
-                type: "image",
-                href: "/images/projects/MobulaRay/2_mobula_render.jpg",
-                alt: "Mobula Ray Render 2"
+                image: {
+                    href: "/images/projects/MobulaRay/2_mobula_render.jpg",
+                    alt: "Mobula Ray Render 2"
+                }
             },
             {
-                type: "image",
-                href: "/images/projects/MobulaRay/3_mobula_render.jpg",
-                alt: "Mobula Ray Render 3"
+                image: {
+                    href: "/images/projects/MobulaRay/3_mobula_render.jpg",
+                    alt: "Mobula Ray Render 3"
+                }
             },
             {
-                type: "image",
-                href: "/images/projects/MobulaRay/4_mobula_render.jpg",
-                alt: "Mobula Ray Render 4"
+                image: {
+                    href: "/images/projects/MobulaRay/4_mobula_render.jpg",
+                    alt: "Mobula Ray Render 4"
+                }
             },
             {
-                type: "image",
-                href: "/images/projects/MobulaRay/5_mobula_render.jpg",
-                alt: "Mobula Ray Render 5"
+                image: {
+                    href: "/images/projects/MobulaRay/5_mobula_render.jpg",
+                    alt: "Mobula Ray Render 5"
+                }
             },
             {
-                type: "image",
-                href: "/images/projects/MobulaRay/6_mobula_ed.jpg",
-                alt: "Mobula Ray Engineering Drawing 1"
+                image: {
+                    href: "/images/projects/MobulaRay/6_mobula_ed.jpg",
+                    alt: "Mobula Ray Engineering Drawing 1"
+                }
             },
             {
-                type: "image",
-                href: "/images/projects/MobulaRay/7_mobula_ed.jpg",
-                alt: "Mobula Ray Engineering Drawing 2"
+                image: {
+                    href: "/images/projects/MobulaRay/7_mobula_ed.jpg",
+                    alt: "Mobula Ray Engineering Drawing 2"
+                }
             },
             {
-                type: "image",
-                href: "/images/projects/MobulaRay/8_mobula_group.jpg",
-                alt: "Mobula Ray Group Photo"
+                image: {
+                    href: "/images/projects/MobulaRay/8_mobula_group.jpg",
+                    alt: "Mobula Ray Group Photo"
+                }
             },
         ],
         people: [
@@ -261,7 +296,10 @@ export const projectsData = [
                 href: ""
             },
         ],
-        description: "Mobula ray is a personal underwater propulsion device rated for a depth of 15m. Powered by a dual-motor drive train and lithium-ion batteries, it is designed to have a battery life of 2hrs for an average speed of 2 kph.\nI worked with a highly talented team to complete the entire design process in one week, from the initial idea to the final engineering delivery. See our final pitching poster below."
+        description: [
+            "Mobula ray is a personal underwater propulsion device rated for a depth of 15m. Powered by a dual-motor drive train and lithium-ion batteries, it is designed to have a battery life of 2hrs for an average speed of 2 kph.",
+            "I worked with a highly talented team to complete the entire design process in one week, from the initial idea to the final engineering delivery. See our final pitching poster below."
+        ]
     },
     {
         id: "heat-diff-model",
@@ -295,7 +333,12 @@ export const projectsData = [
                 href: ""
             },
         ],
-        description: "Worked as a pair to perform a heat transfer analysis of a hot long rectangular rod being quenched in a cold fluid. Using python, we modelled the temperature distribution through the rod in the x - y directions, as it changes with time.\nA mixed composition of brick and steel (AISI 1010) was chosen for the rod, although this could be modified to fit any composition. The rod was long enough that the heat transfer along the longest length could be neglected, hence was modelled in two space dimensions, and time.\nThe location and area of the secondary material was chosen to be a small rectangle, slightly offset from the centre, however, could easily be adjusted to model different problems.\nWe assumed each section of the rod to have uniform density, uniform specific heat, and no internal heat generation. Overall, the model was described by a 3rd order parabolic partial derivative equation."
+        description: [
+            "Worked as a pair to perform a heat transfer analysis of a hot long rectangular rod being quenched in a cold fluid. Using python, we modelled the temperature distribution through the rod in the x - y directions, as it changes with time.",
+            "A mixed composition of brick and steel (AISI 1010) was chosen for the rod, although this could be modified to fit any composition. The rod was long enough that the heat transfer along the longest length could be neglected, hence was modelled in two space dimensions, and time.",
+            "The location and area of the secondary material was chosen to be a small rectangle, slightly offset from the centre, however, could easily be adjusted to model different problems.",
+            "We assumed each section of the rod to have uniform density, uniform specific heat, and no internal heat generation. Overall, the model was described by a 3rd order parabolic partial derivative equation."
+        ]
     },
     {
         id: "sonic",
@@ -312,54 +355,64 @@ export const projectsData = [
         },
         media: [
             {
-                type: "image",
-                href: "/images/projects/Sonic/1_sonic_render.jpg",
-                alt: "SONIC Render 1"
+                image: {
+                    href: "/images/projects/Sonic/1_sonic_render.jpg",
+                    alt: "SONIC Render 1",
+                }
             },
             {
-                type: "image",
-                href: "/images/projects/Sonic/2_sonic_render.jpg",
-                alt: "SONIC Render 2"
+                image: {
+                    href: "/images/projects/Sonic/2_sonic_render.jpg",
+                    alt: "SONIC Render 2"
+                }
             },
             {
-                type: "image",
-                href: "/images/projects/Sonic/3_sonic_render.jpg",
-                alt: "SONIC Render 3"
+                image: {
+                    href: "/images/projects/Sonic/3_sonic_render.jpg",
+                    alt: "SONIC Render 3"
+                }
             },
             {
-                type: "image",
-                href: "/images/projects/Sonic/4_sonic_render.jpg",
-                alt: "SONIC Render 4"
+                image: {
+                    href: "/images/projects/Sonic/4_sonic_render.jpg",
+                    alt: "SONIC Render 4"
+                }
+
             },
             {
-                type: "image",
-                href: "/images/projects/Sonic/5_sonic_ed.jpg",
-                alt: "SONIC Engineering Drawing 1"
+                image: {
+                    href: "/images/projects/Sonic/5_sonic_ed.jpg",
+                    alt: "SONIC Engineering Drawing 1"
+                }
             },
             {
-                type: "image",
-                href: "/images/projects/Sonic/6_sonic_ed.jpg",
-                alt: "SONIC Engineering Drawing 2"
+                image: {
+                    href: "/images/projects/Sonic/6_sonic_ed.jpg",
+                    alt: "SONIC Engineering Drawing 2"
+                }
             },
             {
-                type: "image",
-                href: "/images/projects/Sonic/7_sonic_real.jpg",
-                alt: "SONIC Manufactured 1"
+                image: {
+                    href: "/images/projects/Sonic/7_sonic_real.jpg",
+                    alt: "SONIC Manufactured 1"
+                }
             },
             {
-                type: "image",
-                href: "/images/projects/Sonic/8_sonic_real.jpg",
-                alt: "SONIC Manufactured 2"
+                image: {
+                    href: "/images/projects/Sonic/8_sonic_real.jpg",
+                    alt: "SONIC Manufactured 2"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/Sonic/10_sonic_me.jpg",
+                    alt: "SONIC Manufactured 3"
+                }
             },
             {
                 type: "video",
                 href: "/images/projects/Sonic/9_sonic_run.mp4",
                 alt: "SONIC Demo"
-            },
-            {
-                type: "image",
-                href: "/images/projects/Sonic/10_sonic_me.jpg",
-                alt: "SONIC Manufactured 3"
             },
         ],
         people: [
@@ -386,7 +439,10 @@ export const projectsData = [
                 href: ""
             },
         ],
-        description: "As part of a 5-member team, we designed, manufactured and tested a miniature motorised car to race against 30 other teams in the cohort. Sonic is an ultra light, rear-wheel-drive car featuring an all plastic spur gear drive transmission. Design elements were carefully considered to maximise the ease of manufacturing, reduce the race completion time and many other criteria. Find out more about the complete design and manufacturing journey down below."
+        description: [
+            "As part of a 5-member team, we designed, manufactured and tested a miniature motorised car to race against 30 other teams in the cohort. Sonic is an ultra light, rear-wheel-drive car featuring an all plastic spur gear drive transmission.",
+            "Design elements were carefully considered to maximise the ease of manufacturing, reduce the race completion time and many other criteria. Find out more about the complete design and manufacturing journey down below."
+        ]
     },
     {
         id: "lift-door",
@@ -403,19 +459,22 @@ export const projectsData = [
         },
         media: [
             {
-                type: "image",
-                href: "/images/projects/LiftDoor/1_liftdoor.jpg",
-                alt: "Lift Door Tranmission Render 1"
+                image: {
+                    href: "/images/projects/LiftDoor/1_liftdoor.jpg",
+                    alt: "Lift Door Tranmission Render 1"
+                }
             },
             {
-                type: "image",
-                href: "/images/projects/LiftDoor/2_liftdoor.jpg",
-                alt: "Lift Door Tranmission Render 2"
+                image: {
+                    href: "/images/projects/LiftDoor/2_liftdoor.jpg",
+                    alt: "Lift Door Tranmission Render 2"
+                }
             },
             {
-                type: "image",
-                href: "/images/projects/LiftDoor/3_liftdoor.jpg",
-                alt: "Lift Door Tranmission Render 3"
+                image: {
+                    href: "/images/projects/LiftDoor/3_liftdoor.jpg",
+                    alt: "Lift Door Tranmission Render 3"
+                }
             }
         ],
         people: [],
@@ -425,6 +484,9 @@ export const projectsData = [
                 href: ""
             },
         ],
-        description: "An individual project to design a drive transmission for a lift door, including the complete CAD assembly and engineering drawings.\nThe design features a two-step speed increase and converts rotary motor motion to double-acting linear motion."
+        description: [
+            "An individual project to design a drive transmission for a lift door, including the complete CAD assembly and engineering drawings.",
+            "The design features a two-step speed increase and converts rotary motor motion to double-acting linear motion."
+        ]
     },
 ]

@@ -4,11 +4,12 @@
     position: relative;
     justify-content: flex-start;
     align-items: center;
-    border-radius: 0.6rem;
+    border-radius: 1rem;
     overflow: hidden;
     border: var(--border-primary);
     border-color: rgba(var(--rgb-accent-secondary), 1);
     transition: border-color var(--speed-medium);
+    box-shadow: var(--shadow-glow);
     height: 3rem;
 
     .bg {
@@ -17,16 +18,17 @@
         background-color: rgba(var(--rgb-accent-secondary), 0.5);
         height: 100%;
         z-index: 0;
-        border-radius: 0.4rem;
+        border-radius: calc(1rem - var(--border-width-primary));
     }
 
     .text {
         z-index: 1;
         display: flex;
         flex-wrap: nowrap;
-        margin: 0 1rem;
+        margin-left: 1rem;
         height: 100%;
         align-items: center;
+        justify-content: space-between;
 
         >div {
             line-height: 100%;
@@ -36,15 +38,30 @@
         .pause {
             cursor: pointer;
             transition: text-shadow var(--speed-medium);
+            border-radius: 0.7rem;
+            padding: 0.5rem;
+            aspect-ratio: 1;
+            margin: 0 0.2rem 0 1rem;
+            // margin-left: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all var(--speed-medium);
+            border: var(--border-secondary);
+            box-shadow: var(--shadow);
+            background-color: var(--color-glass);
 
             &:hover {
-                text-shadow: var(--shadow);
+                box-shadow: var(--shadow-small);
+                color: var(--color-cancel);
+                background-color: rgba(var(--rgb-color-cancel), 0.5);
             }
         }
     }
 
     &.paused {
         border-color: var(--color-border);
+        box-shadow: var(--shadow);
 
         .bg {
             background-color: var(--color-bg-disable);
@@ -52,6 +69,14 @@
 
         .text {
             color: var(--color-text-secondary);
+        }
+
+        .pause {
+            color: var(--color-accent-primary);
+
+            &:hover {
+                color: var(--color-accent-secondary);
+            }
         }
     }
 }

@@ -8,7 +8,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/mousewheel';
 import 'swiper/css';
 
-function LightboxSwiper({ artsData, initialSlide = 0, setLightbox, onClick }) {
+function LightboxSwiper({ data, initialSlide = 0, setLightbox, onClick, showDetails = True }) {
 
     const [mobile, setMobile] = useState(window.innerWidth < 800)
     useEffect(() => {
@@ -34,12 +34,12 @@ function LightboxSwiper({ artsData, initialSlide = 0, setLightbox, onClick }) {
             mousewheel
             grabCursor
             rewind>
-            {artsData.map((artData, i) => {
+            {data.map((artData, i) => {
                 return (
                     <SwiperSlide
                         key={artData.id}
                         className={styles.swiperSlide}>
-                        <LightboxSlide {...artData} />
+                        <LightboxSlide {...artData} showDetails={showDetails} />
                     </SwiperSlide>
                 )
             })}

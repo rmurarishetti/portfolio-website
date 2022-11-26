@@ -3,7 +3,7 @@ import { ArtCard } from '../../cards';
 import { LightboxSwiper } from '../../swipers';
 import styles from './GalleryWLightbox.module.scss'
 
-function GalleryWLightbox({ artsData }) {
+function GalleryWLightbox({ data, showDetails = true }) {
     const [index, setIndex] = useState(0)
     const [lightbox, setLightbox] = useState(false)
     const [lightboxTransparent, setLightboxTransparent] = useState(false)
@@ -15,9 +15,9 @@ function GalleryWLightbox({ artsData }) {
     return (
         <>
             <div className={styles.masonary}>
-                {artsData.map((artData, i) => {
+                {data.map((artData, i) => {
                     return (
-                        <ArtCard key={artData.id} index={i} {...artData} setIndex={setIndex} setLightbox={setLightbox} />
+                        <ArtCard key={i} index={i} {...artData} setIndex={setIndex} setLightbox={setLightbox} showDetails={showDetails} />
                     )
                 })}
             </div>
@@ -31,9 +31,10 @@ function GalleryWLightbox({ artsData }) {
                         ✕
                     </div>
                     <LightboxSwiper
-                        artsData={artsData}
+                        data={data}
                         initialSlide={index}
-                        setLightbox={setLightbox} />
+                        setLightbox={setLightbox}
+                        showDetails={showDetails} />
                 </div>
             }
         </>

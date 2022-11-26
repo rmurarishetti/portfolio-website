@@ -20,10 +20,10 @@ function TimerCard({ seconds, children, handlePause }) {
         <div className={[styles.timer, paused ? styles.paused : ''].join(' ')}>
             <div className={styles.bg} style={{ width: `${widthPercent}%` }}></div>
             <div className={styles.text}>
-                <div className={styles.emoji}>⏳</div>
+                {/* <div className={styles.emoji}>⏳</div> */}
                 <div>&nbsp;{children}&nbsp;</div>
-                <div className={styles.time}>{counter}s&nbsp;</div>
-                <div className={styles.pause} onClick={onClick}>{paused ? '▶️' : '⏸️'}</div>
+                <div className={styles.time}>{counter}s</div>
+                <div className={styles.pause} onClick={onClick}>{paused ? '\u23F5' : '\u23F8'}</div>
             </div>
         </div>
     );

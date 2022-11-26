@@ -1,20 +1,14 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import styles from './XpPane.module.scss'
 import { IconButton } from "../../buttons";
 import { DateDiv } from "../../badges";
 import { Tag } from "../../badges";
+import { useSpring, animated } from 'react-spring'
 
 function XpPane({ xpData }) {
     const data = xpData.sort((a, b) => b.roles[0].start - a.roles[0].start)
     const [selectedId, setSelectedId] = useState(data[0].id)
-
-    const [selectedXp, setSelectedXp] = useState(data[0])
-
-    useEffect(() => {
-        setSelectedXp(data.filter(project => project.id == selectedId)[0])
-    }, [selectedId, data])
-
-
+    const selectedXp = data.filter(project => project.id == selectedId)[0]
 
     return (
         <div className={styles.xpPane}>

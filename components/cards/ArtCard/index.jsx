@@ -2,7 +2,7 @@ import Image from 'next/image';
 import styles from './ArtCard.module.scss'
 import { Tag, DateDiv } from '../../badges';
 
-function ArtCard({ index, title, date, mediums, image, hidden, setIndex = null, setLightbox = null }) {
+function ArtCard({ index, title, date, mediums, image, hidden, setIndex = null, setLightbox = null, showDetails = true }) {
 
     const handleClick = () => {
         if (setIndex) { setIndex(index) }
@@ -21,7 +21,7 @@ function ArtCard({ index, title, date, mediums, image, hidden, setIndex = null, 
                     objectFit='cover'
                     layout='fill' />
             </div>
-            <div className={styles.footer}>
+            {showDetails && <div className={styles.footer}>
                 <div className={styles.text}>
                     <div className={styles.date}>
                         <DateDiv start={date} longDate />
@@ -37,7 +37,7 @@ function ArtCard({ index, title, date, mediums, image, hidden, setIndex = null, 
                         )
                     })}
                 </div>
-            </div>
+            </div>}
         </a>
     )
 }

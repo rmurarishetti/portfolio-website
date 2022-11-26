@@ -1,0 +1,81 @@
+.thumbnail {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 2.5;
+
+    .path {
+        position: absolute;
+        z-index: 1;
+        color: var(--color-text-secondary);
+        margin: 1rem;
+        font-size: 0.8rem;
+        display: inline-flex;
+        gap: 0.2rem;
+        overflow: hidden;
+
+        .arrow {
+            transition: all var(--speed-medium);
+            transform: translateX(-5rem);
+            position: absolute;
+            font-weight: 600;
+            color: var(--color-accent-secondary);
+        }
+
+        .parent {
+            transition: all var(--speed-medium);
+        }
+
+        &:hover {
+            .parent {
+                margin-left: 0.9rem;
+            }
+
+            .arrow {
+                transform: none;
+            }
+        }
+    }
+
+    .typeTag {
+        position: absolute;
+        z-index: 1;
+        margin: 1rem;
+        bottom: 0;
+        right: 0;
+    }
+
+    span {
+        overflow: visible !important;
+
+        img {
+            border-radius: 1rem;
+            box-shadow: var(--shadow);
+        }
+    }
+}
+
+.text {
+    font-size: 0.9rem;
+    margin: 1rem 0;
+    color: var(--color-text-secondary);
+
+    .name {
+        margin: 1rem 0;
+        color: var(--color-text-primary);
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        margin: 1rem 0;
+        color: var(--color-text-primary);
+        font-size: 1rem;
+    }
+
+    .description {
+        line-height: 1.4rem
+    }
+}
+
+.galleryContainer {
+    width: 100%;
+}

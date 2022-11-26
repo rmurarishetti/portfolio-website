@@ -28,7 +28,7 @@ function Art() {
                     </div>
                     <p>A gallery of my recent artwork.</p>
                 </div>
-                <GalleryWLightbox artsData={artworks} />
+                <GalleryWLightbox data={artworks} />
             </div>
         </>
     );

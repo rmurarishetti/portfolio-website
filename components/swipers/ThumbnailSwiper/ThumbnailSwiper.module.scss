@@ -24,6 +24,7 @@
             transition: margin-right var(--speed-medium);
 
             >div {
+                z-index: 1;
                 overflow: hidden !important;
                 box-shadow: -0.5rem 0.1rem 0.7rem var(--color-shadow) !important;
             }
