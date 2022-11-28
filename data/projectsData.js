@@ -344,68 +344,98 @@ export const projectsData = [
         type: "Engineering",
         tags: ["SolidWorks", "Manufacturing"],
         thumbnail: {
-            href: "/images/projects/Sonic/1_sonic_render.jpg",
+            href: "/images/projects/Sonic/render1.jpg",
             alt: "SONIC Render"
         },
         media: [
             {
                 image: {
-                    href: "/images/projects/Sonic/1_sonic_render.jpg",
+                    href: "/images/projects/Sonic/render1.jpg",
                     alt: "SONIC Render 1",
                 }
             },
             {
                 image: {
-                    href: "/images/projects/Sonic/2_sonic_render.jpg",
+                    href: "/images/projects/Sonic/render2.jpg",
                     alt: "SONIC Render 2"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/Sonic/3_sonic_render.jpg",
+                    href: "/images/projects/Sonic/render3.jpg",
                     alt: "SONIC Render 3"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/Sonic/4_sonic_render.jpg",
+                    href: "/images/projects/Sonic/render4.jpg",
                     alt: "SONIC Render 4"
                 }
 
             },
             {
                 image: {
-                    href: "/images/projects/Sonic/5_sonic_ed.jpg",
+                    href: "/images/projects/Sonic/ed1.jpg",
                     alt: "SONIC Engineering Drawing 1"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/Sonic/6_sonic_ed.jpg",
+                    href: "/images/projects/Sonic/ed2.jpg",
                     alt: "SONIC Engineering Drawing 2"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/Sonic/7_sonic_real.jpg",
+                    href: "/images/projects/Sonic/ed3.jpg",
+                    alt: "SONIC Engineering Drawing 3"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/Sonic/ed4.jpg",
+                    alt: "SONIC Engineering Drawing 4"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/Sonic/ed5.jpg",
+                    alt: "SONIC Engineering Drawing 5"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/Sonic/ed6.jpg",
+                    alt: "SONIC Engineering Drawing 6"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/Sonic/ed7.jpg",
+                    alt: "SONIC Engineering Drawing 7"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/Sonic/real1.jpg",
                     alt: "SONIC Manufactured 1"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/Sonic/8_sonic_real.jpg",
+                    href: "/images/projects/Sonic/real2.jpg",
                     alt: "SONIC Manufactured 2"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/Sonic/10_sonic_me.jpg",
+                    href: "/images/projects/Sonic/real3.jpg",
                     alt: "SONIC Manufactured 3"
                 }
             },
             {
                 type: "video",
-                href: "/images/projects/Sonic/9_sonic_run.mp4",
+                href: "/images/projects/Sonic/sonic_run.mp4",
                 alt: "SONIC Demo"
             },
         ],
