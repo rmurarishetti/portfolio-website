@@ -217,55 +217,61 @@ export const projectsData = [
         type: "Engineering",
         tags: ["SolidWorks", "CES Selector"],
         thumbnail: {
-            href: "/images/projects/MobulaRay/1_mobula_render.jpg",
+            href: "/images/projects/MobulaRay/render1.jpg",
             alt: "Mobula Ray Render 1"
         },
         media: [
             {
                 image: {
-                    href: "/images/projects/MobulaRay/1_mobula_render.jpg",
-                    alt: "Mobula Ray Render 1"
-                }
-            },
-            {
-                image: {
-                    href: "/images/projects/MobulaRay/2_mobula_render.jpg",
+                    href: "/images/projects/MobulaRay/render2.jpg",
                     alt: "Mobula Ray Render 2"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/MobulaRay/3_mobula_render.jpg",
+                    href: "/images/projects/MobulaRay/render3.jpg",
                     alt: "Mobula Ray Render 3"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/MobulaRay/4_mobula_render.jpg",
+                    href: "/images/projects/MobulaRay/render4.jpg",
                     alt: "Mobula Ray Render 4"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/MobulaRay/5_mobula_render.jpg",
+                    href: "/images/projects/MobulaRay/render5.jpg",
                     alt: "Mobula Ray Render 5"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/MobulaRay/6_mobula_ed.jpg",
+                    href: "/images/projects/MobulaRay/ed1.jpg",
                     alt: "Mobula Ray Engineering Drawing 1"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/MobulaRay/7_mobula_ed.jpg",
+                    href: "/images/projects/MobulaRay/ed2.jpg",
                     alt: "Mobula Ray Engineering Drawing 2"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/MobulaRay/8_mobula_group.jpg",
+                    href: "/images/projects/MobulaRay/ed3.jpg",
+                    alt: "Mobula Ray Engineering Drawing 3"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/MobulaRay/ed4.jpg",
+                    alt: "Mobula Ray Engineering Drawing 4"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/MobulaRay/group.jpg",
                     alt: "Mobula Ray Group Photo"
                 }
             },
