@@ -485,25 +485,67 @@ export const projectsData = [
         tags: ["SolidWorks"],
         thumbnail: {
             href: "/images/projects/LiftDoor/1_liftdoor.jpg",
-            alt: "Lift Door Tranmission Render"
+            alt: "Lift Door Transmission Render"
         },
         media: [
             {
                 image: {
-                    href: "/images/projects/LiftDoor/1_liftdoor.jpg",
-                    alt: "Lift Door Tranmission Render 1"
+                    href: "/images/projects/LiftDoor/render1.jpg",
+                    alt: "Lift Door Transmission Render 1"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/LiftDoor/2_liftdoor.jpg",
-                    alt: "Lift Door Tranmission Render 2"
+                    href: "/images/projects/LiftDoor/render2.jpg",
+                    alt: "Lift Door Transmission Render 2"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/LiftDoor/3_liftdoor.jpg",
-                    alt: "Lift Door Tranmission Render 3"
+                    href: "/images/projects/LiftDoor/render3.jpg",
+                    alt: "Lift Door Transmission Render 3"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/LiftDoor/render4.jpg",
+                    alt: "Lift Door Transmission Render 4"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/LiftDoor/render5.jpg",
+                    alt: "Lift Door Transmission Render 5"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/LiftDoor/render6.jpg",
+                    alt: "Lift Door Transmission Render 6"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/LiftDoor/ed1.jpg",
+                    alt: "Lift Door Transmission Engineering Drawing 1"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/LiftDoor/ed2.jpg",
+                    alt: "Lift Door Transmission Engineering Drawing 2"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/LiftDoor/ed3.jpg",
+                    alt: "Lift Door Transmission Engineering Drawing 3"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/LiftDoor/ed4.jpg",
+                    alt: "Lift Door Transmission Engineering Drawing 4"
                 }
             }
         ],
