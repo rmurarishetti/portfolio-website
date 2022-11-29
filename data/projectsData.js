@@ -484,16 +484,10 @@ export const projectsData = [
         type: "Engineering",
         tags: ["SolidWorks"],
         thumbnail: {
-            href: "/images/projects/LiftDoor/1_liftdoor.jpg",
-            alt: "Lift Door Transmission Render"
+            href: "/images/projects/LiftDoor/render1.jpg",
+            alt: "Lift Door Transmission Render 1"
         },
         media: [
-            {
-                image: {
-                    href: "/images/projects/LiftDoor/render1.jpg",
-                    alt: "Lift Door Transmission Render 1"
-                }
-            },
             {
                 image: {
                     href: "/images/projects/LiftDoor/render2.jpg",
