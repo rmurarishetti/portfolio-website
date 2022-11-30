@@ -1,8 +1,8 @@
 .tag {
     display: flex;
-    background: var(--color-glass);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background: var(--color-glass-dark);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     color: var(--color-text-secondary);
     padding: 0.2rem 0.4rem;
     font-size: 0.7rem;
@@ -12,21 +12,18 @@
     box-shadow: var(--shadow);
 
     &.engineering {
-        background: rgba(var(--rgb-engineering), 0.1);
         border: 1px solid rgba(var(--rgb-engineering), 0.3);
         box-shadow: 0 0px 10px rgba(var(--rgb-engineering), 0.3);
         color: #e17dff;
     }
 
     &.hardware {
-        background: rgba(var(--rgb-hardware), 0.1);
         border: 1px solid rgba(var(--rgb-hardware), 0.3);
         box-shadow: 0 0px 10px rgba(var(--rgb-hardware), 0.3);
         color: #8a7dff;
     }
 
     &.computing {
-        background: rgba(var(--rgb-computing), 0.1);
         border: 1px solid rgba(var(--rgb-computing), 0.3);
         box-shadow: 0 0px 10px rgba(var(--rgb-computing), 0.3);
         color: #7dfffe;

@@ -13,7 +13,7 @@
     .image {
         z-index: 1;
         position: relative;
-        border-radius: 4%;
+        border-radius: 5%/5.5%;
         overflow: hidden;
         cursor: pointer;
         aspect-ratio: 1.1;
@@ -24,13 +24,12 @@
 
         .arrow {
             position: absolute;
-            margin: 0.4rem;
+            margin: 5% 5.5%;
             right: 0;
-            bottom: 0;
-            transform: translateY(2rem);
+            bottom: -100%;
             font-weight: 600;
             color: var(--accent-primary);
-            transition: transform var(--speed-medium);
+            transition: bottom var(--speed-medium);
             text-shadow: var(--shadow-glow-small);
             z-index: 4;
         }
@@ -42,7 +41,7 @@
             transform: translate(0, -0.5rem);
 
             .arrow {
-                transform: translateY(0rem);
+                bottom: 0;
             }
 
             &+div {
