@@ -311,14 +311,15 @@ export const projectsData = [
         type: "Computing",
         tags: ["Python"],
         thumbnail: {
-            href: "/images/projects/HeatDiffusion/heatmodel_thumbnail.jpg",
+            href: "/images/projects/HeatDiffusion/heatmodel.jpg",
             alt: "2D Heat Diffusion Graph"
         },
         media: [
             {
-                type: "video",
-                href: "/images/projects/HeatDiffusion/heatmodel.mp4",
-                alt: "2D Heat Diffusion Graph Animation"
+                image: {
+                    href: "/images/projects/HeatDiffusion/heatmodel.gif",
+                    alt: "2D Heat Diffusion Graph Animation"
+                }
             },
         ],
         people: [
