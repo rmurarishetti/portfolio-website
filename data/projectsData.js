@@ -15,18 +15,6 @@ export const projectsData = [
         media: [
             {
                 image: {
-                    href: "/images/projects/EBike/concept.jpg",
-                    alt: "eBike Concept"
-                }
-            },
-            {
-                image: {
-                    href: "/images/projects/EBike/materials.jpg",
-                    alt: "eBike Materials Choice"
-                }
-            },
-            {
-                image: {
                     href: "/images/projects/EBike/render1.jpg",
                     alt: "eBike Render 1"
                 }
@@ -47,6 +35,18 @@ export const projectsData = [
                 image: {
                     href: "/images/projects/EBike/render4.jpg",
                     alt: "eBike Render 4"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/EBike/concept.jpg",
+                    alt: "eBike Concept"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/EBike/materials.jpg",
+                    alt: "eBike Materials Choice"
                 }
             },
             {
@@ -145,46 +145,60 @@ export const projectsData = [
         type: "Hardware",
         tags: ["C", "PIC Microcontroller"],
         thumbnail: {
-            href: "/images/projects/Buggy/buggy_thumbnail.jpg",
+            href: "/images/projects/Buggy/buggy3.jpg",
             alt: "Mine Rescue Buggy"
         },
         media: [
             {
                 image: {
-                    href: "/images/projects/Buggy/1_buggy_functionality.jpg",
+                    href: "/images/projects/Buggy/buggy1.jpg",
                     alt: "Mine Rescue Buggy 1"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/Buggy/2_buggy_colourmap.jpg",
+                    href: "/images/projects/Buggy/buggy2.jpg",
                     alt: "Mine Rescue Buggy 2"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/Buggy/3_buggy_colourlogic.jpg",
-                    alt: "Mine Rescue Buggy 3"
+                    href: "/images/projects/Buggy/buggy_slide1.jpg",
+                    alt: "Mine Rescue Buggy Functionality"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/Buggy/buggy_slide2.jpg",
+                    alt: "Mine Rescue Buggy Colour Mapping"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/Buggy/buggy_slide3.jpg",
+                    alt: "Mine Rescue Buggy Colour Identification"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/Buggy/buggy_slide4.gif",
+                    alt: "Mine Rescue Buggy Colour Calibration"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/Buggy/buggy_slide5.gif",
+                    alt: "Mine Rescue Buggy Turning Calibration"
                 }
             },
             {
                 type: "video",
-                href: "/images/projects/Buggy/4_buggy_colourcalib.mp4",
-                alt: "Mine Rescue Buggy Video 1"
-            },
-            {
-                type: "video",
-                href: "/images/projects/Buggy/5_buggy_turning_calib.mp4",
-                alt: "Mine Rescue Buggy Video 2"
-            },
-            {
-                type: "video",
-                href: "/images/projects/Buggy/6_buggy_demo.mp4",
+                href: "/images/projects/Buggy/buggy_slide6.mp4",
                 alt: "Mine Rescue Buggy Video 3"
             },
             {
                 type: "video",
-                href: "/images/projects/Buggy/7_buggy_demo.mp4",
+                href: "/images/projects/Buggy/buggy_slide7.mp4",
                 alt: "Mine Rescue Buggy Video 4"
             },
         ],
