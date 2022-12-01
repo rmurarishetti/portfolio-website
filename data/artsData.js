@@ -99,4 +99,194 @@ export const artsData = [
             alt: 'Copic sketch of the Speed Art museum.',
         }
     },
+    {
+        id: 'townley',
+        title: 'Townley Diskobolos',
+        date: new Date(2020, 10),
+        mediums: ['Alcohol Marker', 'Pencil'],
+        image: {
+            href: '/images/art/townley.jpg',
+            alt: 'Copic sketch of Townley Diskobolos.',
+        }
+    },
+    {
+        id: 'handmuseum',
+        title: "Rodin's Hands",
+        date: new Date(2020, 10),
+        mediums: ['Pencil'],
+        image: {
+            href: '/images/art/handmuseum.jpg',
+            alt: "Sketch of Rodin's Hands.",
+        }
+    },
+    {
+        id: 'pc',
+        title: "My PC",
+        date: new Date(2020, 10),
+        mediums: ['Pencil', 'Digital'],
+        image: {
+            href: '/images/art/pc.jpg',
+            alt: "Sketch of my PC.",
+        }
+    },
+    {
+        id: 'razor',
+        title: "Razor Product Design",
+        date: new Date(2020, 10),
+        mediums: ['Alchol Marker', 'Fineline'],
+        image: {
+            href: '/images/art/razor.jpg',
+            alt: "Product design sketch of a razor.",
+        }
+    },
+    {
+        id: 'bikeframe',
+        title: "eBike Frame Concept",
+        date: new Date(2020, 10),
+        mediums: ['Alchol Marker', 'Fineline'],
+        image: {
+            href: '/images/art/bikeframe.jpg',
+            alt: "Concept sketch of a eBikeFrame.",
+        }
+    },
+    {
+        id: 'disinfectant',
+        title: "Bottle Product Design",
+        date: new Date(2020, 10),
+        mediums: ['Pencil', 'Fineline'],
+        image: {
+            href: '/images/art/disinfectant.jpg',
+            alt: "Product design sketch of a disinfectant bottle.",
+        }
+    },
+    {
+        id: 'tokyo',
+        title: "Tokyo",
+        date: new Date(2020, 9),
+        mediums: ['Digital'],
+        image: {
+            href: '/images/art/tokyo.jpg',
+            alt: "Digital drawing of Tokyo.",
+        }
+    },
+    {
+        id: 'kyoto',
+        title: "Kyoto",
+        date: new Date(2020, 9),
+        mediums: ['Digital'],
+        image: {
+            href: '/images/art/kyoto.jpg',
+            alt: "Digital drawing of Kyoto.",
+        }
+    },
+    {
+        id: 'sf',
+        title: "San Franciso",
+        date: new Date(2020, 9),
+        mediums: ['Digital'],
+        image: {
+            href: '/images/art/sf.jpg',
+            alt: "Digital drawing of San Franciso.",
+        }
+    },
+    {
+        id: 'sp4',
+        title: "My Eyes",
+        date: new Date(2020, 9),
+        mediums: ['Pencil', 'Marker'],
+        image: {
+            href: '/images/art/sp4.jpg',
+            alt: "Sketch of my eyes.",
+        }
+    },
+    {
+        id: 'sp1',
+        title: "Self Portrait",
+        date: new Date(2020, 9),
+        mediums: ['Ballpoint'],
+        image: {
+            href: '/images/art/sp1.jpg',
+            alt: "Self portrait.",
+        }
+    },
+    {
+        id: 'lamp',
+        title: "Artificial Light",
+        date: new Date(2020, 9),
+        mediums: ['Pencil', 'Marker'],
+        image: {
+            href: '/images/art/lamp.jpg',
+            alt: "Artificial Light sketch.",
+        }
+    },
+    {
+        id: 'helmet',
+        title: "Helmet Concept",
+        date: new Date(2020, 0),
+        mediums: ['Digital'],
+        image: {
+            href: '/images/art/helmet.jpg',
+            alt: "Digital concept sketch of a helmet.",
+        }
+    },
+    {
+        id: 'darkroom',
+        title: "Darkness",
+        date: new Date(2019, 9),
+        mediums: ['Digital'],
+        image: {
+            href: '/images/art/darkroom.jpg',
+            alt: "Portrait sketch.",
+        }
+    },
+    {
+        id: 'smokedance',
+        title: "Smoke Dance",
+        date: new Date(2019, 8),
+        mediums: ['Pencil', 'Digital'],
+        image: {
+            href: '/images/art/smokedance.jpg',
+            alt: "Smoke Dance sketch.",
+        }
+    },
+    {
+        id: 'danaerys',
+        title: "Danaerys",
+        date: new Date(2017, 7),
+        mediums: ['Pencil'],
+        image: {
+            href: '/images/art/danaerys.jpg',
+            alt: "Danaerys sketch.",
+        }
+    },
+    {
+        id: 'myhand',
+        title: "My Hand",
+        date: new Date(2016, 6),
+        mediums: ['Pencil'],
+        image: {
+            href: '/images/art/myhand.jpg',
+            alt: "Sketch of my hand.",
+        }
+    },
+    {
+        id: 'eagle',
+        title: "Eagle",
+        date: new Date(2015, 7),
+        mediums: ['Pencil'],
+        image: {
+            href: '/images/art/eagle.jpg',
+            alt: "Sketch of a eagle.",
+        }
+    },
+    {
+        id: 'cat',
+        title: "Cat",
+        date: new Date(2015, 6),
+        mediums: ['Pencil', 'Digital'],
+        image: {
+            href: '/images/art/cat.jpg',
+            alt: "Sketch of a cat.",
+        }
+    },
 ]

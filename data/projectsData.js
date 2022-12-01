@@ -1,13 +1,13 @@
 export const projectsData = [
     {
         id: "ebike-frame",
-        name: "eBike Frame",
-        subtitle: "Yr3 Design Project",
+        name: "eBike",
+        subtitle: "Design and manufacturing of a custom, purpose-built ebike.",
         start: new Date(2020, 8),
         end: new Date(2021, 6),
         featured: true,
         type: "Engineering",
-        tags: ["Ansys", "SolidWorks", "BikeCAD", "CES Selector", "Manufacturing"],
+        tags: ["Ansys", "SolidWorks", "CES", "Manufacturing", "Uni"],
         thumbnail: {
             href: "/images/projects/EBike/thumbnail.jpg",
             alt: "eBike Render"
@@ -138,12 +138,12 @@ export const projectsData = [
     {
         id: "mine-rescue-buggy",
         name: "Mine Rescue Buggy",
-        subtitle: "Yr3 Embedded C for Microcontrollers Project",
+        subtitle: "A robot to follow paths and return autonomously.",
         start: new Date(2021, 2),
         end: new Date(2021, 3),
         featured: true,
         type: "Hardware",
-        tags: ["C", "PIC Microcontroller"],
+        tags: ["C", "Microcontroller", "Uni"],
         thumbnail: {
             href: "/images/projects/Buggy/buggy3.jpg",
             alt: "Mine Rescue Buggy"
@@ -224,12 +224,12 @@ export const projectsData = [
     {
         id: "mobula-ray",
         name: "Mobula Ray",
-        subtitle: "Yr2 Design Week Project",
+        subtitle: "Design of a personal underwater propulsive device.",
         start: new Date(2020, 1),
-        end: new Date(2020, 1),
+        end: null,
         featured: true,
         type: "Engineering",
-        tags: ["SolidWorks", "CES Selector"],
+        tags: ["SolidWorks", "CES", "Uni"],
         thumbnail: {
             href: "/images/projects/MobulaRay/render1.jpg",
             alt: "Mobula Ray Render 1"
@@ -318,12 +318,12 @@ export const projectsData = [
     {
         id: "heat-diff-model",
         name: "2D Heat Diffusion Model",
-        subtitle: "Yr2 Computing Project",
+        subtitle: "Dynamic transient heat transfer model of multi-material blocks.",
         start: new Date(2020, 1),
-        end: new Date(2020, 1),
+        end: null,
         featured: true,
         type: "Computing",
-        tags: ["Python"],
+        tags: ["Python", "Uni"],
         thumbnail: {
             href: "/images/projects/HeatDiffusion/heatmodel.jpg",
             alt: "2D Heat Diffusion Graph"
@@ -358,12 +358,12 @@ export const projectsData = [
     {
         id: "sonic",
         name: "SONIC",
-        subtitle: "Yr2 Design & Manufacture Project",
+        subtitle: "Design and manufacturing of a miniature electric drag race car.",
         start: new Date(2019, 9),
         end: new Date(2019, 11),
         featured: true,
         type: "Engineering",
-        tags: ["SolidWorks", "Manufacturing"],
+        tags: ["SolidWorks", "Manufacturing", "Uni"],
         thumbnail: {
             href: "/images/projects/Sonic/render1.jpg",
             alt: "SONIC Render"
@@ -492,12 +492,12 @@ export const projectsData = [
     {
         id: "lift-door",
         name: "Lift Door Transmission",
-        subtitle: "Yr1 Drive Tranimission Project",
+        subtitle: "Design of a bi-directional mechanical transmission.",
         start: new Date(2019, 0),
         end: new Date(2019, 2),
         featured: false,
         type: "Engineering",
-        tags: ["SolidWorks"],
+        tags: ["SolidWorks", "Uni"],
         thumbnail: {
             href: "/images/projects/LiftDoor/render1.jpg",
             alt: "Lift Door Transmission Render 1"
@@ -568,6 +568,701 @@ export const projectsData = [
         description: [
             "An individual project to design a drive transmission for a lift door, including the complete CAD assembly and engineering drawings.",
             "The design features a two-step speed increase and converts rotary motor motion to double-acting linear motion."
+        ]
+    },
+    {
+        id: "data-open",
+        name: "Article Headlines Effect on User Clickrate",
+        subtitle: "An NLP-based data-analysis of article headlines.",
+        start: new Date(2021, 8, 7),
+        end: null,
+        featured: false,
+        type: "Computing",
+        tags: ["Python", "Data-Analysis", "Hackathon", "NLP", "ML"],
+        thumbnail: {
+            href: "/images/projects/DataOpen/plot6.png",
+            alt: "Muti-variate Plot"
+        },
+        media: [
+            {
+                image: {
+                    href: "/images/projects/DataOpen/plot1.png",
+                    alt: "Plot 1"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/DataOpen/plot2.png",
+                    alt: "Plot 2"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/DataOpen/plot3.png",
+                    alt: "Plot 3"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/DataOpen/plot4.png",
+                    alt: "Plot 4"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/DataOpen/plot5.png",
+                    alt: "Plot 5"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/DataOpen/plot6.png",
+                    alt: "Plot 6"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/DataOpen/plot7.png",
+                    alt: "Plot 7"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/DataOpen/plot8.png",
+                    alt: "Plot 8"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/DataOpen/plot9.png",
+                    alt: "Plot 9"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/DataOpen/plot10.png",
+                    alt: "Plot 10"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/DataOpen/plot11.jpg",
+                    alt: "Plot 11"
+                }
+            },
+        ],
+        people: [
+            {
+                name: "Maria Julia Maristany",
+                linkedin: "https://www.linkedin.com/in/maria-julia-maristany-51777915a/"
+            },
+            {
+                name: "Ludwig Jonsson",
+                linkedin: "https://www.linkedin.com/in/ludwigaj/"
+            },
+            {
+                name: "Manith Adikari",
+                linkedin: "https://www.linkedin.com/in/manith-adikari/"
+            }
+        ],
+        documents: [
+            {
+                type: "Report",
+                href: ""
+            },
+        ],
+        description: [
+            "Selected to complete in Citadel's 2021 week-long Europe Regional Datathon. As a group of 4 Imperial and Cambridge students, we focused on identifying the key parameters in online articles which affect user clickrates before the article is read. ",
+            "In the last two decades, with the advent of social networks, most firms have grown an increasingly strong presence online. Whether we are talking about technology, marketing, media, retail, politics, health or activism, engagement has become the standard metric to measure impact, and therefore, success, of products, campaigns or media content.",
+            "The aim was to identify trends in user-behaviours, namely click rates. This would enable us not only to gain insight into which type of A/B test is more effective to increase engagement, but also a first look into what the collection of available data can tell us about the interaction dynamics between the population analysed with online content.",
+        ]
+    },
+    {
+        id: "lunar-deployer",
+        name: "Lunar Rover Deployer",
+        subtitle: "Concept device to deploy Spacebit's Asagumo rover on the lunar surface.",
+        start: new Date(2021, 1),
+        end: null,
+        featured: false,
+        type: "Engineering",
+        tags: ["SolidWorks", "Fusion360", "Hackathon"],
+        thumbnail: {
+            href: "/images/projects/LunarDeployer/render1.png",
+            alt: "Muti-variate Plot"
+        },
+        media: [
+            {
+                image: {
+                    href: "/images/projects/LunarDeployer/render1.png",
+                    alt: "Lunar Deployer Render 1"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/LunarDeployer/render2.png",
+                    alt: "Lunar Deployer Render 2"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/LunarDeployer/render3.png",
+                    alt: "Lunar Deployer Render 3"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/LunarDeployer/render4.png",
+                    alt: "Lunar Deployer Render 4"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/LunarDeployer/render5.png",
+                    alt: "Lunar Deployer Render 5"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/LunarDeployer/render6.png",
+                    alt: "Lunar Deployer Render 6"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/LunarDeployer/render7.png",
+                    alt: "Lunar Deployer Render 7"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/LunarDeployer/render8.png",
+                    alt: "Lunar Deployer Render 8"
+                }
+            },
+        ],
+        people: [
+            {
+                name: "João Matias",
+                linkedin: "https://www.linkedin.com/in/joao-matias/"
+            },
+            {
+                name: "Ming Jie See",
+                linkedin: "https://www.linkedin.com/in/mj-see/"
+            },
+            {
+                name: "Manith Adikari",
+                linkedin: "https://www.linkedin.com/in/manith-adikari/"
+            },
+            {
+                name: "Andrew Chen Siyuan",
+                linkedin: "https://www.linkedin.com/in/andrew-chen-siyuan-13025913a/"
+            },
+            {
+                name: "Wang Jiale",
+                linkedin: "https://www.linkedin.com/in/jiale-wang-sg/"
+            }
+        ],
+        documents: [],
+        description: [
+            "Participated in 2021's Making for the Moon Hackathon with a group of five inter-university and cross-disciplinary students. The challenge was to design a solution to deploy SpaceBit's Asagumo rover from a height of 1m on the moon. Our proposed solution went back to the basics and relied on a simple winch and hook mechanism to both deploy and retrieve the rover. I was responsible for designing the mechanical actuation system, CAD, and rendering.",
+            "The actuation subsystem houses a 1W DC motor, a 1:30 Planetary reduction gearbox, the spool-shaft assembly and the control system for motor control and sensors. Additionally, the unit was carefully designed to meet Asagumo rover's specifications and Astrobotic Tech's Peregrine lunar lander's payload dimension / weight specifications.",
+            "The slotted and sealed casing design also featured methods of minimising loads: sine-vibrational, random vibrational, acoustic and shock. The casing and internal components were designed for a nominal temperature range of -120°C to 100°C.",
+            "The grasping subsystem featured a self-orientating magnetic hook and clamp mechanism for attachment and detachment. This allows for both deployment and recovery of the rover."
+        ]
+    },
+    {
+        id: "bi-space",
+        name: "BiSpace",
+        subtitle: "Design of a compact vertical bike storage solution.",
+        start: new Date(2020, 9),
+        end: new Date(2020, 11),
+        featured: false,
+        type: "Design",
+        tags: ["SolidWorks", "Prototyping"],
+        thumbnail: {
+            href: "/images/projects/BiSpace/render1.png",
+            alt: "BiSpace Render 1"
+        },
+        media: [
+            {
+                image: {
+                    href: "/images/projects/BiSpace/render1.png",
+                    alt: "BiSpace Render 1"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/BiSpace/render2.png",
+                    alt: "BiSpace Render 2"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/BiSpace/render3.png",
+                    alt: "BiSpace Render 3"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/BiSpace/render4.png",
+                    alt: "BiSpace Render 4"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/BiSpace/render5.png",
+                    alt: "BiSpace Render 5"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/BiSpace/render6.png",
+                    alt: "BiSpace Render 6"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/BiSpace/render7.png",
+                    alt: "BiSpace Render 7"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/BiSpace/render8.png",
+                    alt: "BiSpace Render 8"
+                }
+            },
+        ],
+        people: [
+            {
+                name: "Thomas Watson",
+                linkedin: "https://www.linkedin.com/in/thomasjswatson/"
+            },
+            {
+                name: "Frederik Masure",
+                linkedin: "https://www.linkedin.com/in/frederik-masure-a97415173/"
+            },
+            {
+                name: "Luke Walters",
+                linkedin: "https://www.linkedin.com/in/luke-walters-184238208/"
+            },
+        ],
+        documents: [],
+        description: [
+            "Designed and prototyped a compact bike storage, focusing on increased functionality and aesthetics compared to existing market solutions.",
+            "Bispace was designed by a group of four Imperial mechanical engineering students. A prototype made of MDF was also developed as a proof of concept. I was responsible for the overall design, CAD, rendering and core website.",
+            "General Design: 3-part design constituting of a beech platform, ABS centre piece and ABS side panels. The wooden platform provides a low CG for added lateral stability has an inbuilt back plate to act as the rear wheel pivot for effortless mounting. The centrepiece has an integrated wheel slot to avoid slippage and the material choice allows for customer preference colouring. The side panels feature locking slot pins and auto-retracting tension hooks for added mounting security. Additionally, the outward tapering top maximises compatibility of varying bike frame geometries.",
+            "The stand is compatible with 95% of bikes of varying frame dimensions and wheel sizes - based off testing and analysis of bikes in London."
+        ]
+    },
+    {
+        id: "checkapp",
+        name: "CheckApp",
+        subtitle: "Concept app for informed prescriptions and medical decisions.",
+        start: new Date(2020, 6),
+        end: null,
+        featured: false,
+        type: "UI/UX",
+        tags: ["AdobeXD"],
+        thumbnail: {
+            href: "/images/projects/CheckApp/mockup1.png",
+            alt: "CheckApp Mockup 1"
+        },
+        media: [
+            {
+                image: {
+                    href: "/images/projects/CheckApp/mockup1.png",
+                    alt: "CheckApp Mockup 1"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/CheckApp/mockup2.png",
+                    alt: "CheckApp Mockup 2"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/CheckApp/mockup3.png",
+                    alt: "CheckApp Mockup 3"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/CheckApp/mockup4.png",
+                    alt: "CheckApp Mockup 4"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/CheckApp/mockup5.png",
+                    alt: "CheckApp Mockup 5"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/CheckApp/mockup6.png",
+                    alt: "CheckApp Mockup 6"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/CheckApp/mockup7.png",
+                    alt: "CheckApp Mockup 7"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/CheckApp/mockup8.png",
+                    alt: "CheckApp Mockup 8"
+                }
+            },
+        ],
+        people: [
+            {
+                name: "Josh Cheng",
+                linkedin: "https://www.linkedin.com/in/josh-cheng-633311140/"
+            },
+            {
+                name: "Frederik Masure",
+                linkedin: "https://www.linkedin.com/in/frederik-masure-a97415173/"
+            },
+            {
+                name: "Manith Adikari",
+                linkedin: "https://www.linkedin.com/in/manith-adikari/"
+            },
+        ],
+        documents: [],
+        description: [
+            "As a group of four, second-year mechanical engineering students, we participated in the annual five-day hackathon hosted by Imperial College Business School. This year's competition involved finding a sustainable health-tech solution to tackle the global non-communicable disease epidemic.",
+            "We proposed an app to improve medical data collection and accessibility, which would, in turn, allow for more informed medical and lifestyle decisions for both users and healthcare providers.",
+            "Currently, healthcare systems are out of date and there exists an information imbalance between patients and doctors, leading to less accurate advice. With an improved database of information and a deep learning model that considers family medical history, we can provide personalized assessments of a user's health risks, reducing the strain on healthcare systems.",
+        ]
+    },
+    {
+        id: "rail-guide",
+        name: "Fly-away Rail Guides",
+        subtitle: "Design of automatic launch device for a supersonic rocket.",
+        start: new Date(2019, 9),
+        end: new Date(2020, 2),
+        featured: false,
+        type: "Engineering",
+        tags: ["SolidWorks"],
+        thumbnail: {
+            href: "/images/projects/RailGuide/render1.png",
+            alt: "Fly-away Rail Guide Render 1"
+        },
+        media: [
+            {
+                image: {
+                    href: "/images/projects/RailGuide/render1.png",
+                    alt: "Fly-away Rail Guide Render 1"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/RailGuide/render2.png",
+                    alt: "Fly-away Rail Guide Render 2"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/RailGuide/render3.png",
+                    alt: "Fly-away Rail Guide Render 3"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/RailGuide/render4.png",
+                    alt: "Fly-away Rail Guide Render 4"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/RailGuide/render5.png",
+                    alt: "Fly-away Rail Guide Render 5"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/RailGuide/render6.png",
+                    alt: "Fly-away Rail Guide Render 6"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/RailGuide/render7.png",
+                    alt: "Fly-away Rail Guide Render 7"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/RailGuide/render8.png",
+                    alt: "Fly-away Rail Guide Render 8"
+                }
+            },
+        ],
+        people: [
+            {
+                name: "Nikhil Dawda",
+                linkedin: "https://www.linkedin.com/in/nikhil-dawda-a11a431a5/"
+            },
+            {
+                name: "Kai Wilkinson",
+                linkedin: null
+            },
+        ],
+        documents: [],
+        description: [
+            "Designed two bespoke fly-away rail guides for two Imperial College SpaceSoc supersonic rockets, participating in the UKSEDS National Rocketry Competition 2020. ",
+            "The fly-away rail guide securely attaches the rocket body to the aluminium rail and ensures a vertical take-off. They are designed to automatically detach from the rocket body without needing any external electronic feedback.",
+        ]
+    },
+    {
+        id: "daedalus",
+        name: "Project Daedalus",
+        subtitle: "Concept design of cockpit overhaul for 6th-gen fighter jets.",
+        start: new Date(2019, 11),
+        end: new Date(2020, 1),
+        featured: false,
+        type: "Design",
+        tags: ["ProCreate"],
+        thumbnail: {
+            href: "/images/projects/ProjectDaedalus/concept1.png",
+            alt: "Project Daedalus Concept 1"
+        },
+        media: [
+            {
+                image: {
+                    href: "/images/projects/ProjectDaedalus/concept1.png",
+                    alt: "Project Daedalus Concept 1"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/ProjectDaedalus/concept2.png",
+                    alt: "Project Daedalus Concept 2"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/ProjectDaedalus/concept3.png",
+                    alt: "Project Daedalus Concept 3"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/ProjectDaedalus/concept4.png",
+                    alt: "Project Daedalus Concept 4"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/ProjectDaedalus/concept5.png",
+                    alt: "Project Daedalus Concept 5"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/ProjectDaedalus/concept6.png",
+                    alt: "Project Daedalus Concept 6"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/ProjectDaedalus/concept7.png",
+                    alt: "Project Daedalus Concept 7"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/ProjectDaedalus/concept8.png",
+                    alt: "Project Daedalus Concept 8"
+                }
+            },
+        ],
+        people: [
+            {
+                name: "George Ge",
+                linkedin: "https://www.linkedin.com/in/george-ge-a8b334163/"
+            },
+        ],
+        documents: [],
+        description: [
+            "Daedulus is a cockpit overhaul concept for 6th gen jet fighters. This concept provides improvements over current HOTAS systems in areas such as reaction time, programmability, functionality and intuitiveness.",
+            "The design features a calibrated cueing system to eye movements. This is done by the integrated iris trackers in the edges of the helmet visor. The reticle will be able to interact with:",
+            "-Onboard targeting systems such as air-to-air radar, FLIR and others to designate singular or multiple targets.",
+            "-The front panel of the aircraft, with the reticle acting as a 'mouse cursor.'",
+            "-Controls on the throttle will simplify to two buttons, equivalent to left and right mouse buttons.",
+            "Navigation of options will be done through the sight-controlled reticle, and alternatively through voice commands. Similarly, the control stick will only have buttons for countermeasures, trigger and weapon release, with a multi-axis hat for trimming. These changes allow for pilots to achieve at least 80% of the aircraft's combat and logistical functions without ever removing their hands from the throttle or control stick."
+        ]
+    },
+    {
+        id: "spiderman",
+        name: "SPIDERMAN",
+        subtitle: "Design proposal for capturing dead satellites from the low-Earth orbit",
+        start: new Date(2019, 10),
+        end: null,
+        featured: false,
+        type: "Design",
+        tags: ["ProCreate, MATLAB"],
+        thumbnail: {
+            href: "/images/projects/Spiderman/concept1.png",
+            alt: "Spiderman Concept 1"
+        },
+        media: [
+            {
+                image: {
+                    href: "/images/projects/Spiderman/concept1.png",
+                    alt: "Spiderman Concept 1"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/Spiderman/concept2.png",
+                    alt: "Spiderman Concept 2"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/Spiderman/concept3.png",
+                    alt: "Spiderman Concept 3"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/Spiderman/concept4.png",
+                    alt: "Spiderman Concept 4"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/Spiderman/concept5.png",
+                    alt: "Spiderman Concept 5"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/Spiderman/concept6.png",
+                    alt: "Spiderman Concept 6"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/Spiderman/concept7.png",
+                    alt: "Spiderman Concept 7"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/Spiderman/concept8.png",
+                    alt: "Spiderman Concept 8"
+                }
+            },
+        ],
+        people: [
+            {
+                name: "Maha Khamlichi",
+                linkedin: "https://www.linkedin.com/in/maha-khamlichi-5284ba186/"
+            },
+            {
+                name: "Ben Foster",
+                linkedin: "https://www.linkedin.com/in/benjaminfoster1/"
+            },
+            {
+                name: "Manith Adikari",
+                linkedin: "https://www.linkedin.com/in/manith-adikari/"
+            },
+            {
+                name: "João Matias",
+                linkedin: "https://www.linkedin.com/in/joao-matias-68656c6c6f/"
+            },
+        ],
+        documents: [],
+        description: [
+            "2019's SpackHack hosted by OneWeb tasked us with finding a solution to the ever-growing low-Earth orbit space debris problem. As a group of 6 aeronautical and mechanical engineering students, we proposed implementing optimally positioned nodes in the current satellites network. Each node would house a booster module containing a deployable net mechanism to capture 'dead' satellites which have malfunctioned in the process of self-deorbiting at the end of their life-cycle.",
+            "A soft capture is ensured with our net proposal and is important to reduce the risk of debris being created from an impact. Once captured, the booster module could accelerate the dead satellite into an exaggerated elliptical orbit, forcing disintegration on re-entry at a much faster pace than current procedures.",
+            "It was a thoroughly enjoyable experience coming together as a team and was ecstatic to be awarded 1st place out of 40 teams for our idea. Furthermore, we were invited to OneWeb's head office in London for the official launch event of 34 of their satellites."
+        ]
+    },
+    {
+        id: "bioreactor",
+        name: "Fluorescent Biorector",
+        subtitle: "Protype of a cell-growth device.",
+        start: new Date(2019, 0),
+        end: new Date(2019, 1),
+        featured: false,
+        type: "Hardware",
+        tags: ["Arduino", "C"],
+        thumbnail: {
+            href: "/images/projects/Bioreactor/Prototype1.png",
+            alt: "Bioreactor Prototype 1"
+        },
+        media: [
+            {
+                image: {
+                    href: "/images/projects/Bioreactor/Prototype1.png",
+                    alt: "Bioreactor Prototype 1"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/Bioreactor/Prototype2.png",
+                    alt: "Bioreactor Prototype 2"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/Bioreactor/Prototype3.png",
+                    alt: "Bioreactor Prototype 3"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/Bioreactor/Prototype4.png",
+                    alt: "Bioreactor Prototype 4"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/Bioreactor/Prototype5.png",
+                    alt: "Bioreactor Prototype 5"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/Bioreactor/Prototype6.png",
+                    alt: "Bioreactor Prototype 6"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/Bioreactor/Prototype7.png",
+                    alt: "Bioreactor Prototype 7"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/Bioreactor/Prototype8.png",
+                    alt: "Bioreactor Prototype 8"
+                }
+            },
+        ],
+        people: [
+            {
+                name: "Manith Adikari",
+                linkedin: "https://www.linkedin.com/in/manith-adikari/"
+            },
+            {
+                name: "Yoonseo Lim",
+                linkedin: "https://www.linkedin.com/in/yoonseo-lim-115561173/"
+            },
+        ],
+        documents: [],
+        description: [
+            "As part of the Imperial Horizons, Making and Prototyping course, the final project required a device to be manufactured to actively detect cell growth and count. This project proved to be particularly challenging for our team of three, which comprised of students with no bio-related backgrounds.",
+            "Our design involved the detection of fluorescent proteins produced by the GM bacteria culture used. A servo motor based pump system was implemented to introduce a chemical inducer into the sample to start this process.",
+            "A photodiode was used to measure the intensity of light from an LED after passing through the fluorescent sample. As the light intensity was proportional to the cell count, an Arduino code was composed to translate the voltage output of the photodiode to a meaningful cell count reading."
         ]
     },
 ]
