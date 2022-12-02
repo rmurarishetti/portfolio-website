@@ -816,7 +816,7 @@ export const projectsData = [
             },
             {
                 image: {
-                    href: "/images/projects/BiSpace/prototype3.gif",
+                    href: "/images/projects/BiSpace/prototype2.gif",
                     alt: "BiSpace Demo"
                 }
             },
