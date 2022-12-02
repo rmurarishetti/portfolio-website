@@ -687,8 +687,8 @@ export const projectsData = [
         type: "Engineering",
         tags: ["SolidWorks", "Fusion360", "Hackathon"],
         thumbnail: {
-            href: "/images/projects/LunarDeployer/render1.png",
-            alt: "Muti-variate Plot"
+            href: "/images/projects/LunarDeployer/render4.png",
+            alt: "Lunar Deployer Render 4"
         },
         media: [
             {
@@ -713,30 +713,6 @@ export const projectsData = [
                 image: {
                     href: "/images/projects/LunarDeployer/render4.png",
                     alt: "Lunar Deployer Render 4"
-                }
-            },
-            {
-                image: {
-                    href: "/images/projects/LunarDeployer/render5.png",
-                    alt: "Lunar Deployer Render 5"
-                }
-            },
-            {
-                image: {
-                    href: "/images/projects/LunarDeployer/render6.png",
-                    alt: "Lunar Deployer Render 6"
-                }
-            },
-            {
-                image: {
-                    href: "/images/projects/LunarDeployer/render7.png",
-                    alt: "Lunar Deployer Render 7"
-                }
-            },
-            {
-                image: {
-                    href: "/images/projects/LunarDeployer/render8.png",
-                    alt: "Lunar Deployer Render 8"
                 }
             },
         ],
@@ -863,7 +839,7 @@ export const projectsData = [
         end: null,
         featured: false,
         type: "UI/UX",
-        tags: ["AdobeXD"],
+        tags: ["AdobeXD", "Hackathon"],
         thumbnail: {
             href: "/images/projects/CheckApp/mockup1.png",
             alt: "CheckApp Mockup 1"
