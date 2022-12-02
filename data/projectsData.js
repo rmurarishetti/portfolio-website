@@ -943,12 +943,6 @@ export const projectsData = [
         media: [
             {
                 image: {
-                    href: "/images/projects/RailGuide/render1.jpg",
-                    alt: "Fly-away Rail Guide Render 1"
-                }
-            },
-            {
-                image: {
                     href: "/images/projects/RailGuide/render2.jpg",
                     alt: "Fly-away Rail Guide Render 2"
                 }
@@ -967,26 +961,8 @@ export const projectsData = [
             },
             {
                 image: {
-                    href: "/images/projects/RailGuide/render5.jpg",
-                    alt: "Fly-away Rail Guide Render 5"
-                }
-            },
-            {
-                image: {
-                    href: "/images/projects/RailGuide/render6.jpg",
-                    alt: "Fly-away Rail Guide Render 6"
-                }
-            },
-            {
-                image: {
-                    href: "/images/projects/RailGuide/render7.jpg",
-                    alt: "Fly-away Rail Guide Render 7"
-                }
-            },
-            {
-                image: {
-                    href: "/images/projects/RailGuide/render8.jpg",
-                    alt: "Fly-away Rail Guide Render 8"
+                    href: "/images/projects/RailGuide/render1.jpg",
+                    alt: "Fly-away Rail Guide Render 1"
                 }
             },
         ],
