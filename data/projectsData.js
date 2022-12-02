@@ -756,56 +756,68 @@ export const projectsData = [
         type: "Design",
         tags: ["SolidWorks", "Prototyping"],
         thumbnail: {
-            href: "/images/projects/BiSpace/render1.jpg",
+            href: "/images/projects/BiSpace/render1.png",
             alt: "BiSpace Render 1"
         },
         media: [
             {
                 image: {
-                    href: "/images/projects/BiSpace/render1.jpg",
-                    alt: "BiSpace Render 1"
-                }
-            },
-            {
-                image: {
-                    href: "/images/projects/BiSpace/render2.jpg",
+                    href: "/images/projects/BiSpace/render2.png",
                     alt: "BiSpace Render 2"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/BiSpace/render3.jpg",
+                    href: "/images/projects/BiSpace/render3.png",
                     alt: "BiSpace Render 3"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/BiSpace/render4.jpg",
+                    href: "/images/projects/BiSpace/render4.png",
                     alt: "BiSpace Render 4"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/BiSpace/render5.jpg",
+                    href: "/images/projects/BiSpace/render5.png",
                     alt: "BiSpace Render 5"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/BiSpace/render6.jpg",
+                    href: "/images/projects/BiSpace/render6.png",
                     alt: "BiSpace Render 6"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/BiSpace/render7.jpg",
+                    href: "/images/projects/BiSpace/render7.png",
                     alt: "BiSpace Render 7"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/BiSpace/render8.jpg",
+                    href: "/images/projects/BiSpace/render8.png",
                     alt: "BiSpace Render 8"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/BiSpace/assembly.gif",
+                    alt: "BiSpace Assembly Process"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/BiSpace/prototype1.gif",
+                    alt: "BiSpace Compatibility"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/BiSpace/prototype3.gif",
+                    alt: "BiSpace Demo"
                 }
             },
         ],
