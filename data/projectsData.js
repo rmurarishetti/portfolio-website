@@ -687,31 +687,31 @@ export const projectsData = [
         type: "Engineering",
         tags: ["SolidWorks", "Fusion360", "Hackathon"],
         thumbnail: {
-            href: "/images/projects/LunarDeployer/render4.png",
+            href: "/images/projects/LunarDeployer/render4.jpg",
             alt: "Lunar Deployer Render 4"
         },
         media: [
             {
                 image: {
-                    href: "/images/projects/LunarDeployer/render1.png",
+                    href: "/images/projects/LunarDeployer/render1.jpg",
                     alt: "Lunar Deployer Render 1"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/LunarDeployer/render2.png",
+                    href: "/images/projects/LunarDeployer/render2.jpg",
                     alt: "Lunar Deployer Render 2"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/LunarDeployer/render3.png",
+                    href: "/images/projects/LunarDeployer/render3.jpg",
                     alt: "Lunar Deployer Render 3"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/LunarDeployer/render4.png",
+                    href: "/images/projects/LunarDeployer/render4.jpg",
                     alt: "Lunar Deployer Render 4"
                 }
             },
@@ -756,55 +756,55 @@ export const projectsData = [
         type: "Design",
         tags: ["SolidWorks", "Prototyping"],
         thumbnail: {
-            href: "/images/projects/BiSpace/render1.png",
+            href: "/images/projects/BiSpace/render1.jpg",
             alt: "BiSpace Render 1"
         },
         media: [
             {
                 image: {
-                    href: "/images/projects/BiSpace/render1.png",
+                    href: "/images/projects/BiSpace/render1.jpg",
                     alt: "BiSpace Render 1"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/BiSpace/render2.png",
+                    href: "/images/projects/BiSpace/render2.jpg",
                     alt: "BiSpace Render 2"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/BiSpace/render3.png",
+                    href: "/images/projects/BiSpace/render3.jpg",
                     alt: "BiSpace Render 3"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/BiSpace/render4.png",
+                    href: "/images/projects/BiSpace/render4.jpg",
                     alt: "BiSpace Render 4"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/BiSpace/render5.png",
+                    href: "/images/projects/BiSpace/render5.jpg",
                     alt: "BiSpace Render 5"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/BiSpace/render6.png",
+                    href: "/images/projects/BiSpace/render6.jpg",
                     alt: "BiSpace Render 6"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/BiSpace/render7.png",
+                    href: "/images/projects/BiSpace/render7.jpg",
                     alt: "BiSpace Render 7"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/BiSpace/render8.png",
+                    href: "/images/projects/BiSpace/render8.jpg",
                     alt: "BiSpace Render 8"
                 }
             },
@@ -841,55 +841,55 @@ export const projectsData = [
         type: "UI/UX",
         tags: ["AdobeXD", "Hackathon"],
         thumbnail: {
-            href: "/images/projects/CheckApp/mockup1.png",
+            href: "/images/projects/CheckApp/mockup1.jpg",
             alt: "CheckApp Mockup 1"
         },
         media: [
             {
                 image: {
-                    href: "/images/projects/CheckApp/mockup1.png",
+                    href: "/images/projects/CheckApp/mockup1.jpg",
                     alt: "CheckApp Mockup 1"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/CheckApp/mockup2.png",
+                    href: "/images/projects/CheckApp/mockup2.jpg",
                     alt: "CheckApp Mockup 2"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/CheckApp/mockup3.png",
+                    href: "/images/projects/CheckApp/mockup3.jpg",
                     alt: "CheckApp Mockup 3"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/CheckApp/mockup4.png",
+                    href: "/images/projects/CheckApp/mockup4.jpg",
                     alt: "CheckApp Mockup 4"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/CheckApp/mockup5.png",
+                    href: "/images/projects/CheckApp/mockup5.jpg",
                     alt: "CheckApp Mockup 5"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/CheckApp/mockup6.png",
+                    href: "/images/projects/CheckApp/mockup6.jpg",
                     alt: "CheckApp Mockup 6"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/CheckApp/mockup7.png",
+                    href: "/images/projects/CheckApp/mockup7.jpg",
                     alt: "CheckApp Mockup 7"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/CheckApp/mockup8.png",
+                    href: "/images/projects/CheckApp/mockup8.jpg",
                     alt: "CheckApp Mockup 8"
                 }
             },
@@ -925,55 +925,55 @@ export const projectsData = [
         type: "Engineering",
         tags: ["SolidWorks"],
         thumbnail: {
-            href: "/images/projects/RailGuide/render1.png",
+            href: "/images/projects/RailGuide/render1.jpg",
             alt: "Fly-away Rail Guide Render 1"
         },
         media: [
             {
                 image: {
-                    href: "/images/projects/RailGuide/render1.png",
+                    href: "/images/projects/RailGuide/render1.jpg",
                     alt: "Fly-away Rail Guide Render 1"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/RailGuide/render2.png",
+                    href: "/images/projects/RailGuide/render2.jpg",
                     alt: "Fly-away Rail Guide Render 2"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/RailGuide/render3.png",
+                    href: "/images/projects/RailGuide/render3.jpg",
                     alt: "Fly-away Rail Guide Render 3"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/RailGuide/render4.png",
+                    href: "/images/projects/RailGuide/render4.jpg",
                     alt: "Fly-away Rail Guide Render 4"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/RailGuide/render5.png",
+                    href: "/images/projects/RailGuide/render5.jpg",
                     alt: "Fly-away Rail Guide Render 5"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/RailGuide/render6.png",
+                    href: "/images/projects/RailGuide/render6.jpg",
                     alt: "Fly-away Rail Guide Render 6"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/RailGuide/render7.png",
+                    href: "/images/projects/RailGuide/render7.jpg",
                     alt: "Fly-away Rail Guide Render 7"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/RailGuide/render8.png",
+                    href: "/images/projects/RailGuide/render8.jpg",
                     alt: "Fly-away Rail Guide Render 8"
                 }
             },
@@ -1004,55 +1004,55 @@ export const projectsData = [
         type: "Design",
         tags: ["ProCreate"],
         thumbnail: {
-            href: "/images/projects/ProjectDaedalus/concept1.png",
+            href: "/images/projects/ProjectDaedalus/concept1.jpg",
             alt: "Project Daedalus Concept 1"
         },
         media: [
             {
                 image: {
-                    href: "/images/projects/ProjectDaedalus/concept1.png",
+                    href: "/images/projects/ProjectDaedalus/concept1.jpg",
                     alt: "Project Daedalus Concept 1"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/ProjectDaedalus/concept2.png",
+                    href: "/images/projects/ProjectDaedalus/concept2.jpg",
                     alt: "Project Daedalus Concept 2"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/ProjectDaedalus/concept3.png",
+                    href: "/images/projects/ProjectDaedalus/concept3.jpg",
                     alt: "Project Daedalus Concept 3"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/ProjectDaedalus/concept4.png",
+                    href: "/images/projects/ProjectDaedalus/concept4.jpg",
                     alt: "Project Daedalus Concept 4"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/ProjectDaedalus/concept5.png",
+                    href: "/images/projects/ProjectDaedalus/concept5.jpg",
                     alt: "Project Daedalus Concept 5"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/ProjectDaedalus/concept6.png",
+                    href: "/images/projects/ProjectDaedalus/concept6.jpg",
                     alt: "Project Daedalus Concept 6"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/ProjectDaedalus/concept7.png",
+                    href: "/images/projects/ProjectDaedalus/concept7.jpg",
                     alt: "Project Daedalus Concept 7"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/ProjectDaedalus/concept8.png",
+                    href: "/images/projects/ProjectDaedalus/concept8.jpg",
                     alt: "Project Daedalus Concept 8"
                 }
             },
@@ -1083,55 +1083,55 @@ export const projectsData = [
         type: "Design",
         tags: ["ProCreate, MATLAB"],
         thumbnail: {
-            href: "/images/projects/Spiderman/concept1.png",
+            href: "/images/projects/Spiderman/concept1.jpg",
             alt: "Spiderman Concept 1"
         },
         media: [
             {
                 image: {
-                    href: "/images/projects/Spiderman/concept1.png",
+                    href: "/images/projects/Spiderman/concept1.jpg",
                     alt: "Spiderman Concept 1"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/Spiderman/concept2.png",
+                    href: "/images/projects/Spiderman/concept2.jpg",
                     alt: "Spiderman Concept 2"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/Spiderman/concept3.png",
+                    href: "/images/projects/Spiderman/concept3.jpg",
                     alt: "Spiderman Concept 3"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/Spiderman/concept4.png",
+                    href: "/images/projects/Spiderman/concept4.jpg",
                     alt: "Spiderman Concept 4"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/Spiderman/concept5.png",
+                    href: "/images/projects/Spiderman/concept5.jpg",
                     alt: "Spiderman Concept 5"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/Spiderman/concept6.png",
+                    href: "/images/projects/Spiderman/concept6.jpg",
                     alt: "Spiderman Concept 6"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/Spiderman/concept7.png",
+                    href: "/images/projects/Spiderman/concept7.jpg",
                     alt: "Spiderman Concept 7"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/Spiderman/concept8.png",
+                    href: "/images/projects/Spiderman/concept8.jpg",
                     alt: "Spiderman Concept 8"
                 }
             },
@@ -1171,55 +1171,55 @@ export const projectsData = [
         type: "Hardware",
         tags: ["Arduino", "C"],
         thumbnail: {
-            href: "/images/projects/Bioreactor/Prototype1.png",
+            href: "/images/projects/Bioreactor/Prototype1.jpg",
             alt: "Bioreactor Prototype 1"
         },
         media: [
             {
                 image: {
-                    href: "/images/projects/Bioreactor/Prototype1.png",
+                    href: "/images/projects/Bioreactor/Prototype1.jpg",
                     alt: "Bioreactor Prototype 1"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/Bioreactor/Prototype2.png",
+                    href: "/images/projects/Bioreactor/Prototype2.jpg",
                     alt: "Bioreactor Prototype 2"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/Bioreactor/Prototype3.png",
+                    href: "/images/projects/Bioreactor/Prototype3.jpg",
                     alt: "Bioreactor Prototype 3"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/Bioreactor/Prototype4.png",
+                    href: "/images/projects/Bioreactor/Prototype4.jpg",
                     alt: "Bioreactor Prototype 4"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/Bioreactor/Prototype5.png",
+                    href: "/images/projects/Bioreactor/Prototype5.jpg",
                     alt: "Bioreactor Prototype 5"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/Bioreactor/Prototype6.png",
+                    href: "/images/projects/Bioreactor/Prototype6.jpg",
                     alt: "Bioreactor Prototype 6"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/Bioreactor/Prototype7.png",
+                    href: "/images/projects/Bioreactor/Prototype7.jpg",
                     alt: "Bioreactor Prototype 7"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/Bioreactor/Prototype8.png",
+                    href: "/images/projects/Bioreactor/Prototype8.jpg",
                     alt: "Bioreactor Prototype 8"
                 }
             },
