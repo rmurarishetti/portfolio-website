@@ -1003,50 +1003,8 @@ export const projectsData = [
         media: [
             {
                 image: {
-                    href: "/images/projects/ProjectDaedalus/concept1.jpg",
-                    alt: "Project Daedalus Concept 1"
-                }
-            },
-            {
-                image: {
-                    href: "/images/projects/ProjectDaedalus/concept2.jpg",
+                    href: "/images/projects/ProjectDaedalus/concept2.png",
                     alt: "Project Daedalus Concept 2"
-                }
-            },
-            {
-                image: {
-                    href: "/images/projects/ProjectDaedalus/concept3.jpg",
-                    alt: "Project Daedalus Concept 3"
-                }
-            },
-            {
-                image: {
-                    href: "/images/projects/ProjectDaedalus/concept4.jpg",
-                    alt: "Project Daedalus Concept 4"
-                }
-            },
-            {
-                image: {
-                    href: "/images/projects/ProjectDaedalus/concept5.jpg",
-                    alt: "Project Daedalus Concept 5"
-                }
-            },
-            {
-                image: {
-                    href: "/images/projects/ProjectDaedalus/concept6.jpg",
-                    alt: "Project Daedalus Concept 6"
-                }
-            },
-            {
-                image: {
-                    href: "/images/projects/ProjectDaedalus/concept7.jpg",
-                    alt: "Project Daedalus Concept 7"
-                }
-            },
-            {
-                image: {
-                    href: "/images/projects/ProjectDaedalus/concept8.jpg",
-                    alt: "Project Daedalus Concept 8"
                 }
             },
         ],
@@ -1074,7 +1032,7 @@ export const projectsData = [
         end: null,
         featured: false,
         type: "Design",
-        tags: ["ProCreate, MATLAB"],
+        tags: ["ProCreate", "MATLAB", "SolidWorks"],
         thumbnail: {
             href: "/images/projects/Spiderman/render1.png",
             alt: "Spiderman Render 1"
