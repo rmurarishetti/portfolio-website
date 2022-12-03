@@ -1110,7 +1110,7 @@ export const projectsData = [
         type: "Hardware",
         tags: ["Arduino", "C"],
         thumbnail: {
-            href: "/images/projects/Bioreactor/Prototype1.jpg",
+            href: "/images/projects/Bioreactor/prototype1.jpg",
             alt: "Bioreactor Prototype 1"
         },
         media: [
