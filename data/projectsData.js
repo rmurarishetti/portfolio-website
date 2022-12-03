@@ -888,56 +888,26 @@ export const projectsData = [
         type: "UI/UX",
         tags: ["AdobeXD", "Hackathon"],
         thumbnail: {
-            href: "/images/projects/CheckApp/mockup1.jpg",
+            href: "/images/projects/CheckApp/mockup1.png",
             alt: "CheckApp Mockup 1"
         },
         media: [
             {
                 image: {
-                    href: "/images/projects/CheckApp/mockup1.jpg",
-                    alt: "CheckApp Mockup 1"
-                }
-            },
-            {
-                image: {
-                    href: "/images/projects/CheckApp/mockup2.jpg",
+                    href: "/images/projects/CheckApp/mockup2.png",
                     alt: "CheckApp Mockup 2"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/CheckApp/mockup3.jpg",
+                    href: "/images/projects/CheckApp/mockup3.gif",
                     alt: "CheckApp Mockup 3"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/CheckApp/mockup4.jpg",
+                    href: "/images/projects/CheckApp/mockup4.gif",
                     alt: "CheckApp Mockup 4"
-                }
-            },
-            {
-                image: {
-                    href: "/images/projects/CheckApp/mockup5.jpg",
-                    alt: "CheckApp Mockup 5"
-                }
-            },
-            {
-                image: {
-                    href: "/images/projects/CheckApp/mockup6.jpg",
-                    alt: "CheckApp Mockup 6"
-                }
-            },
-            {
-                image: {
-                    href: "/images/projects/CheckApp/mockup7.jpg",
-                    alt: "CheckApp Mockup 7"
-                }
-            },
-            {
-                image: {
-                    href: "/images/projects/CheckApp/mockup8.jpg",
-                    alt: "CheckApp Mockup 8"
                 }
             },
         ],
