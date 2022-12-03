@@ -1116,19 +1116,19 @@ export const projectsData = [
         media: [
             {
                 image: {
-                    href: "/images/projects/Bioreactor/Prototype1.jpg",
+                    href: "/images/projects/Bioreactor/prototype1.jpg",
                     alt: "Bioreactor Prototype 1"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/Bioreactor/Prototype2.jpg",
+                    href: "/images/projects/Bioreactor/prototype2.jpg",
                     alt: "Bioreactor Prototype 2"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/Bioreactor/Prototype3.jpg",
+                    href: "/images/projects/Bioreactor/prototype3.jpg",
                     alt: "Bioreactor Prototype 3"
                 }
             },
