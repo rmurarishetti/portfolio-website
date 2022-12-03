@@ -9,7 +9,7 @@ export const projectsData = [
         type: "Engineering",
         tags: ["Ansys", "SolidWorks", "CES", "Manufacturing", "Uni"],
         thumbnail: {
-            href: "/images/projects/EBike/render4.png",
+            href: "/images/projects/EBike/render5.png",
             alt: "eBike Render"
         },
         media: [
@@ -237,31 +237,43 @@ export const projectsData = [
         type: "Engineering",
         tags: ["SolidWorks", "CES", "Uni"],
         thumbnail: {
-            href: "/images/projects/MobulaRay/render1.jpg",
+            href: "/images/projects/MobulaRay/render1.png",
             alt: "Mobula Ray Render 1"
         },
         media: [
             {
                 image: {
-                    href: "/images/projects/MobulaRay/render2.jpg",
-                    alt: "Mobula Ray Render 2"
-                }
-            },
-            {
-                image: {
-                    href: "/images/projects/MobulaRay/render3.jpg",
+                    href: "/images/projects/MobulaRay/render3.png",
                     alt: "Mobula Ray Render 3"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/MobulaRay/render4.jpg",
+                    href: "/images/projects/MobulaRay/render6.png",
+                    alt: "Mobula Ray Render 6"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/MobulaRay/render7.png",
+                    alt: "Mobula Ray Render 7"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/MobulaRay/render4.png",
                     alt: "Mobula Ray Render 4"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/MobulaRay/render5.jpg",
+                    href: "/images/projects/MobulaRay/render2.png",
+                    alt: "Mobula Ray Render 2"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/MobulaRay/render5.png",
                     alt: "Mobula Ray Render 5"
                 }
             },
@@ -371,34 +383,45 @@ export const projectsData = [
         type: "Engineering",
         tags: ["SolidWorks", "Manufacturing", "Uni"],
         thumbnail: {
-            href: "/images/projects/Sonic/render1.jpg",
+            href: "/images/projects/Sonic/render1.png",
             alt: "SONIC Render"
         },
         media: [
             {
                 image: {
-                    href: "/images/projects/Sonic/render1.jpg",
+                    href: "/images/projects/Sonic/render1.png",
                     alt: "SONIC Render 1",
                 }
             },
             {
                 image: {
-                    href: "/images/projects/Sonic/render2.jpg",
+                    href: "/images/projects/Sonic/render2.png",
                     alt: "SONIC Render 2"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/Sonic/render3.jpg",
+                    href: "/images/projects/Sonic/render3.png",
                     alt: "SONIC Render 3"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/Sonic/render4.jpg",
+                    href: "/images/projects/Sonic/render4.png",
                     alt: "SONIC Render 4"
                 }
-
+            },
+            {
+                image: {
+                    href: "/images/projects/Sonic/render5.png",
+                    alt: "SONIC Render 5"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/Sonic/render6.png",
+                    alt: "SONIC Render 6"
+                }
             },
             {
                 image: {
@@ -505,38 +528,32 @@ export const projectsData = [
         type: "Engineering",
         tags: ["SolidWorks", "Uni"],
         thumbnail: {
-            href: "/images/projects/LiftDoor/render1.jpg",
+            href: "/images/projects/LiftDoor/render1.png",
             alt: "Lift Door Transmission Render 1"
         },
         media: [
             {
                 image: {
-                    href: "/images/projects/LiftDoor/render2.jpg",
+                    href: "/images/projects/LiftDoor/render2.png",
                     alt: "Lift Door Transmission Render 2"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/LiftDoor/render3.jpg",
+                    href: "/images/projects/LiftDoor/render3.png",
                     alt: "Lift Door Transmission Render 3"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/LiftDoor/render4.jpg",
+                    href: "/images/projects/LiftDoor/render4.png",
                     alt: "Lift Door Transmission Render 4"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/LiftDoor/render5.jpg",
-                    alt: "Lift Door Transmission Render 5"
-                }
-            },
-            {
-                image: {
-                    href: "/images/projects/LiftDoor/render6.jpg",
-                    alt: "Lift Door Transmission Render 6"
+                    href: "/images/projects/LiftDoor/render1.png",
+                    alt: "Lift Door Transmission Render 1"
                 }
             },
             {
@@ -693,32 +710,44 @@ export const projectsData = [
         type: "Engineering",
         tags: ["SolidWorks", "Fusion360", "Hackathon"],
         thumbnail: {
-            href: "/images/projects/LunarDeployer/render4.jpg",
-            alt: "Lunar Deployer Render 4"
+            href: "/images/projects/LunarDeployer/render3.png",
+            alt: "Lunar Deployer Render 3"
         },
         media: [
             {
                 image: {
-                    href: "/images/projects/LunarDeployer/render1.jpg",
+                    href: "/images/projects/LunarDeployer/render1.png",
                     alt: "Lunar Deployer Render 1"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/LunarDeployer/render2.jpg",
+                    href: "/images/projects/LunarDeployer/render2.png",
                     alt: "Lunar Deployer Render 2"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/LunarDeployer/render3.jpg",
+                    href: "/images/projects/LunarDeployer/render3.png",
                     alt: "Lunar Deployer Render 3"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/LunarDeployer/render4.jpg",
+                    href: "/images/projects/LunarDeployer/render4.png",
                     alt: "Lunar Deployer Render 4"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/LunarDeployer/render5.png",
+                    alt: "Lunar Deployer Render 5"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/LunarDeployer/render6.png",
+                    alt: "Lunar Deployer Render 6"
                 }
             },
         ],
