@@ -1132,36 +1132,6 @@ export const projectsData = [
                     alt: "Bioreactor Prototype 3"
                 }
             },
-            {
-                image: {
-                    href: "/images/projects/Bioreactor/Prototype4.jpg",
-                    alt: "Bioreactor Prototype 4"
-                }
-            },
-            {
-                image: {
-                    href: "/images/projects/Bioreactor/Prototype5.jpg",
-                    alt: "Bioreactor Prototype 5"
-                }
-            },
-            {
-                image: {
-                    href: "/images/projects/Bioreactor/Prototype6.jpg",
-                    alt: "Bioreactor Prototype 6"
-                }
-            },
-            {
-                image: {
-                    href: "/images/projects/Bioreactor/Prototype7.jpg",
-                    alt: "Bioreactor Prototype 7"
-                }
-            },
-            {
-                image: {
-                    href: "/images/projects/Bioreactor/Prototype8.jpg",
-                    alt: "Bioreactor Prototype 8"
-                }
-            },
         ],
         people: [
             {
