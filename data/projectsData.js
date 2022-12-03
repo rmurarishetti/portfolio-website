@@ -9,31 +9,37 @@ export const projectsData = [
         type: "Engineering",
         tags: ["Ansys", "SolidWorks", "CES", "Manufacturing", "Uni"],
         thumbnail: {
-            href: "/images/projects/EBike/thumbnail.jpg",
+            href: "/images/projects/EBike/render4.png",
             alt: "eBike Render"
         },
         media: [
             {
                 image: {
-                    href: "/images/projects/EBike/render1.jpg",
+                    href: "/images/projects/EBike/render1.png",
                     alt: "eBike Render 1"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/EBike/render2.jpg",
+                    href: "/images/projects/EBike/render2.png",
                     alt: "eBike Render 2"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/EBike/render3.jpg",
+                    href: "/images/projects/EBike/render3.png",
                     alt: "eBike Render 3"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/EBike/render4.jpg",
+                    href: "/images/projects/EBike/render4.png",
+                    alt: "eBike Render 4"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/EBike/render5.png",
                     alt: "eBike Render 4"
                 }
             },
