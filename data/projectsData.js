@@ -1076,56 +1076,38 @@ export const projectsData = [
         type: "Design",
         tags: ["ProCreate, MATLAB"],
         thumbnail: {
-            href: "/images/projects/Spiderman/concept1.jpg",
-            alt: "Spiderman Concept 1"
+            href: "/images/projects/Spiderman/render1.png",
+            alt: "Spiderman Render 1"
         },
         media: [
             {
                 image: {
-                    href: "/images/projects/Spiderman/concept1.jpg",
-                    alt: "Spiderman Concept 1"
+                    href: "/images/projects/Spiderman/render2.jpg",
+                    alt: "Spiderman Render 1"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/Spiderman/concept2.jpg",
-                    alt: "Spiderman Concept 2"
+                    href: "/images/projects/Spiderman/render3.jpg",
+                    alt: "Spiderman Render 2"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/Spiderman/concept3.jpg",
-                    alt: "Spiderman Concept 3"
+                    href: "/images/projects/Spiderman/controlroom.jpg",
+                    alt: "OneWeb Control Room"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/Spiderman/concept4.jpg",
-                    alt: "Spiderman Concept 4"
+                    href: "/images/projects/Spiderman/satellite.jpg",
+                    alt: "OneWeb Satellite"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/Spiderman/concept5.jpg",
-                    alt: "Spiderman Concept 5"
-                }
-            },
-            {
-                image: {
-                    href: "/images/projects/Spiderman/concept6.jpg",
-                    alt: "Spiderman Concept 6"
-                }
-            },
-            {
-                image: {
-                    href: "/images/projects/Spiderman/concept7.jpg",
-                    alt: "Spiderman Concept 7"
-                }
-            },
-            {
-                image: {
-                    href: "/images/projects/Spiderman/concept8.jpg",
-                    alt: "Spiderman Concept 8"
+                    href: "/images/projects/Spiderman/group.jpg",
+                    alt: "OneWeb Group Photo"
                 }
             },
         ],
