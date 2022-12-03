@@ -1082,14 +1082,20 @@ export const projectsData = [
         media: [
             {
                 image: {
-                    href: "/images/projects/Spiderman/render2.jpg",
+                    href: "/images/projects/Spiderman/render2.png",
                     alt: "Spiderman Render 1"
                 }
             },
             {
                 image: {
-                    href: "/images/projects/Spiderman/render3.jpg",
+                    href: "/images/projects/Spiderman/render3.png",
                     alt: "Spiderman Render 2"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/Spiderman/render1.png",
+                    alt: "Spiderman Render 1"
                 }
             },
             {
