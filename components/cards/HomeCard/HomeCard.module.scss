@@ -3,10 +3,8 @@
     display: flex;
     border: var(--border-primary);
     border-radius: 1rem;
-    background: var(--color-glass);
+    background: var(--color-bg-secondary);
     box-shadow: var(--shadow-small);
-    backdrop-filter: blur(10.8px);
-    -webkit-backdrop-filter: blur(10.8px);
     margin: 1rem;
     overflow: hidden;
     cursor: pointer;

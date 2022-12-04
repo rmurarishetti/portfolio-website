@@ -100,18 +100,22 @@ export const projectsData = [
         ],
         people: [
             {
+                gender: 'male',
                 name: "Theo Hales",
                 linkedin: "https://www.linkedin.com/in/theo-hales-a80132141/"
             },
             {
+                gender: 'male',
                 name: "Mingquan Cheng",
                 linkedin: "https://www.linkedin.com/in/mingquan-melvin-c-39957313b/"
             },
             {
+                gender: 'male',
                 name: "Rohhil Chhabra",
                 linkedin: "https://www.linkedin.com/in/rohhil-chhabra/"
             },
             {
+                gender: 'male',
                 name: "Zhongtian Huang",
                 linkedin: "https://www.linkedin.com/in/zhongtian-huang-808a61180/"
             },
@@ -210,6 +214,7 @@ export const projectsData = [
         ],
         people: [
             {
+                gender: 'male',
                 name: "Frederik Masure",
                 linkedin: "https://www.linkedin.com/in/frederik-masure-a97415173/"
             },
@@ -233,7 +238,7 @@ export const projectsData = [
         subtitle: "Design of a personal underwater propulsive device.",
         start: new Date(2020, 1),
         end: null,
-        featured: true,
+        featured: false,
         type: "Engineering",
         tags: ["SolidWorks", "CES", "Uni"],
         thumbnail: {
@@ -310,14 +315,17 @@ export const projectsData = [
         ],
         people: [
             {
+                gender: 'male',
                 name: "Diederik Evanson",
                 linkedin: "https://www.linkedin.com/in/diederik-e-348376129/"
             },
             {
+                gender: 'female',
                 name: "Marie Obrowski Aguirre",
                 linkedin: "https://www.linkedin.com/in/marie-obrowski-1112b6191/"
             },
             {
+                gender: 'male',
                 name: "Iñigo Maruri Aldaz",
                 linkedin: "https://www.linkedin.com/in/inigomaruri/"
             },
@@ -339,7 +347,7 @@ export const projectsData = [
         subtitle: "Dynamic transient heat transfer model of multi-material blocks.",
         start: new Date(2020, 1),
         end: null,
-        featured: true,
+        featured: false,
         type: "Computing",
         tags: ["Python", "Uni"],
         thumbnail: {
@@ -356,6 +364,7 @@ export const projectsData = [
         ],
         people: [
             {
+                gender: 'male',
                 name: "Frederik Masure",
                 linkedin: "https://www.linkedin.com/in/frederik-masure-a97415173/"
             },
@@ -491,18 +500,22 @@ export const projectsData = [
         ],
         people: [
             {
+                gender: 'male',
                 name: "James Lum",
                 linkedin: "https://www.linkedin.com/in/james-lum-kh/"
             },
             {
+                gender: 'male',
                 name: "Ionas Alexopoulos",
                 linkedin: "https://www.linkedin.com/in/ionas-alexopoulos-8504b020b/"
             },
             {
+                gender: 'female',
                 name: "Brindhiini Perera",
                 linkedin: ""
             },
             {
+                gender: 'male',
                 name: "Yilong Huang",
                 linkedin: "https://www.linkedin.com/in/yilong-huang-6137281a7/"
             },
@@ -599,7 +612,7 @@ export const projectsData = [
         subtitle: "An NLP-based data-analysis of article headlines.",
         start: new Date(2021, 8, 7),
         end: null,
-        featured: false,
+        featured: true,
         type: "Computing",
         tags: ["Python", "Data-Analysis", "Hackathon", "NLP", "ML"],
         thumbnail: {
@@ -676,14 +689,17 @@ export const projectsData = [
         ],
         people: [
             {
+                gender: 'female',
                 name: "Maria Julia Maristany",
                 linkedin: "https://www.linkedin.com/in/maria-julia-maristany-51777915a/"
             },
             {
+                gender: 'male',
                 name: "Ludwig Jonsson",
                 linkedin: "https://www.linkedin.com/in/ludwigaj/"
             },
             {
+                gender: 'male',
                 name: "Manith Adikari",
                 linkedin: "https://www.linkedin.com/in/manith-adikari/"
             }
@@ -753,22 +769,27 @@ export const projectsData = [
         ],
         people: [
             {
+                gender: 'male',
                 name: "João Matias",
                 linkedin: "https://www.linkedin.com/in/joao-matias/"
             },
             {
+                gender: 'male',
                 name: "Ming Jie See",
                 linkedin: "https://www.linkedin.com/in/mj-see/"
             },
             {
+                gender: 'male',
                 name: "Manith Adikari",
                 linkedin: "https://www.linkedin.com/in/manith-adikari/"
             },
             {
+                gender: 'male',
                 name: "Andrew Chen Siyuan",
                 linkedin: "https://www.linkedin.com/in/andrew-chen-siyuan-13025913a/"
             },
             {
+                gender: 'male',
                 name: "Wang Jiale",
                 linkedin: "https://www.linkedin.com/in/jiale-wang-sg/"
             }
@@ -787,7 +808,7 @@ export const projectsData = [
         subtitle: "Design of a compact vertical bike storage solution.",
         start: new Date(2020, 9),
         end: new Date(2020, 11),
-        featured: false,
+        featured: true,
         type: "Design",
         tags: ["SolidWorks", "Prototyping"],
         thumbnail: {
@@ -858,14 +879,17 @@ export const projectsData = [
         ],
         people: [
             {
+                gender: 'male',
                 name: "Thomas Watson",
                 linkedin: "https://www.linkedin.com/in/thomasjswatson/"
             },
             {
+                gender: 'male',
                 name: "Frederik Masure",
                 linkedin: "https://www.linkedin.com/in/frederik-masure-a97415173/"
             },
             {
+                gender: 'male',
                 name: "Luke Walters",
                 linkedin: "https://www.linkedin.com/in/luke-walters-184238208/"
             },
@@ -913,14 +937,17 @@ export const projectsData = [
         ],
         people: [
             {
+                gender: 'male',
                 name: "Josh Cheng",
                 linkedin: "https://www.linkedin.com/in/josh-cheng-633311140/"
             },
             {
+                gender: 'male',
                 name: "Frederik Masure",
                 linkedin: "https://www.linkedin.com/in/frederik-masure-a97415173/"
             },
             {
+                gender: 'male',
                 name: "Manith Adikari",
                 linkedin: "https://www.linkedin.com/in/manith-adikari/"
             },
@@ -940,7 +967,7 @@ export const projectsData = [
         end: new Date(2020, 2),
         featured: false,
         type: "Engineering",
-        tags: ["SolidWorks"],
+        tags: ["SolidWorks", "Competition"],
         thumbnail: {
             href: "/images/projects/RailGuide/render1.jpg",
             alt: "Fly-away Rail Guide Render 1"
@@ -973,10 +1000,12 @@ export const projectsData = [
         ],
         people: [
             {
+                gender: 'male',
                 name: "Nikhil Dawda",
                 linkedin: "https://www.linkedin.com/in/nikhil-dawda-a11a431a5/"
             },
             {
+                gender: 'male',
                 name: "Kai Wilkinson",
                 linkedin: null
             },
@@ -995,7 +1024,7 @@ export const projectsData = [
         end: new Date(2020, 1),
         featured: false,
         type: "Design",
-        tags: ["ProCreate"],
+        tags: ["ProCreate", "Competition"],
         thumbnail: {
             href: "/images/projects/ProjectDaedalus/concept1.jpg",
             alt: "Project Daedalus Concept 1"
@@ -1010,6 +1039,7 @@ export const projectsData = [
         ],
         people: [
             {
+                gender: 'male',
                 name: "George Ge",
                 linkedin: "https://www.linkedin.com/in/george-ge-a8b334163/"
             },
@@ -1030,9 +1060,9 @@ export const projectsData = [
         subtitle: "Design proposal for capturing dead satellites from the low-Earth orbit",
         start: new Date(2019, 10),
         end: null,
-        featured: false,
+        featured: true,
         type: "Design",
-        tags: ["ProCreate", "MATLAB", "SolidWorks"],
+        tags: ["MATLAB", "SolidWorks", "Hackathon"],
         thumbnail: {
             href: "/images/projects/Spiderman/render1.png",
             alt: "Spiderman Render 1"
@@ -1077,18 +1107,22 @@ export const projectsData = [
         ],
         people: [
             {
+                gender: 'female',
                 name: "Maha Khamlichi",
                 linkedin: "https://www.linkedin.com/in/maha-khamlichi-5284ba186/"
             },
             {
+                gender: 'male',
                 name: "Ben Foster",
                 linkedin: "https://www.linkedin.com/in/benjaminfoster1/"
             },
             {
+                gender: 'male',
                 name: "Manith Adikari",
                 linkedin: "https://www.linkedin.com/in/manith-adikari/"
             },
             {
+                gender: 'male',
                 name: "João Matias",
                 linkedin: "https://www.linkedin.com/in/joao-matias-68656c6c6f/"
             },
@@ -1103,7 +1137,7 @@ export const projectsData = [
     {
         id: "bioreactor",
         name: "Fluorescent Biorector",
-        subtitle: "Protype of a cell-growth device.",
+        subtitle: "Protype of a cell-growth monitoring device.",
         start: new Date(2019, 0),
         end: new Date(2019, 1),
         featured: false,
@@ -1135,10 +1169,12 @@ export const projectsData = [
         ],
         people: [
             {
+                gender: 'male',
                 name: "Manith Adikari",
                 linkedin: "https://www.linkedin.com/in/manith-adikari/"
             },
             {
+                gender: 'female',
                 name: "Yoonseo Lim",
                 linkedin: "https://www.linkedin.com/in/yoonseo-lim-115561173/"
             },

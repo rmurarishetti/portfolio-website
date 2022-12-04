@@ -38,7 +38,8 @@
     .line {
         width: 3px;
         border-radius: 3px;
-        background-color: var(--color-bg-disable);
+        background-color: var(--color-text-secondary);
+        opacity: 0.05;
         flex-grow: 1;
         transition: background-color var(--speed-fast)
     }

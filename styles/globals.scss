@@ -1,7 +1,8 @@
 :root {
   /* Your default theme */
-  --color-bg: rgb(15, 10, 20);
-  --color-bg-disable: #131313;
+  --color-bg: hsl(270, 10%, 7%);
+  --color-bg-secondary: hsl(270, 10%, 7.2%);
+  --color-bg-disable: hsl(270, 10%, 5%);
   --color-text-primary: #ffffff;
   --color-text-secondary: #b1b1b1;
   --color-border: rgba(255, 255, 255, 0.05);
@@ -10,21 +11,22 @@
   --color-accent-secondary: #4c00ff;
   --color-glass: rgba(0, 0, 0, 0.1);
   --color-glass-dark: rgba(0, 0, 0, 0.4);
-  --color-shadow: rgba(0, 0, 0, 0.9);
+  --color-shadow: hsla(240, 9%, 2%, 0.569);
   --color-cancel: rgba(255, 48, 196, 0.7);
   --rgb-accent-primary: 129, 104, 255;
   --rgb-accent-secondary: 76, 0, 255;
-  --color-engineering: rgb(199, 68, 255);
-  --color-hardware: rgb(121, 106, 255);
-  --color-computing: rgb(0, 174, 218);
-  --rgb-engineering: 120, 0, 150;
-  --rgb-hardware: 50, 50, 150;
-  --rgb-computing: 0, 100, 150;
+  --color-design: hsl(300, 100%, 80%);
+  --color-engineering: hsl(260, 100%, 80%);
+  --color-hardware: hsl(220, 100%, 80%);
+  --color-uiux: hsl(180, 100%, 80%);
+  --color-computing: hsl(140, 100%, 80%);
+  --color-software: hsl(100, 100%, 80%);
 }
 
 [data-theme='light'] {
-  --color-bg: rgb(255, 255, 255);
-  --color-bg-disable: #f8f8f8;
+  --color-bg: hsl(0, 0%, 99%);
+  --color-bg-secondary: hsl(0, 0%, 100%);
+  --color-bg-disable: hsl(0, 0%, 97%);
   --color-text-primary: black;
   --color-text-secondary: #747474fd;
   --color-border: rgba(126, 126, 126, 0.2);
@@ -33,16 +35,16 @@
   --color-accent-secondary: #9e8bff;
   --color-glass: rgba(0, 0, 0, 0.01);
   --color-glass-dark: rgba(255, 255, 255, 0.1);
-  --color-shadow: rgba(0, 0, 0, 0.15);
+  --color-shadow: hsla(0, 0%, 0%, 0.08);
   --color-cancel: rgb(255, 122, 186);
   --rgb-accent-primary: 128, 102, 255;
   --rgb-accent-secondary: 158, 139, 255;
-  --color-engineering: rgb(188, 74, 237);
-  --color-hardware: rgb(104, 91, 216);
-  --color-computing: rgb(2, 161, 201);
-  --rgb-engineering: 200, 150, 250;
-  --rgb-hardware: 150, 150, 250;
-  --rgb-computing: 150, 200, 250;
+  --color-design: hsl(300, 65%, 50%);
+  --color-engineering: hsl(260, 65%, 50%);
+  --color-hardware: hsl(220, 65%, 50%);
+  --color-uiux: hsl(180, 65%, 50%);
+  --color-computing: hsl(140, 65%, 50%);
+  --color-software: hsl(100, 65%, 50%);
 }
 
 :root {

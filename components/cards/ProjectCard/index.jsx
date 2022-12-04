@@ -4,11 +4,9 @@ import styles from './ProjectCard.module.scss'
 import Tilt from 'react-parallax-tilt';
 import Link from 'next/link';
 import { Tag, DateDiv, TypeTag } from '../../badges';
-import { projectTypeStyleClasses } from '../../../data/projectTypeStyleClasses';
-import { rgbDataURL } from '../../../helpers/format';
 
 function ProjectCard({ id, name, subtitle, start, end, featured, type, tags, thumbnail, hidden }) {
-
+    const [hover, setHover] = useState(false);
     const [mobile, setMobile] = useState(window.innerWidth < 500)
     useEffect(() => {
         function handleResize() {
@@ -19,6 +17,15 @@ function ProjectCard({ id, name, subtitle, start, end, featured, type, tags, thu
             window.removeEventListener('resize', handleResize)
         }
     })
+    const formattedType = type.toLowerCase().replace(/[^a-zA-Z0-9 ]/g, '')
+    const cardHoverStyle = {
+        borderColor: `var(--color-${formattedType})`,
+        boxShadow: `0 0px 5px var(--color-${formattedType})`,
+    }
+
+    const titleHoverStyle = {
+        color: `var(--color-${formattedType})`
+    }
 
     return (
         <Tilt
@@ -26,7 +33,7 @@ function ProjectCard({ id, name, subtitle, start, end, featured, type, tags, thu
             scale={1.02}
             tiltMaxAngleX={5}
             tiltMaxAngleY={5}
-            glareColor={featured ? `var(--color-${type.toLowerCase()})` : 'var(--color-accent-primary)'}
+            glareColor={`var(--color-${formattedType})`}
             glarePosition="all"
             glareMaxOpacity={0.3}
             glareBorderRadius={10}
@@ -34,7 +41,15 @@ function ProjectCard({ id, name, subtitle, start, end, featured, type, tags, thu
             transitionSpeed={500}
             glareEnable
             tiltEnable={!mobile}
-            className={[styles.card, featured ? styles.featured : '', projectTypeStyleClasses(styles, type), hidden ? styles.hidden : ''].join(' ')}>
+            onEnter={() => {
+                setHover(true);
+            }}
+            onLeave={() => {
+                setHover(false);
+            }}
+            className={[styles.card, featured ? styles.featured : '', hidden ? styles.hidden : ''].join(' ')}
+            style={hover ? cardHoverStyle : null}
+        >
             <Link href={`/projects/${id}`}>
                 <a>
                     <div className={styles.thumbnail}>
@@ -46,7 +61,9 @@ function ProjectCard({ id, name, subtitle, start, end, featured, type, tags, thu
                         <div className={styles.typeTag}>
                             <TypeTag type={type}></TypeTag>
                         </div>
-                        <div className={styles.arrow}>
+                        <div
+                            className={styles.arrow}
+                            style={titleHoverStyle}>
                             &rarr;
                         </div>
                         <div className={styles.tags}>
@@ -63,7 +80,12 @@ function ProjectCard({ id, name, subtitle, start, end, featured, type, tags, thu
                                 start={start}
                                 end={end} />
                         </div>
-                        <h2 className={styles.title}>{name}</h2>
+                        <h2
+                            className={styles.title}
+                            style={hover ? titleHoverStyle : null}
+                        >
+                            {name}
+                        </h2>
                         <p className={styles.subtitle}>{subtitle}</p>
                     </div>
                 </a>
