@@ -35,6 +35,7 @@ export const getStaticProps = async (context) => {
 
 function ProjectPage({ project }) {
     // console.log(project.media.filter(obj => 'image' in obj))
+    console.log(project.people)
     return (
         <>
             <Head>
@@ -83,7 +84,7 @@ function ProjectPage({ project }) {
             <div className={styles.galleryContainer}>
                 <GalleryWLightbox data={project.media.filter(obj => 'image' in obj)} showDetails={false} />
             </div>
-            {project.people && <div className={styles.peopleContainer}>
+            {project.people[0] && <div className={styles.peopleContainer}>
                 <div className={styles.header}>Contributors</div>
                 <div className={styles.people}>
                     {project.people.map((person, i) => {

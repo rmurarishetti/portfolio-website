@@ -2,7 +2,6 @@ import Image from 'next/image';
 import { useState } from 'react';
 import styles from './LightboxSlide.module.scss'
 import { Tag, DateDiv } from '../../../badges';
-import { rgbDataURL } from '../../../../helpers/format';
 
 function LightboxSlide({ title, date, mediums, image, showDetails = True }) {
     const [ratio, setRatio] = useState(1.1) // default to 16:9
@@ -12,8 +11,6 @@ function LightboxSlide({ title, date, mediums, image, showDetails = True }) {
                 <Image
                     src={image.href}
                     alt={image.alt}
-                    placeholder={blur}
-                    blurDataURL={rgbDataURL(126, 126, 126)}
                     objectFit='contain'
                     layout="fill" />
             </div>

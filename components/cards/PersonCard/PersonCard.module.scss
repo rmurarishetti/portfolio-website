@@ -1,7 +1,7 @@
 .container {
     display: flex;
     flex-direction: row;
-    gap: 0.5rem;
+    gap: 0.3rem;
     padding: 0.2rem 0rem;
     font-size: inherit;
     border-radius: 1rem;
@@ -54,6 +54,10 @@
                 transform: none;
             }
         }
+
+        .name {
+            color: var(--color-accent-secondary);
+        }
     }
 
     &.nolink {
@@ -69,6 +73,10 @@
 
             .emoji {
                 transform: none;
+            }
+
+            .name {
+                color: var(--color-text-secondary);
             }
         }
     }
