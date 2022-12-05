@@ -71,7 +71,9 @@ export default function Home() {
         <FeaturedProjectsSwiper projectsData={projectsData.filter(projectData => projectData.featured)} />
         <Link href={pagesData.filter((pageData => pageData.title == 'Projects'))[0].link}>
           <a className={styles.link}>
-            {pagesData.filter((pageData => pageData.title == 'Projects'))[0].emoji} All projects &rarr;
+            <div className={styles.emoji}>{pagesData.filter((pageData => pageData.title == 'Projects'))[0].emoji}</div>
+            <div className={styles.parent}>All projects</div>
+            <div className={styles.arrow}>&rarr;</div>
           </a>
         </Link>
       </div>
@@ -81,9 +83,13 @@ export default function Home() {
         <div className={styles.galleryContainer}>
           <GalleryWLightbox data={artsData.filter(artData => daysDiff(new Date(), artData.date) < 365)} />
         </div>
-        <Link href={pagesData.filter((pageData => pageData.title == 'Art'))[0].link} >
+        <Link href={pagesData.filter((pageData => pageData.title == 'Art'))[0].link}>
           <a className={styles.link}>
-            {pagesData.filter((pageData => pageData.title == 'Art'))[0].emoji} All artwork &rarr;
+            <div className={styles.emoji}>
+              {pagesData.filter((pageData => pageData.title == 'Projects'))[0].emoji}
+            </div>
+            <div className={styles.parent}>All artwork</div>
+            <div className={styles.arrow}>&rarr;&nbsp;</div>
           </a>
         </Link>
       </div>

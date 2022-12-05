@@ -2,7 +2,7 @@ import { projectsData } from '../../data/projectsData';
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
-import { PersonCard } from '../../components/cards';
+import { PersonCard, ProjectCard } from '../../components/cards';
 import { Tag, DateDiv, TypeTag } from '../../components/badges';
 import { GalleryWLightbox } from '../../components/layout';
 import styles from '../../styles/Project.module.scss'
@@ -14,7 +14,9 @@ import styles from '../../styles/Project.module.scss'
 export const getStaticPaths = async () => {
     const paths = projectsData.map(project => {
         return {
-            params: { id: project.id }
+            params: {
+                id: project.id
+            }
         }
     })
 
@@ -34,8 +36,14 @@ export const getStaticProps = async (context) => {
 }
 
 function ProjectPage({ project }) {
-    // console.log(project.media.filter(obj => 'image' in obj))
-    console.log(project.people)
+    const formattedType = project.type.toLowerCase().replace(/[^a-zA-Z0-9 ]/g, '')
+    const typeStyle = {
+        color: `var(--color-${formattedType})`
+    }
+
+    const relatedProjects = projectsData.filter((p) => {
+        return (p.type === project.type && p.id !== project.id)
+    })
     return (
         <>
             <Head>
@@ -43,8 +51,12 @@ function ProjectPage({ project }) {
                 <meta name="keywords" content="Engineer, Developer, Designer, Portfolio" />
             </Head>
             <div className={styles.path}>
-                <div className={styles.arrow}>&larr;</div>
-                <div className={styles.parent}><Link href={'/projects'}>Projects</Link></div>
+                <Link href={'/projects'}>
+                    <a>
+                        <div className={styles.arrow}>&larr;</div>
+                        <div className={styles.parent}>Projects</div>
+                    </a>
+                </Link>
                 <div className={styles.seperator}>/</div>
                 <div className={styles.name}>{project.name}</div>
             </div>
@@ -98,6 +110,32 @@ function ProjectPage({ project }) {
                     })}
                 </div>
             </div>}
+            <div className={styles.otherProjects}>
+                {relatedProjects[0] && <>
+                    <div className={styles.header}>
+                        Other&nbsp;
+                        <div className={styles.type} style={typeStyle}>{project.type.toLowerCase()}</div>
+                        &nbsp;projects
+                    </div>
+                    <div className={styles.grid}>
+                        {relatedProjects.map((project) => {
+                            return (
+                                <div
+                                    className={styles.cardContainer}
+                                    key={project.id}>
+                                    <ProjectCard {...project} />
+                                </div>
+                            )
+                        })}
+                    </div>
+                </>}
+            </div>
+            <Link href={'/projects'}>
+                <a className={styles.prevLink}>
+                    <div className={styles.arrow}>&larr;&nbsp;</div>
+                    <div className={styles.parent}>Back to all projects</div>
+                </a>
+            </Link>
         </>
     );
 }

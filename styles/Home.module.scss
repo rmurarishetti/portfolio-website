@@ -62,10 +62,27 @@
     -webkit-text-fill-color: transparent;
   }
 
+  // .link {
+  //   text-align: right;
+  //   width: fit-content;
+  //   align-self: flex-end;
+  // }
+
   .link {
-    text-align: right;
-    width: fit-content;
     align-self: flex-end;
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.3rem;
+
+    .arrow {
+      transition: transform var(--speed-medium);
+    }
+
+    &:hover {
+      .arrow {
+        transform: translateX(0.5rem);
+      }
+    }
   }
 
   .galleryContainer {
