@@ -1,6 +1,6 @@
-import styles from './PersonCard.module.scss'
+import styles from './PersonButton.module.scss'
 
-function PersonCard({ name, link = null, gender }) {
+function PersonButton({ name, link = null, gender }) {
     return (
         link ?
             <a href={link} target='_blank' rel='noreferrer' className={styles.container}>
@@ -21,4 +21,4 @@ function PersonCard({ name, link = null, gender }) {
     );
 }
 
-export default PersonCard;
+export default PersonButton;

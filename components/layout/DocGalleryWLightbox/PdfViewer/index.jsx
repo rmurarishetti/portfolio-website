@@ -58,8 +58,10 @@ function PdfViewer({ href }) {
         };
     }, [pageNumber, numPages]);
 
+    console.log(height)
+
     return (
-        <div style={{ minHeight: height }}>
+        <div>
             <Document
                 file={href}
                 onLoadSuccess={onDocumentLoadSuccess}

@@ -6,19 +6,23 @@
     gap: 0.5rem;
     overflow: hidden;
 
-    >div {
+    .text {
         font-size: 0.9rem;
         color: var(--color-text-secondary);
         transition: color var(--speed-medium);
     }
 
     &:hover {
-        color: var(--color-accent-primary);
         background-color: var(--color-bg-disable);
+
+        .text {
+            color: var(--color-accent-primary);
+        }
     }
 
     &.active {
-        >div {
+
+        .text {
             color: var(--color-text-primary);
         }
     }

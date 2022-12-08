@@ -38,6 +38,8 @@
 
     .name {
         margin: 0 0.8rem 0 0.2rem;
+        white-space: nowrap;
+        display: inline-block;
     }
 
     &:hover {

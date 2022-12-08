@@ -2,10 +2,12 @@ import { projectsData } from '../../data/projectsData';
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
-import { PersonCard, ProjectCard } from '../../components/cards';
+import { ProjectCard } from '../../components/cards';
+import { PersonButton, URLButton } from '../../components/buttons';
 import { Tag, DateDiv, TypeTag } from '../../components/badges';
 import { GalleryWLightbox, DocGalleryWLightbox } from '../../components/layout';
 import styles from '../../styles/Project.module.scss'
+import ReactPlayer from 'react-player'
 // export const getStaticPaths = async () => {
 //     const res = projectsData
 //     console.log(res)
@@ -44,6 +46,10 @@ function ProjectPage({ project }) {
     const relatedProjects = projectsData.filter((p) => {
         return (p.type === project.type && p.id !== project.id)
     })
+    const images = project.media.filter(obj => 'image' in obj);
+    const videos = project.media.filter(obj => 'video' in obj);
+
+    console.log(ReactPlayer.canPlay('https://www.youtube.com/watch?v=lF4KuL2s7vI'))
     return (
         <>
             <Head>
@@ -61,9 +67,9 @@ function ProjectPage({ project }) {
                 <div className={styles.name}>{project.name}</div>
             </div>
             <div className={styles.thumbnail}>
-                <div className={styles.typeTag}>
-                    <TypeTag type={project.type}></TypeTag>
-                </div>
+                {project.link.href && <div className={styles.link}>
+                    <URLButton name={project.link.name} href={project.link.href} />
+                </div>}
                 <Image
                     src={project.thumbnail.href}
                     alt={project.thumbnail.alt}
@@ -77,37 +83,48 @@ function ProjectPage({ project }) {
                         end={project.end ? new Date(project.end) : null}
                         longDate
                         duration />
-                    <div className={styles.tags}>{project.tags.map((tag) => {
-                        return (
-                            <Tag key={tag} >{tag}</Tag>
-                        )
-                    })}</div>
                 </div>
                 <h1 className={styles.name}>{project.name}</h1>
                 <div className={styles.subtitle}>{project.subtitle}</div>
-                <div className={styles.description}>
+                <div className={styles.tags}>
+                    <div className={styles.typeTag}>
+                        <TypeTag type={project.type}></TypeTag>
+                    </div>
+                    {project.tags.map((tag) => {
+                        return (
+                            <Tag key={tag} >{tag}</Tag>
+                        )
+                    })}
+                </div>
+                {project.description[0] && <div className={styles.description}>
                     {project.description.map((paragraph, i) => {
                         return (
                             <p key={i}>{paragraph}</p>
                         )
                     })}
-                </div>
+                </div>}
             </div>
-            <div className={styles.galleryContainer}>
-                <GalleryWLightbox data={project.media.filter(obj => 'image' in obj)} showDetails={false} />
-            </div>
+            {images[0] && <div className={styles.galleryContainer}>
+                <GalleryWLightbox data={images} showDetails={false} />
+            </div>}
+            {videos[0] && <div className={styles.videosContainer}>
+                {videos.map((obj, i) => {
+                    return (
+                        <ReactPlayer key={i} url={obj.video.href} controls={false} pip light />
+                    )
+                })}
+            </div>}
             {project.documents[0] &&
                 <div className={styles.documentsContainer}>
                     <div className={styles.header}>Documents</div>
                     <DocGalleryWLightbox docsData={project.documents} />
-                </div>
-            }
+                </div>}
             {project.people[0] && <div className={styles.peopleContainer}>
                 <div className={styles.header}>Contributors</div>
                 <div className={styles.people}>
                     {project.people.map((person, i) => {
                         return (
-                            <PersonCard
+                            <PersonButton
                                 key={i}
                                 name={person.name}
                                 link={person.linkedin}
@@ -116,6 +133,7 @@ function ProjectPage({ project }) {
                     })}
                 </div>
             </div>}
+
             <div className={styles.otherProjects}>
                 {relatedProjects[0] && <>
                     <div className={styles.header}>

@@ -8,6 +8,7 @@ export const projectsData = [
         featured: true,
         type: "Engineering",
         tags: ["Ansys", "SolidWorks", "CES", "Manufacturing", "Uni"],
+        link: {},
         thumbnail: {
             href: "/images/projects/EBike/render5.png",
             alt: "eBike Render"
@@ -146,6 +147,7 @@ export const projectsData = [
         featured: true,
         type: "Hardware",
         tags: ["C", "Microcontroller", "Uni"],
+        link: {},
         thumbnail: {
             href: "/images/projects/Buggy/buggy3.jpg",
             alt: "Mine Rescue Buggy"
@@ -193,15 +195,23 @@ export const projectsData = [
                     alt: "Mine Rescue Buggy Turning Calibration"
                 }
             },
+            // {
+            //     video: {
+            //         href: "/images/projects/Buggy/buggy_slide6.mp4",
+            //         alt: "Mine Rescue Buggy Video 3"
+            //     }
+            // },
+            // {
+            //     video: {
+            //         href: "/images/projects/Buggy/buggy_slide7.mp4",
+            //         alt: "Mine Rescue Buggy Video 4"
+            //     }
+            // },
             {
-                type: "video",
-                href: "/images/projects/Buggy/buggy_slide6.mp4",
-                alt: "Mine Rescue Buggy Video 3"
-            },
-            {
-                type: "video",
-                href: "/images/projects/Buggy/buggy_slide7.mp4",
-                alt: "Mine Rescue Buggy Video 4"
+                video: {
+                    href: "https://player.vimeo.com/video/58253485",
+                    alt: "Mine Rescue Buggy Video 4"
+                }
             },
         ],
         people: [
@@ -228,6 +238,7 @@ export const projectsData = [
         featured: false,
         type: "Engineering",
         tags: ["SolidWorks", "CES", "Uni"],
+        link: {},
         thumbnail: {
             href: "/images/projects/MobulaRay/render1.png",
             alt: "Mobula Ray Render 1"
@@ -332,6 +343,7 @@ export const projectsData = [
         featured: false,
         type: "Computing",
         tags: ["Python", "Uni"],
+        link: {},
         thumbnail: {
             href: "/images/projects/HeatDiffusion/heatmodel.jpg",
             alt: "2D Heat Diffusion Graph"
@@ -373,6 +385,7 @@ export const projectsData = [
         featured: true,
         type: "Engineering",
         tags: ["SolidWorks", "Manufacturing", "Uni"],
+        link: {},
         thumbnail: {
             href: "/images/projects/Sonic/render1.png",
             alt: "SONIC Render"
@@ -522,6 +535,7 @@ export const projectsData = [
         featured: false,
         type: "Engineering",
         tags: ["SolidWorks", "Uni"],
+        link: {},
         thumbnail: {
             href: "/images/projects/LiftDoor/render1.png",
             alt: "Lift Door Transmission Render 1"
@@ -592,6 +606,7 @@ export const projectsData = [
         featured: true,
         type: "Computing",
         tags: ["Python", "Data-Analysis", "Hackathon", "NLP", "ML"],
+        link: {},
         thumbnail: {
             href: "/images/projects/DataOpen/plot6.png",
             alt: "Muti-variate Plot"
@@ -702,6 +717,7 @@ export const projectsData = [
         featured: false,
         type: "Engineering",
         tags: ["SolidWorks", "Fusion360", "Hackathon"],
+        link: {},
         thumbnail: {
             href: "/images/projects/LunarDeployer/render3.png",
             alt: "Lunar Deployer Render 3"
@@ -788,6 +804,10 @@ export const projectsData = [
         featured: true,
         type: "Design",
         tags: ["SolidWorks", "Prototyping"],
+        link: {
+            name: "Product Website",
+            href: "https://dac2020.wixsite.com/group4"
+        },
         thumbnail: {
             href: "/images/projects/BiSpace/render1.png",
             alt: "BiSpace Render 1"
@@ -888,6 +908,7 @@ export const projectsData = [
         featured: false,
         type: "UI/UX",
         tags: ["AdobeXD", "Hackathon"],
+        link: {},
         thumbnail: {
             href: "/images/projects/CheckApp/mockup1.png",
             alt: "CheckApp Mockup 1"
@@ -945,6 +966,7 @@ export const projectsData = [
         featured: false,
         type: "Engineering",
         tags: ["SolidWorks", "Competition"],
+        link: {},
         thumbnail: {
             href: "/images/projects/RailGuide/render1.jpg",
             alt: "Fly-away Rail Guide Render 1"
@@ -1002,6 +1024,7 @@ export const projectsData = [
         featured: false,
         type: "Design",
         tags: ["ProCreate", "Competition"],
+        link: {},
         thumbnail: {
             href: "/images/projects/ProjectDaedalus/concept1.jpg",
             alt: "Project Daedalus Concept 1"
@@ -1040,6 +1063,7 @@ export const projectsData = [
         featured: true,
         type: "Design",
         tags: ["MATLAB", "SolidWorks", "Hackathon"],
+        link: {},
         thumbnail: {
             href: "/images/projects/Spiderman/render1.png",
             alt: "Spiderman Render 1"
@@ -1120,6 +1144,7 @@ export const projectsData = [
         featured: false,
         type: "Hardware",
         tags: ["Arduino", "C"],
+        link: {},
         thumbnail: {
             href: "/images/projects/Bioreactor/prototype1.jpg",
             alt: "Bioreactor Prototype 1"

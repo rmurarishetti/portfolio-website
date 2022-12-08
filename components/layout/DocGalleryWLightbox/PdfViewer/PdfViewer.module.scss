@@ -1,4 +1,5 @@
 .document {
+    user-select: none;
     // height: 80%;
 
     .page {
@@ -38,6 +39,7 @@
             color: var(--color-text-primary);
             cursor: pointer;
             transition: all var(--speed-medium);
+            user-select: none;
 
             &.rightArrow:hover {
                 transform: translateX(0.2rem);

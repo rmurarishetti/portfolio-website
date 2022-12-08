@@ -12,6 +12,20 @@ function GalleryWLightbox({ data, showDetails = true }) {
         setLightboxTransparent(false)
     }, [lightbox])
 
+    useEffect(() => {
+        const handleKeyDown = (e) => {
+            if (e.keyCode === 27) {
+                setLightbox(false)
+            }
+        };
+
+        window.addEventListener('keydown', handleKeyDown);
+
+        return () => {
+            window.removeEventListener('keydown', handleKeyDown);
+        };
+    }, []);
+
     return (
         <>
             <div className={styles.masonary}>
