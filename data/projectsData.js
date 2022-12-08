@@ -122,21 +122,13 @@ export const projectsData = [
         ],
         documents: [
             {
-                type: "Poster",
-                href: ""
+                name: "Design Report",
+                href: "/documents/projects/EBike/designReport.pdf"
             },
             {
-                type: "Design Report",
-                href: ""
+                name: "Testing & Analysis Report",
+                href: "/documents/projects/EBike/testingReport.pdf"
             },
-            {
-                type: "Testing & Analysis Report",
-                href: ""
-            },
-            {
-                type: "Seminar Presentation",
-                href: ""
-            }
         ],
         description: [
             "Worked with a group of third year mechanical engineering students to design, make, and test an urban electric bike from the ground up. Was specifically responsible for the engineering design, validation, manufacturing, and testing of the frame in a 5-member subgroup. ",
@@ -219,12 +211,7 @@ export const projectsData = [
                 linkedin: "https://www.linkedin.com/in/frederik-masure-a97415173/"
             },
         ],
-        documents: [
-            {
-                type: "Repository",
-                href: ""
-            },
-        ],
+        documents: [],
         description: [
             "As part of the final project of the Embedded-C for Microcontrollers module, we developed an autonomous mine rescue robot. The buggy can navigate a conceptual mine using a set of instructions coded in coloured cards and return to its starting position - simulating a scenario of determining the location of trapped miners.",
             "Enjoy exploring the set of slides which explain the key functionalities and features of the buggy. Slides 4 onwards have calibration demos before a full demo run on the final slide.",
@@ -330,12 +317,7 @@ export const projectsData = [
                 linkedin: "https://www.linkedin.com/in/inigomaruri/"
             },
         ],
-        documents: [
-            {
-                type: "Poster",
-                href: ""
-            },
-        ],
+        documents: [],
         description: [
             "Mobula ray is a personal underwater propulsion device rated for a depth of 15m. Powered by a dual-motor drive train and lithium-ion batteries, it is designed to have a battery life of 2hrs for an average speed of 2 kph.",
             "I worked with a highly talented team to complete the entire design process in one week, from the initial idea to the final engineering delivery. See our final pitching poster below."
@@ -371,8 +353,8 @@ export const projectsData = [
         ],
         documents: [
             {
-                type: "Report",
-                href: ""
+                name: "Coursework Summary",
+                href: "/documents/projects/HeatDiffusion/cwSummary.pdf"
             },
         ],
         description: [
@@ -522,8 +504,8 @@ export const projectsData = [
         ],
         documents: [
             {
-                type: "Design Report",
-                href: ""
+                name: "Design Report",
+                href: "/documents/projects/Sonic/designReport.pdf"
             },
         ],
         description: [
@@ -595,12 +577,7 @@ export const projectsData = [
             }
         ],
         people: [],
-        documents: [
-            {
-                type: "Design Review Presentation",
-                href: ""
-            },
-        ],
+        documents: [],
         description: [
             "An individual project to design a drive transmission for a lift door, including the complete CAD assembly and engineering drawings.",
             "The design features a two-step speed increase and converts rotary motor motion to double-acting linear motion."
@@ -706,8 +683,8 @@ export const projectsData = [
         ],
         documents: [
             {
-                type: "Report",
-                href: ""
+                name: "Analysis Report",
+                href: "/documents/projects/DataOpen/report.pdf"
             },
         ],
         description: [

@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { PersonCard, ProjectCard } from '../../components/cards';
 import { Tag, DateDiv, TypeTag } from '../../components/badges';
-import { GalleryWLightbox } from '../../components/layout';
+import { GalleryWLightbox, DocGalleryWLightbox } from '../../components/layout';
 import styles from '../../styles/Project.module.scss'
 // export const getStaticPaths = async () => {
 //     const res = projectsData
@@ -96,6 +96,12 @@ function ProjectPage({ project }) {
             <div className={styles.galleryContainer}>
                 <GalleryWLightbox data={project.media.filter(obj => 'image' in obj)} showDetails={false} />
             </div>
+            {project.documents[0] &&
+                <div className={styles.documentsContainer}>
+                    <div className={styles.header}>Documents</div>
+                    <DocGalleryWLightbox docsData={project.documents} />
+                </div>
+            }
             {project.people[0] && <div className={styles.peopleContainer}>
                 <div className={styles.header}>Contributors</div>
                 <div className={styles.people}>

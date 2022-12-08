@@ -98,6 +98,22 @@
     width: 100%;
 }
 
+.documentsContainer {
+    margin-top: 3rem;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 1.5rem;
+    border-radius: 1rem;
+    font-size: 0.9rem;
+
+    .header {
+        font-size: 1.2rem;
+        font-weight: 600;
+        display: flex;
+    }
+}
+
 .peopleContainer {
     margin-top: 3rem;
     display: flex;
@@ -110,9 +126,12 @@
     border: var(--border-primary);
     box-shadow: var(--shadow);
     font-size: 0.9rem;
+    align-items: center;
 
     .header {
-        color: var(--color-text-secondary);
+        font-size: 1.2rem;
+        font-weight: 600;
+        // color: var(--color-text-secondary);
         display: flex;
     }
 
@@ -139,8 +158,8 @@
         // justify-content: center;
         margin-bottom: 1rem;
         color: var(--color-text-secondary);
-        font-size: 1.3rem;
-        font-weight: 500;
+        font-size: 1.5rem;
+        font-weight: 600;
     }
 
     .grid {
