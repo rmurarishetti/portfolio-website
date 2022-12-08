@@ -82,15 +82,15 @@
   --animation-swing: swing var(--speed-extra-slow) ease both;
 }
 
-@supports(padding:max(0px)) {
+// @supports(padding:max(0px)) {
 
-  body,
-  header,
-  footer {
-    padding-left: min(0vmin, env(safe-area-inset-left));
-    padding-right: min(0vmin, env(safe-area-inset-right));
-  }
-}
+//   body,
+//   header,
+//   footer {
+//     padding-left: min(0vmin, env(safe-area-inset-left));
+//     padding-right: min(0vmin, env(safe-area-inset-right));
+//   }
+// }
 
 html {
   width: 100%;
