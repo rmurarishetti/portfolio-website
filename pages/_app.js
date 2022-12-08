@@ -4,6 +4,7 @@ import { ThemeProvider } from 'next-themes'
 import NextNProgress from 'nextjs-progressbar';
 import { Navbar, Footer } from '../components/layout'
 import { useRouter } from 'next/router'
+import { Analytics } from '@vercel/analytics/react';
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -26,6 +27,7 @@ function MyApp({ Component, pageProps }) {
         </div>
         <Footer />
       </ThemeProvider>
+      <Analytics />
     </>
   )
 }
