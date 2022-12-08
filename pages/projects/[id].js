@@ -48,8 +48,6 @@ function ProjectPage({ project }) {
     })
     const images = project.media.filter(obj => 'image' in obj);
     const videos = project.media.filter(obj => 'video' in obj);
-
-    console.log(ReactPlayer.canPlay('https://www.youtube.com/watch?v=lF4KuL2s7vI'))
     return (
         <>
             <Head>
