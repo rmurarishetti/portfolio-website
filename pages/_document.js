@@ -1,6 +1,11 @@
-import { Html, Head, Main, NextScript } from 'next/document'
+import { Html, Head, Main, NextScript } from 'next/document';
+// import { useTheme } from 'next-themes';
+
 
 export default function Document() {
+    // const { theme, setTheme } = useTheme();
+    // const bgColor = theme == 'light' ? '#fcfcfc' : '#121014';
+
     return (
         <Html>
             <Head>
@@ -13,9 +18,11 @@ export default function Document() {
                 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
                 <link rel="manifest" href="/site.webmanifest" />
                 {/* <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"></meta> */}
-                {/* <meta name="msapplication-TileColor" content="#da532c" />
-                <meta name="theme-color" content="#ffffff" />
-                <meta name="apple-mobile-web-app-status-bar-style" content="#ffffff"></meta> */}
+                <meta name="msapplication-TileColor" content="#8168ff" />
+                {/* <meta name="theme-color" content={bgColor} /> */}
+                <meta name="theme-color" media="(prefers-color-scheme: light)" content='#fcfcfc' />
+                <meta name="theme-color" media="(prefers-color-scheme: dark)" content='#121014' />
+                {/* <meta name="apple-mobile-web-app-status-bar-style" content={bgColor}></meta> */}
             </Head>
             <body>
                 <Main />
