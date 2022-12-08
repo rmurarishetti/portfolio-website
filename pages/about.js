@@ -16,6 +16,7 @@ function About() {
             <Head>
                 <title>Rohit Nag | About</title>
                 <meta name="keywords" content="Engineer, Developer, Designer, Portfolio" />
+                <meta name="description" content="My background, experiences and skills." />
             </Head>
             <div className={styles.aboutPage}>
                 <div className={styles.header}>

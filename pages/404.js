@@ -34,6 +34,7 @@ function NotFound() {
         <>
             <Head>
                 <title>Rohit Nag | 404</title>
+                <meta name="description" content="Not found page." />
                 <meta name="keywords" content="Engineer, Developer, Designer, Portfolio" />
             </Head>
             <div className={styles.errorPage}>

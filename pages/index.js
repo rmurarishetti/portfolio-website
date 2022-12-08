@@ -20,6 +20,7 @@ export default function Home() {
     <>
       <Head>
         <title>Rohit Nag</title>
+        <meta name="description" content="My personal portfolio of projects, artwork and graphics." />
         <meta name="keywords" content="Engineer, Developer, Designer, Portfolio" />
       </Head>
       <div className={styles.header}>

@@ -19,6 +19,7 @@ function Art() {
             <Head>
                 <title>Rohit Nag | Art</title>
                 <meta name="keywords" content="Engineer, Developer, Designer, Portfolio" />
+                <meta name="description" content="Gallery of my artwork." />
             </Head>
             <div className={styles.artPage}>
                 <div className={styles.header}>

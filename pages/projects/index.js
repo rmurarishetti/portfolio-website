@@ -161,6 +161,7 @@ function Projects() {
         <>
             <Head>
                 <title>Rohit Nag | Projects</title>
+                <meta name="description" content="A collection of my engineering, hardware, ui/ux, design, and computing projects." />
                 <meta name="keywords" content="Engineer, Developer, Designer, Portfolio" />
             </Head>
             <div className={styles.projectPage}>

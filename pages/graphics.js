@@ -27,6 +27,7 @@ function Graphics() {
             <Head>
                 <title>Rohit Nag | Graphics</title>
                 <meta name="keywords" content="Engineer, Developer, Designer, Portfolio" />
+                <meta name="description" content="Gallery of my graphics." />
             </Head>
             <div className={styles.graphicsPage} ref={ref}>
                 <div className={styles.header}>
