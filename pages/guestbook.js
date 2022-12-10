@@ -13,8 +13,6 @@ function GuestBook() {
         refreshInterval: 1000
     })
 
-    console.log(data)
-
     return (
         <>
             <Head>
