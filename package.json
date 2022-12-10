@@ -10,6 +10,7 @@
     "postbuild": "next-sitemap --config next-sitemap.config.js"
   },
   "dependencies": {
+    "@prisma/client": "^4.7.1",
     "@react-three/drei": "^9.36.0",
     "@react-three/fiber": "^8.8.10",
     "@vercel/analytics": "^0.1.5",
@@ -28,11 +29,13 @@
     "sass": "^1.55.0",
     "sitemap": "^7.1.1",
     "swiper": "^8.4.4",
+    "swr": "^2.0.0",
     "three": "^0.145.0",
     "three-custom-shader-material": "^4.0.0"
   },
   "devDependencies": {
     "eslint": "8.24.0",
-    "eslint-config-next": "12.3.1"
+    "eslint-config-next": "12.3.1",
+    "prisma": "^4.7.1"
   }
 }

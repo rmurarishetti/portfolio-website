@@ -5,7 +5,7 @@
     position: relative;
     overflow: hidden;
     width: 100%;
-    align-items: flex-start;
+    align-items: center;
 
     input {
         display: flex;
@@ -45,6 +45,23 @@
         height: 0;
         padding: 0;
         opacity: 0;
+    }
+
+    .submitMessage {
+        display: flex;
+        height: 0;
+        transform: translateY(-1rem);
+        opacity: 0;
+        overflow: hidden;
+        color: var(--color-successful);
+        font-size: 0.7rem;
+        transition: all var(--speed-medium);
+
+        &.submitted {
+            transform: none;
+            opacity: 1;
+            height: auto;
+        }
     }
 
     &.active {

@@ -6,5 +6,6 @@ import GalleryWLightbox from "./GalleryWLightbox";
 import DocGalleryWLightbox from "./DocGalleryWLightbox";
 import XpPane from "./XpPane";
 import RatioImage from "./RatioImage";
+import CommentDiv from "./CommentDiv";
 
-export { Footer, Navbar, FilterPane, DatePane, GalleryWLightbox, XpPane, RatioImage, DocGalleryWLightbox };
+export { Footer, Navbar, FilterPane, DatePane, GalleryWLightbox, XpPane, RatioImage, DocGalleryWLightbox, CommentDiv };

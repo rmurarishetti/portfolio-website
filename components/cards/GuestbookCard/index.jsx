@@ -1,7 +1,7 @@
 import styles from './GuestbookCard.module.scss'
 import { MessageBox } from '../../inputs';
 import { UserButton } from '../../buttons';
-import { useSession, signIn, signOut } from 'next-auth/react'
+import { useSession } from 'next-auth/react'
 
 function GuestbookCard() {
     const { data: session } = useSession()

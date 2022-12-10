@@ -33,4 +33,13 @@
             margin: 1rem 0;
         }
     }
+
+    .comments {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 2.5rem;
+        padding: 0 1rem;
+    }
 }

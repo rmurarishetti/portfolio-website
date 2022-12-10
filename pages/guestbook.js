@@ -3,8 +3,17 @@ import { useRef, useState, useEffect } from 'react';
 import styles from '../styles/Guestbook.module.scss'
 import { DateDiv } from '../components/badges';
 import { GuestbookCard } from '../components/cards';
+import { CommentDiv } from '../components/layout';
+import useSWR from "swr";
 
-function Graphics() {
+function GuestBook() {
+    const fetcher = (url) => fetch(url).then((res) => res.json());
+
+    const { data, error } = useSWR("/api/guestbook/getAllMessages", fetcher, {
+        refreshInterval: 1000
+    })
+
+    console.log(data)
 
     return (
         <>
@@ -22,9 +31,16 @@ function Graphics() {
                     <p>Sign my website and leave some feedback, appreciation or even humor!</p>
                 </div>
                 <GuestbookCard />
+                <div className={styles.comments}>
+                    {data && data.map(message => {
+                        return (
+                            <CommentDiv key={message.id} {...message} />
+                        )
+                    })}
+                </div>
             </div>
         </>
     );
 }
 
-export default Graphics;
+export default GuestBook;

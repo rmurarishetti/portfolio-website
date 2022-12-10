@@ -11,7 +11,6 @@ function UserButton() {
     async function handleGoogleSignout() {
         signOut('google', { callbackUrl: 'http://localhost:3000/guestbook' })
     }
-    console.log(session)
 
     const userName = session ? session.user.name : null
     const userImg = session ? session.user.image : null
@@ -21,7 +20,9 @@ function UserButton() {
             onClick={session ? handleGoogleSignout : handleGoogleSignin}>
             {session ?
                 <>
-                    <Image src={userImg} width={30} height={30} alt={`${userName}`}></Image>
+                    <div className={styles.imageWrapper}>
+                        <Image src={userImg} width={30} height={30} alt={`${userName}`}></Image>
+                    </div>
                     <div className={styles.tooltip}>Log out</div>
                 </>
                 :

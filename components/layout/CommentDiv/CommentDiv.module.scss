@@ -1,0 +1,48 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    gap: 0.7rem;
+
+    .message {
+        color: var(--color-text-primary);
+        font-size: 1rem;
+        line-height: 1.6rem;
+    }
+
+    .footer {
+        display: flex;
+        gap: 0.7rem;
+        color: var(--color-text-secondary);
+        font-size: 0.8rem;
+        align-items: center;
+
+        .person {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+
+            .icon {
+                width: 20px;
+                height: 20px;
+                border-radius: 100%;
+                overflow: hidden;
+            }
+        }
+
+        .seperator,
+        .date {
+            opacity: 0.7;
+        }
+
+        .deleteButton {
+            cursor: pointer;
+            color: var(--color-cancel);
+
+            &:hover {
+                text-shadow: var(--shadow-small-cancel);
+            }
+        }
+    }
+}

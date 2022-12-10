@@ -43,7 +43,10 @@
         border: none;
         box-shadow: none;
 
-        img {
+        .imageWrapper {
+            width: 30px;
+            height: 30px;
+            overflow: hidden;
             border-radius: 30px;
             transition: all var(--speed-medium);
         }
@@ -51,7 +54,7 @@
         &:hover {
             background: none;
 
-            img {
+            .imageWrapper {
                 scale: 0.95;
                 filter: grayscale(100%);
                 -webkit-filter: grayscale(100%);
