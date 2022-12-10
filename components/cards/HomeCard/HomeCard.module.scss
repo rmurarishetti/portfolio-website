@@ -76,6 +76,10 @@
                         transform-origin: bottom right;
                         animation: var(--animation-swing);
                     }
+
+                    &.✍️ {
+                        animation: var(--animation-paint);
+                    }
                 }
 
                 .arrow {

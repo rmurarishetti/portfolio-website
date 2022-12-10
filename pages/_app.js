@@ -2,6 +2,7 @@ import { ThemeProvider } from 'next-themes';
 import { useRouter } from 'next/router';
 import { Analytics } from '@vercel/analytics/react';
 import { useState, useEffect } from "react";
+import { SessionProvider } from 'next-auth/react'
 import NextNProgress from 'nextjs-progressbar';
 import { Navbar, Footer } from '../components/layout'
 import '../styles/globals.scss';
@@ -15,7 +16,7 @@ function MyApp({ Component, pageProps }) {
   }, [])
 
   return (
-    <>
+    <SessionProvider session={pageProps.session}>
       <ThemeProvider
         themes={['light', 'dark']}
         defaultTheme={'system'}
@@ -36,7 +37,7 @@ function MyApp({ Component, pageProps }) {
         <Footer />
       </ThemeProvider>
       <Analytics />
-    </>
+    </SessionProvider>
   )
 }
 

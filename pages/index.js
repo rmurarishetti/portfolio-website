@@ -58,7 +58,7 @@ export default function Home() {
       </div>
 
       <div className={styles.grid}>
-        {pagesData.slice(1).map((pageData) => {
+        {pagesData.slice(1, -1).map((pageData) => {
           return (
             <HomeCard
               key={pageData.title}
