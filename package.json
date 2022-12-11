@@ -9,8 +9,8 @@
     "lint": "next lint",
     "postbuild": "next-sitemap --config next-sitemap.config.js",
     "vercel-build": "npm run prisma:generate && npm run prisma:migrate && next build",
-    "prisma:generate": "prisma generate --data-proxy",
-    "prisma:migrate": "DATABASE_URL=\"$MIGRATE_DATABASE_URL\" prisma migrate deploy"
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate deploy"
   },
   "dependencies": {
     "@prisma/client": "^4.7.1",
