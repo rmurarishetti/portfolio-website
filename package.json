@@ -8,9 +8,9 @@
     "start": "next start",
     "lint": "next lint",
     "postbuild": "next-sitemap --config next-sitemap.config.js",
-    "vercel-build": "npm run prisma:generate && npm run prisma:migrate && next build",
+    "vercel-build": "npm run prisma:generate && npm run prisma:push && next build",
     "prisma:generate": "prisma generate",
-    "prisma:migrate": "prisma migrate deploy"
+    "prisma:push": "prisma db push"
   },
   "dependencies": {
     "@prisma/client": "^4.7.1",
