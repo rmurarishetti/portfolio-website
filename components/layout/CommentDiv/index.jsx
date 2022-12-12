@@ -34,7 +34,7 @@ function CommentDiv({ id, email, image, fullName, message, dateTime }) {
                 </div>
                 <div className={styles.seperator}>/</div>
                 <div className={styles.date}>
-                    <DateDiv start={new Date(dateTime)} longDate days />
+                    <DateDiv start={new Date(dateTime)} longDate day />
                 </div>
                 {editable &&
                     <>
