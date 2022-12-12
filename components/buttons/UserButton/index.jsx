@@ -5,11 +5,11 @@ import Image from 'next/image'
 function UserButton() {
     const { data: session } = useSession()
     async function handleGoogleSignin() {
-        signIn('google', { callbackUrl: `${process.env.NEXTAUTH_URL}/guestbook` })
+        signIn('google', { callbackUrl: 'https://rohitnag.com/guestbook' })
     }
 
     async function handleGoogleSignout() {
-        signOut('google', { callbackUrl: `${process.env.NEXTAUTH_URL}/guestbook` })
+        signOut('google', { callbackUrl: 'https://rohitnag.com/guestbook' })
     }
 
     const userName = session ? session.user.name : null
