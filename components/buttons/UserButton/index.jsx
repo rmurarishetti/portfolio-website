@@ -1,15 +1,17 @@
 import styles from './UserButton.module.scss'
 import { useSession, signIn, signOut } from 'next-auth/react'
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 
 function UserButton() {
+    const router = useRouter()
     const { data: session } = useSession()
     async function handleGoogleSignin() {
-        signIn('google', { callbackUrl: 'https://rohitnag.com/guestbook' })
+        signIn('google', { callbackUrl: router.query.callbackUrl })
     }
 
     async function handleGoogleSignout() {
-        signOut('google', { callbackUrl: 'https://rohitnag.com/guestbook' })
+        signOut('google', { callbackUrl: router.query.callbackUrl })
     }
 
     const userName = session ? session.user.name : null
