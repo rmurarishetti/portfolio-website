@@ -18,8 +18,6 @@ function CommentDiv({ id, email, image, fullName, message, dateTime }) {
         }
     }
 
-    const dateTimeOptions = { year: 'numeric', month: 'short', day: 'numeric', hour: "2-digit", minute: "2-digit" };
-
     return (
         <div className={styles.container}>
             <div className={styles.message}>{message}</div>
@@ -36,8 +34,7 @@ function CommentDiv({ id, email, image, fullName, message, dateTime }) {
                 </div>
                 <div className={styles.seperator}>/</div>
                 <div className={styles.date}>
-                    {/* <DateDiv start={new Date(dateTime)} longDate /> */}
-                    {(new Date(dateTime)).toLocaleString("en-US", dateTimeOptions)}
+                    <DateDiv start={new Date(dateTime)} longDate days />
                 </div>
                 {editable &&
                     <>
