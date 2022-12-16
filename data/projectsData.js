@@ -4,7 +4,7 @@ export const projectsData = [
         name: "CheatSheet",
         subtitle: "A global shortcuts helper Windows application.",
         start: new Date(2022, 6),
-        end: new Date(2021, 7),
+        end: new Date(2022, 7),
         featured: true,
         type: "UI/UX",
         tags: ["WinUI3", "XAML", "C#", "Hackathon"],
