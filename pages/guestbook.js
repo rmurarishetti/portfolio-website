@@ -13,11 +13,6 @@ function GuestBook() {
         refreshInterval: 1000
     })
 
-    // const sortedData = data.sort((a, b) => {
-    //     return (new Date(a.dateTime) > new Date(b.dateTime))
-    // })
-    // console.log(sortedData)
-
     return (
         <>
             <Head>

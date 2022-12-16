@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import { useTheme } from 'next-themes';
+import { useCorrectedTheme } from "../../../helpers/hooks";
 
 function ThemedSpotlight() {
     const [isMounted, setIsMounted] = useState(false);
-    const { theme, setTheme } = useTheme();
+    const theme = useCorrectedTheme();
 
     useEffect(() => {
         setIsMounted(true);

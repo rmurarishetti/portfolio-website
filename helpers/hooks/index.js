@@ -1,3 +1,4 @@
 import { useCountDown } from "./useCountdown";
+import { useCorrectedTheme } from "./useCorrectedTheme";
 
-export { useCountDown }
+export { useCountDown, useCorrectedTheme }

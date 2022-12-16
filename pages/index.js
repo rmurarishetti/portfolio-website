@@ -78,7 +78,7 @@ export default function Home() {
           </a>
         </Link>
       </div>
-      <KineticScene />
+      {/* <KineticScene /> */}
       <div className={[styles.block, styles.artBlock].join(' ')}>
         <h2>New Artwork</h2>
         <div className={styles.galleryContainer}>

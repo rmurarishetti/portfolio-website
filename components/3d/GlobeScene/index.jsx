@@ -1,14 +1,12 @@
 import { Suspense } from 'react';
 import { Canvas } from "@react-three/fiber";
 import { Globe } from './Globe';
-import { useTheme } from 'next-themes';
+import { useCorrectedTheme } from '../../../helpers/hooks';
 import styles from './GlobeScene.module.scss'
 import { a } from '@react-spring/three'
 
 export function GlobeScene({ homeCities, visitedCities }) {
-    const { theme, setTheme } = useTheme();
-
-    const correctedTheme = theme == 'system' ? 'dark' : theme
+    const theme = useCorrectedTheme()
 
     const themedDirectionalLightProps = {
         'dark': {
@@ -33,10 +31,10 @@ export function GlobeScene({ homeCities, visitedCities }) {
         <Suspense fallback={null}>
             <Canvas className={styles.scene}>
                 <a.ambientLight
-                    {...themedAmbientLightProps[correctedTheme]}
+                    {...themedAmbientLightProps[theme]}
                     position={[3, 3, 3]} />
                 <a.directionalLight
-                    {...themedDirectionalLightProps[correctedTheme]}
+                    {...themedDirectionalLightProps[theme]}
                     lookAt={[0, 0, 0]} />
                 <Suspense
                     fallback={
@@ -44,7 +42,7 @@ export function GlobeScene({ homeCities, visitedCities }) {
                             <sphereGeometry attach="geometry" args={[2.3, 64, 64]} />
                             <meshPhongMaterial color={theme == 'light' ? '#85bbce' : '#161C41'} attach="material" specular={'#7300FF'} shininess={10} />
                         </mesh>}>
-                    <Globe position={[0, 0, 0]} theme={correctedTheme} radius={2.3} homeCities={homeCities} visitedCities={visitedCities} />
+                    <Globe position={[0, 0, 0]} theme={theme} radius={2.3} homeCities={homeCities} visitedCities={visitedCities} />
                 </Suspense>
             </Canvas>
         </Suspense>

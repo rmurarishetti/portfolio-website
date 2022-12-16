@@ -1,7 +1,6 @@
 import { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
 import Winch from './Winch';
-import * as THREE from 'three'
 import styles from './WinchScene.module.scss'
 import { useScrollPercentage } from 'react-scroll-percentage'
 import ThemedSpotlight from './ThemedLight';
