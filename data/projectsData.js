@@ -51,7 +51,7 @@ export const projectsData = [
         ],
         documents: [],
         description: [
-            "Keyboard shortcuts is great way to increase productivity. Unfortunately, they are very hard to remember when you need them. That is why I created CheatSheet, a global shortcuts-helper overlay app for Windows.",
+            "Keyboard shortcuts are great way to increase productivity. Unfortunately, they are very hard to remember when you need them. That is why I created CheatSheet, a global shortcuts-helper overlay app for Windows.",
             "The idea was proposed by me in the Microsoft EMEA Innovation Challenge Hackathon 2022 which won 1st place. The application was then later developed with the help of my manager at Microsft for Microsoft's 2022 Global Hackathon.",
             "The overlay can be activated with a key press, displaying recommended and recently used shortcuts for the foreground application. Development is in beta with functionalities including automatic foreground app detection, complete ui functionality and data fetching. The next milestone is automatic data retrieval from apps without relying on hard-corded data.",
             "The app was developed using WinUI 3, a C#/XAML UI kit that ships with the Windows App SDK."
