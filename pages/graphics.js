@@ -35,7 +35,7 @@ function Graphics() {
                         <div className={styles.emoji}>🖼</div>
                         <div className={styles.text}>Graphics</div>
                     </div>
-                    <p>Some my posters, infographics and logos.</p>
+                    <p>Some of my posters, infographics and logos.</p>
                 </div>
                 <div className={styles.grid}>
                     {graphicsData.map(graphic => {
