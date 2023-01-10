@@ -13,7 +13,7 @@ export const xpData = [
                 start: new Date(2022, 6),
                 end: new Date(2022, 8, 30),
                 description: "Worked in the Microsoft Search Assistance & Intelligence (MSAI) team. Developed within the Windows OS code-base, specifically on the preprocessing of telemetry data for the training of File Explorer recommendations models.",
-                skills: ["C++", "C#", "XAML", "React"]
+                skills: ["C++"]
             }
         ]
     },
