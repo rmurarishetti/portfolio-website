@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router';
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import NavItem from './NavItem'
 import Logo from './Logo'
 import styles from './Navbar.module.scss'
@@ -9,6 +9,34 @@ import { ThemeToggle } from '../../buttons'
 import { pagesData } from '../../../data/pagesData';
 
 function Navbar() {
+    const [show, setShow] = useState(true);
+    const [lastScrollY, setLastScrollY] = useState(0);
+
+
+
+    useEffect(() => {
+        const controlNavbar = () => {
+            if (typeof window !== 'undefined') {
+                if (window.scrollY > lastScrollY) { // if scroll down hide the navbar
+                    setShow(false);
+                } else { // if scroll up show the navbar
+                    setShow(true);
+                }
+
+                // remember current page location to use in the next move
+                setLastScrollY(window.scrollY);
+            }
+        };
+        if (typeof window !== 'undefined') {
+            window.addEventListener('scroll', controlNavbar);
+
+            // cleanup function
+            return () => {
+                window.removeEventListener('scroll', controlNavbar);
+            };
+        }
+    }, [lastScrollY]);
+
     const [collapsed, setCollapsed] = useState(true);
 
     const toggleMenu = () => {
@@ -19,9 +47,13 @@ function Navbar() {
 
     const router = useRouter()
 
+    console.log(show)
 
     return (
-        <nav className={[styles.navContainer, collapsed ? styles.collapsed : styles.expanded].join(' ')}>
+        <nav
+            className={[styles.navContainer,
+            collapsed ? styles.collapsed : styles.expanded,
+            show ? null : styles.hidden].join(' ')}>
             <div className={styles.nav}>
                 <div className={styles.menuToggleContainer}>
                     <MenuToggle onclick_event={toggleMenu} expanded={!collapsed} />

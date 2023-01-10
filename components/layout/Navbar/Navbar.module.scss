@@ -9,6 +9,11 @@
     background-color: var(--color-glass);
     backdrop-filter: var(--blur-glass);
     -webkit-backdrop-filter: var(--blur-glass);
+    transition: top var(--speed-slow);
+
+    &.hidden {
+        top: -80px;
+    }
 
     .nav {
         width: 100%;
