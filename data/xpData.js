@@ -1,5 +1,3 @@
-import { MeshStandardMaterial } from "three";
-
 export const xpData = [
     {
         logo: "/images/icons/logos/microsoft_logo.svg",
