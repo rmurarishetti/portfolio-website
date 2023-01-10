@@ -156,21 +156,31 @@ html {
             .swiper-pagination {
               bottom: 0;
               z-index: 20;
+              padding-left: 25%;
+              padding-right: 25%;
+              display: flex;
 
               .swiper-pagination-bullet {
-                border-radius: 10px;
+                display: flex;
+                flex-grow: 1;
+                width: auto;
+                border-radius: 4px;
                 background-color: var(--color-text-primary);
                 opacity: 0.2;
-                transition: width var(--speed-medium);
+                transition: all var(--speed-slow);
+                height: 4px;
+                margin: 2px;
 
                 &.swiper-pagination-bullet-active {
                   opacity: 1;
-                  width: 24px;
+                  flex-grow: 1.5;
+                  // width: 24px;
                   background-color: var(--color-accent-secondary);
                 }
 
                 &:hover {
                   background-color: var(--color-accent-primary);
+                  flex-grow: 1.5;
                 }
               }
             }

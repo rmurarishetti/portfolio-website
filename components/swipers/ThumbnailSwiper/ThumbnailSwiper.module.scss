@@ -19,8 +19,8 @@
             display: flex;
             // border: 2px solid red;
             align-items: stretch;
-            // margin: 0rem 0rem;
-            margin-right: -3rem;
+            margin: 0rem 0.5rem;
+            // margin-right: -3rem;
             transition: margin-right var(--speed-medium);
 
             >div {
@@ -30,7 +30,7 @@
             }
 
             &:hover {
-                margin-right: 2rem;
+                // margin-right: 2rem;
                 z-index: 20;
                 // transform: translateY(-0.2rem);
             }

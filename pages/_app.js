@@ -25,7 +25,8 @@ function MyApp({ Component, pageProps }) {
           color="#6F3BFF"
           startPosition={0.3}
           stopDelayMs={200}
-          height={6}
+          options={{ showSpinner: false }}
+          height={4}
           showOnShallow />
         <Navbar />
         <div className="container">
