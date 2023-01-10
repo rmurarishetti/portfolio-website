@@ -47,8 +47,6 @@ function Navbar() {
 
     const router = useRouter()
 
-    console.log(show)
-
     return (
         <nav
             className={[styles.navContainer,

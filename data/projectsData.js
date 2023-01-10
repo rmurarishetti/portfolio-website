@@ -378,7 +378,7 @@ export const projectsData = [
             {
                 gender: 'female',
                 name: "Marie Obrowski Aguirre",
-                linkedin: "https://www.linkedin.com/in/marie-obrowski-1112b6191/"
+                linkedin: "https://www.linkedin.com/in/marie-obrowski-aguirre-1112b6191/"
             },
             {
                 gender: 'male',
