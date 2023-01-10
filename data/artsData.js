@@ -133,7 +133,7 @@ export const artsData = [
         id: 'razor',
         title: "Razor Product Design",
         date: new Date(2020, 10),
-        mediums: ['Alchol Marker', 'Fineline'],
+        mediums: ['Alchol Marker', 'Fineliner'],
         image: {
             href: '/images/art/razor.jpg',
             alt: "Product design sketch of a razor.",
@@ -143,7 +143,7 @@ export const artsData = [
         id: 'bikeframe',
         title: "eBike Frame Concept",
         date: new Date(2020, 10),
-        mediums: ['Alchol Marker', 'Fineline'],
+        mediums: ['Alchol Marker', 'Fineliner'],
         image: {
             href: '/images/art/bikeframe.jpg',
             alt: "Concept sketch of a eBikeFrame.",
@@ -153,7 +153,7 @@ export const artsData = [
         id: 'disinfectant',
         title: "Bottle Product Design",
         date: new Date(2020, 10),
-        mediums: ['Pencil', 'Fineline'],
+        mediums: ['Pencil', 'Fineliner'],
         image: {
             href: '/images/art/disinfectant.jpg',
             alt: "Product design sketch of a disinfectant bottle.",

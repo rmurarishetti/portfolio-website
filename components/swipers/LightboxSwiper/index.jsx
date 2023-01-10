@@ -33,7 +33,7 @@ function LightboxSwiper({ data, initialSlide = 0, setLightbox, onClick, showDeta
             centeredSlides={true}
             mousewheel
             grabCursor
-            rewind>
+            loop>
             {data.map((artData, i) => {
                 return (
                     <SwiperSlide

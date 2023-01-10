@@ -19,7 +19,7 @@ function ArtsSwiper({ artsData }) {
             initialSlide={0}
             mousewheel
             grabCursor
-            rewind>
+            loop>
             <div className={styles.fade} />
             {artsData.map((artData, i) => {
                 return (

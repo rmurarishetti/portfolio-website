@@ -19,7 +19,7 @@ function FeaturedProjectsSwiper({ projectsData }) {
             initialSlide={0}
             mousewheel
             grabCursor
-            rewind>
+        >
             <div className={styles.fade} />
             {projectsData.map((projectData, i) => {
                 return (
