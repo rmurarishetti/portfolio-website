@@ -29,7 +29,7 @@ export default function Home() {
             Rohit Nag
           </h1>
           <div className={styles.role}>
-            A Mechanical Engineering student at&nbsp;
+            A Master&#39;s Mechanical Engineering student at&nbsp;
             <a
               href="https://www.imperial.ac.uk/ "
               target="_blank"

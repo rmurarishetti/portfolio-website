@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import styles from '../styles/About.module.scss';
-
+import Link from 'next/link';
 import { GlobeScene } from '../components/3d/GlobeScene';
 import { homeCitiesData } from "../data/citiesData";
 import { visitedCitiesData } from "../data/citiesData";
@@ -32,12 +32,29 @@ function About() {
                             visitedCities={citiesData.filter(city => city.type == 'visited')} />
                     </div>
                     <div className={styles.text}>
-                        I&apos;m a Mechanical Engineering student at Imperial College London, specialising in Mechatronics and Robotics. My dream is to work on impactful solutions that combine engineering, design, and computing. I also enjoy drawing, <HoverBadge hoverText={'Bucket List: 🇯🇵, 🇧🇴, 🇵🇪, 🇪🇸'}>travelling</HoverBadge> and playing <HoverBadge hoverText={'🏃‍♂️ 🚴‍♂️ 🎾 🏸 🏓 🏏'}> sports</HoverBadge>.
+                        I&apos;m a Master&apos;s Mechanical Engineering student at&nbsp;
+                        <a
+                            href="https://www.imperial.ac.uk"
+                            target="_blank"
+                            rel="noreferrer">
+                            Imperial College London
+                        </a>
+                        &nbsp;, specialising in Mechatronics and Aircraft Engine Technology. Currently, I&apos;m working on my Master&apos;s project on locating optimal peg-fixation positions for&nbsp;
+                        <a
+                            href="https://www.osstec.uk"
+                            target="_blank"
+                            rel="noreferrer">
+                            OSSTEC&apos;s
+                        </a>
+                        &nbsp;knee arthroplasty implants using modern and novel computational methods. My dream is to work on impactful solutions that combine engineering, design, and computing.
                     </div>
                     <div className={styles.text}>
-                        I&apos;m lucky to have grown up in Oman, Libya, Brunei, Qatar and the UK, all of which I consider home. Have fun exploring the globe to find the cities I&apos;ve lived in and the ones I&apos;ve visited.
+                        Outside work, I also enjoy drawing, playing <HoverBadge hoverText={'🏃‍♂️ 🚴‍♂️ 🎾 🏸 🏓 🏏'}> sports</HoverBadge> and <HoverBadge hoverText={'Bucket List: 🇯🇵, 🇧🇴, 🇵🇪, 🇪🇸'}>travelling</HoverBadge>. I&apos;m lucky to have grown up in Oman, Libya, Brunei, Qatar and the UK, all of which I consider home. Enjoy exploring the globe to find the cities I&apos;ve lived in and the ones I&apos;ve visited.
                     </div>
                 </div>
+                {/* <div className={styles.note}>
+                    Feel free leave any feedback or appreciation by signing my <Link href='/guestbook'>Guestbook</Link>!
+                </div> */}
                 <div className={styles.xp}>
                     <h2>Experience</h2>
                     <XpPane xpData={xpData} />
