@@ -36,7 +36,7 @@ export const xpData = [
                 start: new Date(2021, 5, 4),
                 end: new Date(2021, 11, 25),
                 description: "Worked within the Artificial Chief Engineer (ACE) team, developing RR's new autonomous machinery control system for Naval vessels.",
-                skills: ["HTML", "JavaScript", "CSS"]
+                skills: ["HTML", "JavaScript", "CSS", "Docker", "MATLAB"]
             }
         ]
     },
