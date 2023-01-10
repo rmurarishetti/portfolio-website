@@ -34,7 +34,7 @@ export default function Home() {
               href="https://www.imperial.ac.uk/ "
               target="_blank"
               rel="noreferrer">
-              Imperial College
+              Imperial College London
             </a>.
           </div>
           <div className={styles.description}>

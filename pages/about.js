@@ -35,7 +35,7 @@ function About() {
                         I&apos;m a Mechanical Engineering student at Imperial College London, specialising in Mechatronics and Robotics. My dream is to work on impactful solutions that combine engineering, design, and computing. I also enjoy drawing, <HoverBadge hoverText={'Bucket List: 🇯🇵, 🇧🇴, 🇵🇪, 🇪🇸'}>travelling</HoverBadge> and playing <HoverBadge hoverText={'🏃‍♂️ 🚴‍♂️ 🎾 🏸 🏓 🏏'}> sports</HoverBadge>.
                     </div>
                     <div className={styles.text}>
-                        I&apos;m lucky to have grown up in Oman, Libya, Brunei, and Qatar, all of which I consider home. Somehow, I have picked up something from every place, but any languages 😆. Have fun exploring the globe to find the countries I&apos;ve lived in and the ones I&apos;ve visited.
+                        I&apos;m lucky to have grown up in Oman, Libya, Brunei, Qatar and the UK, all of which I consider home. Have fun exploring the globe to find the cities I&apos;ve lived in and the ones I&apos;ve visited.
                     </div>
                 </div>
                 <div className={styles.xp}>
