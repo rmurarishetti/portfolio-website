@@ -66,7 +66,15 @@ export default function Home() {
           )
         })}
       </div>
-      <WinchScene />
+      <div className={styles.winchSceneContainer}>
+        <WinchScene />
+        <Link href='/projects/lunar-deployer'>
+          <a className={styles.link}>
+            <div className={styles.parent}>Projects / Lunar Rover Deployer</div>
+            <div className={styles.arrow}>&rarr;</div>
+          </a>
+        </Link>
+      </div>
       <div className={styles.block}>
         <h2>Featured Projects</h2>
         <FeaturedProjectsSwiper projectsData={projectsData.filter(projectData => projectData.featured)} />
@@ -93,6 +101,17 @@ export default function Home() {
             <div className={styles.arrow}>&rarr;&nbsp;</div>
           </a>
         </Link>
+      </div>
+      <div className={styles.guestbookNote}>
+        <div className={styles.main}>
+          Feel free to leave some feedback or appreciation by signing my&nbsp;
+          <Link href='/guestbook'>
+            <a className={styles.link}>
+              <div className={styles.parent}>Guestbook</div>
+              <div className={styles.arrow}>&rarr;</div>
+            </a>
+          </Link>
+        </div>
       </div>
     </>
   )

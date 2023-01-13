@@ -44,6 +44,32 @@
   margin: 0 -1rem;
 }
 
+.winchSceneContainer {
+  display: flex;
+  width: 100%;
+  position: relative;
+
+  .link {
+    position: absolute;
+    bottom: 0rem;
+    right: 0;
+    font-size: 0.8rem;
+    display: inline-flex;
+    gap: 0.2rem;
+    font-weight: 400;
+
+    .arrow {
+      transition: transform var(--speed-medium);
+    }
+
+    &:hover {
+      .arrow {
+        transform: translateX(0.2rem);
+      }
+    }
+  }
+}
+
 .block {
   width: 100%;
   display: flex;
@@ -80,7 +106,7 @@
 
     &:hover {
       .arrow {
-        transform: translateX(0.5rem);
+        transform: translateX(0.3rem);
       }
     }
   }
@@ -94,6 +120,38 @@
 .logo {
   height: 1em;
   margin-left: 0.5rem;
+}
+
+.guestbookNote {
+  margin-top: 2rem;
+  border: var(--border-secondary);
+  box-shadow: var(--shadow);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 2rem;
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  align-items: center;
+
+  .link {
+    align-self: flex-end;
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.3rem;
+
+    .arrow {
+      transition: transform var(--speed-medium);
+    }
+
+    &:hover {
+      .arrow {
+        transform: translateX(0.3rem);
+      }
+    }
+  }
 }
 
 @media (max-width: 800px) {
