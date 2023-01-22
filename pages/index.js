@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { HomeCard } from '../components/cards';
 import { FeaturedProjectsSwiper } from '../components/swipers';
+// import WinchScene from '../components/3d/WinchScene';
 import WinchScene from '../components/3d/WinchScene';
 import KineticScene from '../components/3d/KineticScene';
 import styles from '../styles/Home.module.scss';
@@ -13,9 +14,14 @@ import profilePic from '../public/images/profile/profile.jpg';
 import { daysDiff } from '../helpers/math';
 import { GalleryWLightbox } from '../components/layout';
 import { TextTransitionBadge } from '../components/badges';
+import { useScrollPercentage } from 'react-scroll-percentage'
 
 export default function Home() {
-
+  const [scrolRef, percentage] = useScrollPercentage({
+    /* Optional options */
+    threshold: 0,
+  })
+  console.log(percentage)
   return (
     <>
       <Head>
@@ -57,7 +63,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className={styles.grid}>
+      <div className={styles.grid} ref={scrolRef}>
         {pagesData.slice(1, -1).map((pageData) => {
           return (
             <HomeCard
@@ -67,7 +73,7 @@ export default function Home() {
         })}
       </div>
       <div className={styles.winchSceneContainer}>
-        <WinchScene />
+        <WinchScene scrollPercentage={percentage} />
         <Link href='/projects/lunar-deployer'>
           <a className={styles.link}>
             <div className={styles.parent}>Projects / Lunar Rover Deployer</div>

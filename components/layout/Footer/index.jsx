@@ -24,7 +24,7 @@ function Footer() {
                 </a>
             </div>
             <div className={styles.main}>
-                <div className={styles.note}>Last updated: 13/01/2023</div>
+                <div className={styles.note}>Last updated: 22/01/2023</div>
                 <div className={styles.copyright}>© 2022 Rohit Nag</div>
             </div>
         </footer>
