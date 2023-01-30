@@ -1,12 +1,8 @@
 import Head from 'next/head';
 import styles from '../styles/About.module.scss';
-import Link from 'next/link';
-import { GlobeScene } from '../components/3d/GlobeScene';
-import { homeCitiesData } from "../data/citiesData";
-import { visitedCitiesData } from "../data/citiesData";
+import { GlobeScene } from '../components/3d';
 import { HoverBadge } from '../components/badges';
 import { XpPane } from '../components/layout';
-
 import { citiesData } from "../data/citiesData";
 import { xpData } from '../data/xpData';
 

@@ -6,6 +6,7 @@ import { ProjectCard } from '../../components/cards';
 import { PersonButton, URLButton } from '../../components/buttons';
 import { Tag, DateDiv, TypeTag } from '../../components/badges';
 import { GalleryWLightbox, DocGalleryWLightbox } from '../../components/layout';
+import { AdaptiveViewer } from '../../components/3d';
 import styles from '../../styles/Project.module.scss'
 import ReactPlayer from 'react-player'
 // export const getStaticPaths = async () => {
@@ -102,6 +103,7 @@ function ProjectPage({ project }) {
                     })}
                 </div>}
             </div>
+            {project.model && <AdaptiveViewer {...project.model} />}
             {images[0] && <div className={styles.galleryContainer}>
                 <GalleryWLightbox data={images} showDetails={false} />
             </div>}

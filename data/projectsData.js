@@ -71,6 +71,9 @@ export const projectsData = [
             href: "/images/projects/EBike/render5.png",
             alt: "eBike Render"
         },
+        model: {
+            href: '/3d/ebike.draco.glb',
+        },
         media: [
             {
                 image: {
@@ -301,6 +304,13 @@ export const projectsData = [
             href: "/images/projects/MobulaRay/render1.png",
             alt: "Mobula Ray Render 1"
         },
+        model: {
+            href: '/3d/mobularay.draco.glb',
+            fov: 33,
+            aspectRatio: 2,
+            marginTop: '-10rem',
+            marginBottom: '2rem'
+        },
         media: [
             {
                 image: {
@@ -447,6 +457,9 @@ export const projectsData = [
         thumbnail: {
             href: "/images/projects/Sonic/render1.png",
             alt: "SONIC Render"
+        },
+        model: {
+            href: '/3d/sonic.draco.glb',
         },
         media: [
             {
@@ -597,6 +610,9 @@ export const projectsData = [
         thumbnail: {
             href: "/images/projects/LiftDoor/render1.png",
             alt: "Lift Door Transmission Render 1"
+        },
+        model: {
+            href: '/3d/liftdoor.draco.glb',
         },
         media: [
             {
@@ -779,6 +795,9 @@ export const projectsData = [
         thumbnail: {
             href: "/images/projects/LunarDeployer/render3.png",
             alt: "Lunar Deployer Render 3"
+        },
+        model: {
+            href: '/3d/winch.glb',
         },
         media: [
             {
@@ -1029,6 +1048,12 @@ export const projectsData = [
             href: "/images/projects/RailGuide/render1.jpg",
             alt: "Fly-away Rail Guide Render 1"
         },
+        model: {
+            href: '/3d/rocket.draco.glb',
+            fov: 50,
+            aspectRatio: 1,
+            marginBottom: '-7rem'
+        },
         media: [
             {
                 image: {
@@ -1125,6 +1150,9 @@ export const projectsData = [
         thumbnail: {
             href: "/images/projects/Spiderman/render1.png",
             alt: "Spiderman Render 1"
+        },
+        model: {
+            href: '/3d/boostermodule.glb',
         },
         media: [
             {

@@ -4,19 +4,26 @@ import { useSpring } from '@react-spring/core'
 import { useFrame } from "@react-three/fiber";
 import { a } from '@react-spring/three';
 import { PerspectiveCamera } from "@react-three/drei";
-import { Vector3 } from "three";
 
 export function Winch(props) {
     const { nodes, materials } = useGLTF("/3d/winch.glb");
     const shaftRef = useRef()
     const shellRef = useRef()
+    const [shaftActive, setShaftActive] = useState(1)
+    const [shaftHovered, setShaftHovered] = useState(0)
     const [shellActive, setShellActive] = useState(0)
     const [shellHovered, setShellHovered] = useState(0)
 
     const { shellColor } = useSpring({ shellColor: shellHovered ? '#9e8bff' : '#555555' })
     const { shellOpacity } = useSpring({ shellOpacity: shellActive ? 1 : 0.5 })
+
+    const { jawColor } = useSpring({ jawColor: shaftActive ? '#00EAFF' : '#FF0000' })
+    const { jawEmissivity } = useSpring({ jawEmissivity: shaftHovered ? 0 : 1.5 })
+
     useFrame(() => {
-        shaftRef.current.rotation.x += 0.1;
+        const mutiplier = shaftHovered || shaftActive
+        const full = !shaftHovered && shaftActive
+        shaftRef.current.rotation.x += 0.1 * (0.1 * mutiplier + full);
     });
     const initialShellY = 0.0365;
     useFrame(() => {
@@ -622,6 +629,15 @@ export function Winch(props) {
                         name="Shaft001"
                         position={[-0.022, 0, 0]}
                         rotation={[3.02543242, 0, Math.PI / 2]}
+                        onClick={() => setShaftActive(Number(!shaftActive))}
+                        onPointerEnter={() => {
+                            setShaftHovered(1);
+                            document.body.style.cursor = "pointer";
+                        }}
+                        onPointerLeave={() => {
+                            setShaftHovered(0);
+                            document.body.style.cursor = "default";
+                        }}
                     >
                         <group
                             name="Flexible_Jaw_Coupling_5-8_Hub_8-2"
@@ -640,13 +656,14 @@ export function Winch(props) {
                             name="Flexible_Jaw_Coupling_5-8_Rubber-1"
                             position={[0, -0.0075, 0]}
                         >
-                            <mesh
+                            <a.mesh
                                 name="glossy_rubber"
                                 castShadow
                                 receiveShadow
                                 geometry={nodes.glossy_rubber.geometry}
-                                material={materials.Appearance}
-                            />
+                                material={materials.Appearance}>
+                                <a.meshPhongMaterial color={jawColor} emissive={jawColor} emissiveIntensity={jawEmissivity} />
+                            </a.mesh>
                         </group>
                         <group
                             name="Winch_Spool-1"
@@ -670,8 +687,7 @@ export function Winch(props) {
                         />
                     </group>
                 </group>
-                <group
-                    name="Shell">
+                <group name="Shell" >
                     <a.group
                         ref={shellRef}
                         onClick={() => setShellActive(Number(!shellActive))}
@@ -687,7 +703,7 @@ export function Winch(props) {
                         position={[-0.1278, initialShellY, 0.01775]}>
                         <group
                             name="Guide_Rail-1"
-                            position={[0.148, 0.005, -0.006]}
+                            position={[0.148, 0.00246151, -0.006]}
                             rotation={[-Math.PI, 0, -Math.PI]}
                         >
                             <mesh
@@ -700,7 +716,7 @@ export function Winch(props) {
                         </group>
                         <group
                             name="Guide_Rail-2"
-                            position={[0.118, 0.005, -0.006]}
+                            position={[0.118, 0.00246151, -0.006]}
                             rotation={[-Math.PI, 0, -Math.PI]}
                         >
                             <mesh
@@ -713,7 +729,7 @@ export function Winch(props) {
                         </group>
                         <group
                             name="Guide_Rail-3"
-                            position={[0.086, 0.005, -0.006]}
+                            position={[0.086, 0.00246151, -0.006]}
                             rotation={[Math.PI, 0, Math.PI]}
                         >
                             <mesh
@@ -737,7 +753,9 @@ export function Winch(props) {
                                 material={materials["satin finish stainless steel.013"]}
                             />
                         </group>
-                        <group name="Guide_Rail-5" position={[0.142, 0.005, -0.0295]}>
+                        <group
+                            name="Guide_Rail-5"
+                            position={[0.142, 0.00246151, -0.0295]}>
                             <mesh
                                 name="color-8"
                                 castShadow
@@ -746,7 +764,9 @@ export function Winch(props) {
                                 material={materials["satin finish stainless steel.006"]}
                             />
                         </group>
-                        <group name="Guide_Rail-6" position={[0.112, 0.005, -0.0295]}>
+                        <group
+                            name="Guide_Rail-6"
+                            position={[0.112, 0.00246151, -0.0295]}>
                             <mesh
                                 name="color-81"
                                 castShadow
@@ -755,7 +775,9 @@ export function Winch(props) {
                                 material={materials["satin finish stainless steel.007"]}
                             />
                         </group>
-                        <group name="Guide_Rail-7" position={[0.08, 0.005, -0.0295]}>
+                        <group
+                            name="Guide_Rail-7"
+                            position={[0.08, 0.00246151, -0.0295]}>
                             <mesh
                                 name="color-82"
                                 castShadow

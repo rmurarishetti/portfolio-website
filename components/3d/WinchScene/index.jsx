@@ -1,9 +1,13 @@
-import React, { Suspense, useRef } from 'react'
+import { Suspense, useRef, useLayoutEffect } from 'react'
 import { Canvas } from '@react-three/fiber'
-import { OrbitControls, PresentationControls, Stage } from '@react-three/drei'
+import { Stage } from '@react-three/drei'
 import { Winch } from './Winch'
 import styles from './WinchScene.module.scss'
 import { useCorrectedTheme } from "../../../helpers/hooks";
+import { SelectiveBloom } from '@react-three/postprocessing'
+import { BlurPass, Resizer, KernelSize } from 'postprocessing'
+import { EffectComposer } from '@react-three/postprocessing'
+import { DepthOfField, Bloom } from '@react-three/postprocessing'
 
 function WinchScene({ scrollPercentage }) {
     const theme = useCorrectedTheme();
@@ -13,9 +17,11 @@ function WinchScene({ scrollPercentage }) {
         <Canvas
             className={styles.scene}
             gl={{ preserveDrawingBuffer: true }}
-            shadows dpr={[1, 1.5]}
+            shadows
+            dpr={[1, 1.5]}
             camera={{ position: [0, 0, 0], fov: 30 }}>
-            <ambientLight intensity={theme == 'light' ? 2 : 0.1} />
+            <ambientLight
+                intensity={theme == 'light' ? 2 : 0.1} />
             <directionalLight
                 position={[5, 0.2, -1]}
                 color={'#FFFFFF'}
@@ -29,15 +35,19 @@ function WinchScene({ scrollPercentage }) {
             <Suspense fallback={null}>
                 <Stage
                     controls={sceneRef}
-                    preset={'rembrandt'}
+                    preset='rembrandt'
                     intensity={theme == 'light' ? 1 : 0}
                     contactShadow
-                    shadows
+                    shadows="accumulative"
                     adjustCamera={false}
                     environment={theme == 'light' ? 'sunset' : 'night'}>
                     <Winch scroll={scrollPercentage} />
                 </Stage>
             </Suspense>
+            {/* <EffectComposer>
+                <DepthOfField focusDistance={0} focalLength={0.05} bokehScale={1} height={600} />
+                <Bloom luminanceThreshold={1.5} luminanceSmoothing={2} height={600} kernelSize={4} />
+            </EffectComposer> */}
             {/* <OrbitControls ref={sceneRef} autoRotate={false} enableZoom={false} enableRotate={true} /> */}
         </Canvas>
     )

@@ -5,7 +5,7 @@ import { useCorrectedTheme } from '../../../helpers/hooks';
 import styles from './GlobeScene.module.scss'
 import { a } from '@react-spring/three'
 
-export function GlobeScene({ homeCities, visitedCities }) {
+function GlobeScene({ homeCities, visitedCities }) {
     const theme = useCorrectedTheme()
 
     const themedDirectionalLightProps = {
@@ -48,3 +48,5 @@ export function GlobeScene({ homeCities, visitedCities }) {
         </Suspense>
     )
 }
+
+export default GlobeScene;
