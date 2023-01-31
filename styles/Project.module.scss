@@ -108,27 +108,32 @@
     flex-direction: column;
     gap: 1.5rem;
 
-    >div {
-        width: 100% !important;
+    .video {
+        display: flex;
 
         >div {
-            border-radius: 1rem;
-            box-shadow: var(--shadow);
+            width: 100% !important;
+            height: 100% !important;
 
-            >div>div {
-                border-width: 1rem 0px 1rem 13/8rem !important;
-                border-color: transparent transparent transparent var(--color-accent-primary) !important;
-            }
-
-            &:hover {
-                >div>div {
-                    border-color: transparent transparent transparent var(--color-accent-secondary) !important;
-                }
-            }
-
-            >iframe {
+            >div {
                 border-radius: 1rem;
                 box-shadow: var(--shadow);
+
+                >div>div {
+                    border-width: 1rem 0px 1rem 13/8rem !important;
+                    border-color: transparent transparent transparent var(--color-accent-primary) !important;
+                }
+
+                &:hover {
+                    >div>div {
+                        border-color: transparent transparent transparent var(--color-accent-secondary) !important;
+                    }
+                }
+
+                >iframe {
+                    border-radius: 1rem;
+                    box-shadow: var(--shadow);
+                }
             }
         }
     }

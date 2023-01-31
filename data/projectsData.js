@@ -256,22 +256,11 @@ export const projectsData = [
                     alt: "Mine Rescue Buggy Turning Calibration"
                 }
             },
-            // {
-            //     video: {
-            //         href: "/images/projects/Buggy/buggy_slide6.mp4",
-            //         alt: "Mine Rescue Buggy Video 3"
-            //     }
-            // },
-            // {
-            //     video: {
-            //         href: "/images/projects/Buggy/buggy_slide7.mp4",
-            //         alt: "Mine Rescue Buggy Video 4"
-            //     }
-            // },
             {
                 video: {
-                    href: "https://player.vimeo.com/video/58253485",
-                    alt: "Mine Rescue Buggy Video 4"
+                    href: "https://vimeo.com/794470923",
+                    alt: "Mine Rescue Buggy Video",
+                    aspectRatio: 16 / 9
                 }
             },
         ],
@@ -834,6 +823,13 @@ export const projectsData = [
                 image: {
                     href: "/images/projects/LunarDeployer/render6.png",
                     alt: "Lunar Deployer Render 6"
+                }
+            },
+            {
+                video: {
+                    href: "https://www.youtube.com/watch?v=R4yxMDOaoE4",
+                    alt: "Lunar Deployer",
+                    aspectRatio: 16 / 9
                 }
             },
         ],

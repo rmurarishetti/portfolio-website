@@ -9,6 +9,7 @@ import { GalleryWLightbox, DocGalleryWLightbox } from '../../components/layout';
 import { AdaptiveViewer } from '../../components/3d';
 import styles from '../../styles/Project.module.scss'
 import ReactPlayer from 'react-player'
+import { useCorrectedTheme } from '../../helpers/hooks';
 // export const getStaticPaths = async () => {
 //     const res = projectsData
 //     console.log(res)
@@ -39,6 +40,7 @@ export const getStaticProps = async (context) => {
 }
 
 function ProjectPage({ project }) {
+    const theme = useCorrectedTheme();
     const formattedType = project.type.toLowerCase().replace(/[^a-zA-Z0-9 ]/g, '')
     const typeStyle = {
         color: `var(--color-${formattedType})`
@@ -107,13 +109,18 @@ function ProjectPage({ project }) {
             {images[0] && <div className={styles.galleryContainer}>
                 <GalleryWLightbox data={images} showDetails={false} />
             </div>}
-            {videos[0] && <div className={styles.videosContainer}>
-                {videos.map((obj, i) => {
-                    return (
-                        <ReactPlayer key={i} url={obj.video.href} controls={false} pip light />
-                    )
-                })}
-            </div>}
+            {videos[0] &&
+                <div
+                    className={styles.videosContainer}>
+                    {videos.map((obj, i) => {
+                        const aspectRatio = obj.video.aspectRatio ? obj.video.aspectRatio : 16 / 9
+                        return (
+                            <div className={styles.video} key={i} style={{ aspectRatio: aspectRatio }}>
+                                <ReactPlayer url={obj.video.href} controls={true} pip light={theme == 'light'} />
+                            </div>
+                        )
+                    })}
+                </div>}
             {project.documents[0] &&
                 <div className={styles.documentsContainer}>
                     <div className={styles.header}>Documents</div>
