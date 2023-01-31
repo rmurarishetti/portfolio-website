@@ -1220,7 +1220,7 @@ export const projectsData = [
     {
         id: "bioreactor",
         name: "Fluorescent Biorector",
-        subtitle: "Protype of a cell-growth monitoring device.",
+        subtitle: "Prototype of a cell-growth monitoring device.",
         start: new Date(2019, 0),
         end: new Date(2019, 1),
         featured: false,
