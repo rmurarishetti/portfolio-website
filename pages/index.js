@@ -92,7 +92,7 @@ export default function Home() {
       </div>
       {/* <KineticScene /> */}
       <div className={[styles.block, styles.artBlock].join(' ')}>
-        <h2>New Artwork</h2>
+        <h2>Recent Artwork</h2>
         <div className={styles.galleryContainer}>
           <GalleryWLightbox data={artsData.sort(artData => daysDiff(new Date(), artData.date)).slice(0, 8)} />
         </div>
