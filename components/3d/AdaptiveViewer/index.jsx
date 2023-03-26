@@ -4,12 +4,15 @@ import { Html, OrbitControls, Stage, useGLTF } from '@react-three/drei'
 import styles from './AdaptiveViewer.module.scss';
 import { useCorrectedTheme } from "../../../helpers/hooks";
 
-export default function Viewer({ href, fov = 27, aspectRatio = 2, marginTop = 0, marginBottom = 0, shadows = true, contactShadow = true, autoRotate = true }) {
+export default function Viewer({ href, fov = 27, aspectRatio = 2, shadows = true, contactShadow = true, autoRotate = true }) {
   const theme = useCorrectedTheme();
   const { scene } = useGLTF(href)
   const ref = useRef()
   useLayoutEffect(() => {
     scene.traverse((obj) => {
+      if (!obj.parent) {
+        console.log(obj)
+      }
       if (obj.isMesh) {
         obj.castShadow = obj.receiveShadow = shadows
         obj.material.envMapIntensity = 0.8
@@ -18,13 +21,13 @@ export default function Viewer({ href, fov = 27, aspectRatio = 2, marginTop = 0,
   }, [scene, shadows])
   const [mounted, setMounted] = useState(false);
   useEffect(() => {
-    setTimeout(() => setMounted(true), 1000)
+    setMounted(true)
   }, []);
 
   return (
     <>
       {!mounted &&
-        <div className={styles.loader} style={{ aspectRatio: aspectRatio, marginTop: marginTop, marginBottom: marginBottom }}>
+        <div className={styles.loader} style={{ aspectRatio: aspectRatio }}>
           3D model loading...
         </div>
       }
@@ -38,9 +41,9 @@ export default function Viewer({ href, fov = 27, aspectRatio = 2, marginTop = 0,
               position: [0, 0, 0],
               fov: fov
             }}
-            style={{ aspectRatio: aspectRatio, marginTop: marginTop, marginBottom: marginBottom }}>
+            style={{ aspectRatio: aspectRatio }}>
             <ambientLight
-              intensity={theme == 'light' ? 2 : 0.1} />
+              intensity={theme == 'light' ? 1 : 0.1} />
             <directionalLight
               position={[5, 0.2, -1]}
               color={'#FFFFFF'}

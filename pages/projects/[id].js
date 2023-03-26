@@ -10,6 +10,7 @@ import { AdaptiveViewer } from '../../components/3d';
 import styles from '../../styles/Project.module.scss'
 import ReactPlayer from 'react-player'
 import { useCorrectedTheme } from '../../helpers/hooks';
+import { useGLTF } from '@react-three/drei';
 // export const getStaticPaths = async () => {
 //     const res = projectsData
 //     console.log(res)
@@ -169,6 +170,7 @@ function ProjectPage({ project }) {
             </Link>
         </>
     );
+    { useGLTF.preload(project.model.href); }
 }
 
 export default ProjectPage;

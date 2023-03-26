@@ -1,5 +1,171 @@
 export const projectsData = [
     {
+        id: "engine",
+        name: "FireTanker Aircraft Engine",
+        subtitle: "Design of a new high-bypass turbofan engine.",
+        start: new Date(2023, 0),
+        end: new Date(2023, 2),
+        featured: true,
+        type: "Engineering",
+        tags: ["SolidWorks", "GasTurb", "Python", "Uni"],
+        link: {
+            name: "Github Repo",
+            href: "https://github.com/RohitNag11/JetEngineDesigner"
+        },
+        thumbnail: {
+            href: "/images/projects/Engine/thumbnail.png",
+            alt: "Engine Render"
+        },
+        model: {
+            href: '/3d/engine.draco.glb',
+            fov: 32,
+            aspectRatio: 1.5,
+        },
+        media: [
+            {
+                image: {
+                    href: "/images/projects/Engine/render1.png",
+                    alt: "Engine Render 1"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/Engine/render2.png",
+                    alt: "Engine Render 2"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/Engine/render3.png",
+                    alt: "Engine Render 3"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/Engine/render4.png",
+                    alt: "Engine Render 4"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/Engine/mission_profile.png",
+                    alt: "The airtanker mission profile"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/Engine/multi-parameter_opr_graph.png",
+                    alt: "Multi-parameter optimization graph"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/Engine/sfc_specific_thrust_graph.png",
+                    alt: "SFC vs Specific Thrust graph"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/Engine/sfc_vs_offr_with_bpr.png",
+                    alt: "SFC vs Outter Fan Pressure Ratio with BPR graph"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/Engine/smith_chart.png",
+                    alt: "Smith Chart"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/Engine/thickness_distribution.png",
+                    alt: "HPT Rotor Thickness Distribution"
+                }
+            },
+            {
+                image: {
+                    href: "/images/projects/Engine/stress_distribution.jpg",
+                    alt: "HPT Rotor Stress Distribution"
+                }
+            }
+        ],
+        people: [
+            {
+                gender: 'male',
+                name: "Areeb Haider",
+                linkedin: "https://www.linkedin.com/in/areeb-nasim-haider/"
+            },
+            {
+                gender: 'male',
+                name: "Conor Leo",
+                linkedin: "https://www.linkedin.com/in/conorleo/"
+            },
+            {
+                gender: 'male',
+                name: "Diederik Evanson",
+                linkedin: "https://www.linkedin.com/in/diederikevanson/"
+            }
+        ],
+        documents: [
+            {
+                name: "Design Report",
+                href: "/documents/projects/Engine/finalReport.pdf"
+            }
+        ],
+        description: [
+            "In response to the ongoing challenges of bush fires in Australia, our team developed a new aircraft engine designed specifically for firefighting operations. The Air Tanker is capable of transporting 30 tonnes of water from a local airport, dropping it on a fire up to 1500 km away, and returning for refilling. The design process of the aircraft's engines was conducted from scratch, employing the GasTurb software for thermodynamic calculations and a novel Python library for performance optimizations.",
+
+            "The propulsion system of The Air Tanker relies on two medium-bypass, two-spool, unmixed Turbofan engines, optimized for low Specific Fuel Consumption (SFC) and high Specific Thrust (T/ṁ) during cruise. Each engine, with a diameter of 2.6m and a bypass ratio of 7, produces a thrust of 53.2 kN at cruise, while maintaining a core mass flow rate of just 20.5 kg/s. Despite the emphasis on low SFC and high Specific Thrust, our engine design demonstrates high efficiency at cruise conditions, achieving core and propulsive efficiencies of 57.6% and 73.3%, respectively.",
+
+            "We have also thoroughly examined several off-design conditions, including take-off with both engines functioning, take-off with only one engine functioning, and the aircraft at top of climb. The engines can deliver a maximum thrust of 237.0 kN under take-off conditions without exceeding material temperature limits, ensuring sufficient thrust for all off-design scenarios.",
+
+            "The engine is comprised of a fan and low-pressure booster, a high-pressure compressor, a high-pressure turbine, and a low-pressure turbine. The low-pressure compression stage includes two booster stages with an angular velocity of 294.67 rad/s and an overall pressure ratio of 2.5. The high-pressure compression stage features 11 stages, each with a pressure ratio of 1.29 and an angular velocity of 850 rad/s, resulting in an overall compression ratio of 16. The high-pressure turbine, with three stages and an overall pressure ratio of 5.63, works in conjunction with the low-pressure turbine, which has four stages and an overall pressure ratio of 6.73. At cruise, the total-to-total efficiency is 89% for the high-pressure turbine and 87% for the low-pressure turbine.",
+
+            "To maximize efficiency, we carefully designed the blade angles for the compressors and turbines. We also analyzed the stresses in the high-pressure disks and ensured a minimum safety factor of 1.52. Lastly, we optimized the disk thickness to minimize unnecessary mass.",
+
+            "The report below details the process followed to design the engines for The Air Tanker.",
+        ]
+    },
+    // {
+    //     id: "robot",
+    //     name: "6DOF Robot Arm",
+    //     subtitle: "A multi-application robotic arm design.",
+    //     start: new Date(2022, 6),
+    //     end: new Date(2022, 7),
+    //     featured: true,
+    //     type: "Hardware",
+    //     tags: ["Uni", "CAD", "Python",],
+    //     link: {
+    //         name: "Github Repo",
+    //         href: "https://github.com/RohitNag11/RobotKin"
+    //     },
+    //     thumbnail: {
+    //         href: "/images/projects/CheatSheet/mockup.png",
+    //         alt: "CheatSheet Mockup"
+    //     },
+    //     model: {
+    //         href: '/3d/robot.draco.glb',
+    //         fov: 50,
+    //         aspectRatio: 1,
+    //     },
+    //     media: [
+    //         {
+    //             image: {
+    //                 href: "/images/projects/CheatSheet/screenshot1.jpg",
+    //                 alt: "CheatSheet Screenshot 1"
+    //             }
+    //         },
+    //     ],
+    //     people: [],
+    //     documents: [],
+    //     description: [
+    //         "Keyboard shortcuts are a great way to increase productivity. Unfortunately, they are hard to remember when you need them. That is why I created CheatSheet, a global shortcuts-helper overlay app for Windows.",
+    //         "I pitched the idea in the Microsoft EMEA Innovation Challenge Hackathon 2022, winning 1st place. The application was then later developed with the help of my manager at Microsft for Microsoft's 2022 Global Hackathon.",
+    //         "The overlay can be activated with a key press, displaying recommended and recently used shortcuts for the foreground application. Development is in beta with functionalities including automatic foreground app detection, complete UI functionality and data fetching. The next milestone is automatic data retrieval from apps without relying on hard-corded data.",
+    //         "The app was developed using WinUI 3, a C#/XAML UI kit that ships with the Windows App SDK."
+    //     ]
+    // },
+    {
         id: "cheat-sheet",
         name: "CheatSheet",
         subtitle: "A global shortcuts helper Windows application.",
@@ -73,6 +239,8 @@ export const projectsData = [
         },
         model: {
             href: '/3d/ebike.draco.glb',
+            fov: 30,
+            aspectRatio: 1.5
         },
         media: [
             {
@@ -296,10 +464,8 @@ export const projectsData = [
         },
         model: {
             href: '/3d/mobularay.draco.glb',
-            fov: 33,
-            aspectRatio: 2,
-            marginTop: '-10rem',
-            marginBottom: '2rem'
+            fov: 30,
+            aspectRatio: 2
         },
         media: [
             {
@@ -451,6 +617,8 @@ export const projectsData = [
         },
         model: {
             href: '/3d/sonic.draco.glb',
+            fov: 25,
+            aspectRatio: 2,
         },
         media: [
             {
@@ -1049,7 +1217,6 @@ export const projectsData = [
             href: '/3d/rocket.draco.glb',
             fov: 50,
             aspectRatio: 1,
-            marginBottom: '-7rem'
         },
         media: [
             {

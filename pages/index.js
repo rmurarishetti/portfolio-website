@@ -94,7 +94,7 @@ export default function Home() {
       <div className={[styles.block, styles.artBlock].join(' ')}>
         <h2>New Artwork</h2>
         <div className={styles.galleryContainer}>
-          <GalleryWLightbox data={artsData.filter(artData => daysDiff(new Date(), artData.date) < 365)} />
+          <GalleryWLightbox data={artsData.sort(artData => daysDiff(new Date(), artData.date)).slice(0, 8)} />
         </div>
         <Link href={pagesData.filter((pageData => pageData.title == 'Art'))[0].link}>
           <a className={styles.link}>
