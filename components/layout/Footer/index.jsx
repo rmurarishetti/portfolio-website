@@ -1,6 +1,13 @@
 import styles from './Footer.module.scss'
+import { useState, useEffect } from 'react';
 
 function Footer() {
+    const [lastUpdated, setLastUpdated] = useState('');
+
+    useEffect(() => {
+        setLastUpdated((new Date(process.env.LAST_UPDATED).toLocaleDateString()));
+    }, []);
+
     return (
         <footer className={styles.footer}>
             <div className={styles.links}>
@@ -24,7 +31,7 @@ function Footer() {
                 </a>
             </div>
             <div className={styles.main}>
-                <div className={styles.note}>Last updated: 22/01/2023</div>
+                <div className={styles.note}>Last updated: {lastUpdated}</div>
                 <div className={styles.copyright}>© 2022 Rohit Nag</div>
             </div>
         </footer>

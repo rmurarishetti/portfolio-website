@@ -19,7 +19,6 @@ export default function Home() {
     /* Optional options */
     threshold: 0,
   })
-  console.log(percentage)
   return (
     <>
       <Head>
