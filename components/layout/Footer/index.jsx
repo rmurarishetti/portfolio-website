@@ -1,12 +1,7 @@
 import styles from './Footer.module.scss'
-import { useState, useEffect } from 'react';
 
 function Footer() {
-    const [lastUpdated, setLastUpdated] = useState('');
-
-    useEffect(() => {
-        setLastUpdated((new Date(process.env.LAST_UPDATED).toLocaleDateString()));
-    }, []);
+    const lastUpdated = '27/03/2023'
 
     return (
         <footer className={styles.footer}>
