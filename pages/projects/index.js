@@ -23,11 +23,27 @@ function Projects() {
     const [tagsFilter, setTagsFilter] = useState(inititialTagsFilter)
     const [visibleProjects, setVisibleProjects] = useState(new Set)
     const [filterCount, setFilterCount] = useState(false)
+    const [selectableTags, setSelectableTags] = useState(new Set)
+    const [selectableTypes, setSelectableTypes] = useState(new Set)
 
 
     useEffect(() => {
         filteredProjects.sort((a, b) => b.start - a.start)
         setVisibleProjects(new Set(filteredProjects.map((project) => project.id)))
+        // setSelectableTags(new Set(filteredProjects.map((project) => project.tags)))
+    }, [filteredProjects]);
+
+    useEffect(() => {
+        const tagsSet = new Set();
+        const typesSet = new Set();
+        filteredProjects.forEach((project) => {
+            project.tags.forEach((tag) => {
+                tagsSet.add(tag);
+            });
+            typesSet.add(project.type);
+        });
+        setSelectableTags(tagsSet);
+        setSelectableTypes(typesSet);
     }, [filteredProjects]);
 
     useEffect(() => {
@@ -178,7 +194,9 @@ function Projects() {
                         name={'projects'}
                         filterFunction={filterProjects}
                         typeFilterState={typeFilter}
-                        tagsFilterState={tagsFilter} />
+                        tagsFilterState={tagsFilter}
+                        selectableTags={selectableTags}
+                        selectableTypes={selectableTypes} />
                 </div>
                 <div className={styles.datePaneContainer}>
                     <DatePane

@@ -32,4 +32,15 @@
 
         }
     }
+
+    &.disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+
+        &:hover {
+            box-shadow: none;
+            border-color: var(--border-secondary) !important;
+            box-shadow: none;
+        }
+    }
 }

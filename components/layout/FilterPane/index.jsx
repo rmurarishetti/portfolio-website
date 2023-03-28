@@ -4,7 +4,7 @@ import { TagFilterToggle, ClearFilterButton } from '../../buttons';
 import { SearchBar } from '../../inputs';
 import FilterSection from './FilterSection';
 
-function FilterPane({ name, count, filterFunction, typeFilterState, tagsFilterState }) {
+function FilterPane({ name, count, filterFunction, typeFilterState, tagsFilterState, selectableTags, selectableTypes }) {
     const [clearSearch, setClearSearch] = useState(false)
 
     useEffect(() => {
@@ -25,13 +25,16 @@ function FilterPane({ name, count, filterFunction, typeFilterState, tagsFilterSt
             </div>
             <FilterSection name='Type'>
                 {Object.keys(typeFilterState).map((type) => {
+                    const selectable = selectableTypes.has(type)
                     return (
                         <TagFilterToggle
                             key={type}
                             onClick={() => {
                                 filterFunction({ type: type })
                             }}
-                            forceDisable={!Boolean(count)}>
+                            forceDisable={!Boolean(count)}
+                            selectable={selectable}
+                        >
                             {type}
                         </TagFilterToggle>
                     )
@@ -39,13 +42,15 @@ function FilterPane({ name, count, filterFunction, typeFilterState, tagsFilterSt
             </FilterSection>
             <FilterSection name='Tags'>
                 {Object.keys(tagsFilterState).map((tag) => {
+                    const selectable = selectableTags.has(tag)
                     return (
                         <TagFilterToggle
                             key={tag}
                             onClick={() => {
                                 filterFunction({ tag: tag })
                             }}
-                            forceDisable={!Boolean(count)}>
+                            forceDisable={!Boolean(count)}
+                            selectable={selectable}>
                             {tag}
                         </TagFilterToggle>
                     )
