@@ -3,8 +3,9 @@ import { useState } from 'react';
 import styles from './LightboxSlide.module.scss'
 import { Tag, DateDiv } from '../../../badges';
 
-function LightboxSlide({ title, date, mediums, image, showDetails = True }) {
+function LightboxSlide({ title, date, image, showDetails = True, mediums = null, technologies = null }) {
     const [ratio, setRatio] = useState(1.1) // default to 16:9
+    const tags = mediums ? mediums : technologies
     return (
         <a className={styles.slide}>
             <div className={styles.image}>
@@ -24,9 +25,9 @@ function LightboxSlide({ title, date, mediums, image, showDetails = True }) {
                     </div>
                 </div>
                 <div className={styles.tags}>
-                    {mediums.map((medium, i) => {
+                    {tags.map((tag, i) => {
                         return (
-                            <div key={i}><Tag noShadow>{medium}</Tag></div>
+                            <div key={i}><Tag noShadow>{tag}</Tag></div>
                         )
                     })}
                 </div>

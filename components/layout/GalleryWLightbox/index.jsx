@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { ArtCard } from '../../cards';
+import { ArtCard, GraphicsCard } from '../../cards';
 import { LightboxSwiper } from '../../swipers';
 import styles from './GalleryWLightbox.module.scss'
 
@@ -29,9 +29,9 @@ function GalleryWLightbox({ data, showDetails = true }) {
     return (
         <>
             <div className={styles.masonary}>
-                {data.map((artData, i) => {
+                {data.map((d, i) => {
                     return (
-                        <ArtCard key={i} index={i} {...artData} setIndex={setIndex} setLightbox={setLightbox} showDetails={showDetails} />
+                        <ArtCard key={i} index={i} {...d} setIndex={setIndex} setLightbox={setLightbox} showDetails={showDetails} />
                     )
                 })}
             </div>

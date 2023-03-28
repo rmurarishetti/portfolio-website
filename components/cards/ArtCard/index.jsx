@@ -2,12 +2,14 @@ import Image from 'next/image';
 import styles from './ArtCard.module.scss'
 import { Tag, DateDiv } from '../../badges';
 
-function ArtCard({ index, title, date, mediums, image, hidden, setIndex = null, setLightbox = null, showDetails = true }) {
+function ArtCard({ index, title, date, image, hidden, setIndex = null, setLightbox = null, showDetails = true, mediums = null, technologies = null }) {
 
     const handleClick = () => {
         if (setIndex) { setIndex(index) }
         if (setLightbox) { setLightbox(true) }
     }
+
+    const tags = mediums ? mediums : technologies
 
     return (
         <a className={[styles.artCard, hidden ? styles.hidden : ''].join(' ')}>
@@ -31,9 +33,9 @@ function ArtCard({ index, title, date, mediums, image, hidden, setIndex = null, 
                     </h2>
                 </div>
                 <div className={styles.tags}>
-                    {mediums.map((medium, i) => {
+                    {tags.map((tag, i) => {
                         return (
-                            <div key={i}><Tag noShadow>{medium}</Tag></div>
+                            <div key={i}><Tag noShadow>{tag}</Tag></div>
                         )
                     })}
                 </div>

@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    min-height: 35rem;
+    min-height: 100vh;
 
     .header {
         display: flex;
@@ -34,28 +34,10 @@
         }
     }
 
-    .grid {
+    .block {
         display: flex;
         flex-direction: column;
-        gap: 2rem;
-        align-items: center;
-
-        .graphicCard {
-            display: flex;
-            flex-direction: column;
-
-            .image {
-
-                span {
-                    box-shadow: var(--shadow);
-                    border-radius: 1rem;
-                    background-color: var(--color-bg-disable);
-                }
-            }
-
-            .description {
-                display: flex;
-            }
-        }
+        width: 100%;
+        margin-bottom: 2rem;
     }
 }

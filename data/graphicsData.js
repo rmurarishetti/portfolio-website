@@ -2,6 +2,7 @@ export const graphicsData = [
     {
         id: 'mechsoclogo',
         title: 'Imperial College MechSoc Logo',
+        type: 'logo',
         date: new Date(2023, 0),
         technologies: ['Powerpoint'],
         image: {
@@ -12,6 +13,7 @@ export const graphicsData = [
     {
         id: 'ebikeposter',
         title: 'E-Bike Frame Project Poster',
+        type: 'poster',
         date: new Date(2021, 7),
         technologies: ['Adobe Illustrator'],
         image: {
@@ -22,16 +24,18 @@ export const graphicsData = [
     {
         id: 'icavlogo',
         title: 'Imperial College Aerial Vehicle Logo',
+        type: 'logo',
         date: new Date(2020, 2),
         technologies: ['Notability'],
         image: {
-            href: '/images/graphics/icavLogo.jpg',
+            href: '/images/graphics/icavLogo.png',
             alt: 'Imperial College Aerial Vehicle Logo',
         }
     },
     {
         id: 'cyclinginfographic',
         title: 'Cycling in Numbers',
+        type: 'poster',
         date: new Date(2020, 10),
         technologies: ['Adobe Illustrator'],
         image: {

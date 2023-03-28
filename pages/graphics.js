@@ -1,26 +1,20 @@
 import Head from 'next/head';
-import { useRef, useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import styles from '../styles/Graphics.module.scss'
 import { graphicsData } from '../data/graphicsData';
-import { DateDiv } from '../components/badges';
-import { RatioImage } from '../components/layout';
+import { GalleryWLightbox } from '../components/layout';
 
 function Graphics() {
-    const ref = useRef(null);
-    const [width, setWidth] = useState(0);
+    const [logos, setLogos] = useState(graphicsData.filter(graphic => graphic.type === 'logo'));
+    const [posters, setPosters] = useState(graphicsData.filter(graphic => graphic.type === 'poster'));
 
+
+    // sort logos and posters by date:
     useEffect(() => {
-        const handleResize = () =>
-            setWidth(ref.current.offsetWidth);
+        logos.sort((a, b) => b.date - a.date)
+        posters.sort((a, b) => b.date - a.date)
+    }, [logos, posters]);
 
-        window.addEventListener('resize', handleResize);
-
-        handleResize();
-
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-    }, []);
 
     return (
         <>
@@ -29,27 +23,21 @@ function Graphics() {
                 <meta name="keywords" content="Engineer, Developer, Designer, Portfolio" />
                 <meta name="description" content="Gallery of my graphics." />
             </Head>
-            <div className={styles.graphicsPage} ref={ref}>
+            <div className={styles.graphicsPage}>
                 <div className={styles.header}>
                     <div className={styles.title}>
-                        <div className={styles.emoji}>🖼</div>
+                        <div className={styles.emoji}>🖼️</div>
                         <div className={styles.text}>Graphics</div>
                     </div>
-                    <p>Some of my posters, infographics and logos.</p>
+                    <p>A gallery of the logos and posters I&apos;ve designed.</p>
                 </div>
-                <div className={styles.grid}>
-                    {graphicsData.map(graphic => {
-                        return (
-                            <div className={styles.graphicCard} key={graphic.id}>
-                                <div className={styles.image}>
-                                    <RatioImage
-                                        src={graphic.image.href}
-                                        alt={graphic.image.alt}
-                                        width={width} />
-                                </div>
-                            </div>
-                        )
-                    })}
+                <div className={styles.block}>
+                    <h2>Posters</h2>
+                    <GalleryWLightbox data={posters} />
+                </div>
+                <div className={styles.block}>
+                    <h2>Logos</h2>
+                    <GalleryWLightbox data={logos} />
                 </div>
             </div>
         </>
