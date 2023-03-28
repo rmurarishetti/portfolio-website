@@ -68,8 +68,12 @@ function Projects() {
         switch (type) {
             case 'search':
                 query = query.toLowerCase()
+                const nameMatch = (projectData) => projectData.name.toLowerCase().includes(query)
+                const subtitleMatch = (projectData) => projectData.subtitle.toLowerCase().includes(query)
+                const typeMatch = (projectData) => projectData.type.toLowerCase().includes(query)
+                const tagMatch = (projectData) => projectData.tags.some(tag => tag.toLowerCase().includes(query))
                 setFilteredProjects((projects) => projects.filter(projectData => {
-                    return projectData.name.toLowerCase().includes(query) || projectData.subtitle.toLowerCase().includes(query)
+                    return nameMatch(projectData) || subtitleMatch(projectData) || typeMatch(projectData) || tagMatch(projectData)
                 }))
                 break;
             case 'tag':

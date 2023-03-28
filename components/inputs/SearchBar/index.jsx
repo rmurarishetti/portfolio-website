@@ -30,7 +30,7 @@ function SearchBar({ filterFunction, forceClear }) {
                 type="text"
                 onChange={handleChange}
                 value={message}
-                placeholder='Title or subtitle...' />
+                placeholder='Search...' />
             <button onClick={handleClear}>✕</button>
 
         </div>
