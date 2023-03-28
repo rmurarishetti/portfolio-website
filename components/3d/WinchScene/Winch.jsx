@@ -1,36 +1,38 @@
 import { useRef, useState } from "react";
-import { useGLTF } from "@react-three/drei";
-import { useSpring } from '@react-spring/core'
+import { useGLTF, PerspectiveCamera } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
-import { a } from '@react-spring/three';
-import { PerspectiveCamera } from "@react-three/drei";
+import { useSpring, animated } from '@react-spring/three';
+import * as THREE from "three";
 
 export function Winch(props) {
     const { nodes, materials } = useGLTF("/3d/winch.glb");
-    const shaftRef = useRef()
-    const shellRef = useRef()
-    const [shaftActive, setShaftActive] = useState(1)
-    const [shaftHovered, setShaftHovered] = useState(0)
-    const [shellActive, setShellActive] = useState(0)
-    const [shellHovered, setShellHovered] = useState(0)
+    const shaftRef = useRef();
+    const shellRef = useRef();
+    const [shaftActive, setShaftActive] = useState(1);
+    const [shaftHovered, setShaftHovered] = useState(0);
+    const [shellActive, setShellActive] = useState(0);
+    const [shellHovered, setShellHovered] = useState(0);
 
-    const { shellColor } = useSpring({ shellColor: shellHovered ? '#9e8bff' : '#555555' })
-    const { shellOpacity } = useSpring({ shellOpacity: shellActive ? 1 : 0.5 })
+    const { shellColor } = useSpring({ shellColor: shellHovered ? '#9e8bff' : '#555555' });
+    const { shellOpacity } = useSpring({ shellOpacity: shellActive ? 1 : 0.5 });
 
-    const { jawColor } = useSpring({ jawColor: shaftActive ? '#00EAFF' : '#FF0000' })
-    const { jawEmissivity } = useSpring({ jawEmissivity: shaftHovered ? 0 : 1.5 })
+    const { jawColor } = useSpring({ jawColor: shaftActive ? '#00EAFF' : '#FF0000' });
+    const { jawEmissivity } = useSpring({ jawEmissivity: shaftHovered ? 0 : 1.5 });
 
-    useFrame(() => {
-        const mutiplier = shaftHovered || shaftActive
-        const full = !shaftHovered && shaftActive
-        shaftRef.current.rotation.x += 0.1 * (0.1 * mutiplier + full);
-    });
     const initialShellY = 0.0365;
-    useFrame(() => {
-        let y = -0.1 * props.scroll + 0.0765
-        y = y < initialShellY ? y : initialShellY;
-        shellRef.current.position.y = y;
-    })
+    const targetY = -0.1 * props.scroll + 0.0765;
+    const clampedY = targetY < initialShellY ? targetY : initialShellY;
+
+    useFrame(({ clock }) => {
+        const mutiplier = shaftHovered || shaftActive;
+        const full = !shaftHovered && shaftActive;
+        shaftRef.current.rotation.x += 0.1 * (0.1 * mutiplier + full);
+
+        if (shellRef.current) {
+            const speed = 40;
+            shellRef.current.position.y = THREE.MathUtils.lerp(shellRef.current.position.y, clampedY, speed * clock.getDelta());
+        }
+    });
 
     return (
         <group {...props} dispose={null}>
@@ -656,14 +658,14 @@ export function Winch(props) {
                             name="Flexible_Jaw_Coupling_5-8_Rubber-1"
                             position={[0, -0.0075, 0]}
                         >
-                            <a.mesh
+                            <animated.mesh
                                 name="glossy_rubber"
                                 castShadow
                                 receiveShadow
                                 geometry={nodes.glossy_rubber.geometry}
                                 material={materials.Appearance}>
-                                <a.meshPhongMaterial color={jawColor} emissive={jawColor} emissiveIntensity={jawEmissivity} />
-                            </a.mesh>
+                                <animated.meshPhongMaterial color={jawColor} emissive={jawColor} emissiveIntensity={jawEmissivity} />
+                            </animated.mesh>
                         </group>
                         <group
                             name="Winch_Spool-1"
@@ -688,7 +690,7 @@ export function Winch(props) {
                     </group>
                 </group>
                 <group name="Shell" >
-                    <a.group
+                    <animated.group
                         ref={shellRef}
                         onClick={() => setShellActive(Number(!shellActive))}
                         onPointerEnter={() => {
@@ -798,15 +800,15 @@ export function Winch(props) {
                                 material={materials["satin finish stainless steel.009"]}
                             />
                         </group>
-                        <a.mesh
+                        <animated.mesh
                             name="satin_finish_aluminum-9"
                             castShadow
                             receiveShadow
                             geometry={nodes["satin_finish_aluminum-9"].geometry}
                             material={materials["satin finish aluminum-8.003"]}>
-                            <a.meshPhongMaterial color={shellColor} opacity={shellOpacity} transparent />
-                        </a.mesh>
-                    </a.group>
+                            <animated.meshPhongMaterial color={shellColor} opacity={shellOpacity} transparent />
+                        </animated.mesh>
+                    </animated.group>
                 </group>
             </group>
         </group>
