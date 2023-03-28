@@ -14,28 +14,28 @@ function Navbar() {
 
 
 
-    useEffect(() => {
-        const controlNavbar = () => {
-            if (typeof window !== 'undefined') {
-                if (window.scrollY > lastScrollY) { // if scroll down hide the navbar
-                    setShow(false);
-                } else { // if scroll up show the navbar
-                    setShow(true);
-                }
+    // useEffect(() => {
+    //     const controlNavbar = () => {
+    //         if (typeof window !== 'undefined') {
+    //             if (window.scrollY > lastScrollY) { // if scroll down hide the navbar
+    //                 setShow(false);
+    //             } else { // if scroll up show the navbar
+    //                 setShow(true);
+    //             }
 
-                // remember current page location to use in the next move
-                setLastScrollY(window.scrollY);
-            }
-        };
-        if (typeof window !== 'undefined') {
-            window.addEventListener('scroll', controlNavbar);
+    //             // remember current page location to use in the next move
+    //             setLastScrollY(window.scrollY);
+    //         }
+    //     };
+    //     if (typeof window !== 'undefined') {
+    //         window.addEventListener('scroll', controlNavbar);
 
-            // cleanup function
-            return () => {
-                window.removeEventListener('scroll', controlNavbar);
-            };
-        }
-    }, [lastScrollY]);
+    //         // cleanup function
+    //         return () => {
+    //             window.removeEventListener('scroll', controlNavbar);
+    //         };
+    //     }
+    // }, [lastScrollY]);
 
     const [collapsed, setCollapsed] = useState(true);
 

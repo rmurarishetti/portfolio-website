@@ -9,7 +9,7 @@
   --color-emoji: #ffcb4c;
   --color-accent-primary: #8168ff;
   --color-accent-secondary: #4c00ff;
-  --color-glass: rgba(0, 0, 0, 0.1);
+  --color-glass: hsla(270, 11%, 7%, 0.8);
   --color-glass-dark: rgba(0, 0, 0, 0.4);
   --color-shadow: hsla(240, 9%, 2%, 0.569);
   --color-cancel: rgba(255, 48, 196, 0.7);
@@ -25,7 +25,7 @@
 }
 
 [data-theme='light'] {
-  --color-bg: #fcfcfc;
+  --color-bg: hsl(0, 0%, 99%);
   --color-bg-secondary: hsl(0, 0%, 100%);
   --color-bg-disable: hsl(0, 0%, 97%);
   --color-text-primary: black;
@@ -34,7 +34,7 @@
   --color-emoji: #b98400;
   --color-accent-primary: #8168ff;
   --color-accent-secondary: #9e8bff;
-  --color-glass: rgba(0, 0, 0, 0.01);
+  --color-glass: hsla(0, 0%, 99%, 0.8);
   --color-glass-dark: rgba(255, 255, 255, 0.1);
   --color-shadow: hsla(0, 0%, 0%, 0.08);
   --color-cancel: rgb(255, 122, 186);
