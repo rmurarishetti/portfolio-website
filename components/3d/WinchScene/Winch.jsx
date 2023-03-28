@@ -2,7 +2,6 @@ import { useRef, useState } from "react";
 import { useGLTF, PerspectiveCamera } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { useSpring, animated } from '@react-spring/three';
-import * as THREE from "three";
 
 export function Winch(props) {
     const { nodes, materials } = useGLTF("/3d/winch.glb");
@@ -23,15 +22,19 @@ export function Winch(props) {
     const targetY = -0.1 * props.scroll + 0.0765;
     const clampedY = targetY < initialShellY ? targetY : initialShellY;
 
-    useFrame(({ clock }) => {
+    const springProps = useSpring({
+        posY: clampedY,
+        config: { tension: 80, friction: 18 }, // Adjust tension and friction to control the interpolation speed and smoothness
+    });
+
+    useFrame(() => {
         const mutiplier = shaftHovered || shaftActive;
         const full = !shaftHovered && shaftActive;
         shaftRef.current.rotation.x += 0.1 * (0.1 * mutiplier + full);
-
         if (shellRef.current) {
-            const speed = 40;
-            shellRef.current.position.y = THREE.MathUtils.lerp(shellRef.current.position.y, clampedY, speed * clock.getDelta());
+            shellRef.current.position.y = springProps.posY.get();
         }
+
     });
 
     return (
