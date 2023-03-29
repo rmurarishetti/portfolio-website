@@ -4,6 +4,7 @@ import styles from '../../styles/Projects.module.scss'
 import { ProjectCard } from '../../components/cards';
 import { projectsData } from '../../data/projectsData';
 import { FilterPane, DatePane } from '../../components/layout';
+import { isDateInRange } from '../../helpers/date';
 
 function Projects() {
     // Get all unique tags and types and store them in objects as filtered=false state
@@ -72,8 +73,9 @@ function Projects() {
                 const subtitleMatch = (projectData) => projectData.subtitle.toLowerCase().includes(query)
                 const typeMatch = (projectData) => projectData.type.toLowerCase().includes(query)
                 const tagMatch = (projectData) => projectData.tags.some(tag => tag.toLowerCase().includes(query))
+                const dateMatch = (projectData) => isDateInRange(projectData.start, projectData.end, query)
                 setFilteredProjects((projects) => projects.filter(projectData => {
-                    return nameMatch(projectData) || subtitleMatch(projectData) || typeMatch(projectData) || tagMatch(projectData)
+                    return nameMatch(projectData) || subtitleMatch(projectData) || typeMatch(projectData) || tagMatch(projectData) || dateMatch(projectData)
                 }))
                 break;
             case 'tag':
@@ -208,7 +210,7 @@ function Projects() {
                         end={filteredProjects[0] ? filteredProjects[filteredProjects.length - 1].start : ''}
                         cardCount={filteredProjects[0] ? filteredProjects.length : 1} />
                 </div>
-                <div className={styles.grid}>
+                {filteredProjects[0] && <div className={styles.grid}>
                     {projectsData.map((projectData) => {
                         return (
                             <div
@@ -219,7 +221,13 @@ function Projects() {
                             </div>
                         )
                     })}
-                </div>
+                </div>}
+                {filteredProjects.length === 0 && <div className={styles.noProjects}>
+                    {console.log('no projects')}
+                    <div className={styles.emoji}>😔</div>
+                    <div className={styles.text}>No projects found.</div>
+                    <div className={styles.description}>Please try a different search query.</div>
+                </div>}
             </div>
         </>
     );
