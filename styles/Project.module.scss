@@ -195,19 +195,26 @@
     border-top: var(--border-secondary);
 
     .header {
-        display: inline-flex;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
         // justify-content: center;
         margin-bottom: 1rem;
         color: var(--color-text-secondary);
         font-size: 1.5rem;
         font-weight: 600;
+
+        >div {
+            margin-right: 0.4rem;
+        }
     }
 
     .grid {
         width: 100%;
         display: grid;
         grid-auto-rows: 1fr;
-        grid-template-columns: repeat(3, 1fr);
+        // grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(auto-fill, minmax(min(13rem, 100%), 1fr));
         transition: all var(--speed-medium);
         animation: var(--animation-fade-up);
         overflow: hidden;
@@ -240,17 +247,26 @@
     }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
     .otherProjects {
         .grid {
-            grid-template-columns: repeat(2, 1fr);
-
             .cardContainer {
-                padding: 1rem;
+                padding: 0.7rem;
             }
         }
     }
 }
+
+@media (max-width: 700px) {
+    .otherProjects {
+        .grid {
+            .cardContainer {
+                padding: 0.6rem;
+            }
+        }
+    }
+}
+
 
 @media (max-width: 600px) {
     .thumbnail {
@@ -290,11 +306,11 @@
 @media (max-width: 500px) {
     .otherProjects {
         .grid {
-            grid-template-columns: repeat(1, 1fr);
+            // grid-template-columns: repeat(1, 1fr);
             margin-top: 0.5rem;
 
             .cardContainer {
-                padding: 1rem;
+                padding: 0.8rem;
                 overflow: visible;
             }
         }

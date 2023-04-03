@@ -145,9 +145,9 @@ function ProjectPage({ project }) {
             <div className={styles.otherProjects}>
                 {relatedProjects[0] && <>
                     <div className={styles.header}>
-                        Other&nbsp;
+                        <div className={styles.word}>Other</div>
                         <div className={styles.type} style={typeStyle}>{project.type.toLowerCase()}</div>
-                        &nbsp;projects
+                        <div className={styles.word}>projects</div>
                     </div>
                     <div className={styles.grid}>
                         {relatedProjects.map((project) => {

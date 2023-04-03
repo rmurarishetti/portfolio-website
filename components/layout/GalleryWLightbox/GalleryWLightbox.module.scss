@@ -1,7 +1,6 @@
 .masonary {
     display: grid;
     gap: 1.5rem;
-    // grid-template-columns: repeat(auto-fill, minmax(12rem, 2fr));
     grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
     animation: var(--animation-fade-up);
 }
@@ -54,5 +53,17 @@
             color: var(--color-cancel);
             text-shadow: var(--shadow-small-cancel);
         }
+    }
+}
+
+@media (max-width: 700px) {
+    .masonary {
+        grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+    }
+}
+
+@media (max-width: 500px) {
+    .masonary {
+        grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
     }
 }
