@@ -47,6 +47,11 @@ function Navbar() {
 
     const router = useRouter()
 
+    const isSubPage = (parentPageLink) => {
+        const currentPath = router.asPath
+        return currentPath.includes(parentPageLink) && currentPath !== parentPageLink && parentPageLink !== '/'
+    }
+
     return (
         <nav
             className={[styles.navContainer,
@@ -68,7 +73,8 @@ function Navbar() {
                                 <NavItem
                                     link={page.link}
                                     title={page.title}
-                                    active={router.asPath == page.link} />
+                                    active={router.asPath == page.link}
+                                    subActive={isSubPage(page.link)} />
                             </div>
                         )
                     })}

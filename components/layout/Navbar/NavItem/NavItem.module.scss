@@ -26,4 +26,16 @@
             color: var(--color-text-primary);
         }
     }
+
+    &.subActive {
+        .text {
+            color: var(--color-accent-secondary);
+        }
+
+        &:hover {
+            .text {
+                color: var(--color-accent-primary);
+            }
+        }
+    }
 }
