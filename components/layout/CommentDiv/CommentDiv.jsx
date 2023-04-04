@@ -18,33 +18,42 @@ function CommentDiv({ id, email, image, fullName, message, dateTime }) {
         }
     }
 
+    function toTitleCase(str) {
+        if (!str) return str;
+
+        return str.toLowerCase().replace(/(^|\s)\S/g, (match) => match.toUpperCase());
+    }
+    const formattedName = toTitleCase(fullName)
+
     return (
         <div className={styles.container}>
-            <div className={styles.message}>{message}</div>
-            <div className={styles.footer}>
-                <div className={styles.person}>
-                    <div className={styles.icon}>
-                        <Image
-                            src={image}
-                            width={20}
-                            height={20}
-                            alt={`${fullName}_image`} />
+            <div className={styles.icon}>
+                <Image
+                    src={image}
+                    width={40}
+                    height={40}
+                    layout='fill'
+                    objectPosition={'center'}
+                    alt={`${fullName}_image`} />
+            </div>
+            <div className={styles.text}>
+                <div className={styles.header}>
+                    <div className={styles.name}>{formattedName}</div>
+                    <div className={styles.seperator}>·</div>
+                    <div className={styles.date}>
+                        <DateDiv start={new Date(dateTime)} longDate day />
                     </div>
-                    <div className={styles.name}>{fullName}</div>
+                    {editable &&
+                        <>
+                            <div className={styles.seperator}>/</div>
+                            <div
+                                className={styles.deleteButton}
+                                onClick={() => deleteComment(id)}>
+                                Delete
+                            </div>
+                        </>}
                 </div>
-                <div className={styles.seperator}>/</div>
-                <div className={styles.date}>
-                    <DateDiv start={new Date(dateTime)} longDate day />
-                </div>
-                {editable &&
-                    <>
-                        <div className={styles.seperator}>/</div>
-                        <div
-                            className={styles.deleteButton}
-                            onClick={() => deleteComment(id)}>
-                            Delete
-                        </div>
-                    </>}
+                <div className={styles.message}>{message}</div>
             </div>
         </div>
     );
