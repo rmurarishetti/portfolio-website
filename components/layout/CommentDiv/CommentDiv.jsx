@@ -26,7 +26,7 @@ function CommentDiv({ id, email, image, fullName, message, dateTime }) {
     const formattedName = toTitleCase(fullName)
 
     return (
-        <div className={styles.container}>
+        <div className={[styles.container, editable ? styles.editable : ''].join(' ')}>
             <div className={styles.icon}>
                 <Image
                     src={image}
@@ -43,17 +43,15 @@ function CommentDiv({ id, email, image, fullName, message, dateTime }) {
                     <div className={styles.date}>
                         <DateDiv start={new Date(dateTime)} longDate day />
                     </div>
-                    {editable &&
-                        <>
-                            <div className={styles.seperator}>/</div>
-                            <div
-                                className={styles.deleteButton}
-                                onClick={() => deleteComment(id)}>
-                                Delete
-                            </div>
-                        </>}
                 </div>
                 <div className={styles.message}>{message}</div>
+                {editable &&
+                    <div
+                        className={styles.deleteButton}
+                        onClick={() => deleteComment(id)}>
+                        Delete
+                    </div>
+                }
             </div>
         </div>
     );
