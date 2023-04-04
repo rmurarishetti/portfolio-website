@@ -27,15 +27,14 @@
     -webkit-backdrop-filter: var(--blur-glass-large);
     animation: var(--animation-fade-up);
     animation-duration: var(--speed-medium);
-    transition: all var(--speed-medium);
+    transition: background-color var(--speed-slow);
 
     >div {
         transition: filter var(--speed-slow);
     }
 
     &.transparentMode {
-        backdrop-filter: var(--blur-glass);
-        -webkit-backdrop-filter: var(--blur-glass);
+        background-color: rgba(255, 255, 255, 0);
 
         >div {
             filter: grayscale(100%);
