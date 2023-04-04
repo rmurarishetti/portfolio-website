@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { ArtCard, GraphicsCard } from '../../cards';
+import { ArtCard } from '../../cards';
 import { LightboxSwiper } from '../../swipers';
 import styles from './GalleryWLightbox.module.scss'
 

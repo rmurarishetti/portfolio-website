@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
-import { Document, Page } from 'react-pdf';
-import { pdfjs } from 'react-pdf';
+import { Document, Page, pdfjs } from 'react-pdf';
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 import 'react-pdf/dist/esm/Page/TextLayer.css';
 import styles from './PdfViewer.module.scss'
@@ -57,8 +56,6 @@ function PdfViewer({ href }) {
             window.removeEventListener('keydown', handleKeyDown);
         };
     }, [pageNumber, numPages]);
-
-    console.log(height)
 
     return (
         <div>

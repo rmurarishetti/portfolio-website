@@ -3,7 +3,7 @@ import { useRef, useState, useEffect } from 'react';
 import styles from '../styles/Guestbook.module.scss'
 import { DateDiv } from '../components/badges';
 import { GuestbookCard } from '../components/cards';
-import { CommentDiv } from '../components/layout';
+import { CommentDiv, CommentPlaceholder } from '../components/layout';
 import useSWR from "swr";
 
 function GuestBook() {
@@ -12,6 +12,15 @@ function GuestBook() {
     const { data, error } = useSWR("/api/guestbook/getAllMessages", fetcher, {
         refreshInterval: 1000
     })
+
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+        const timeoutId = setTimeout(() => {
+            setIsLoading(false);
+        }, 2000);
+        return () => clearTimeout(timeoutId);
+    }, []);
 
     return (
         <>
@@ -29,13 +38,22 @@ function GuestBook() {
                     <p>Sign my website and leave some feedback, appreciation or even humor!</p>
                 </div>
                 <GuestbookCard />
-                <div className={styles.comments}>
-                    {data && data.map(message => {
-                        return (
-                            <CommentDiv key={message.id} {...message} />
-                        )
-                    })}
-                </div>
+                {isLoading && (
+                    <div className={styles.comments}>
+                        {[...Array(10)].map((_, index) => (
+                            <CommentPlaceholder key={index} />
+                        ))}
+                    </div>
+                )}
+                {!isLoading && (
+                    <div className={styles.comments}>
+                        {data && data.map(message => {
+                            return (
+                                <CommentDiv key={message.id} {...message} />
+                            )
+                        })}
+                    </div>
+                )}
             </div>
         </>
     );

@@ -1,6 +1,6 @@
 import { Suspense, useMemo, memo } from 'react';
 import { Canvas } from '@react-three/fiber';
-import { Stage } from '@react-three/drei';
+import { Stage, Environment } from '@react-three/drei';
 import { Winch } from './Winch';
 import styles from './WinchScene.module.scss';
 import { useCorrectedTheme } from '../../../helpers/hooks';
@@ -30,6 +30,7 @@ function WinchScene({ scrollPercentage }) {
             shadows
             dpr={[1, 1.5]}
             camera={{ position: [0, 0, 0], fov: 30 }}>
+            {/* <fog attach="fog" args={['black', 50, 60]} /> */}
             <ambientLight intensity={ambientIntensity} />
             <directionalLight position={[5, 0.2, -1]} color="#FFFFFF" intensity={0.1} />
             <pointLight
