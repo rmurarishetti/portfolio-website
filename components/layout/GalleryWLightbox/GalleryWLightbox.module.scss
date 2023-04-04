@@ -16,26 +16,24 @@
     flex-direction: column;
     padding: 4rem 0rem 2rem 0rem;
     align-items: center;
-    // place-items: center;
-    // background-color: var(--color-bg);
     background-color: var(--color-glass);
     backdrop-filter: var(--blur-glass-large);
     -webkit-backdrop-filter: var(--blur-glass-large);
     animation: var(--animation-fade-up);
     animation-duration: var(--speed-medium);
-    transition: all var(--speed-medium);
+    transition: background-color var(--speed-slow);
 
-    >div {
+    img {
         transition: filter var(--speed-slow);
     }
 
     &.transparentMode {
-        backdrop-filter: var(--blur-glass);
-        -webkit-backdrop-filter: var(--blur-glass);
+        background-color: rgba(255, 255, 255, 0);
 
-        >div {
+        img {
             filter: grayscale(100%);
             -webkit-filter: grayscale(100%);
+            transition: filter var(--speed-slow);
         }
     }
 
