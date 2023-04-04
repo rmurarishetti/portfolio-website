@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import { HomeCard } from '../components/cards';
-import { FeaturedProjectsSwiper } from '../components/swipers';
+import { ThumbnailSwiper } from '../components/swipers';
 import { WinchScene, AdaptiveViewer } from '../components/3d';
 import styles from '../styles/Home.module.scss';
 import { projectsData } from '../data/projectsData';
@@ -80,11 +80,10 @@ export default function Home() {
       </div>
       <div className={styles.block}>
         <h2>Featured Projects</h2>
-        <FeaturedProjectsSwiper projectsData={projectsData.filter(projectData => projectData.featured)} />
+        <ThumbnailSwiper projectsData={projectsData.filter(projectData => projectData.featured)} />
         <Link href={pagesData.filter((pageData => pageData.title == 'Projects'))[0].link}>
           <a className={styles.link}>
-            <div className={styles.emoji}>{pagesData.filter((pageData => pageData.title == 'Projects'))[0].emoji}</div>
-            <div className={styles.parent}>All projects</div>
+            <div className={styles.parent}>View all projects</div>
             <div className={styles.arrow}>&rarr;</div>
           </a>
         </Link>
@@ -97,10 +96,7 @@ export default function Home() {
         </div>
         <Link href={pagesData.filter((pageData => pageData.title == 'Art'))[0].link}>
           <a className={styles.link}>
-            <div className={styles.emoji}>
-              {pagesData.filter((pageData => pageData.title == 'Projects'))[0].emoji}
-            </div>
-            <div className={styles.parent}>All artwork</div>
+            <div className={styles.parent}>View all artwork</div>
             <div className={styles.arrow}>&rarr;&nbsp;</div>
           </a>
         </Link>

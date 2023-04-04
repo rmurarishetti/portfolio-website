@@ -99,6 +99,7 @@
     display: inline-flex;
     align-items: baseline;
     gap: 0.3rem;
+    font-size: 0.8rem;
 
     .arrow {
       transition: transform var(--speed-medium);
@@ -172,6 +173,13 @@
 }
 
 @media (max-width: 550px) {
+
+  .block {
+    .link {
+      // align-self: center;
+      margin-top: 1.5rem;
+    }
+  }
 
   .grid {
     display: flex;

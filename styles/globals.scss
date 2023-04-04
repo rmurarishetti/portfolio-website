@@ -22,6 +22,7 @@
   --color-uiux: hsl(180, 100%, 80%);
   --color-computing: hsl(140, 100%, 80%);
   --color-software: hsl(100, 100%, 80%);
+  --color-pagination: hsl(273, 8%, 21%);
 }
 
 [data-theme='light'] {
@@ -47,6 +48,7 @@
   --color-uiux: hsl(180, 65%, 50%);
   --color-computing: hsl(140, 65%, 50%);
   --color-software: hsl(100, 65%, 50%);
+  --color-pagination: hsl(0, 0%, 83%);
 }
 
 :root {
@@ -154,7 +156,7 @@ html {
             }
 
             .swiper-pagination {
-              bottom: 0;
+              bottom: 0.3rem;
               z-index: 20;
               padding-left: 25%;
               padding-right: 25%;
@@ -164,23 +166,36 @@ html {
                 display: flex;
                 flex-grow: 1;
                 width: auto;
-                border-radius: 4px;
-                background-color: var(--color-text-primary);
-                opacity: 0.2;
+                border-radius: 0px;
+                // background-color: var(--color-text-primary);
+                background-color: var(--color-border);
+                // opacity: 0.2;
+                opacity: 1;
                 transition: all var(--speed-slow);
                 height: 4px;
-                margin: 2px;
+                margin: 0.5px;
+
+                &:first-of-type {
+                  border-radius: 4px 0px 0px 4px;
+                }
+
+                &:last-of-type {
+                  border-radius: 0px 4px 4px 0px;
+                }
 
                 &.swiper-pagination-bullet-active {
                   opacity: 1;
                   flex-grow: 1.5;
                   // width: 24px;
-                  background-color: var(--color-accent-secondary);
+                  background-color: var(--color-accent-primary);
+                  box-shadow: var(--shadow-glow);
+                  border-radius: 4px;
                 }
 
                 &:hover {
-                  background-color: var(--color-accent-primary);
+                  background-color: var(--color-accent-secondary);
                   flex-grow: 1.5;
+                  border-radius: 4px;
                 }
               }
             }

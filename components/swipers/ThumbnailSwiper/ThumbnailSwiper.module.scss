@@ -1,4 +1,5 @@
 .swiper {
+    position: relative;
 
     &.projectSwiper {
         padding-left: 5% !important;
@@ -48,6 +49,77 @@
         pointer-events: none;
         z-index: 1;
         transition: background-image var(--speed-medium);
+    }
+
+    .footer {
+        position: absolute;
+        right: 50%;
+        bottom: -1.2rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(50%);
+        gap: 0.8rem;
+        z-index: 20;
+
+        .arrow {
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            user-select: none;
+            transition: all var(--speed-medium);
+
+            &:hover {
+                cursor: pointer;
+                color: var(--color-accent-primary);
+            }
+        }
+
+        & .leftArrow {
+            &:hover {
+                transform: translateX(-0.1rem);
+            }
+        }
+
+        & .rightArrow {
+            &:hover {
+                transform: translateX(0.1rem);
+            }
+        }
+
+        & .disabled {
+            color: var(--color-text-secondary);
+            opacity: 0.5;
+            pointer-events: none;
+            cursor: none;
+
+            &:hover {
+                transform: translateX(0rem);
+                cursor: none;
+            }
+        }
+
+        .fraction {
+            user-select: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.7rem;
+            font-weight: 400;
+            color: var(--color-text-secondary);
+            gap: 0.2rem;
+            width: 2rem;
+
+            >div {
+                opacity: 0.5;
+            }
+
+            .current {
+                font-weight: 700;
+                opacity: 1;
+            }
+        }
     }
 }
 
