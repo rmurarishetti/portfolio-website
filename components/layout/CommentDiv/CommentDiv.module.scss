@@ -122,44 +122,44 @@
 
 @keyframes colorShift {
     0% {
-        background-color: hsla(0, 5%, 50%, 0.5);
+        background-color: hsla(0, 5%, 50%, 0.2);
     }
 
     25% {
-        background-color: hsla(72, 5%, 50%, 0.5);
+        background-color: hsla(72, 5%, 50%, 0.15);
     }
 
     50% {
-        background-color: hsla(144, 5%, 50%, 0.5);
+        background-color: hsla(144, 5%, 50%, 0.1);
     }
 
     75% {
-        background-color: hsla(216, 5%, 50%, 0.5);
+        background-color: hsla(216, 5%, 50%, 0.15);
     }
 
     100% {
-        background-color: hsla(360, 5%, 50%, 0.5);
+        background-color: hsla(360, 5%, 50%, 0.2);
     }
 }
 
 @keyframes alphaShift {
     0% {
-        opacity: 0.4;
-    }
-
-    25% {
-        opacity: 0.3;
-    }
-
-    50% {
         opacity: 0.2;
     }
 
+    25% {
+        opacity: 0.15;
+    }
+
+    50% {
+        opacity: 0.1;
+    }
+
     75% {
-        opacity: 0.3;
+        opacity: 0.15;
     }
 
     100% {
-        opacity: 0.4;
+        opacity: 0.2;
     }
 }
