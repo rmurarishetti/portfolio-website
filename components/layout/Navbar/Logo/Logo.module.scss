@@ -46,6 +46,30 @@
         }
     }
 
+    .plane {
+        position: fixed;
+        bottom: 50%;
+        left: -3vw;
+        cursor: none;
+        user-select: none;
+        transform: translateX(-3vw) translateY(50%) rotate(-30deg);
+        scale: 0.1;
+        font-size: 6rem;
+
+        &.animatePlane {
+            animation: flyZoom 1s ease-in;
+        }
+
+        .trail {
+            position: relative;
+            width: 1rem;
+            height: 8rem;
+            background: linear-gradient(0deg, rgba(var(--rgb-accent-primary), 0.7) 0%, transparent 100%);
+            border-radius: 50% 50% 0% 0%;
+            transform: translateY(-140%) translateX(-170%) rotate(-52deg);
+        }
+    }
+
     &:hover {
 
         .background {
@@ -63,5 +87,17 @@
                 }
             }
         }
+    }
+}
+
+@keyframes flyZoom {
+    0% {
+        transform: translateX(-3vw) translateY(50%) rotate(-30deg);
+        scale: 0.1;
+    }
+
+    100% {
+        transform: translateX(110vw) translateY(20vh) rotate(-30deg);
+        scale: 1;
     }
 }
