@@ -7,6 +7,7 @@ import { Tag, DateDiv, TypeTag } from '../../badges';
 
 function ProjectCard({ id, name, subtitle, start, end, featured, type, tags, thumbnail, hidden }) {
     const [hover, setHover] = useState(false);
+    const [active, setActive] = useState(false);
     const [mobile, setMobile] = useState(window.innerWidth < 500)
     useEffect(() => {
         function handleResize() {
@@ -18,14 +19,20 @@ function ProjectCard({ id, name, subtitle, start, end, featured, type, tags, thu
         }
     })
     const formattedType = type.toLowerCase().replace(/[^a-zA-Z0-9 ]/g, '')
-    const cardHoverStyle = {
+    const changedCardStyle = {
         borderColor: `var(--color-${formattedType})`,
         boxShadow: `0 0px 5px var(--color-${formattedType})`,
     }
-
-    const titleHoverStyle = {
+    const changedTitleStyle = {
         color: `var(--color-${formattedType})`
     }
+    const cardHoverStyle = mobile ? null : changedCardStyle
+    const titleHoverStyle = mobile ? null : changedTitleStyle
+
+    let cardStyle = hover ? cardHoverStyle : null
+    cardStyle = active ? changedCardStyle : cardStyle
+    let titleStyle = hover ? titleHoverStyle : null
+    titleStyle = active ? changedTitleStyle : titleStyle
 
     return (
         <Tilt
@@ -39,7 +46,7 @@ function ProjectCard({ id, name, subtitle, start, end, featured, type, tags, thu
             glareBorderRadius={10}
             perspective={500}
             transitionSpeed={500}
-            glareEnable
+            glareEnable={!mobile}
             tiltEnable={!mobile}
             onEnter={() => {
                 setHover(true);
@@ -47,8 +54,11 @@ function ProjectCard({ id, name, subtitle, start, end, featured, type, tags, thu
             onLeave={() => {
                 setHover(false);
             }}
+            onClick={() => {
+                setActive((prev) => !prev);
+            }}
             className={[styles.card, featured ? styles.featured : '', hidden ? styles.hidden : ''].join(' ')}
-            style={hover ? cardHoverStyle : null}
+            style={cardStyle}
         >
             <Link href={`/projects/${id}`}>
                 <a>
@@ -63,7 +73,7 @@ function ProjectCard({ id, name, subtitle, start, end, featured, type, tags, thu
                         </div>
                         <div
                             className={styles.arrow}
-                            style={titleHoverStyle}>
+                            style={titleStyle}>
                             &rarr;
                         </div>
                         <div className={styles.tags}>
@@ -82,7 +92,7 @@ function ProjectCard({ id, name, subtitle, start, end, featured, type, tags, thu
                         </div>
                         <h2
                             className={styles.title}
-                            style={hover ? titleHoverStyle : null}
+                            style={titleStyle}
                         >
                             {name}
                         </h2>

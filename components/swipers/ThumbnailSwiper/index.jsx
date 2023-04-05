@@ -28,6 +28,8 @@ function ThumbnailSwiper({ projectsData, activeIndex = 0 }) {
             slidesPerView={'auto'}
             pagination={{ clickable: true }}
             keyboard={{ enabled: true }}
+            centeredSlides={true}
+            // centeredSlidesBounds={true}
             initialSlide={0}
             mousewheel
             grabCursor
