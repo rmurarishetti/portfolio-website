@@ -143,7 +143,7 @@ html {
 
             .swiper-wrapper {
               overflow: none;
-              width: fit-content;
+              // width: fit-content;
               padding-bottom: 2rem;
               cursor: grab;
 
@@ -153,13 +153,6 @@ html {
 
               .swiper-slide {
                 height: auto;
-                transition: scale var(--speed-medium);
-                scale: 0.8;
-
-
-                &.swiper-slide-active {
-                  scale: 1;
-                }
               }
 
             }
