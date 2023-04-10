@@ -1,36 +1,50 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { FlipCard } from '../../cards';
 import styles from './MemoryGame.module.scss';
 import confetti from 'canvas-confetti';
 
 
-const emojis = ['🏎️', '🎾', '🎲', '🚀', '💡', '🎸', '🏂', '👾'];
+const allEmojis = ['😀', '😃', '😄', '😁', '😆', '😅', '😂', '🤣', '😊', '😇', '🙂', '🙃', '😉', '😌', '😍', '🥰', '😘', '😗', '😙', '😚', '👋', '🤚', '🖐️', '✋', '🖖', '👌', '✌️', '🤞', '🤟', '🤘', '🤙', '👈', '👉', '👆', '🖕', '👇', '☝️', '👍', '👎', '✊', '🐶', '🐱', '🐭', '🐹', '🐰', '🦊', '🐻', '🐼', '🦁', '🐯', '🐨', '🐽', '🦄', '🐮', '🐷', '🐸', '🐵', '🙈', '🙉', '🙊', '🍏', '🍎', '🍐', '🍊', '🍋', '🍌', '🍉', '🍇', '🍓', '🍈', '🍒', '🍑', '🥭', '🍍', '🥥', '🥑', '🍆', '🍅', '🥒', '🥬', '⚽️', '🏀', '🏈', '⚾️', '🥎', '🎾', '🏐', '🏉', '🎱', '🏓', '🏸', '🥅', '🏒', '🏑', '🥍', '🏏', '🥋', '🥊', '🎽', '🛹', '🛼', '🛷', '🥌', '🎿', '⛷️', '🏂', '🏋️', '🤼', '🤸', '🤽', '🤾', '🤹', '🧘', '🏄', '🏊', '🏇', '🚣', '🏌️', '🏋️', '🚴', '🚵', '🏎️', '🏍️', '🛵', '🛺', '🚗', '🚕', '🚙', '🚌', '🚎', '🏎️', '🚓', '🚑', '🚒', '🚐', '🚚', '🚛', '🚜', '🛴', '🚲', '🛵', '🏍️', '🚨', '🚔', '🚍', '🚘', '🚖', '🚡', '🚠', '🚟', '🚃', '🚋', '🚞', '🚝', '🚄', '🚅', '🚈', '🚂', '🚆', '🚇', '🚊', '🚉', '✈️', '🛫', '🛬', '🛩️', '💺', '🛰️', '🚀', '🛸', '🚁', '🛶', '⛵️', '🚤', '🛥️', '🛳️', '⛴️', '🚢', '⚓️', '🚧', '⛽️', '🚏', '🚦', '🚥', '🚢', '🚁', '🚟', '🚠', '🚡', '🛰️', '🚀', '🛸', '🚃', '🚄', '🚅', '🚆', '🚇', '🚈', '🚉', '🚊', '🚝', '🚞', '🚋', '🚃', '🚋', '🚞', '🚝', '🚉', '🚈', '🚆', '🚅', '🚄', '🚃', '🚂', '🚊', '🖥️', '🖨️', '⌨️', '🖱️', '💿', '📀', '💽', '📱', '☎️', '📞', '📟', '📠', '📺', '📻', '📷', '📸', '📹', '🎥', '🎞️', '📽️']
+
 
 function MemoryGame({ setPaused }) {
     const [cards, setCards] = useState([]);
     const [flippedCards, setFlippedCards] = useState([]);
     const [matchedCards, setMatchedCards] = useState([]);
     const [flipCount, setFlipCount] = useState(0);
+    const [emojis, setEmojis] = useState(selectRandomEmojis(8));
 
     useEffect(() => {
+        function generateShuffledCards() {
+            let cardPool = [...emojis, ...emojis].map((emoji, index) => ({
+                id: index,
+                emoji: emoji,
+                isFlipped: false,
+            }));
+
+            let shuffledCards = [];
+            while (cardPool.length > 0) {
+                const randomIndex = Math.floor(Math.random() * cardPool.length);
+                shuffledCards.push(cardPool[randomIndex]);
+                cardPool.splice(randomIndex, 1);
+            }
+            return shuffledCards;
+        }
         const shuffledCards = generateShuffledCards();
         setCards(shuffledCards);
-    }, []);
+    }, [emojis]);
 
-    function generateShuffledCards() {
-        let cardPool = [...emojis, ...emojis].map((emoji, index) => ({
-            id: index,
-            emoji: emoji,
-            isFlipped: false,
-        }));
+    function selectRandomEmojis(n) {
+        const emojis = [];
+        const emojiPool = [...allEmojis];
 
-        let shuffledCards = [];
-        while (cardPool.length > 0) {
-            const randomIndex = Math.floor(Math.random() * cardPool.length);
-            shuffledCards.push(cardPool[randomIndex]);
-            cardPool.splice(randomIndex, 1);
+        while (emojis.length < n) {
+            const randomIndex = Math.floor(Math.random() * emojiPool.length);
+            emojis.push(emojiPool[randomIndex]);
+            emojiPool.splice(randomIndex, 1);
         }
-        return shuffledCards;
+
+        return emojis;
     }
 
     function handleCardClick(card) {
