@@ -23,7 +23,7 @@ function Logo() {
     };
 
     return (
-        <Link href="/">
+        <Link href="/404">
             <a className={styles.navLogo} onClick={handleClick}
             >
                 <div className={styles.background}>

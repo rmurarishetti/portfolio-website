@@ -1,0 +1,49 @@
+.memoryGame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    animation: var(--fade-up) var(--speed-medium) ease-in-out;
+
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .cardGridContainer {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem;
+
+        .cardGrid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(3rem, 5rem));
+            grid-gap: min(max(0.3rem, 2vw), 1rem);
+        }
+    }
+
+    .flipCount {
+        margin: 1rem 0;
+        // color: var(--color-text-secondary);
+    }
+
+    .gameInfo {
+        margin: 1rem 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        border: var(--border-primary);
+        padding: 1.5rem 2.5rem;
+        border-radius: 1rem;
+        box-shadow: var(--shadow);
+        animation: var(--fade-up) var(--speed-medium) ease-in-out;
+
+        .stats {
+            color: var(--color-text-secondary)
+        }
+    }
+}

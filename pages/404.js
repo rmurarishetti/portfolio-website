@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { useCountDown } from '../helpers/hooks';
 import { TimerCard } from '../components/cards';
+import { MemoryGame } from '../components/games';
 
 function NotFound() {
     const router = useRouter();
@@ -25,9 +26,13 @@ function NotFound() {
     }
 
     useEffect(() => {
-        console.log(counter)
         counter == 0 ? router.push("/") : ''
     }, [counter, router])
+
+    const handleHardPause = () => {
+        setPaused(true)
+        reset()
+    }
 
 
     return (
@@ -44,7 +49,12 @@ function NotFound() {
                         <div className={styles.text}>OoOps</div>
                     </div>
                     <p>This page could not be found.</p>
-                    <TimerCard seconds={timeOut} handlePause={handlePause}>Going back to&nbsp;<Link href="/"><a>home</a></Link>&nbsp;in</TimerCard>
+                    <TimerCard seconds={timeOut} handlePause={handlePause} counter={counter} paused={paused}>Going back to&nbsp;<Link href="/"><a>home</a></Link>&nbsp;in</TimerCard>
+
+                    <p className={styles.gamePrompt}>Or... try out a memory game below <br /> Flip and match pairs of cards.</p>
+                </div>
+                <div className={styles.game} onClick={handleHardPause}>
+                    <MemoryGame setPaused={setPaused} />
                 </div>
             </div>
         </>

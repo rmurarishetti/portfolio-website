@@ -2,19 +2,7 @@ import { useEffect, useState } from "react";
 import { useCountDown } from "../../../helpers/hooks";
 import styles from './TimerCard.module.scss'
 
-function TimerCard({ seconds, children, handlePause }) {
-    const [counter, start, pause, reset] = useCountDown(seconds, 1000);
-    const [paused, setPaused] = useState(true)
-    useEffect(() => {
-        setPaused(false)
-    }, [])
-    useEffect(() => {
-        paused ? pause() : start()
-    }, [paused, pause, start])
-    const onClick = () => {
-        handlePause()
-        setPaused((prev) => !prev)
-    }
+function TimerCard({ seconds, children, handlePause, counter, paused }) {
     const widthPercent = 100 * counter / seconds
     return (
         <div className={[styles.timer, paused ? styles.paused : ''].join(' ')}>
@@ -23,7 +11,7 @@ function TimerCard({ seconds, children, handlePause }) {
                 {/* <div className={styles.emoji}>⏳</div> */}
                 <div>&nbsp;{children}&nbsp;</div>
                 <div className={styles.time}>{counter}s</div>
-                <div className={styles.pause} onClick={onClick}>{paused ? '\u23F5' : '\u23F8'}</div>
+                <div className={styles.pause} onClick={handlePause}>{paused ? '\u23F5' : '\u23F8'}</div>
             </div>
         </div>
     );
