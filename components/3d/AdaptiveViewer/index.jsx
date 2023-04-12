@@ -66,7 +66,7 @@ export default function Viewer({ href, fov = 27, aspectRatio = 2, shadows = true
                 <primitive object={scene} />
               </Stage>
             </Suspense>
-            <OrbitControls ref={ref} autoRotate={autoRotate} />
+            <OrbitControls ref={ref} autoRotate={autoRotate} maxDistance={10} minDistance={1} enablePan autoRotateSpeed={0.5} />
           </Canvas>
         </>}
     </>

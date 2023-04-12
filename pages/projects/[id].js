@@ -43,8 +43,12 @@ export const getStaticProps = async (context) => {
 function ProjectPage({ project }) {
     const theme = useCorrectedTheme();
     const formattedType = project.type.toLowerCase().replace(/[^a-zA-Z0-9 ]/g, '')
+    const typeCssVar = `var(--color-${formattedType})`
     const typeStyle = {
-        color: `var(--color-${formattedType})`
+        color: typeCssVar
+    }
+    const thumbnailBgAccentStyle = {
+        background: `linear-gradient(-135deg, ${typeCssVar} 0%, rgba(0,0,0,0) 50%)`
     }
 
     const relatedProjects = projectsData.filter((p) => {
@@ -77,6 +81,7 @@ function ProjectPage({ project }) {
                     alt={project.thumbnail.alt}
                     objectFit='cover'
                     layout='fill' />
+                <div className={styles.bgAccent} style={thumbnailBgAccentStyle}></div>
             </div>
             <div className={styles.text}>
                 <div className={styles.header}>

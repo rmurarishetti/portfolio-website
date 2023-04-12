@@ -841,7 +841,7 @@ export const projectsData = [
         tags: ["Python", "Data-Analysis", "Hackathon", "NLP", "ML"],
         link: {},
         thumbnail: {
-            href: "/images/projects/DataOpen/plot6.png",
+            href: "/images/projects/DataOpen/thumbnail.png",
             alt: "Muti-variate Plot"
         },
         media: [
