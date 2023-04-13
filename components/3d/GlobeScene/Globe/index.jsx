@@ -5,6 +5,7 @@ import { PresentationControls, useCursor, OrbitControls } from '@react-three/dre
 import { GlowSphere } from './GlowSphere';
 import { CityPoint } from './CityPoint';
 import { FlightArc } from './FlightArc';
+import { CloudSphere } from './CloudSphere';
 
 const makeUrl = (file) => `./textures/${file}.jpg`;
 
@@ -31,11 +32,11 @@ export function Globe({ position, theme, radius, homeCities, visitedCities }) {
     useCursor(active, 'grabbing', 'auto');
 
     useFrame((_, delta) => {
-        const dThetaY = hovered ? delta / 30 : delta / 10;
+        const dThetaY = hovered ? delta / 30 : delta / 20;
         groupRef.current.rotation.y += dThetaY;
     });
 
-    const [texture, bump, spec] = useLoader(TextureLoader, [makeUrl(theme === 'light' ? 'earth_day' : 'earth_night'), makeUrl('earth_bump'), makeUrl('earth_spec')]);
+    const [texture, spec, normal] = useLoader(TextureLoader, [makeUrl(theme === 'light' ? 'earth_day' : 'earth_night'), makeUrl('earth_spec'), makeUrl('earth_normal')]);
 
     const HomeCityPoints = useMemo(() => homeCities?.map((city) => (
         <CityPoint key={city.city} globeRadius={radius} city={city} theme={theme} type="home" globeRef={globeRef} />
@@ -80,13 +81,24 @@ export function Globe({ position, theme, radius, homeCities, visitedCities }) {
                 onPointerLeave={() => handlePointer(false, false)}
                 onPointerOver={() => setHover(true)}
                 onPointerOut={() => handlePointer(false, true)}>
+
+                <GlowSphere theme={theme} position={position} radius={1.1 * radius} />
                 <mesh ref={globeRef}>
                     <sphereGeometry attach="geometry" args={[radius, 64, 64]} />
-                    <Suspense fallback={<meshStandardMaterial color={theme == 'light' ? '#85bbce' : '#03071d'} attach="material" />}>
-                        <meshPhongMaterial attach="material" map={texture} bumpMap={bump} bumpScale={0.03} specularMap={spec} specular={'#7300FF'} shininess={10} />
+
+                    <CloudSphere position={position} radius={1.01 * radius} />
+                    <Suspense fallback={<meshStandardMaterial color={theme == 'light' ? '#8186C2' : '#03071d'} attach="material" />}>
+                        <meshPhongMaterial
+                            attach="material"
+                            map={texture}
+                            specularMap={spec}
+                            specular={'#7300FF'}
+                            normalMap={normal}
+                            normalMapType={'TangentSpaceNormalMap'}
+                            normalScale={[0.5, 0.5]}
+                            shininess={10} />
                     </Suspense>
                 </mesh>
-                <GlowSphere theme={theme} position={position} radius={1.1 * radius} />
                 {VisitedCityPoints}
                 {HomeCityPoints}
                 {HomeCityFlightArcs}
