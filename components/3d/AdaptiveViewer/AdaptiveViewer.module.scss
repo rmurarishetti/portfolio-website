@@ -1,13 +1,73 @@
-.scene {
-    z-index: 0;
+.canvasWrapper {
     width: 100%;
-    // margin-top: 1rem;
-    // margin-bottom: 1rem;
-    // touch-action: none;
-    cursor: grab;
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    margin: 0rem 0rem 1rem 0rem;
 
-    :active {
-        cursor: grabbing;
+    .scene {
+        z-index: 0;
+        width: 100%;
+        cursor: grab;
+
+        :active {
+            cursor: grabbing;
+        }
+    }
+
+    .controlsInfo {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%) translateY(150%);
+        z-index: 1;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.7rem;
+        gap: 1rem;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        background-color: var(--color-glass);
+        backdrop-filter: blur(0.5rem);
+        margin: 0.5rem;
+        // border: var(--border-secondary);
+        // box-shadow: var(--shadow-small);
+        cursor: default;
+        opacity: 0;
+        transition: transform var(--speed-slow), opacity var(--speed-slow);
+
+        .controlsInfoItem {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 0.4rem;
+            user-select: none;
+            color: var(--color-text-secondary);
+            transition: color var(--speed-slow);
+
+            span {
+                opacity: 0.5;
+                transition: opacity var(--speed-slow);
+            }
+
+            &.active {
+                color: var(--color-accent-primary);
+
+                span {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &:hover {
+        .controlsInfo {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
     }
 }
 
@@ -18,4 +78,12 @@
     align-items: center;
     color: var(--color-accent-primary);
     z-index: 0;
+}
+
+@media (max-width: 500px) {
+    .canvasWrapper {
+        .controlsInfo {
+            display: none;
+        }
+    }
 }
