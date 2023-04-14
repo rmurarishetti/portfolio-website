@@ -15,6 +15,16 @@ function MyApp({ Component, pageProps }) {
     setIsMounted(true)
   }, [])
 
+  const customProgressBarCss = `
+    #nprogress .bar {
+      border-radius: 0px 100px 100px 0px;
+      box-shadow: var(--shadow-glow);
+    }
+    #nprogress .peg {
+      box-shadow: none;
+    }
+  `;
+
   return (
     <SessionProvider session={pageProps.session}>
       <ThemeProvider
@@ -22,12 +32,18 @@ function MyApp({ Component, pageProps }) {
         defaultTheme={'system'}
         enableSystem >
         <NextNProgress
-          color="#6F3BFF"
+          color="var(--color-accent-primary)"
           startPosition={0.3}
           stopDelayMs={200}
           options={{ showSpinner: false }}
           height={4}
-          showOnShallow />
+          showOnShallow
+          transformCSS={(css) => {
+            css += customProgressBarCss
+            console.log(css)
+            return <style>{css}</style>;
+          }}
+        />
         <Navbar />
         <div className="container">
           {isMounted &&

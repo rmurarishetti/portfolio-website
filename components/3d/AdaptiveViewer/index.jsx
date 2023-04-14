@@ -17,9 +17,6 @@ export default function Viewer({ href, fov = 27, aspectRatio = 2, shadows = true
 
   useLayoutEffect(() => {
     scene.traverse((obj) => {
-      if (!obj.parent) {
-        console.log(obj)
-      }
       if (obj.isMesh) {
         obj.castShadow = obj.receiveShadow = shadows
         obj.material.envMapIntensity = 0.8
