@@ -11,7 +11,7 @@ export const xpData = [
                 start: new Date(2022, 6),
                 end: new Date(2022, 8, 30),
                 description: "Worked in the Microsoft Search Assistance & Intelligence (MSAI) team. Developed within the Windows OS code-base, specifically on the preprocessing of telemetry data for the training of File Explorer recommendations models.",
-                skills: ["C++"]
+                skills: ["C++", "C#", "XAML"]
             }
         ]
     },
@@ -50,7 +50,6 @@ export const xpData = [
                 start: new Date(2020, 3),
                 end: new Date(2020, 8),
                 description: "Exposure to BP’s upstream activities and strategies to meet future carbon emission goals.",
-                skills: []
             },
         ]
     },
@@ -66,7 +65,6 @@ export const xpData = [
                 start: new Date(2019, 2, 1),
                 end: new Date(2019, 2, 10),
                 description: "Explored different wave propagation prevention techniques used in ports.",
-                skills: []
             },
         ]
     },
@@ -82,7 +80,6 @@ export const xpData = [
                 start: new Date(2016, 3, 1),
                 end: new Date(2016, 3, 10),
                 description: "Work shadow within Qatar Shell’s upstream division - insight into subsurface data gathering and general well design.",
-                skills: []
             },
         ]
     }

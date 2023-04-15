@@ -5,6 +5,7 @@ import { HoverBadge } from '../components/badges';
 import { XpPane } from '../components/layout';
 import { citiesData } from "../data/citiesData";
 import { xpData } from '../data/xpData';
+import { eduData } from '../data/eduData';
 
 function About() {
     return (
@@ -54,6 +55,10 @@ function About() {
                 <div className={styles.xp}>
                     <h2>Experience</h2>
                     <XpPane xpData={xpData} />
+                </div>
+                <div className={styles.edu}>
+                    <h2>Education</h2>
+                    <XpPane xpData={eduData} />
                 </div>
             </div>
         </>

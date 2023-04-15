@@ -43,14 +43,23 @@ function XpPane({ xpData }) {
                             <DateDiv start={role.start} end={role.end} duration longDate></DateDiv>
                             <div className={styles.position}>{role.position}</div>
                             <div className={styles.description}>
-                                <div className={styles.text}>{role.description}</div>
-                                <div className={styles.tags}>
+                                {typeof role.description === 'string' && <div className={styles.text}>{role.description}</div>}
+                                {Array.isArray(role.description) && <div className={styles.text}>
+                                    {role.description.map((paragraph, i) => {
+                                        const splitText = paragraph.split(':')
+                                        return (
+                                            splitText.length > 1 ? <p key={i}><span className={styles.type}>{splitText[0]}:</span> {splitText[1]}</p> :
+                                                <p key={i}>{paragraph}</p>
+                                        )
+                                    })}
+                                </div>}
+                                {role.skills && <div className={styles.tags}>
                                     {role.skills.map((skill) => {
                                         return (
                                             <Tag key={skill}>{skill}</Tag>
                                         )
                                     })}
-                                </div>
+                                </div>}
                             </div>
                         </div>
                     )
