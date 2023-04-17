@@ -39,7 +39,7 @@ function GlobeScene({ homeCities, visitedCities }) {
                             <mesh>
                                 <sphereGeometry attach="geometry" args={[2.3, 64, 64]} />
                                 <meshPhongMaterial
-                                    color={theme === 'light' ? '#85bbce' : '#161C41'}
+                                    color={theme === 'light' ? '#5C697E' : '#161C41'}
                                     attach="material"
                                     specular="#7300FF"
                                     shininess={10}

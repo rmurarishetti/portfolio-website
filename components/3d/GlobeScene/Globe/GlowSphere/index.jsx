@@ -3,6 +3,7 @@ import { ThreeElements } from '@react-three/fiber';
 import { colors } from '../../../../../helpers/format';
 
 import './shaderMaterials'
+import { Suspense } from 'react';
 
 export function GlowSphere({ theme, position, radius }) {
     const themedGlowProps = {
@@ -21,12 +22,14 @@ export function GlowSphere({ theme, position, radius }) {
     return (
         <mesh position={position}>
             <sphereGeometry args={[radius, 64, 64]} />
-            <glowShaderMaterial
-                attach="material"
-                blending={AdditiveBlending}
-                transparent={true}
-                side={BackSide}
-                {...themedGlowProps[theme]} />
+            <Suspense fallback={null}>
+                <glowShaderMaterial
+                    attach="material"
+                    blending={AdditiveBlending}
+                    transparent={true}
+                    side={BackSide}
+                    {...themedGlowProps[theme]} />
+            </Suspense>
         </mesh>
     )
 }

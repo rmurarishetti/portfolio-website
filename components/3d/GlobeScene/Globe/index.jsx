@@ -81,13 +81,11 @@ export function Globe({ position, theme, radius, homeCities, visitedCities }) {
                 onPointerLeave={() => handlePointer(false, false)}
                 onPointerOver={() => setHover(true)}
                 onPointerOut={() => handlePointer(false, true)}>
-
                 <GlowSphere theme={theme} position={position} radius={1.1 * radius} />
                 <mesh ref={globeRef}>
                     <sphereGeometry attach="geometry" args={[radius, 64, 64]} />
-
                     <CloudSphere position={position} radius={1.01 * radius} />
-                    <Suspense fallback={<meshStandardMaterial color={theme == 'light' ? '#8186C2' : '#03071d'} attach="material" />}>
+                    <Suspense fallback={<meshStandardMaterial color={theme == 'light' ? '#5C697E' : '#03071d'} attach="material" />}>
                         <meshPhongMaterial
                             attach="material"
                             map={texture}
