@@ -570,7 +570,7 @@ export const projectsData = [
         tags: ["Python", "Uni"],
         link: {},
         thumbnail: {
-            href: "/images/projects/HeatDiffusion/heatmodel.jpg",
+            href: "/images/projects/HeatDiffusion/heatmodel.png",
             alt: "2D Heat Diffusion Graph"
         },
         media: [
