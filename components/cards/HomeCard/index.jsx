@@ -1,8 +1,10 @@
 import styles from './HomeCard.module.scss'
 import Tilt from 'react-parallax-tilt';
 import Link from 'next/link';
+import { useAOS } from '../../../helpers/hooks';
 
 function HomeCard({ link, title, emoji, description }) {
+    useAOS()
 
     return (
         <Tilt
@@ -18,7 +20,7 @@ function HomeCard({ link, title, emoji, description }) {
             transitionSpeed={500}
             className={styles.card}>
             <Link href={link}>
-                <a>
+                <a data-aos="fade-up">
                     {/* <h2>{emoji} {title} &rarr;</h2> */}
                     <div className={styles.header}>
                         {/* <div className={[styles.emoji, styles[emoji]].join(' ')}>{emoji}</div> */}

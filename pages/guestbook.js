@@ -47,9 +47,9 @@ function GuestBook() {
                 )}
                 {!isLoading && (
                     <div className={styles.comments}>
-                        {data && data.map(message => {
+                        {data && data.map((message, i) => {
                             return (
-                                <CommentDiv key={message.id} {...message} />
+                                <CommentDiv key={message.id} animated={i > 4} {...message} />
                             )
                         })}
                     </div>

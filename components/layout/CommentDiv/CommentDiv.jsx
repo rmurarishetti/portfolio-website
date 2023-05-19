@@ -2,8 +2,10 @@ import styles from './CommentDiv.module.scss'
 import Image from 'next/image';
 import { DateDiv } from '../../badges';
 import { useSession } from 'next-auth/react'
+import { useAOS } from '../../../helpers/hooks';
 
-function CommentDiv({ id, email, image, fullName, message, dateTime }) {
+function CommentDiv({ id, email, image, fullName, message, dateTime, animated = true }) {
+    useAOS()
     const { data: session } = useSession()
     const editable = session ? session.user.email == email : false;
 
@@ -26,7 +28,7 @@ function CommentDiv({ id, email, image, fullName, message, dateTime }) {
     const formattedName = toTitleCase(fullName)
 
     return (
-        <div className={[styles.container, editable ? styles.editable : ''].join(' ')}>
+        <div className={[styles.container, editable ? styles.editable : ''].join(' ')} data-aos={animated ? 'fade-up' : null}>
             <div className={styles.icon}>
                 <Image
                     src={image}

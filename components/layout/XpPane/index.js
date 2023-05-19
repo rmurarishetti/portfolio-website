@@ -3,9 +3,10 @@ import styles from './XpPane.module.scss'
 import { IconButton } from "../../buttons";
 import { DateDiv } from "../../badges";
 import { Tag } from "../../badges";
-import { useSpring, animated } from 'react-spring'
+import { useAOS } from "../../../helpers/hooks";
 
 function XpPane({ xpData }) {
+    useAOS()
     const data = xpData.sort((a, b) => b.roles[0].start - a.roles[0].start)
     const [selectedId, setSelectedId] = useState(data[0].id)
     const selectedXp = data.filter(project => project.id == selectedId)[0]
@@ -13,14 +14,15 @@ function XpPane({ xpData }) {
     return (
         <div className={styles.xpPane}>
             <div className={styles.logosContainer}>
-                {data.map((xp) => {
+                {data.map((xp, i) => {
                     return (
                         <IconButton
                             key={xp.id}
                             id={xp.id}
                             iconPath={xp.logo}
                             active={selectedId == xp.id}
-                            handleSelected={setSelectedId} />
+                            handleSelected={setSelectedId}
+                            animationDelay={i * 100} />
                     )
                 })}
             </div>

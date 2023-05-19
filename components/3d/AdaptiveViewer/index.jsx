@@ -4,8 +4,10 @@ import { Html, OrbitControls, Stage, useGLTF } from '@react-three/drei'
 import styles from './AdaptiveViewer.module.scss';
 import { useCorrectedTheme } from "../../../helpers/hooks";
 import { MouseIcon } from '../../icons';
+import { useAOS } from '../../../helpers/hooks';
 
 export default function Viewer({ href, fov = 27, aspectRatio = 2, shadows = true, contactShadow = true, autoRotate = true, rotateSpeed = 0.5, zoom0 = 10, minDistance = 1, maxDistance = 10, lightThemeColor = '#C5AFFF', darkThemeColor = '#7A00FC', lightThemeIntensity = 2, darkThemeIntensity = 0.5 }) {
+  useAOS()
   const [leftClicked, setLeftClicked] = useState(false);
   const [rightClicked, setRightClicked] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -37,6 +39,7 @@ export default function Viewer({ href, fov = 27, aspectRatio = 2, shadows = true
       }
       {mounted &&
         <div
+          data-aos='fade-up'
           className={styles.canvasWrapper}
           onPointerDown={(e) => { e.button === 0 ? setLeftClicked(true) : setRightClicked(true) }}
           onPointerUp={(e) => { e.button === 0 ? setLeftClicked(false) : setRightClicked(false) }}

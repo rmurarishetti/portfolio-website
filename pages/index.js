@@ -13,8 +13,10 @@ import { daysDiff } from '../helpers/math';
 import { GalleryWLightbox } from '../components/layout';
 import { TextTransitionBadge } from '../components/badges';
 import { useScrollPercentage } from 'react-scroll-percentage'
+import { useAOS } from '../helpers/hooks';
 
 export default function Home() {
+  useAOS();
   const [scrolRef, percentage] = useScrollPercentage({
     /* Optional options */
     threshold: 0,
@@ -60,7 +62,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className={styles.grid} ref={scrolRef}>
+      <div className={styles.grid} ref={scrolRef} data-aos="fade-up">
         {pagesData.slice(1, -1).map((pageData) => {
           return (
             <HomeCard
@@ -72,36 +74,36 @@ export default function Home() {
       <div className={styles.winchSceneContainer}>
         <WinchScene scrollPercentage={percentage} />
         <Link href='/projects/lunar-deployer'>
-          <a className={styles.link}>
+          <a className={styles.link} data-aos="fade-right">
             <div className={styles.parent}>Projects / Lunar Rover Deployer</div>
             <div className={styles.arrow}>&rarr;</div>
           </a>
         </Link>
       </div>
-      <div className={styles.block}>
+      <div className={styles.block} data-aos="fade-up">
         <h2>Featured Projects</h2>
         <ThumbnailSwiper projectsData={projectsData.filter(projectData => projectData.featured)} />
         <Link href={pagesData.filter((pageData => pageData.title == 'Projects'))[0].link}>
-          <a className={styles.link}>
+          <a className={styles.link} data-aos="fade-right">
             <div className={styles.parent}>View all projects</div>
             <div className={styles.arrow}>&rarr;</div>
           </a>
         </Link>
       </div>
       {/* <KineticScene /> */}
-      <div className={[styles.block, styles.artBlock].join(' ')}>
+      <div className={[styles.block, styles.artBlock].join(' ')} data-aos="fade-up">
         <h2>Recent Artwork</h2>
         <div className={styles.galleryContainer}>
           <GalleryWLightbox data={artsData.sort(artData => daysDiff(new Date(), artData.date)).slice(0, 8)} />
         </div>
-        <Link href={pagesData.filter((pageData => pageData.title == 'Art'))[0].link}>
-          <a className={styles.link}>
+        <Link href={pagesData.filter((pageData => pageData.title == 'Art'))[0].link} >
+          <a className={styles.link} data-aos="fade-right">
             <div className={styles.parent}>View all artwork</div>
             <div className={styles.arrow}>&rarr;&nbsp;</div>
           </a>
         </Link>
       </div>
-      <div className={styles.guestbookNote}>
+      <div className={styles.guestbookNote} data-aos="fade-down">
         <div className={styles.main}>
           Feel free to leave some feedback or appreciation by signing my&nbsp;
           <Link href='/guestbook'>

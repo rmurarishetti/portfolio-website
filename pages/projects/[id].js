@@ -11,6 +11,7 @@ import styles from '../../styles/Project.module.scss'
 import ReactPlayer from 'react-player'
 import { useCorrectedTheme } from '../../helpers/hooks';
 import { useGLTF } from '@react-three/drei';
+import { useAOS } from '../../helpers/hooks';
 // export const getStaticPaths = async () => {
 //     const res = projectsData
 //     console.log(res)
@@ -41,6 +42,7 @@ export const getStaticProps = async (context) => {
 }
 
 function ProjectPage({ project }) {
+    useAOS()
     const theme = useCorrectedTheme();
     const formattedType = project.type.toLowerCase().replace(/[^a-zA-Z0-9 ]/g, '')
     const typeCssVar = `var(--color-${formattedType})`
@@ -72,7 +74,7 @@ function ProjectPage({ project }) {
                 <div className={styles.seperator}>/</div>
                 <div className={styles.name}>{project.name}</div>
             </div>
-            <div className={styles.thumbnail}>
+            <div className={styles.thumbnail} data-aos='fade-up'>
                 {project.link.href && <div className={styles.link}>
                     <URLButton name={project.link.name} href={project.link.href} />
                 </div>}
@@ -83,7 +85,7 @@ function ProjectPage({ project }) {
                     layout='fill' />
                 <div className={styles.bgAccent} style={thumbnailBgAccentStyle}></div>
             </div>
-            <div className={styles.text}>
+            <div className={styles.text} data-aos='fade-up'>
                 <div className={styles.header}>
                     <DateDiv
                         start={new Date(project.start)}
@@ -106,18 +108,18 @@ function ProjectPage({ project }) {
                 {project.description[0] && <div className={styles.description}>
                     {project.description.map((paragraph, i) => {
                         return (
-                            <p key={i}>{paragraph}</p>
+                            <p key={i} data-aos='fade-up'>{paragraph}</p>
                         )
                     })}
                 </div>}
             </div>
             {project.model && <AdaptiveViewer {...project.model} />}
-            {images[0] && <div className={styles.galleryContainer}>
+            {images[0] && <div className={styles.galleryContainer} data-aos='fade-up'>
                 <GalleryWLightbox data={images} showDetails={false} />
             </div>}
             {videos[0] &&
                 <div
-                    className={styles.videosContainer}>
+                    className={styles.videosContainer} data-aos='fade-up'>
                     {videos.map((obj, i) => {
                         const aspectRatio = obj.video.aspectRatio ? obj.video.aspectRatio : 16 / 9
                         return (
@@ -128,26 +130,27 @@ function ProjectPage({ project }) {
                     })}
                 </div>}
             {project.documents[0] &&
-                <div className={styles.documentsContainer}>
+                <div className={styles.documentsContainer} data-aos='fade-up'>
                     <div className={styles.header}>Documents</div>
                     <DocGalleryWLightbox docsData={project.documents} />
                 </div>}
-            {project.people[0] && <div className={styles.peopleContainer}>
-                <div className={styles.header}>Contributors</div>
-                <div className={styles.people}>
-                    {project.people.map((person, i) => {
-                        return (
-                            <PersonButton
-                                key={i}
-                                name={person.name}
-                                link={person.linkedin}
-                                gender={person.gender} />
-                        )
-                    })}
-                </div>
-            </div>}
+            {project.people[0] &&
+                <div className={styles.peopleContainer} data-aos='fade-up'>
+                    <div className={styles.header}>Contributors</div>
+                    <div className={styles.people}>
+                        {project.people.map((person, i) => {
+                            return (
+                                <PersonButton
+                                    key={i}
+                                    name={person.name}
+                                    link={person.linkedin}
+                                    gender={person.gender} />
+                            )
+                        })}
+                    </div>
+                </div>}
 
-            <div className={styles.otherProjects}>
+            <div className={styles.otherProjects} data-aos='fade-down'>
                 {relatedProjects[0] && <>
                     <div className={styles.header}>
                         <div className={styles.word}>Other</div>
@@ -168,7 +171,7 @@ function ProjectPage({ project }) {
                 </>}
             </div>
             <Link href={'/projects'}>
-                <a className={styles.prevLink}>
+                <a className={styles.prevLink} data-aos='fade-left'>
                     <div className={styles.arrow}>&larr;&nbsp;</div>
                     <div className={styles.parent}>Back to all projects</div>
                 </a>

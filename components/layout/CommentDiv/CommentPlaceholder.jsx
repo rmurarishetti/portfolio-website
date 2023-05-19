@@ -1,8 +1,10 @@
 import styles from './CommentDiv.module.scss';
+import { useAOS } from '../../../helpers/hooks';
 
 function CommentPlaceholder() {
+    useAOS()
     return (
-        <div className={styles.container}>
+        <div className={styles.container} data-aos='fade-up'>
             <div className={styles.icon}>
                 <div className={styles.imagePlaceholder}>
                 </div>

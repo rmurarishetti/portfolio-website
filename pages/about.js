@@ -8,8 +8,10 @@ import { XpPane } from '../components/layout';
 import { citiesData } from "../data/citiesData";
 import { xpData } from '../data/xpData';
 import { eduData } from '../data/eduData';
+import { useAOS } from '../helpers/hooks';
 
 function About() {
+    useAOS();
     return (
         <>
             <Head>
@@ -32,7 +34,7 @@ function About() {
                         <div className={styles.text}>About Me</div>
                     </div>
                 </div>
-                <div className={styles.about}>
+                <div className={styles.about} data-aos="fade-up">
                     <div className={styles.globe}>
                         <GlobeScene
                             homeCities={citiesData.filter(city => city.type == 'home')}
@@ -56,17 +58,14 @@ function About() {
                         &nbsp;knee arthroplasty implants using modern and novel computational methods. My dream is to work on impactful solutions that combine engineering, design, and computing.
                     </div>
                     <div className={styles.text}>
-                        Outside work, I also enjoy drawing, playing <HoverBadge hoverText={'🏃‍♂️ 🚴‍♂️ 🎾 🏸 🏓 🏏'}> sports</HoverBadge> and <HoverBadge hoverText={'Bucket List: 🇯🇵, 🇧🇴, 🇵🇪, 🇪🇸'}>travelling</HoverBadge>. I&apos;m lucky to have grown up in Oman, Libya, Brunei, Qatar and the UK, all of which I consider home. Enjoy exploring the globe to find the cities I&apos;ve lived in and the ones I&apos;ve visited.
+                        Outside work, I enjoy drawing, playing <HoverBadge hoverText={'🏃‍♂️ 🚴‍♂️ 🎾 🏸 🏓 🏏'}> sports</HoverBadge> and <HoverBadge hoverText={'Bucket List: 🇯🇵, 🇧🇴, 🇵🇪, 🇪🇸'}>travelling</HoverBadge>. I&apos;m lucky to have grown up in Oman, Libya, Brunei, Qatar and the UK, all of which I consider home. Enjoy exploring the globe to find the cities I&apos;ve lived in and the ones I&apos;ve visited.
                     </div>
                 </div>
-                {/* <div className={styles.note}>
-                    Feel free leave any feedback or appreciation by signing my <Link href='/guestbook'>Guestbook</Link>!
-                </div> */}
-                <div className={styles.block}>
+                <div className={styles.block} data-aos="fade-up">
                     <h2>Experience</h2>
                     <XpPane xpData={xpData} />
                 </div>
-                <div className={styles.block}>
+                <div className={styles.block} data-aos="fade-up">
                     <h2>Education</h2>
                     <XpPane xpData={eduData} />
                 </div>
