@@ -1,5 +1,6 @@
 import { coordinates2cartesian } from "./coordinates2cartesian";
-import { cubicBezierCurve } from "./cubicBezierCurve";
+import { cubicBezierCurve, cubicBezierAtTime } from "./cubicBezierCurve";
 import { daysDiff } from "./dateDiff";
+import { distanceBetween } from "./trig";
 
-export { coordinates2cartesian, cubicBezierCurve, daysDiff };
+export { coordinates2cartesian, cubicBezierCurve, daysDiff, cubicBezierAtTime, distanceBetween };

@@ -13,7 +13,7 @@ export function cubicBezierCurve(coord1, coord2, radius) {
     const p4 = coordinates2cartesian(radius, coord2);
 
     // altitudes
-    const maxAltitude = radius / 2.1;
+    const maxAltitude = radius / 3;
     const minAltitude = radius / 10;
     const altitude = clamp(distanceBetween(p1, p4) * .75, minAltitude, maxAltitude);
 

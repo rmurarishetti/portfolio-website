@@ -30,7 +30,7 @@ function GlobeScene({ homeCities, visitedCities }) {
 
     return (
         <Suspense fallback={null}>
-            <Canvas className={styles.scene}>
+            <Canvas className={styles.scene} shadows>
                 <Fragment>
                     <a.ambientLight {...ambient} position={[3, 3, 3]} />
                     <a.directionalLight {...directional} lookAt={[0, 0, 0]} />

@@ -36,7 +36,7 @@ function About() {
                             rel="noreferrer">
                             Imperial College London
                         </a>
-                        &nbsp;, specialising in Mechatronics and Aircraft Engine Technology. Currently, I&apos;m working on my Master&apos;s project on locating optimal peg-fixation positions for&nbsp;
+                        , specialising in Mechatronics and Aircraft Engine Technology. Currently, I&apos;m working on my Master&apos;s project on locating optimal peg-fixation positions for&nbsp;
                         <a
                             href="https://www.osstec.uk"
                             target="_blank"
@@ -52,11 +52,11 @@ function About() {
                 {/* <div className={styles.note}>
                     Feel free leave any feedback or appreciation by signing my <Link href='/guestbook'>Guestbook</Link>!
                 </div> */}
-                <div className={styles.xp}>
+                <div className={styles.block}>
                     <h2>Experience</h2>
                     <XpPane xpData={xpData} />
                 </div>
-                <div className={styles.edu}>
+                <div className={styles.block}>
                     <h2>Education</h2>
                     <XpPane xpData={eduData} />
                 </div>

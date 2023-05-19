@@ -5,7 +5,7 @@ import styles from './AdaptiveViewer.module.scss';
 import { useCorrectedTheme } from "../../../helpers/hooks";
 import { MouseIcon } from '../../icons';
 
-export default function Viewer({ href, fov = 27, aspectRatio = 2, shadows = true, contactShadow = true, autoRotate = true }) {
+export default function Viewer({ href, fov = 27, aspectRatio = 2, shadows = true, contactShadow = true, autoRotate = true, rotateSpeed = 0.5, zoom0 = 10, minDistance = 1, maxDistance = 10, lightThemeColor = '#C5AFFF', darkThemeColor = '#7A00FC', lightThemeIntensity = 2, darkThemeIntensity = 0.5 }) {
   const [leftClicked, setLeftClicked] = useState(false);
   const [rightClicked, setRightClicked] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -69,8 +69,8 @@ export default function Viewer({ href, fov = 27, aspectRatio = 2, shadows = true
               castShadow
               receiveShadow
               position={[0, 50, 20]}
-              color={theme == 'light' ? "#C5AFFF" : "#7A00FC"}
-              intensity={theme == 'light' ? 2 : 0.5} />
+              color={theme == 'light' ? lightThemeColor : darkThemeColor}
+              intensity={theme == 'light' ? lightThemeIntensity : darkThemeIntensity} />
             <Suspense fallback={null}>
               <Stage
                 controls={ref}
@@ -83,7 +83,7 @@ export default function Viewer({ href, fov = 27, aspectRatio = 2, shadows = true
                 <primitive object={scene} />
               </Stage>
             </Suspense>
-            <OrbitControls ref={ref} autoRotate={autoRotate} maxDistance={10} minDistance={1} enablePan autoRotateSpeed={0.5} onWheel={() => { setScrolled(true) }} />
+            <OrbitControls zoom0={zoom0} ref={ref} autoRotate={autoRotate} maxDistance={maxDistance} minDistance={minDistance} enablePan autoRotateSpeed={rotateSpeed} onWheel={() => { setScrolled(true) }} />
           </Canvas>
           <div className={[styles.controlsInfo].join(' ')}>
             <div className={[styles.controlsInfoItem, leftClicked ? styles.active : ''].join(' ')}>

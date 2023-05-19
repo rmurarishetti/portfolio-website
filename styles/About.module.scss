@@ -77,6 +77,14 @@
         font-size: 0.9rem;
         text-align: center;
     }
+
+    .block {
+        h2 {
+            font-size: 1.5rem;
+            color: var(--color-text-secondary);
+            margin-bottom: 1rem;
+        }
+    }
 }
 
 @media (max-width: 750px) {
