@@ -71,7 +71,7 @@ export default function Home() {
           )
         })}
       </div>
-      <div className={styles.winchSceneContainer}>
+      <div className={styles.winchSceneContainer} data-aos="fade-up">
         <WinchScene scrollPercentage={percentage} />
         <Link href='/projects/lunar-deployer'>
           <a className={styles.link}>
