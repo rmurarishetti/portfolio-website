@@ -26,7 +26,7 @@ function Graphics() {
             <div className={styles.graphicsPage}>
                 <div className={styles.header}>
                     <div className={styles.title}>
-                        <div className={styles.emoji}>🖼️</div>
+                        {/* <div className={styles.emoji}>🖼️</div> */}
                         <div className={styles.text}>Graphics</div>
                     </div>
                     <p>A gallery of the logos and posters I&apos;ve designed.</p>

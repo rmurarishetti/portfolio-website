@@ -1,5 +1,7 @@
 import Head from 'next/head';
 import styles from '../styles/About.module.scss';
+import Image from 'next/image';
+import aboutPic from '../public/images/profile/about.jpeg';
 import { GlobeScene } from '../components/3d';
 import { HoverBadge } from '../components/badges';
 import { XpPane } from '../components/layout';
@@ -18,7 +20,15 @@ function About() {
             <div className={styles.aboutPage}>
                 <div className={styles.header}>
                     <div className={styles.title}>
-                        <div className={styles.emoji}>👋</div>
+                        {/* <div className={styles.emoji}>👋</div> */}
+                        <div className={styles.profile}>
+                            <Image
+                                src={aboutPic}
+                                alt="Picture of Rohit Nag"
+                                placeholder='blur'
+                                objectFit='cover'
+                                layout='fill' />
+                        </div>
                         <div className={styles.text}>About Me</div>
                     </div>
                 </div>
@@ -29,7 +39,7 @@ function About() {
                             visitedCities={citiesData.filter(city => city.type == 'visited')} />
                     </div>
                     <div className={styles.text}>
-                        I&apos;m a Master&apos;s Mechanical Engineering student at&nbsp;
+                        Hi there! A brief introduction: I&apos;m a Master&apos;s Mechanical Engineering student at&nbsp;
                         <a
                             href="https://www.imperial.ac.uk"
                             target="_blank"

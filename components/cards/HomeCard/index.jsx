@@ -21,7 +21,7 @@ function HomeCard({ link, title, emoji, description }) {
                 <a>
                     {/* <h2>{emoji} {title} &rarr;</h2> */}
                     <div className={styles.header}>
-                        <div className={[styles.emoji, styles[emoji]].join(' ')}>{emoji}</div>
+                        {/* <div className={[styles.emoji, styles[emoji]].join(' ')}>{emoji}</div> */}
                         <div className={styles.title}>{title}</div>
                         <div className={styles.arrow}>&rarr;</div>
                     </div>

@@ -14,12 +14,25 @@
 
         .title {
             display: flex;
-            gap: 1rem;
+            gap: 2rem;
             cursor: default;
+            // justify-content: space-between;
+            // flex-direction: column;
+            align-items: center;
+            width: 100%;
 
             .emoji {
                 transform-origin: 100% 100%;
                 animation: var(--animation-swing);
+            }
+
+            .profile {
+                position: relative;
+                width: 6rem;
+                height: 6rem;
+                aspect-ratio: 1;
+                border-radius: 100%;
+                overflow: hidden;
             }
 
             >div {
@@ -41,7 +54,7 @@
         position: relative;
         display: flex;
         flex-direction: column;
-        padding: 1rem;
+        // padding: 1rem;
         // background-color: var(--color-glass);
         // border-radius: 1rem;
         // border: var(--border-primary);
@@ -110,6 +123,18 @@
 
 @media (max-width: 600px) {
     .aboutPage {
+        .header {
+            .title {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+
+                >div {
+                    font-size: 2.5rem;
+                }
+            }
+        }
+
         .about {
             margin-bottom: -30%;
 

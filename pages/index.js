@@ -47,7 +47,7 @@ export default function Home() {
             <TextTransitionBadge
               textArray={["UI / UX", "graphic", "product"]}
               speed={2000} />
-            &nbsp;designer on the side 😁.
+            &nbsp;designer on the side.
           </div>
         </div>
         <div className={styles.profile}>
