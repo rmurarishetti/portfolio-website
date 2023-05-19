@@ -1,8 +1,10 @@
 import Image from 'next/image';
 import styles from './ArtCard.module.scss'
 import { Tag, DateDiv } from '../../badges';
+import { useAOS } from '../../../helpers/hooks';
 
 function ArtCard({ index, title, date, image, hidden, setIndex = null, setLightbox = null, showDetails = true, mediums = null, technologies = null }) {
+    useAOS()
 
     const handleClick = () => {
         if (setIndex) { setIndex(index) }
@@ -12,7 +14,7 @@ function ArtCard({ index, title, date, image, hidden, setIndex = null, setLightb
     const tags = mediums ? mediums : technologies
 
     return (
-        <a className={[styles.artCard, hidden ? styles.hidden : ''].join(' ')}>
+        <a className={[styles.artCard, hidden ? styles.hidden : ''].join(' ')} data-aos='fade-up'>
             <div
                 className={styles.image}
                 onClick={handleClick}>

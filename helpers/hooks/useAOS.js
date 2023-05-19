@@ -5,7 +5,8 @@ import 'aos/dist/aos.css'; // You can also use <link> in _document.js
 const useAOS = () => {
     useEffect(() => {
         AOS.init({
-            duration: 2000
+            duration: 2000,
+            easing: 'ease-in-out',
         });
     }, []);
 };

@@ -171,7 +171,7 @@ function ProjectPage({ project }) {
                 </>}
             </div>
             <Link href={'/projects'}>
-                <a className={styles.prevLink} data-aos='fade-left'>
+                <a className={styles.prevLink} data-aos='fade-left' data-aos-delay='1000'>
                     <div className={styles.arrow}>&larr;&nbsp;</div>
                     <div className={styles.parent}>Back to all projects</div>
                 </a>

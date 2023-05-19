@@ -117,6 +117,8 @@ html {
 
       .container {
         padding: 0 2rem;
+        overflow-y: hidden;
+        overflow-x: hidden;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;

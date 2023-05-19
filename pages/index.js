@@ -74,7 +74,7 @@ export default function Home() {
       <div className={styles.winchSceneContainer}>
         <WinchScene scrollPercentage={percentage} />
         <Link href='/projects/lunar-deployer'>
-          <a className={styles.link} data-aos="fade-right">
+          <a className={styles.link}>
             <div className={styles.parent}>Projects / Lunar Rover Deployer</div>
             <div className={styles.arrow}>&rarr;</div>
           </a>
@@ -84,7 +84,7 @@ export default function Home() {
         <h2>Featured Projects</h2>
         <ThumbnailSwiper projectsData={projectsData.filter(projectData => projectData.featured)} />
         <Link href={pagesData.filter((pageData => pageData.title == 'Projects'))[0].link}>
-          <a className={styles.link} data-aos="fade-right">
+          <a className={styles.link}>
             <div className={styles.parent}>View all projects</div>
             <div className={styles.arrow}>&rarr;</div>
           </a>
@@ -97,13 +97,13 @@ export default function Home() {
           <GalleryWLightbox data={artsData.sort(artData => daysDiff(new Date(), artData.date)).slice(0, 8)} />
         </div>
         <Link href={pagesData.filter((pageData => pageData.title == 'Art'))[0].link} >
-          <a className={styles.link} data-aos="fade-right">
+          <a className={styles.link}>
             <div className={styles.parent}>View all artwork</div>
             <div className={styles.arrow}>&rarr;&nbsp;</div>
           </a>
         </Link>
       </div>
-      <div className={styles.guestbookNote} data-aos="fade-down">
+      <div className={styles.guestbookNote} data-aos="fade-up">
         <div className={styles.main}>
           Feel free to leave some feedback or appreciation by signing my&nbsp;
           <Link href='/guestbook'>
