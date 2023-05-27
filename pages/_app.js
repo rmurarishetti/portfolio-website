@@ -40,7 +40,6 @@ function MyApp({ Component, pageProps }) {
           showOnShallow
           transformCSS={(css) => {
             css += customProgressBarCss
-            console.log(css)
             return <style>{css}</style>;
           }}
         />

@@ -138,6 +138,23 @@ html {
           width: 100%;
           max-width: 800px;
 
+          [data-aos="fade-up"] {
+            opacity: 0;
+            transition-property: transform, opacity;
+
+            &.aos-animate {
+              opacity: 1;
+            }
+
+            @media screen and (min-width: 768px) {
+              transform: translateY(30px);
+
+              &.aos-animate {
+                transform: translateX(0);
+              }
+            }
+          }
+
           .swiper {
             width: 100%;
             max-width: 100%;

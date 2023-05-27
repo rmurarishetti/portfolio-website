@@ -1,10 +1,11 @@
-export const citiesData = [
+export const travelData = [
     {
         city: "Geneva",
         country: '🇨🇭',
         coordinates: [46.2044, 6.1432],
         start: new Date(2022, 8),
         type: 'visited',
+        travelledFrom: 'Lausanne',
     },
     {
         city: "Lausanne",
@@ -12,6 +13,7 @@ export const citiesData = [
         coordinates: [46.5197, 6.6323],
         start: new Date(2022, 8),
         type: 'visited',
+        travelledFrom: 'Lucerne',
     },
     {
         city: "Lucerne",
@@ -19,6 +21,7 @@ export const citiesData = [
         coordinates: [47.0502, 8.3093],
         start: new Date(2022, 8),
         type: 'visited',
+        travelledFrom: 'Zurich',
     },
     {
         city: "Zurich",
@@ -26,6 +29,7 @@ export const citiesData = [
         coordinates: [47.3769, 8.5417],
         start: new Date(2022, 8),
         type: 'visited',
+        travelledFrom: 'Bern',
     },
     {
         city: "Bern",
@@ -33,6 +37,7 @@ export const citiesData = [
         coordinates: [46.9480, 7.4474],
         start: new Date(2022, 8),
         type: 'visited',
+        travelledFrom: 'Interlaken',
     },
     {
         city: "Interlaken",
@@ -40,6 +45,7 @@ export const citiesData = [
         coordinates: [46.6863, 7.8632],
         start: new Date(2022, 8),
         type: 'visited',
+        travelledFrom: 'Sulz',
     },
     {
         city: "Sulz",
@@ -47,6 +53,7 @@ export const citiesData = [
         coordinates: [48.3537, 8.6344],
         start: new Date(2022, 8),
         type: 'visited',
+        travelledFrom: 'Basel',
     },
     {
         city: "Basel",
@@ -54,6 +61,7 @@ export const citiesData = [
         coordinates: [47.5596, 7.5886],
         start: new Date(2022, 8),
         type: 'visited',
+        travelledFrom: 'London',
     },
     {
         city: "Belgrade",
@@ -61,6 +69,7 @@ export const citiesData = [
         coordinates: [44.8131, 20.46326],
         start: new Date(2022, 5),
         type: 'visited',
+        travelledFrom: 'London',
     },
     {
         city: "Edinburgh",
@@ -68,6 +77,7 @@ export const citiesData = [
         coordinates: [55.95415, -3.20277],
         start: new Date(2022, 4),
         type: 'visited',
+        travelledFrom: 'Newcastle',
     },
     {
         city: "Newcastle",
@@ -75,6 +85,8 @@ export const citiesData = [
         coordinates: [54.97794, -1.61162],
         start: new Date(2022, 3),
         type: 'visited',
+        travelledFrom: 'Sheffield',
+
     },
     {
         city: "Sheffield",
@@ -82,6 +94,7 @@ export const citiesData = [
         coordinates: [53.38311, -1.46454],
         start: new Date(2022, 3),
         type: 'visited',
+        travelledFrom: 'Bristol',
     },
     {
         city: "Oxford",
@@ -89,6 +102,7 @@ export const citiesData = [
         coordinates: [51.75629, -1.25951],
         start: new Date(2022, 1),
         type: 'visited',
+        travelledFrom: 'Bristol',
     },
     {
         city: "Bristol",
@@ -105,6 +119,7 @@ export const citiesData = [
         coordinates: [53.79448, -1.54664],
         start: new Date(2020, 8),
         type: 'visited',
+        travelledFrom: 'London',
     },
     {
         city: "Manchester",
@@ -112,6 +127,7 @@ export const citiesData = [
         coordinates: [53.47959, -2.24874],
         start: new Date(2020, 8),
         type: 'visited',
+        travelledFrom: 'London',
     },
     {
         city: "Brighton",
@@ -119,6 +135,7 @@ export const citiesData = [
         coordinates: [50.82887, -0.13414],
         start: new Date(2019, 0),
         type: 'visited',
+        travelledFrom: 'London',
     },
     {
         city: "Kathmandu",
@@ -126,6 +143,7 @@ export const citiesData = [
         coordinates: [27.700769, 85.300140],
         start: new Date(2019, 6),
         type: 'visited',
+        travelledFrom: 'Kolkata',
     },
     {
         city: "Pokhara",
@@ -133,6 +151,7 @@ export const citiesData = [
         coordinates: [28.21223, 83.98734],
         start: new Date(2019, 6),
         type: 'visited',
+        travelledFrom: 'Kathmandu',
     },
     {
         city: "Mustang",
@@ -140,6 +159,7 @@ export const citiesData = [
         coordinates: [28.981314, 83.85787],
         start: new Date(2019, 6),
         type: 'visited',
+        travelledFrom: 'Pokhara',
     },
     {
         city: "London",
@@ -156,6 +176,7 @@ export const citiesData = [
         coordinates: [7.2930923, 80.63508],
         start: new Date(2016, 8),
         type: 'visited',
+        travelledFrom: 'Colombo',
     },
     {
         city: "Colombo",
@@ -163,6 +184,7 @@ export const citiesData = [
         coordinates: [6.938747, 79.85411],
         start: new Date(2016, 6),
         type: 'visited',
+        travelledFrom: 'Doha',
     },
     {
         city: "Shillong",
@@ -170,6 +192,7 @@ export const citiesData = [
         coordinates: [25.57308, 91.88782],
         start: new Date(2015, 6),
         type: 'visited',
+        travelledFrom: 'Guwahati',
     },
     {
         city: "Guwahati",
@@ -177,6 +200,7 @@ export const citiesData = [
         coordinates: [26.1158, 91.7086],
         start: new Date(2015, 6),
         type: 'visited',
+        travelledFrom: 'Kolkata',
     },
     {
         city: "Bokaro",
@@ -184,6 +208,7 @@ export const citiesData = [
         coordinates: [23.6892, 86.11],
         start: new Date(2015, 6),
         type: 'visited',
+        travelledFrom: 'Kolkata',
     },
     {
         city: "Munich",
@@ -191,6 +216,7 @@ export const citiesData = [
         coordinates: [48.13641, 11.57754],
         start: new Date(2014, 10),
         type: 'visited',
+        travelledFrom: 'Doha',
     },
     {
         city: "Doha",
@@ -207,6 +233,7 @@ export const citiesData = [
         coordinates: [26.9124, 75.7873],
         start: new Date(2013, 3),
         type: 'visited',
+        travelledFrom: 'Udaipur',
     },
     {
         city: "Udaipur",
@@ -214,6 +241,7 @@ export const citiesData = [
         coordinates: [24.5854, 73.7125],
         start: new Date(2013, 3),
         type: 'visited',
+        travelledFrom: 'Ahmedabad',
     },
     {
         city: "Kuala Lumpur",
@@ -221,6 +249,7 @@ export const citiesData = [
         coordinates: [3.14777, 101.69403],
         start: new Date(2012, 8),
         type: 'visited',
+        travelledFrom: 'Panaga',
     },
     {
         city: "12 Apostles",
@@ -228,6 +257,7 @@ export const citiesData = [
         coordinates: [-38.6621, 143.1051],
         start: new Date(2012, 3),
         type: 'visited',
+        travelledFrom: 'Melbourne',
     },
     {
         city: "Melbourne",
@@ -235,6 +265,7 @@ export const citiesData = [
         coordinates: [-37.81753, 144.96715],
         start: new Date(2012, 3),
         type: 'visited',
+        travelledFrom: 'Sydney',
     },
     {
         city: "Sydney",
@@ -242,6 +273,7 @@ export const citiesData = [
         coordinates: [-33.8696, 151.20695],
         start: new Date(2012, 3),
         type: 'visited',
+        travelledFrom: 'Panaga',
     },
     {
         city: "Milford Sound",
@@ -249,6 +281,7 @@ export const citiesData = [
         coordinates: [-44.608505, 167.84767],
         start: new Date(2012, 3),
         type: 'visited',
+        travelledFrom: 'Queenstown',
     },
     {
         city: "Queenstown",
@@ -256,6 +289,7 @@ export const citiesData = [
         coordinates: [-45.0327, 168.658],
         start: new Date(2012, 3),
         type: 'visited',
+        travelledFrom: 'Sydney',
     },
     {
         city: "Ahmedabad",
@@ -263,6 +297,7 @@ export const citiesData = [
         coordinates: [23.0225, 72.5714],
         start: new Date(2011, 7),
         type: 'visited',
+        travelledFrom: 'Kolkata',
     },
     {
         city: "Daman and Diu",
@@ -270,6 +305,7 @@ export const citiesData = [
         coordinates: [20.3974, 72.8328],
         start: new Date(2011, 7),
         type: 'visited',
+        travelledFrom: 'Ahmedabad',
     },
     {
         city: "Kuching",
@@ -277,6 +313,7 @@ export const citiesData = [
         coordinates: [1.549073, 110.34417],
         start: new Date(2011, 6),
         type: 'visited',
+        travelledFrom: 'Panaga',
     },
     {
         city: "Langkawi",
@@ -284,6 +321,7 @@ export const citiesData = [
         coordinates: [6.373586, 99.78261],
         start: new Date(2010, 6),
         type: 'visited',
+        travelledFrom: 'Malacca',
     },
     {
         city: "Malacca",
@@ -291,6 +329,7 @@ export const citiesData = [
         coordinates: [2.1896, 102.2501],
         start: new Date(2010, 6),
         type: 'visited',
+        travelledFrom: 'Kuala Lumpur',
     },
     {
         city: "Singapore",
@@ -298,6 +337,7 @@ export const citiesData = [
         coordinates: [1.29016, 103.852],
         start: new Date(2009, 5),
         type: 'visited',
+        travelledFrom: 'Panaga',
     },
     {
         city: "Paris",
@@ -305,6 +345,7 @@ export const citiesData = [
         coordinates: [48.863186, 2.339754],
         start: new Date(2010, 4),
         type: 'visited',
+        travelledFrom: 'Brussels',
     },
     {
         city: "Brussels",
@@ -312,20 +353,7 @@ export const citiesData = [
         coordinates: [50.836117, 4.370607],
         start: new Date(2010, 4),
         type: 'visited',
-    },
-    {
-        city: "Amsterdam",
-        country: '🇳🇱',
-        coordinates: [52.353218, 5.0027695],
-        start: new Date(2010, 4),
-        type: 'visited',
-    },
-    {
-        city: "Den Haag",
-        country: '🇳🇱',
-        coordinates: [52.0657, 4.31255],
-        start: new Date(2010, 4),
-        type: 'visited',
+        travelledFrom: 'Cologne',
     },
     {
         city: "Cologne",
@@ -333,6 +361,23 @@ export const citiesData = [
         coordinates: [50.9324, 6.953008],
         start: new Date(2010, 4),
         type: 'visited',
+        travelledFrom: 'Amsterdam',
+    },
+    {
+        city: "Amsterdam",
+        country: '🇳🇱',
+        coordinates: [52.353218, 5.0027695],
+        start: new Date(2010, 4),
+        type: 'visited',
+        travelledFrom: 'Den Haag',
+    },
+    {
+        city: "Den Haag",
+        country: '🇳🇱',
+        coordinates: [52.0657, 4.31255],
+        start: new Date(2010, 4),
+        type: 'visited',
+        travelledFrom: 'Panaga',
     },
     {
         city: "Xi'an",
@@ -340,6 +385,7 @@ export const citiesData = [
         coordinates: [34.2658, 108.9541],
         start: new Date(2010, 3),
         type: 'visited',
+        travelledFrom: 'Shanghai',
     },
     {
         city: "Shanghai",
@@ -347,6 +393,7 @@ export const citiesData = [
         coordinates: [31.230707, 121.472916],
         start: new Date(2010, 3),
         type: 'visited',
+        travelledFrom: 'Beijing',
     },
     {
         city: "Beijing",
@@ -354,6 +401,7 @@ export const citiesData = [
         coordinates: [39.904667, 116.408195],
         start: new Date(2010, 3),
         type: 'visited',
+        travelledFrom: 'Panaga',
     },
     {
         city: "Kota Kinabalu",
@@ -361,6 +409,7 @@ export const citiesData = [
         coordinates: [5.9804, 116.0735],
         start: new Date(2009, 4),
         type: 'visited',
+        travelledFrom: 'Panaga',
     },
     {
         city: "Bintulu",
@@ -368,6 +417,7 @@ export const citiesData = [
         coordinates: [3.1713, 113.0419],
         start: new Date(2009, 3),
         type: 'visited',
+        travelledFrom: 'Panaga',
     },
     {
         city: "Temburong",
@@ -375,6 +425,7 @@ export const citiesData = [
         coordinates: [4.6204, 115.1415],
         start: new Date(2008, 3),
         type: 'visited',
+        travelledFrom: 'Panaga',
     },
     {
         city: "Miri",
@@ -382,6 +433,7 @@ export const citiesData = [
         coordinates: [4.3995, 113.9914],
         start: new Date(2008, 1),
         type: 'visited',
+        travelledFrom: 'Panaga',
     },
     {
         city: "Panaga",
@@ -398,6 +450,7 @@ export const citiesData = [
         coordinates: [32.7811, 12.4495],
         start: new Date(2006, 6),
         type: 'visited',
+        travelledFrom: 'Tripoli',
     },
     {
         city: "Letis Magna",
@@ -405,6 +458,7 @@ export const citiesData = [
         coordinates: [32.6343, 14.2948],
         start: new Date(2006, 3),
         type: 'visited',
+        travelledFrom: 'Tripoli',
     },
     {
         city: "Tripoli",
@@ -421,6 +475,7 @@ export const citiesData = [
         coordinates: [28.643206, 77.11578],
         start: new Date(2004, 6),
         type: 'visited',
+        travelledFrom: 'Mumbai',
     },
     {
         city: "Dubai",
@@ -428,6 +483,7 @@ export const citiesData = [
         coordinates: [25.20498, 55.271057],
         start: new Date(2003, 1),
         type: 'visited',
+        travelledFrom: 'Muscat',
     },
     {
         city: "Niswa",
@@ -435,6 +491,7 @@ export const citiesData = [
         coordinates: [22.9171, 57.5363],
         start: new Date(2002, 8),
         type: 'visited',
+        travelledFrom: 'Muscat',
     },
     {
         city: "Muscat",

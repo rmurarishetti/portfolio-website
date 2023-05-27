@@ -6,8 +6,10 @@ import { useRouter } from 'next/router';
 import { useCountDown } from '../helpers/hooks';
 import { TimerCard } from '../components/cards';
 import { MemoryGame } from '../components/games';
+import { useAOS } from '../helpers/hooks';
 
 function NotFound() {
+    useAOS()
     const router = useRouter();
     const timeOut = 5;
     const [counter, start, pause, reset] = useCountDown(timeOut, 1000);
@@ -53,7 +55,7 @@ function NotFound() {
 
                     <p className={styles.gamePrompt}>Or... try out a memory game below <br /> Flip and match pairs of cards.</p>
                 </div>
-                <div className={styles.game} onClick={handleHardPause}>
+                <div className={styles.game} onClick={handleHardPause} data-aos='fade-up'>
                     <MemoryGame setPaused={setPaused} />
                 </div>
             </div>

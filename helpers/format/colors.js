@@ -10,7 +10,10 @@ export const colors = {
         glass: 'rgba(0, 0, 0, 0.05)',
         shadow: 'rgba(255, 255, 255, 0.15)',
         globeGlow: '#430072',
-        flightArc: '#6322FB',
+        flightArc: {
+            'home': '#6322FB',
+            'visited': '#7A7A7A'
+        },
         city3d: {
             'home': { default: '#4c00ff', active: '#F200FF' },
             'visited': { default: '#FFFFFF', active: '#EA61FF' }
@@ -27,7 +30,10 @@ export const colors = {
         glass: 'rgba(0, 0, 0, 0.01)',
         shadow: 'rgba(0, 0, 0, 0.15)',
         globeGlow: '#9e8bff',
-        flightArc: '#622DDE',
+        flightArc: {
+            'home': '#7F54E2',
+            'visited': '#391278'
+        },
         city3d: {
             'home': { default: '#622DDE', active: '#1900FF' },
             'visited': { default: '#42277D', active: '#0059FF' }

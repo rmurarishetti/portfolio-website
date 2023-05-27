@@ -6,6 +6,7 @@ import { GlowSphere } from './GlowSphere';
 import { CityPoint } from './CityPoint';
 import { FlightArc } from './FlightArc';
 import { CloudSphere } from './CloudSphere';
+import { travelData } from '../../../../data/travelData';
 
 const makeUrl = (file) => `./textures/${file}.jpg`;
 
@@ -27,6 +28,11 @@ export function Globe({ position, theme, radius, homeCities, visitedCities }) {
 
     const [hovered, setHover] = useState(false);
     const [active, setActive] = useState(false);
+
+    const findCity = useCallback((cityName) => {
+        const city = travelData.find((city) => city.city === cityName);
+        return city;
+    }, []);
 
     useCursor(hovered, 'grab', 'auto');
     useCursor(active, 'grabbing', 'auto');
@@ -59,6 +65,20 @@ export function Globe({ position, theme, radius, homeCities, visitedCities }) {
             />
         ));
     }, [homeCities, radius, theme]);
+
+    const VisitedCityFlightArcs = useMemo(() => {
+        if (!visitedCities) return [];
+        return visitedCities.map((city) => (
+            <FlightArc
+                key={city.city}
+                globeRadius={radius}
+                city1={city}
+                city2={findCity(city.travelledFrom)}
+                theme={theme}
+                type="visited"
+            />
+        ));
+    }, [visitedCities, radius, theme, findCity]);
 
     const handlePointer = useCallback((enter, leave) => {
         setHover(enter);
@@ -100,6 +120,7 @@ export function Globe({ position, theme, radius, homeCities, visitedCities }) {
                 {VisitedCityPoints}
                 {HomeCityPoints}
                 {HomeCityFlightArcs}
+                {VisitedCityFlightArcs}
             </group>
             <OrbitControls enabled={hovered || mobile} enableRotate={false} maxDistance={5} minDistance={4} enablePan={false} />
         </PresentationControls>

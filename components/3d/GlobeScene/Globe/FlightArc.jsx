@@ -7,11 +7,11 @@ export function FlightArc({ globeRadius, city1, city2, theme, type = "home" }) {
 
     const LineProps = type === "home" ?
         {
-            color: colors[theme].flightArc,
+            color: colors[theme].flightArc.home,
             lineWidth: 1
         } :
         {
-            color: colors[theme].flightArc,
+            color: colors[theme].flightArc.visited,
             lineWidth: 0.5
         }
 

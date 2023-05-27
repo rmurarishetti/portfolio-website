@@ -5,7 +5,7 @@ import aboutPic from '../public/images/profile/about.jpeg';
 import { GlobeScene } from '../components/3d';
 import { HoverBadge } from '../components/badges';
 import { XpPane } from '../components/layout';
-import { citiesData } from "../data/citiesData";
+import { travelData } from "../data/travelData";
 import { xpData } from '../data/xpData';
 import { eduData } from '../data/eduData';
 import { useAOS } from '../helpers/hooks';
@@ -37,8 +37,8 @@ function About() {
                 <div className={styles.about} data-aos="fade-up">
                     <div className={styles.globe}>
                         <GlobeScene
-                            homeCities={citiesData.filter(city => city.type == 'home')}
-                            visitedCities={citiesData.filter(city => city.type == 'visited')} />
+                            homeCities={travelData.filter(city => city.type == 'home')}
+                            visitedCities={travelData.filter(city => city.type == 'visited')} />
                     </div>
                     <div className={styles.text}>
                         Hi there! A brief introduction: I&apos;m a Master&apos;s Mechanical Engineering student at&nbsp;
