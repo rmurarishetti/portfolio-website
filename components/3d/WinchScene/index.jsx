@@ -11,17 +11,21 @@ function useThemeLights(theme) {
         const pointColor = theme === 'light' ? '#C5AFFF' : '#7A00FC';
         const pointIntensity = theme === 'light' ? 0 : 1;
         const stageIntensity = theme === 'light' ? 3 : 0.2;
-        const environment = theme === 'light' ? 'sunset' : 'night';
-
-        return { ambientIntensity, pointColor, pointIntensity, stageIntensity, environment };
+        return { ambientIntensity, pointColor, pointIntensity, stageIntensity };
     }, [theme]);
+}
+
+function environmentMap(theme) {
+    return theme === 'light' ?
+        '/3d/venice_sunset_1k.hdr' :
+        '/3d/dikhololo_night_1k.hdr';
 }
 
 const MemoizedWinch = memo(Winch);
 
 function WinchScene({ scrollPercentage }) {
     const theme = useCorrectedTheme();
-    const { ambientIntensity, pointColor, pointIntensity, stageIntensity, environment } = useThemeLights(theme);
+    const { ambientIntensity, pointColor, pointIntensity, stageIntensity } = useThemeLights(theme);
 
     return (
         <Canvas
@@ -46,8 +50,8 @@ function WinchScene({ scrollPercentage }) {
                     intensity={stageIntensity}
                     contactShadow
                     shadows="accumulative"
-                    adjustCamera={false}
-                    environment={environment}>
+                    adjustCamera={false}>
+                    <Environment background={false} files={environmentMap(theme)} />
                     <MemoizedWinch scroll={scrollPercentage} />
                 </Stage>
             </Suspense>

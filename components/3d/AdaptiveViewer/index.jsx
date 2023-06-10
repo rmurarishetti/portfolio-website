@@ -1,6 +1,6 @@
 import { Suspense, useLayoutEffect, useEffect, useState, useRef } from 'react'
 import { Canvas } from '@react-three/fiber'
-import { Html, OrbitControls, Stage, useGLTF } from '@react-three/drei'
+import { Html, OrbitControls, Stage, useGLTF, Environment } from '@react-three/drei'
 import styles from './AdaptiveViewer.module.scss';
 import { useCorrectedTheme } from "../../../helpers/hooks";
 import { MouseIcon } from '../../icons';
@@ -29,6 +29,12 @@ export default function Viewer({ href, fov = 27, aspectRatio = 2, shadows = true
   useEffect(() => {
     setMounted(true)
   }, []);
+
+  function environmentMap(theme) {
+    return theme === 'light' ?
+      '/3d/venice_sunset_1k.hdr' :
+      '/3d/dikhololo_night_1k.hdr';
+  }
 
   return (
     <>
@@ -81,8 +87,8 @@ export default function Viewer({ href, fov = 27, aspectRatio = 2, shadows = true
                 intensity={theme == 'light' ? 1 : 0}
                 contactShadow={contactShadow}
                 shadows="accumulative"
-                adjustCamera
-                environment={theme == 'light' ? 'sunset' : 'night'}>
+                adjustCamera>
+                <Environment background={false} files={environmentMap(theme)} />
                 <primitive object={scene} />
               </Stage>
             </Suspense>

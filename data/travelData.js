@@ -393,7 +393,7 @@ export const travelData = [
         coordinates: [31.230707, 121.472916],
         start: new Date(2010, 3),
         type: 'visited',
-        travelledFrom: 'Beijing',
+        travelledFrom: 'Panaga',
     },
     {
         city: "Beijing",
@@ -401,7 +401,7 @@ export const travelData = [
         coordinates: [39.904667, 116.408195],
         start: new Date(2010, 3),
         type: 'visited',
-        travelledFrom: 'Panaga',
+        travelledFrom: 'Shanghai',
     },
     {
         city: "Kota Kinabalu",
