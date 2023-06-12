@@ -15,11 +15,11 @@ function useThemeLights(theme) {
     }, [theme]);
 }
 
-// function environmentMap(theme) {
-//     return theme === 'light' ?
-//         '/3d/venice_sunset_1k.hdr' :
-//         '/3d/dikhololo_night_1k.hdr';
-// }
+function environmentMap(theme) {
+    return theme === 'light' ?
+        '/3d/venice_sunset_1k.hdr' :
+        '/3d/dikhololo_night_1k.hdr';
+}
 
 const MemoizedWinch = memo(Winch);
 
@@ -48,10 +48,11 @@ function WinchScene({ scrollPercentage }) {
                 <Stage
                     preset="rembrandt"
                     intensity={stageIntensity}
+                    environment={null}
                     contactShadow
                     shadows="accumulative"
                     adjustCamera={false}>
-                    {/* <Environment background={false} files={environmentMap(theme)} /> */}
+                    <Environment background={false} files={environmentMap(theme)} />
                     <MemoizedWinch scroll={scrollPercentage} />
                 </Stage>
             </Suspense>

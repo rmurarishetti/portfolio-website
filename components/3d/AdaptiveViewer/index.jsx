@@ -30,11 +30,11 @@ export default function Viewer({ href, fov = 27, aspectRatio = 2, shadows = true
     setMounted(true)
   }, []);
 
-  // function environmentMap(theme) {
-  //   return theme === 'light' ?
-  //     '/3d/venice_sunset_1k.hdr' :
-  //     '/3d/dikhololo_night_1k.hdr';
-  // }
+  function environmentMap(theme) {
+    return theme === 'light' ?
+      '/3d/venice_sunset_1k.hdr' :
+      '/3d/dikhololo_night_1k.hdr';
+  }
 
   return (
     <>
@@ -84,11 +84,12 @@ export default function Viewer({ href, fov = 27, aspectRatio = 2, shadows = true
               <Stage
                 controls={ref}
                 preset='rembrandt'
+                environment={null}
                 intensity={theme == 'light' ? 1 : 0}
                 contactShadow={contactShadow}
                 shadows="accumulative"
                 adjustCamera>
-                {/* <Environment background={false} files={environmentMap(theme)} /> */}
+                <Environment background={false} files={environmentMap(theme)} />
                 <primitive object={scene} />
               </Stage>
             </Suspense>
