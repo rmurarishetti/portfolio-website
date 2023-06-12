@@ -1,8 +1,7 @@
 import styles from './Footer.module.scss'
+import { websiteData } from '../../../data/websiteData';
 
 function Footer() {
-    const lastUpdated = '27/03/2023'
-
     return (
         <footer className={styles.footer}>
             <div className={styles.links}>
@@ -26,8 +25,8 @@ function Footer() {
                 </a>
             </div>
             <div className={styles.main}>
-                <div className={styles.note}>Last updated: {lastUpdated}</div>
-                <div className={styles.copyright}>© 2022 Rohit Nag</div>
+                <div className={styles.note}>Last updated: {websiteData.lastUpdated}</div>
+                <div className={styles.copyright}>© {websiteData.yearCreated} {websiteData.author}</div>
             </div>
         </footer>
     );

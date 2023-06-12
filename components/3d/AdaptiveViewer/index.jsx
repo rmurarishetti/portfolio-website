@@ -5,6 +5,7 @@ import styles from './AdaptiveViewer.module.scss';
 import { useCorrectedTheme } from "../../../helpers/hooks";
 import { MouseIcon, ComputerKeyIcon } from '../../icons';
 import { useAOS } from '../../../helpers/hooks';
+import { LoaderPlaceholder } from '../../3d';
 
 export default function Viewer({ href, fov = 27, aspectRatio = 2, shadows = true, contactShadow = true, autoRotate = true, rotateSpeed = 0.5, zoom0 = 10, minDistance = 1, maxDistance = 10, lightThemeColor = '#C5AFFF', darkThemeColor = '#7A00FC', lightThemeIntensity = 2, darkThemeIntensity = 0.5 }) {
   useAOS()
@@ -72,13 +73,12 @@ export default function Viewer({ href, fov = 27, aspectRatio = 2, shadows = true
   return (
     <>
       {!mounted &&
-        <div className={styles.loader} style={{ aspectRatio: aspectRatio }}>
-          3D model loading...
+        <div className={styles.loader} style={{ aspectRatio: aspectRatio }} data-aos='fade-up'>
+          <LoaderPlaceholder />
         </div>
       }
       {mounted &&
         <div
-          data-aos='fade-up'
           className={styles.canvasWrapper}
           onPointerDown={(e) => { e.button === 0 ? setLeftClicked(true) : setRightClicked(true) }}
           onPointerUp={(e) => { e.button === 0 ? setLeftClicked(false) : setRightClicked(false) }}
@@ -95,7 +95,8 @@ export default function Viewer({ href, fov = 27, aspectRatio = 2, shadows = true
           <Canvas
             className={styles.scene}
             gl={{ preserveDrawingBuffer: true }}
-            shadows dpr={[1, 1.5]}
+            shadows
+            dpr={[1, 1.5]}
             camera={{
               position: [0, 0, 0],
               fov: fov

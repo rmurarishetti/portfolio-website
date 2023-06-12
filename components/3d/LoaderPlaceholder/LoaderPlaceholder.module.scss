@@ -1,0 +1,17 @@
+.loader {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+    /* Add perspective for 3D transforms */
+    overflow: hidden;
+    /* Ensures the 3D text doesn't overflow */
+
+    .text {
+        font-size: 0.9rem;
+        color: var(--color-text-secondary);
+        opacity: 0.5;
+    }
+}
