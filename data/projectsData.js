@@ -464,8 +464,10 @@ export const projectsData = [
         },
         model: {
             href: '/3d/mobularay.draco.glb',
-            fov: 30,
-            aspectRatio: 2
+            fov: 27,
+            aspectRatio: 2,
+            maxDistance: 2,
+            minDistance: 0.1,
         },
         media: [
             {
@@ -617,8 +619,10 @@ export const projectsData = [
         },
         model: {
             href: '/3d/sonic.draco.glb',
-            fov: 25,
+            fov: 13,
             aspectRatio: 2,
+            minDistance: 0.1,
+            maxDistance: 100,
         },
         media: [
             {

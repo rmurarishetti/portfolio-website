@@ -1,0 +1,30 @@
+.key {
+    height: 0.9rem;
+    aspect-ratio: 1;
+    border-radius: 0.2rem;
+    background-color: var(--color-border);
+    border: var(--border-secondary);
+    border-color: var(--color-text-secondary);
+    opacity: 0.5;
+    position: relative;
+    transition: opacity var(--speed-slow), border-color var(--speed-slow), box-shadow var(--speed-slow);
+    // display: flex;
+    // // align-items: center;
+    // justify-content: center;
+    // text-align: center;
+    display: block;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    line-height: 0.9rem;
+    font-size: 0.6rem;
+    font-weight: 300;
+    color: var(--color-text-secondary);
+
+    &.interacted {
+        border-color: var(--color-accent-primary);
+        opacity: 1;
+        text-shadow: var(--shadow-small-glow);
+        color: var(--color-accent-primary);
+    }
+}

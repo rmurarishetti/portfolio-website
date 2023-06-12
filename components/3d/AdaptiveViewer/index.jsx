@@ -3,7 +3,7 @@ import { Canvas } from '@react-three/fiber'
 import { Html, OrbitControls, Stage, useGLTF, Environment } from '@react-three/drei'
 import styles from './AdaptiveViewer.module.scss';
 import { useCorrectedTheme } from "../../../helpers/hooks";
-import { MouseIcon } from '../../icons';
+import { MouseIcon, ComputerKeyIcon } from '../../icons';
 import { useAOS } from '../../../helpers/hooks';
 
 export default function Viewer({ href, fov = 27, aspectRatio = 2, shadows = true, contactShadow = true, autoRotate = true, rotateSpeed = 0.5, zoom0 = 10, minDistance = 1, maxDistance = 10, lightThemeColor = '#C5AFFF', darkThemeColor = '#7A00FC', lightThemeIntensity = 2, darkThemeIntensity = 0.5 }) {
@@ -11,10 +11,29 @@ export default function Viewer({ href, fov = 27, aspectRatio = 2, shadows = true
   const [leftClicked, setLeftClicked] = useState(false);
   const [rightClicked, setRightClicked] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [resetCamera, setResetCamera] = useState(true);
+  const [resetActive, setResetActive] = useState(false);
   const theme = useCorrectedTheme();
   const { scene } = useGLTF(href)
   const ref = useRef()
   var timer = null;
+
+  useEffect(() => {
+    function handleKeyPress(event) {
+      if (event.key === 'r' || event.key === 'R') {
+        setResetCamera(true);
+        setResetActive(true);
+        setTimeout(() => {
+          setResetCamera(false);
+          setResetActive(false);
+        }, 200); // 100ms delay to ensure the camera reset and active state toggle take effect
+      }
+    }
+    window.addEventListener('keydown', handleKeyPress);
+    return () => {
+      window.removeEventListener('keydown', handleKeyPress);
+    };
+  }, []);
 
 
   useLayoutEffect(() => {
@@ -25,10 +44,24 @@ export default function Viewer({ href, fov = 27, aspectRatio = 2, shadows = true
       }
     })
   }, [scene, shadows])
+
+
   const [mounted, setMounted] = useState(false);
   useEffect(() => {
     setMounted(true)
   }, []);
+  // Additional effect to reset `mounted` when `href` changes
+  useEffect(() => {
+    setMounted(false);
+
+    // Simulate loading delay
+    const timeoutId = setTimeout(() => {
+      setMounted(true);
+    }, 1000);
+
+    // Cleanup function
+    return () => clearTimeout(timeoutId);
+  }, [href]);
 
   function environmentMap(theme) {
     return theme === 'light' ?
@@ -88,7 +121,7 @@ export default function Viewer({ href, fov = 27, aspectRatio = 2, shadows = true
                 intensity={theme == 'light' ? 1 : 0}
                 contactShadow={contactShadow}
                 shadows="accumulative"
-                adjustCamera>
+                adjustCamera={resetCamera}>
                 <Environment background={false} files={environmentMap(theme)} />
                 <primitive object={scene} />
               </Stage>
@@ -107,6 +140,10 @@ export default function Viewer({ href, fov = 27, aspectRatio = 2, shadows = true
             <div className={[styles.controlsInfoItem, scrolled ? styles.active : ''].join(' ')}>
               <MouseIcon type='scroll' active={scrolled} />
               <span>Zoom</span>
+            </div>
+            <div className={[styles.controlsInfoItem, resetActive ? styles.active : ''].join(' ')}>
+              <ComputerKeyIcon active={resetActive} />
+              <span>Reset</span>
             </div>
           </div>
         </div>}
