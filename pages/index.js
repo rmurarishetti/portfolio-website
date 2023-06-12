@@ -27,19 +27,6 @@ export default function Home() {
         <title>Rohit Nag</title>
         <meta name="description" content="My personal portfolio of projects, artwork and graphics." />
         <meta name="keywords" content="Mechnical Engineer, Developer, Designer, Portfolio" />
-        <meta property="og:url" content="rohitnag.com" />
-        <meta property="og:type" content="portfolio" />
-        <meta property="fb:app_id" content="ro.t.nag" />
-        <meta
-          property="og:title"
-          content="rohitnag.com - Rohit Nag's Portfolio"
-        />
-        <meta name="twitter:card" content="summary" />
-        <meta
-          property="og:description"
-          content="Engineering, Art and Design."
-        />
-        <meta property="og:image" content={"../public/images/thumbnail/thumbnail.png"} />
       </Head>
       <div className={styles.header}>
         <div className={styles.text}>
