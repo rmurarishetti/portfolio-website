@@ -73,7 +73,7 @@ export default function Home() {
         data-aos="fade-up"
       // ref={scrolRef}
       >
-        <WinchScene />
+        <WinchScene scrollStart={0} scrollEnd={0.6} />
         <Link href='/projects/lunar-deployer'>
           <a className={styles.link}>
             <div className={styles.parent}>Projects / Lunar Rover Deployer</div>

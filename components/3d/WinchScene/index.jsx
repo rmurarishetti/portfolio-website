@@ -23,7 +23,7 @@ function environmentMap(theme) {
 
 const MemoizedWinch = memo(Winch);
 
-function WinchScene() {
+function WinchScene({ scrollStart, scrollEnd }) {
     const [scrolRef, scrollPercentage] = useScrollPercentage();
     const theme = useCorrectedTheme();
     const { ambientIntensity, pointColor, pointIntensity, stageIntensity } = useThemeLights(theme);
@@ -55,7 +55,7 @@ function WinchScene() {
                     shadows="accumulative"
                     adjustCamera={false}>
                     <Environment background={false} files={environmentMap(theme)} />
-                    <MemoizedWinch scroll={scrollPercentage} />
+                    <MemoizedWinch scroll={scrollPercentage} scrollStart={scrollStart} scrollEnd={scrollEnd} />
                 </Stage>
             </Suspense>
         </Canvas>

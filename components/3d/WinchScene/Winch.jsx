@@ -15,11 +15,9 @@ export function Winch(props) {
 
     const shellTopY = 0.025; // Y-position of shell when fully open
     const shellBottomY = -0.0235; // Y-position of shell when fully closed
-    const scrollStart = 0; // scroll percentage when the shell is fully open
-    const scrollEnd = 0.4; // scroll percentage when the shell is fully closed
 
-    const m = (shellTopY - shellBottomY) / (scrollStart - scrollEnd); // slope
-    const c = shellTopY - m * scrollStart; // y-intercept
+    const m = (shellTopY - shellBottomY) / (props.scrollStart - props.scrollEnd); // slope
+    const c = shellTopY - m * props.scrollStart; // y-intercept
     const shellTargetY = m * props.scroll + c;
     const shellClampedY = Math.min(Math.max(shellTargetY, shellBottomY), shellTopY);
 
