@@ -14,6 +14,7 @@ import { GalleryWLightbox } from '../components/layout';
 import { TextTransitionBadge } from '../components/badges';
 import { useScrollPercentage } from 'react-scroll-percentage'
 import { useAOS } from '../helpers/hooks';
+import { useState } from 'react';
 
 export default function Home() {
   useAOS();
@@ -21,6 +22,7 @@ export default function Home() {
     /* Optional options */
     threshold: 0,
   })
+
   return (
     <>
       <Head>
@@ -80,7 +82,7 @@ export default function Home() {
           </a>
         </Link>
       </div>
-      <div className={styles.block} data-aos="fade-up">
+      <div className={styles.block}>
         <h2>Featured Projects</h2>
         <ThumbnailSwiper projectsData={projectsData.filter(projectData => projectData.featured)} />
         <Link href={pagesData.filter((pageData => pageData.title == 'Projects'))[0].link}>
@@ -91,7 +93,7 @@ export default function Home() {
         </Link>
       </div>
       {/* <KineticScene /> */}
-      <div className={[styles.block, styles.artBlock].join(' ')} data-aos="fade-up">
+      <div className={[styles.block, styles.artBlock].join(' ')}>
         <h2>Recent Artwork</h2>
         <div className={styles.galleryContainer}>
           <GalleryWLightbox data={artsData.sort(artData => daysDiff(new Date(), artData.date)).slice(0, 8)} />

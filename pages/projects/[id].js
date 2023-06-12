@@ -114,12 +114,12 @@ function ProjectPage({ project }) {
                 </div>}
             </div>
             {project.model && <AdaptiveViewer {...project.model} />}
-            {images[0] && <div className={styles.galleryContainer} data-aos='fade-up'>
+            {images[0] && <div className={styles.galleryContainer}>
                 <GalleryWLightbox data={images} showDetails={false} />
             </div>}
             {videos[0] &&
                 <div
-                    className={styles.videosContainer} data-aos='fade-up'>
+                    className={styles.videosContainer}>
                     {videos.map((obj, i) => {
                         const aspectRatio = obj.video.aspectRatio ? obj.video.aspectRatio : 16 / 9
                         return (
@@ -130,7 +130,7 @@ function ProjectPage({ project }) {
                     })}
                 </div>}
             {project.documents[0] &&
-                <div className={styles.documentsContainer} data-aos='fade-up'>
+                <div className={styles.documentsContainer}>
                     <div className={styles.header}>Documents</div>
                     <DocGalleryWLightbox docsData={project.documents} />
                 </div>}
