@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useGLTF, PerspectiveCamera } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { useSpring, animated } from '@react-spring/three';
@@ -13,9 +13,17 @@ export function Winch(props) {
     const [shellHovered, setShellHovered] = useState(0);
     const [targetRotationX, setTargetRotationX] = useState(0);
 
-    const shelInitY = 0.0365;
-    const shellTargetY = -0.1 * props.scroll + 0.0765;
-    const shellClampedY = shellTargetY < shelInitY ? shellTargetY : shelInitY;
+    const shellTopY = 0.025; // Y-position of shell when fully open
+    const shellBottomY = -0.0235; // Y-position of shell when fully closed
+    const scrollStart = 0; // scroll percentage when the shell is fully open
+    const scrollEnd = 0.4; // scroll percentage when the shell is fully closed
+
+    const m = (shellTopY - shellBottomY) / (scrollStart - scrollEnd); // slope
+    const c = shellTopY - m * scrollStart; // y-intercept
+    const shellTargetY = m * props.scroll + c;
+    const shellClampedY = Math.min(Math.max(shellTargetY, shellBottomY), shellTopY);
+
+    console.log(shellTargetY, shellClampedY)
 
     const shaftMutiplier = shaftHovered || shaftActive;
     const shaftMaxSpeed = !shaftHovered && shaftActive;
@@ -714,7 +722,7 @@ export function Winch(props) {
                             document.body.style.cursor = "default";
                         }}
                         name="Shell001"
-                        position={[-0.1278, shelInitY, 0.01775]}>
+                        position={[-0.1278, shellTopY, 0.01775]}>
                         <group
                             name="Guide_Rail-1"
                             position={[0.148, 0.00246151, -0.006]}

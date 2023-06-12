@@ -12,16 +12,11 @@ import profilePic from '../public/images/profile/profile.jpg';
 import { daysDiff } from '../helpers/math';
 import { GalleryWLightbox } from '../components/layout';
 import { TextTransitionBadge } from '../components/badges';
-import { useScrollPercentage } from 'react-scroll-percentage'
-import { useAOS } from '../helpers/hooks';
-import { useState } from 'react';
+import { useAOS, useScrollPercentage } from '../helpers/hooks';
 
 export default function Home() {
   useAOS();
-  const [scrolRef, percentage] = useScrollPercentage({
-    /* Optional options */
-    threshold: 0,
-  })
+  // const [scrolRef, percentage] = useScrollPercentage()
 
   return (
     <>
@@ -64,7 +59,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className={styles.grid} ref={scrolRef} data-aos="fade-up">
+      <div className={styles.grid} data-aos="fade-up">
         {pagesData.slice(1, -1).map((pageData) => {
           return (
             <HomeCard
@@ -73,8 +68,12 @@ export default function Home() {
           )
         })}
       </div>
-      <div className={styles.winchSceneContainer} data-aos="fade-up">
-        <WinchScene scrollPercentage={percentage} />
+      <div
+        className={styles.winchSceneContainer}
+        data-aos="fade-up"
+      // ref={scrolRef}
+      >
+        <WinchScene />
         <Link href='/projects/lunar-deployer'>
           <a className={styles.link}>
             <div className={styles.parent}>Projects / Lunar Rover Deployer</div>
