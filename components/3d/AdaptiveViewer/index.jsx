@@ -80,6 +80,7 @@ export default function Viewer({ href, fov = 27, aspectRatio = 2, shadows = true
       {mounted &&
         <div
           className={styles.canvasWrapper}
+          data-aos='fade-up'
           onPointerDown={(e) => { e.button === 0 ? setLeftClicked(true) : setRightClicked(true) }}
           onPointerUp={(e) => { e.button === 0 ? setLeftClicked(false) : setRightClicked(false) }}
           onWheel={(e) => {

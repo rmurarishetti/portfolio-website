@@ -240,7 +240,9 @@ export const projectsData = [
         model: {
             href: '/3d/ebike.draco.glb',
             fov: 30,
-            aspectRatio: 1.5
+            aspectRatio: 1.5,
+            maxDistance: 3.5,
+            minDistance: 0.1,
         },
         media: [
             {
@@ -619,10 +621,10 @@ export const projectsData = [
         },
         model: {
             href: '/3d/sonic.draco.glb',
-            fov: 13,
+            fov: 27,
             aspectRatio: 2,
             minDistance: 0.1,
-            maxDistance: 100,
+            maxDistance: 0.7,
         },
         media: [
             {
@@ -776,6 +778,9 @@ export const projectsData = [
         },
         model: {
             href: '/3d/liftdoor.draco.glb',
+            aspectRatio: 2,
+            maxDistance: 3,
+            minDistance: 0.1,
         },
         media: [
             {
@@ -961,6 +966,8 @@ export const projectsData = [
         },
         model: {
             href: '/3d/winch.glb',
+            maxDistance: 0.6,
+            minDistance: 0.1,
         },
         media: [
             {
@@ -1221,6 +1228,8 @@ export const projectsData = [
             href: '/3d/rocket.draco.glb',
             fov: 50,
             aspectRatio: 1,
+            maxDistance: 4,
+            minDistance: 0.3,
         },
         media: [
             {
