@@ -58,6 +58,7 @@ export default function Viewer({ href, fov = 27, aspectRatio = 2, shadows = true
     // Simulate loading delay
     const timeoutId = setTimeout(() => {
       setMounted(true);
+      setResetCamera(true);
     }, 1000);
 
     // Cleanup function
