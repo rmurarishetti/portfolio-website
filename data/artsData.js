@@ -20,6 +20,16 @@ export const artsData = [
         }
     },
     {
+        id: 'bristol',
+        title: 'Bristol',
+        date: new Date(2022, 0),
+        mediums: ['Alcohol Marker', 'Fineliner'],
+        image: {
+            href: '/images/art/valestreet.jpg',
+            alt: 'Copic drawing of Vale Street Bristol',
+        }
+    },
+    {
         id: 'matteo',
         title: 'Matteo M.',
         date: new Date(2021, 8),
@@ -173,20 +183,20 @@ export const artsData = [
         id: 'kyoto',
         title: "Kyoto",
         date: new Date(2020, 9),
-        mediums: ['Digital'],
+        mediums: ['Ballpoint'],
         image: {
             href: '/images/art/kyoto.jpg',
-            alt: "Digital drawing of Kyoto.",
+            alt: "Drawing of Kyoto.",
         }
     },
     {
         id: 'sf',
         title: "San Franciso",
         date: new Date(2020, 9),
-        mediums: ['Digital'],
+        mediums: ['Ballpoint'],
         image: {
             href: '/images/art/sf.jpg',
-            alt: "Digital drawing of San Franciso.",
+            alt: "Drawing of San Franciso.",
         }
     },
     {
@@ -220,6 +230,16 @@ export const artsData = [
         }
     },
     {
+        id: 'mountain',
+        title: "Stonescape",
+        date: new Date(2020, 4),
+        mediums: ['Pencil'],
+        image: {
+            href: '/images/art/mountain.jpg',
+            alt: "Mountain sketch.",
+        }
+    },
+    {
         id: 'helmet',
         title: "Helmet Concept",
         date: new Date(2020, 0),
@@ -247,6 +267,16 @@ export const artsData = [
         image: {
             href: '/images/art/smokedance.jpg',
             alt: "Smoke Dance sketch.",
+        }
+    },
+    {
+        id: 'icyreflection',
+        title: "Reflections",
+        date: new Date(2019, 8),
+        mediums: ['Digital'],
+        image: {
+            href: '/images/art/icyreflection.jpg',
+            alt: "Mountain digital art.",
         }
     },
     {
@@ -283,10 +313,20 @@ export const artsData = [
         id: 'cat',
         title: "Cat",
         date: new Date(2015, 6),
-        mediums: ['Pencil', 'Digital'],
+        mediums: ['Pencil'],
         image: {
             href: '/images/art/cat.jpg',
             alt: "Sketch of a cat.",
+        }
+    },
+    {
+        id: 'butterfly',
+        title: "Monarch Butterfly",
+        date: new Date(2013, 0),
+        mediums: ['Watercolour'],
+        image: {
+            href: '/images/art/butterfly.jpg',
+            alt: "Sketch of a butterfly.",
         }
     },
 ]
