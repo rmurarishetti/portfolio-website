@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { Suspense, useMemo } from 'react';
 import countryPolyData from '../../../../data/countryPolyData.json';
 import { ConicPolygonGeometry } from '../../../../helpers/threeConicPolygon';
 import { colors } from '../../../../helpers/format';
@@ -46,9 +46,11 @@ export function Country({ name, radius, type = 'home', theme = 'light' }) {
 
     return (
         <group>
-            {polygons.map((polygonGeometry, i) => (
-                <mesh key={polygonGeometry.uuid} geometry={polygonGeometry} material={materials} />
-            ))}
+            <Suspense fallback={null}>
+                {polygons.map((polygonGeometry, i) => (
+                    <mesh key={polygonGeometry.uuid} geometry={polygonGeometry} material={materials} />
+                ))}
+            </Suspense>
         </group>
     );
 }

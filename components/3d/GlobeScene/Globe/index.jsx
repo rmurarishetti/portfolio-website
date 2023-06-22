@@ -115,11 +115,16 @@ export function Globe({ position, theme, radius, homeCities, visitedCities }) {
                 onPointerOver={() => setHover(true)}
                 onPointerOut={() => handlePointer(false, true)}>
                 <GlowSphere theme={theme} position={position} radius={1.1 * radius} />
-
-                {HomeCountryPolygons}
-                {VisitedCountryPolygons}
-                {HomeCityFlightArcs}
-                {/* {VisitedCityFlightArcs} */}
+                <Suspense fallback={
+                    <mesh>
+                        <sphereGeometry attach="geometry" args={[radius, 64, 64]} />
+                        <meshStandardMaterial color={theme == 'light' ? '#5C697E' : '#03071d'} attach="material" />
+                    </mesh>
+                }>
+                    {HomeCountryPolygons}
+                    {VisitedCountryPolygons}
+                    {HomeCityFlightArcs}
+                </Suspense>
                 <mesh ref={globeRef}>
                     <sphereGeometry attach="geometry" args={[radius, 64, 64]} />
                     <CloudSphere position={position} radius={1.01 * radius} />
@@ -135,9 +140,10 @@ export function Globe({ position, theme, radius, homeCities, visitedCities }) {
                             shininess={10} />
                     </Suspense>
                 </mesh>
-
-                {VisitedCityPoints}
-                {HomeCityPoints}
+                <Suspense fallback={null}>
+                    {VisitedCityPoints}
+                    {HomeCityPoints}
+                </Suspense>
             </group>
             <OrbitControls enabled={hovered || mobile} enableRotate={false} maxDistance={5} minDistance={4} enablePan={false} />
         </PresentationControls>
