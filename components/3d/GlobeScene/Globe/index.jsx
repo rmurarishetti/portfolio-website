@@ -6,6 +6,7 @@ import { GlowSphere } from './GlowSphere';
 import { CityPoint } from './CityPoint';
 import { FlightArc } from './FlightArc';
 import { CloudSphere } from './CloudSphere';
+import { Country } from './Country';
 import { travelData } from '../../../../data/travelData';
 
 const makeUrl = (file) => `./textures/${file}.jpg`;
@@ -44,12 +45,24 @@ export function Globe({ position, theme, radius, homeCities, visitedCities }) {
 
     const [texture, spec, normal] = useLoader(TextureLoader, [makeUrl(theme === 'light' ? 'earth_day' : 'earth_night'), makeUrl('earth_spec'), makeUrl('earth_normal')]);
 
+    // Extract unique countries from homeCities and visitedCities
+    const homeCountries = Array.from(new Set(homeCities.map(city => city.country)));
+    const visitedCountries = Array.from(new Set(visitedCities.map(city => city.country).filter(country => !homeCountries.includes(country))));
+
+    const HomeCountryPolygons = useMemo(() => homeCountries?.map((country) => (
+        <Country key={country} name={country} radius={radius * 1.012} type='home' theme={theme} />
+    )), [homeCountries, radius, theme]);
+
+    const VisitedCountryPolygons = useMemo(() => visitedCountries?.map((country) => (
+        <Country key={country} name={country} radius={radius * 1.012} type='visited' theme={theme} />
+    )), [visitedCountries, radius, theme]);
+
     const HomeCityPoints = useMemo(() => homeCities?.map((city) => (
-        <CityPoint key={city.city} globeRadius={radius} city={city} theme={theme} type="home" globeRef={globeRef} />
+        <CityPoint key={city.city} globeRadius={radius * 1.012} city={city} theme={theme} type="home" globeRef={globeRef} />
     )), [homeCities, radius, theme]);
 
     const VisitedCityPoints = useMemo(() => visitedCities?.map((city) => (
-        <CityPoint key={city.city} globeRadius={radius} city={city} theme={theme} type="visited" globeRef={globeRef} />
+        <CityPoint key={city.city} globeRadius={radius * 1.012} city={city} theme={theme} type="visited" globeRef={globeRef} />
     )), [visitedCities, radius, theme]);
 
     const HomeCityFlightArcs = useMemo(() => {
@@ -57,7 +70,7 @@ export function Globe({ position, theme, radius, homeCities, visitedCities }) {
         return homeCities.slice(0, -1).map((city1, i) => (
             <FlightArc
                 key={city1.city + homeCities[i + 1].city}
-                globeRadius={radius}
+                globeRadius={radius * 1.012}
                 city1={city1}
                 city2={homeCities[i + 1]}
                 theme={theme}
@@ -66,19 +79,19 @@ export function Globe({ position, theme, radius, homeCities, visitedCities }) {
         ));
     }, [homeCities, radius, theme]);
 
-    const VisitedCityFlightArcs = useMemo(() => {
-        if (!visitedCities) return [];
-        return visitedCities.map((city) => (
-            <FlightArc
-                key={city.city}
-                globeRadius={radius}
-                city1={city}
-                city2={findCity(city.travelledFrom)}
-                theme={theme}
-                type="visited"
-            />
-        ));
-    }, [visitedCities, radius, theme, findCity]);
+    // const VisitedCityFlightArcs = useMemo(() => {
+    //     if (!visitedCities) return [];
+    //     return visitedCities.map((city) => (
+    //         <FlightArc
+    //             key={city.city}
+    //             globeRadius={radius * 1.012}
+    //             city1={city}
+    //             city2={findCity(city.travelledFrom)}
+    //             theme={theme}
+    //             type="visited"
+    //         />
+    //     ));
+    // }, [visitedCities, radius, theme, findCity]);
 
     const handlePointer = useCallback((enter, leave) => {
         setHover(enter);
@@ -102,6 +115,11 @@ export function Globe({ position, theme, radius, homeCities, visitedCities }) {
                 onPointerOver={() => setHover(true)}
                 onPointerOut={() => handlePointer(false, true)}>
                 <GlowSphere theme={theme} position={position} radius={1.1 * radius} />
+
+                {HomeCountryPolygons}
+                {VisitedCountryPolygons}
+                {HomeCityFlightArcs}
+                {/* {VisitedCityFlightArcs} */}
                 <mesh ref={globeRef}>
                     <sphereGeometry attach="geometry" args={[radius, 64, 64]} />
                     <CloudSphere position={position} radius={1.01 * radius} />
@@ -117,10 +135,9 @@ export function Globe({ position, theme, radius, homeCities, visitedCities }) {
                             shininess={10} />
                     </Suspense>
                 </mesh>
+
                 {VisitedCityPoints}
                 {HomeCityPoints}
-                {HomeCityFlightArcs}
-                {VisitedCityFlightArcs}
             </group>
             <OrbitControls enabled={hovered || mobile} enableRotate={false} maxDistance={5} minDistance={4} enablePan={false} />
         </PresentationControls>

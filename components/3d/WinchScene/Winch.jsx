@@ -21,8 +21,6 @@ export function Winch(props) {
     const shellTargetY = m * props.scroll + c;
     const shellClampedY = Math.min(Math.max(shellTargetY, shellBottomY), shellTopY);
 
-    console.log(shellTargetY, shellClampedY)
-
     const shaftMutiplier = shaftHovered || shaftActive;
     const shaftMaxSpeed = !shaftHovered && shaftActive;
     const shaftRotSpeed = 0.1 * (0.1 * shaftMutiplier + shaftMaxSpeed);

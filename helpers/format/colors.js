@@ -12,11 +12,11 @@ export const colors = {
         globeGlow: '#430072',
         flightArc: {
             'home': '#6322FB',
-            'visited': '#7A7A7A'
+            'visited': '#7C6982'
         },
         city3d: {
             'home': { default: '#4c00ff', active: '#F200FF' },
-            'visited': { default: '#FFFFFF', active: '#EA61FF' }
+            'visited': { default: '#E9B4FF', active: '#EA61FF' }
         }
     },
     'light': {

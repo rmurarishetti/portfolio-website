@@ -37,7 +37,7 @@ function CityLabel({ city, color, globeRadius, globeRef, onClick }) {
                             {city.city}
                         </div>
                         <div className={styles.country}>
-                            {city.country}
+                            {city.countryEmoji}
                         </div>
                     </div>
                     <div className={styles.date}>

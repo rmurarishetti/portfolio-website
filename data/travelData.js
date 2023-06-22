@@ -1,7 +1,8 @@
 export const travelData = [
     {
         city: "Geneva",
-        country: '🇨🇭',
+        country: "Switzerland",
+        countryEmoji: '🇨🇭',
         coordinates: [46.2044, 6.1432],
         start: new Date(2022, 8),
         type: 'visited',
@@ -9,7 +10,8 @@ export const travelData = [
     },
     {
         city: "Lausanne",
-        country: '🇨🇭',
+        country: "Switzerland",
+        countryEmoji: '🇨🇭',
         coordinates: [46.5197, 6.6323],
         start: new Date(2022, 8),
         type: 'visited',
@@ -17,7 +19,8 @@ export const travelData = [
     },
     {
         city: "Lucerne",
-        country: '🇨🇭',
+        country: "Switzerland",
+        countryEmoji: '🇨🇭',
         coordinates: [47.0502, 8.3093],
         start: new Date(2022, 8),
         type: 'visited',
@@ -25,7 +28,8 @@ export const travelData = [
     },
     {
         city: "Zurich",
-        country: '🇨🇭',
+        country: "Switzerland",
+        countryEmoji: '🇨🇭',
         coordinates: [47.3769, 8.5417],
         start: new Date(2022, 8),
         type: 'visited',
@@ -33,7 +37,8 @@ export const travelData = [
     },
     {
         city: "Bern",
-        country: '🇨🇭',
+        country: "Switzerland",
+        countryEmoji: '🇨🇭',
         coordinates: [46.9480, 7.4474],
         start: new Date(2022, 8),
         type: 'visited',
@@ -41,7 +46,8 @@ export const travelData = [
     },
     {
         city: "Interlaken",
-        country: '🇨🇭',
+        country: "Switzerland",
+        countryEmoji: '🇨🇭',
         coordinates: [46.6863, 7.8632],
         start: new Date(2022, 8),
         type: 'visited',
@@ -49,7 +55,8 @@ export const travelData = [
     },
     {
         city: "Sulz",
-        country: '🇨🇭',
+        country: "Switzerland",
+        countryEmoji: '🇨🇭',
         coordinates: [48.3537, 8.6344],
         start: new Date(2022, 8),
         type: 'visited',
@@ -57,7 +64,8 @@ export const travelData = [
     },
     {
         city: "Basel",
-        country: '🇨🇭',
+        country: "Switzerland",
+        countryEmoji: '🇨🇭',
         coordinates: [47.5596, 7.5886],
         start: new Date(2022, 8),
         type: 'visited',
@@ -65,7 +73,8 @@ export const travelData = [
     },
     {
         city: "Belgrade",
-        country: '🇷🇸',
+        country: "Serbia",
+        countryEmoji: '🇷🇸',
         coordinates: [44.8131, 20.46326],
         start: new Date(2022, 5),
         type: 'visited',
@@ -73,7 +82,8 @@ export const travelData = [
     },
     {
         city: "Edinburgh",
-        country: '🏴󠁧󠁢󠁳󠁣󠁴󠁿',
+        country: "United Kingdom",
+        countryEmoji: '🏴󠁧󠁢󠁳󠁣󠁴󠁿',
         coordinates: [55.95415, -3.20277],
         start: new Date(2022, 4),
         type: 'visited',
@@ -81,7 +91,8 @@ export const travelData = [
     },
     {
         city: "Newcastle",
-        country: '🏴󠁧󠁢󠁥󠁮󠁧󠁿',
+        country: "United Kingdom",
+        countryEmoji: '🏴󠁧󠁢󠁥󠁮󠁧󠁿',
         coordinates: [54.97794, -1.61162],
         start: new Date(2022, 3),
         type: 'visited',
@@ -90,7 +101,8 @@ export const travelData = [
     },
     {
         city: "Sheffield",
-        country: '🏴󠁧󠁢󠁥󠁮󠁧󠁿',
+        country: "United Kingdom",
+        countryEmoji: '🏴󠁧󠁢󠁥󠁮󠁧󠁿',
         coordinates: [53.38311, -1.46454],
         start: new Date(2022, 3),
         type: 'visited',
@@ -98,7 +110,8 @@ export const travelData = [
     },
     {
         city: "Oxford",
-        country: '🏴󠁧󠁢󠁥󠁮󠁧󠁿',
+        country: "United Kingdom",
+        countryEmoji: '🏴󠁧󠁢󠁥󠁮󠁧󠁿',
         coordinates: [51.75629, -1.25951],
         start: new Date(2022, 1),
         type: 'visited',
@@ -106,7 +119,8 @@ export const travelData = [
     },
     {
         city: "Bristol",
-        country: '🏴󠁧󠁢󠁥󠁮󠁧󠁿',
+        country: "United Kingdom",
+        countryEmoji: '🏴󠁧󠁢󠁥󠁮󠁧󠁿',
         coordinates: [51.45379, -2.59168],
         start: new Date(2021, 6),
         end: new Date(2022, 6),
@@ -115,7 +129,8 @@ export const travelData = [
     },
     {
         city: "Leeds",
-        country: '🏴󠁧󠁢󠁥󠁮󠁧󠁿',
+        country: "United Kingdom",
+        countryEmoji: '🏴󠁧󠁢󠁥󠁮󠁧󠁿',
         coordinates: [53.79448, -1.54664],
         start: new Date(2020, 8),
         type: 'visited',
@@ -123,7 +138,8 @@ export const travelData = [
     },
     {
         city: "Manchester",
-        country: '🏴󠁧󠁢󠁥󠁮󠁧󠁿',
+        country: "United Kingdom",
+        countryEmoji: '🏴󠁧󠁢󠁥󠁮󠁧󠁿',
         coordinates: [53.47959, -2.24874],
         start: new Date(2020, 8),
         type: 'visited',
@@ -131,7 +147,8 @@ export const travelData = [
     },
     {
         city: "Brighton",
-        country: '🏴󠁧󠁢󠁥󠁮󠁧󠁿',
+        country: "United Kingdom",
+        countryEmoji: '🏴󠁧󠁢󠁥󠁮󠁧󠁿',
         coordinates: [50.82887, -0.13414],
         start: new Date(2019, 0),
         type: 'visited',
@@ -139,7 +156,8 @@ export const travelData = [
     },
     {
         city: "Kathmandu",
-        country: '🇳🇵',
+        country: "Nepal",
+        countryEmoji: '🇳🇵',
         coordinates: [27.700769, 85.300140],
         start: new Date(2019, 6),
         type: 'visited',
@@ -147,7 +165,8 @@ export const travelData = [
     },
     {
         city: "Pokhara",
-        country: '🇳🇵',
+        country: "Nepal",
+        countryEmoji: '🇳🇵',
         coordinates: [28.21223, 83.98734],
         start: new Date(2019, 6),
         type: 'visited',
@@ -155,7 +174,8 @@ export const travelData = [
     },
     {
         city: "Mustang",
-        country: '🇳🇵',
+        country: "Nepal",
+        countryEmoji: '🇳🇵',
         coordinates: [28.981314, 83.85787],
         start: new Date(2019, 6),
         type: 'visited',
@@ -163,7 +183,8 @@ export const travelData = [
     },
     {
         city: "London",
-        country: '🏴󠁧󠁢󠁥󠁮󠁧󠁿',
+        country: "United Kingdom",
+        countryEmoji: '🏴󠁧󠁢󠁥󠁮󠁧󠁿',
         coordinates: [51.5072, -0.1276],
         start: new Date(2018, 8),
         end: new Date(),
@@ -172,7 +193,8 @@ export const travelData = [
     },
     {
         city: "Kandy",
-        country: '🇱🇰',
+        country: "Sri Lanka",
+        countryEmoji: '🇱🇰',
         coordinates: [7.2930923, 80.63508],
         start: new Date(2016, 8),
         type: 'visited',
@@ -180,7 +202,8 @@ export const travelData = [
     },
     {
         city: "Colombo",
-        country: '🇱🇰',
+        country: "Sri Lanka",
+        countryEmoji: '🇱🇰',
         coordinates: [6.938747, 79.85411],
         start: new Date(2016, 6),
         type: 'visited',
@@ -188,7 +211,8 @@ export const travelData = [
     },
     {
         city: "Shillong",
-        country: '🇮🇳',
+        country: "India",
+        countryEmoji: '🇮🇳',
         coordinates: [25.57308, 91.88782],
         start: new Date(2015, 6),
         type: 'visited',
@@ -196,7 +220,8 @@ export const travelData = [
     },
     {
         city: "Guwahati",
-        country: '🇮🇳',
+        country: "India",
+        countryEmoji: '🇮🇳',
         coordinates: [26.1158, 91.7086],
         start: new Date(2015, 6),
         type: 'visited',
@@ -204,7 +229,8 @@ export const travelData = [
     },
     {
         city: "Bokaro",
-        country: '🇮🇳',
+        country: "India",
+        countryEmoji: '🇮🇳',
         coordinates: [23.6892, 86.11],
         start: new Date(2015, 6),
         type: 'visited',
@@ -212,7 +238,8 @@ export const travelData = [
     },
     {
         city: "Munich",
-        country: '🇩🇪',
+        country: "Germany",
+        countryEmoji: '🇩🇪',
         coordinates: [48.13641, 11.57754],
         start: new Date(2014, 10),
         type: 'visited',
@@ -220,7 +247,8 @@ export const travelData = [
     },
     {
         city: "Doha",
-        country: '🇶🇦',
+        country: "Qatar",
+        countryEmoji: '🇶🇦',
         coordinates: [25.29457, 51.51944],
         start: new Date(2013, 7),
         end: new Date(2018, 8),
@@ -229,7 +257,8 @@ export const travelData = [
     },
     {
         city: "Jaipur",
-        country: '🇮🇳',
+        country: "India",
+        countryEmoji: '🇮🇳',
         coordinates: [26.9124, 75.7873],
         start: new Date(2013, 3),
         type: 'visited',
@@ -237,7 +266,8 @@ export const travelData = [
     },
     {
         city: "Udaipur",
-        country: '🇮🇳',
+        country: "India",
+        countryEmoji: '🇮🇳',
         coordinates: [24.5854, 73.7125],
         start: new Date(2013, 3),
         type: 'visited',
@@ -245,7 +275,8 @@ export const travelData = [
     },
     {
         city: "Kuala Lumpur",
-        country: '🇲🇾',
+        country: "Malaysia",
+        countryEmoji: '🇲🇾',
         coordinates: [3.14777, 101.69403],
         start: new Date(2012, 8),
         type: 'visited',
@@ -253,7 +284,8 @@ export const travelData = [
     },
     {
         city: "12 Apostles",
-        country: '🇦🇺',
+        country: "Australia",
+        countryEmoji: '🇦🇺',
         coordinates: [-38.6621, 143.1051],
         start: new Date(2012, 3),
         type: 'visited',
@@ -261,7 +293,8 @@ export const travelData = [
     },
     {
         city: "Melbourne",
-        country: '🇦🇺',
+        country: "Australia",
+        countryEmoji: '🇦🇺',
         coordinates: [-37.81753, 144.96715],
         start: new Date(2012, 3),
         type: 'visited',
@@ -269,7 +302,8 @@ export const travelData = [
     },
     {
         city: "Sydney",
-        country: '🇦🇺',
+        country: "Australia",
+        countryEmoji: '🇦🇺',
         coordinates: [-33.8696, 151.20695],
         start: new Date(2012, 3),
         type: 'visited',
@@ -277,7 +311,8 @@ export const travelData = [
     },
     {
         city: "Milford Sound",
-        country: '🇳🇿',
+        country: "New Zealand",
+        countryEmoji: '🇳🇿',
         coordinates: [-44.608505, 167.84767],
         start: new Date(2012, 3),
         type: 'visited',
@@ -285,7 +320,8 @@ export const travelData = [
     },
     {
         city: "Queenstown",
-        country: '🇳🇿',
+        country: "New Zealand",
+        countryEmoji: '🇳🇿',
         coordinates: [-45.0327, 168.658],
         start: new Date(2012, 3),
         type: 'visited',
@@ -293,7 +329,8 @@ export const travelData = [
     },
     {
         city: "Ahmedabad",
-        country: '🇮🇳',
+        country: "India",
+        countryEmoji: '🇮🇳',
         coordinates: [23.0225, 72.5714],
         start: new Date(2011, 7),
         type: 'visited',
@@ -301,7 +338,8 @@ export const travelData = [
     },
     {
         city: "Daman and Diu",
-        country: '🇮🇳',
+        country: "India",
+        countryEmoji: '🇮🇳',
         coordinates: [20.3974, 72.8328],
         start: new Date(2011, 7),
         type: 'visited',
@@ -309,7 +347,8 @@ export const travelData = [
     },
     {
         city: "Kuching",
-        country: '🇲🇾',
+        country: "Malaysia",
+        countryEmoji: '🇲🇾',
         coordinates: [1.549073, 110.34417],
         start: new Date(2011, 6),
         type: 'visited',
@@ -317,7 +356,8 @@ export const travelData = [
     },
     {
         city: "Langkawi",
-        country: '🇲🇾',
+        country: "Malaysia",
+        countryEmoji: '🇲🇾',
         coordinates: [6.373586, 99.78261],
         start: new Date(2010, 6),
         type: 'visited',
@@ -325,7 +365,8 @@ export const travelData = [
     },
     {
         city: "Malacca",
-        country: '🇲🇾',
+        country: "Malaysia",
+        countryEmoji: '🇲🇾',
         coordinates: [2.1896, 102.2501],
         start: new Date(2010, 6),
         type: 'visited',
@@ -333,7 +374,8 @@ export const travelData = [
     },
     {
         city: "Singapore",
-        country: '🇸🇬',
+        country: "Singapore",
+        countryEmoji: '🇸🇬',
         coordinates: [1.29016, 103.852],
         start: new Date(2009, 5),
         type: 'visited',
@@ -341,7 +383,8 @@ export const travelData = [
     },
     {
         city: "Paris",
-        country: '🇫🇷',
+        country: "France",
+        countryEmoji: '🇫🇷',
         coordinates: [48.863186, 2.339754],
         start: new Date(2010, 4),
         type: 'visited',
@@ -349,7 +392,8 @@ export const travelData = [
     },
     {
         city: "Brussels",
-        country: '🇧🇪',
+        country: "Belgium",
+        countryEmoji: '🇧🇪',
         coordinates: [50.836117, 4.370607],
         start: new Date(2010, 4),
         type: 'visited',
@@ -357,7 +401,8 @@ export const travelData = [
     },
     {
         city: "Cologne",
-        country: '🇩🇪',
+        country: "Germany",
+        countryEmoji: '🇩🇪',
         coordinates: [50.9324, 6.953008],
         start: new Date(2010, 4),
         type: 'visited',
@@ -365,7 +410,8 @@ export const travelData = [
     },
     {
         city: "Amsterdam",
-        country: '🇳🇱',
+        country: "Netherlands",
+        countryEmoji: '🇳🇱',
         coordinates: [52.353218, 5.0027695],
         start: new Date(2010, 4),
         type: 'visited',
@@ -373,7 +419,8 @@ export const travelData = [
     },
     {
         city: "Den Haag",
-        country: '🇳🇱',
+        country: "Netherlands",
+        countryEmoji: '🇳🇱',
         coordinates: [52.0657, 4.31255],
         start: new Date(2010, 4),
         type: 'visited',
@@ -381,7 +428,8 @@ export const travelData = [
     },
     {
         city: "Xi'an",
-        country: '🇨🇳',
+        country: "China",
+        countryEmoji: '🇨🇳',
         coordinates: [34.2658, 108.9541],
         start: new Date(2010, 3),
         type: 'visited',
@@ -389,7 +437,8 @@ export const travelData = [
     },
     {
         city: "Shanghai",
-        country: '🇨🇳',
+        country: "China",
+        countryEmoji: '🇨🇳',
         coordinates: [31.230707, 121.472916],
         start: new Date(2010, 3),
         type: 'visited',
@@ -397,7 +446,8 @@ export const travelData = [
     },
     {
         city: "Beijing",
-        country: '🇨🇳',
+        country: "China",
+        countryEmoji: '🇨🇳',
         coordinates: [39.904667, 116.408195],
         start: new Date(2010, 3),
         type: 'visited',
@@ -405,7 +455,8 @@ export const travelData = [
     },
     {
         city: "Kota Kinabalu",
-        country: '🇲🇾',
+        country: "Malaysia",
+        countryEmoji: '🇲🇾',
         coordinates: [5.9804, 116.0735],
         start: new Date(2009, 4),
         type: 'visited',
@@ -413,7 +464,8 @@ export const travelData = [
     },
     {
         city: "Bintulu",
-        country: '🇲🇾',
+        country: "Malaysia",
+        countryEmoji: '🇲🇾',
         coordinates: [3.1713, 113.0419],
         start: new Date(2009, 3),
         type: 'visited',
@@ -421,7 +473,8 @@ export const travelData = [
     },
     {
         city: "Temburong",
-        country: '🇧🇳',
+        country: "Brunei",
+        countryEmoji: '🇧🇳',
         coordinates: [4.6204, 115.1415],
         start: new Date(2008, 3),
         type: 'visited',
@@ -429,7 +482,8 @@ export const travelData = [
     },
     {
         city: "Miri",
-        country: '🇲🇾',
+        country: "Malaysia",
+        countryEmoji: '🇲🇾',
         coordinates: [4.3995, 113.9914],
         start: new Date(2008, 1),
         type: 'visited',
@@ -437,7 +491,8 @@ export const travelData = [
     },
     {
         city: "Panaga",
-        country: '🇧🇳',
+        country: "Brunei",
+        countryEmoji: '🇧🇳',
         coordinates: [4.602037, 114.270622],
         start: new Date(2007, 7),
         end: new Date(2013, 6),
@@ -446,7 +501,8 @@ export const travelData = [
     },
     {
         city: "Sabratha",
-        country: '🇱🇾',
+        country: "Libya",
+        countryEmoji: '🇱🇾',
         coordinates: [32.7811, 12.4495],
         start: new Date(2006, 6),
         type: 'visited',
@@ -454,7 +510,8 @@ export const travelData = [
     },
     {
         city: "Letis Magna",
-        country: '🇱🇾',
+        country: "Libya",
+        countryEmoji: '🇱🇾',
         coordinates: [32.6343, 14.2948],
         start: new Date(2006, 3),
         type: 'visited',
@@ -462,7 +519,8 @@ export const travelData = [
     },
     {
         city: "Tripoli",
-        country: '🇱🇾',
+        country: "Libya",
+        countryEmoji: '🇱🇾',
         coordinates: [32.887209, 13.191338],
         start: new Date(2006, 1),
         end: new Date(2007, 6),
@@ -471,7 +529,8 @@ export const travelData = [
     },
     {
         city: "Delhi",
-        country: '🇮🇳',
+        country: "India",
+        countryEmoji: '🇮🇳',
         coordinates: [28.643206, 77.11578],
         start: new Date(2004, 6),
         type: 'visited',
@@ -479,7 +538,8 @@ export const travelData = [
     },
     {
         city: "Dubai",
-        country: '🇦🇪',
+        country: "United Arab Emirates",
+        countryEmoji: '🇦🇪',
         coordinates: [25.20498, 55.271057],
         start: new Date(2003, 1),
         type: 'visited',
@@ -487,7 +547,8 @@ export const travelData = [
     },
     {
         city: "Niswa",
-        country: '🇴🇲',
+        country: "Oman",
+        countryEmoji: '🇴🇲',
         coordinates: [22.9171, 57.5363],
         start: new Date(2002, 8),
         type: 'visited',
@@ -495,7 +556,8 @@ export const travelData = [
     },
     {
         city: "Muscat",
-        country: '🇴🇲',
+        country: "Oman",
+        countryEmoji: '🇴🇲',
         coordinates: [23.585890, 58.405923],
         start: new Date(2001, 6),
         end: new Date(2005, 11),
@@ -504,7 +566,8 @@ export const travelData = [
     },
     {
         city: "Mumbai",
-        country: '🇮🇳',
+        country: "India",
+        countryEmoji: '🇮🇳',
         coordinates: [19.07283, 72.88261],
         start: new Date(2000, 9),
         end: new Date(2001, 5),
@@ -513,7 +576,8 @@ export const travelData = [
     },
     {
         city: "Kolkata",
-        country: '🇮🇳',
+        country: "India",
+        countryEmoji: '🇮🇳',
         coordinates: [22.5726, 88.3639],
         start: new Date(2000, 6),
         end: new Date(2000, 9),
