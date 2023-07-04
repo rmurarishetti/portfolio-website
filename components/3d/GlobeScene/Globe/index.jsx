@@ -50,19 +50,19 @@ export function Globe({ position, theme, radius, homeCities, visitedCities }) {
     const visitedCountries = Array.from(new Set(visitedCities.map(city => city.country).filter(country => !homeCountries.includes(country))));
 
     const HomeCountryPolygons = useMemo(() => homeCountries?.map((country) => (
-        <Country key={country} name={country} radius={radius * 1.012} type='home' theme={theme} />
+        <Country key={country} name={country} radius={radius * 1.01} type='home' theme={theme} />
     )), [homeCountries, radius, theme]);
 
     const VisitedCountryPolygons = useMemo(() => visitedCountries?.map((country) => (
-        <Country key={country} name={country} radius={radius * 1.012} type='visited' theme={theme} />
+        <Country key={country} name={country} radius={radius * 1.005} type='visited' theme={theme} />
     )), [visitedCountries, radius, theme]);
 
     const HomeCityPoints = useMemo(() => homeCities?.map((city) => (
-        <CityPoint key={city.city} globeRadius={radius * 1.012} city={city} theme={theme} type="home" globeRef={globeRef} />
+        <CityPoint key={city.city} globeRadius={radius * 1.01} city={city} theme={theme} type="home" globeRef={globeRef} />
     )), [homeCities, radius, theme]);
 
     const VisitedCityPoints = useMemo(() => visitedCities?.map((city) => (
-        <CityPoint key={city.city} globeRadius={radius * 1.012} city={city} theme={theme} type="visited" globeRef={globeRef} />
+        <CityPoint key={city.city} globeRadius={radius * 1.005} city={city} theme={theme} type="visited" globeRef={globeRef} />
     )), [visitedCities, radius, theme]);
 
     const HomeCityFlightArcs = useMemo(() => {
@@ -70,7 +70,7 @@ export function Globe({ position, theme, radius, homeCities, visitedCities }) {
         return homeCities.slice(0, -1).map((city1, i) => (
             <FlightArc
                 key={city1.city + homeCities[i + 1].city}
-                globeRadius={radius * 1.012}
+                globeRadius={radius * 1.01}
                 city1={city1}
                 city2={homeCities[i + 1]}
                 theme={theme}
@@ -127,7 +127,7 @@ export function Globe({ position, theme, radius, homeCities, visitedCities }) {
                 </Suspense>
                 <mesh ref={globeRef}>
                     <sphereGeometry attach="geometry" args={[radius, 64, 64]} />
-                    <CloudSphere position={position} radius={1.01 * radius} />
+                    <CloudSphere position={position} radius={1.03 * radius} />
                     <Suspense fallback={<meshStandardMaterial color={theme == 'light' ? '#5C697E' : '#03071d'} attach="material" />}>
                         <meshPhongMaterial
                             attach="material"
