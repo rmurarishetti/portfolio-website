@@ -8,6 +8,7 @@ import { FlightArc } from './FlightArc';
 import { CloudSphere } from './CloudSphere';
 import { Country } from './Country';
 import { travelData } from '../../../../data/travelData';
+import { useSpring, animated as a } from '@react-spring/three';
 
 const makeUrl = (file) => `./textures/${file}.jpg`;
 
@@ -98,6 +99,11 @@ export function Globe({ position, theme, radius, homeCities, visitedCities }) {
         setActive(leave);
     }, []);
 
+    const { sphereColor } = useSpring({
+        sphereColor: theme === 'light' ? '#5C697E' : '#161C41',
+        config: { mass: 1, tension: 500, friction: 50 }
+    });
+
     return (
         <PresentationControls
             global={false}
@@ -116,19 +122,19 @@ export function Globe({ position, theme, radius, homeCities, visitedCities }) {
                 onPointerOut={() => handlePointer(false, true)}>
                 <GlowSphere theme={theme} position={position} radius={1.1 * radius} />
                 <Suspense fallback={
-                    <mesh>
+                    <a.mesh>
                         <sphereGeometry attach="geometry" args={[radius, 64, 64]} />
-                        <meshStandardMaterial color={theme == 'light' ? '#5C697E' : '#03071d'} attach="material" />
-                    </mesh>
+                        <a.meshStandardMaterial color={sphereColor} attach="material" />
+                    </a.mesh>
                 }>
                     {HomeCountryPolygons}
                     {VisitedCountryPolygons}
                     {HomeCityFlightArcs}
                 </Suspense>
-                <mesh ref={globeRef}>
+                <a.mesh ref={globeRef}>
                     <sphereGeometry attach="geometry" args={[radius, 64, 64]} />
                     <CloudSphere position={position} radius={1.03 * radius} />
-                    <Suspense fallback={<meshStandardMaterial color={theme == 'light' ? '#5C697E' : '#03071d'} attach="material" />}>
+                    <Suspense fallback={<a.meshStandardMaterial color={sphereColor} attach="material" />}>
                         <meshPhongMaterial
                             attach="material"
                             map={texture}
@@ -139,7 +145,7 @@ export function Globe({ position, theme, radius, homeCities, visitedCities }) {
                             normalScale={[0.5, 0.5]}
                             shininess={10} />
                     </Suspense>
-                </mesh>
+                </a.mesh>
                 <Suspense fallback={null}>
                     {VisitedCityPoints}
                     {HomeCityPoints}

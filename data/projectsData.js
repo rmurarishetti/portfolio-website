@@ -20,6 +20,9 @@ export const projectsData = [
             href: '/3d/engine.draco.glb',
             fov: 32,
             aspectRatio: 1.5,
+            lightProps: {
+                lightDirectionalIntensity: 2,
+            }
         },
         media: [
             {
@@ -126,45 +129,41 @@ export const projectsData = [
             "The report below details the process followed to design the engines for The Air Tanker.",
         ]
     },
-    // {
-    //     id: "robot",
-    //     name: "6DOF Robot Arm",
-    //     subtitle: "A multi-application robotic arm design.",
-    //     start: new Date(2022, 6),
-    //     end: new Date(2022, 7),
-    //     featured: true,
-    //     type: "Hardware",
-    //     tags: ["Uni", "CAD", "Python",],
-    //     link: {
-    //         name: "Github Repo",
-    //         href: "https://github.com/RohitNag11/RobotKin"
-    //     },
-    //     thumbnail: {
-    //         href: "/images/projects/CheatSheet/mockup.png",
-    //         alt: "CheatSheet Mockup"
-    //     },
-    //     model: {
-    //         href: '/3d/robot.draco.glb',
-    //         fov: 50,
-    //         aspectRatio: 1,
-    //     },
-    //     media: [
-    //         {
-    //             image: {
-    //                 href: "/images/projects/CheatSheet/screenshot1.jpg",
-    //                 alt: "CheatSheet Screenshot 1"
-    //             }
-    //         },
-    //     ],
-    //     people: [],
-    //     documents: [],
-    //     description: [
-    //         "Keyboard shortcuts are a great way to increase productivity. Unfortunately, they are hard to remember when you need them. That is why I created CheatSheet, a global shortcuts-helper overlay app for Windows.",
-    //         "I pitched the idea in the Microsoft EMEA Innovation Challenge Hackathon 2022, winning 1st place. The application was then later developed with the help of my manager at Microsft for Microsoft's 2022 Global Hackathon.",
-    //         "The overlay can be activated with a key press, displaying recommended and recently used shortcuts for the foreground application. Development is in beta with functionalities including automatic foreground app detection, complete UI functionality and data fetching. The next milestone is automatic data retrieval from apps without relying on hard-corded data.",
-    //         "The app was developed using WinUI 3, a C#/XAML UI kit that ships with the Windows App SDK."
-    //     ]
-    // },
+    {
+        id: "robot",
+        name: "HexaLimb",
+        subtitle: "Design and simulation of a 6DOF multi-application robotic manipulator.",
+        start: new Date(2023, 2),
+        end: new Date(2023, 4),
+        featured: true,
+        type: "Hardware",
+        tags: ["Uni", "CAD", "Python",],
+        link: {
+            name: "Github Repo",
+            href: "https://github.com/RohitNag11/RobotKin"
+        },
+        thumbnail: {
+            href: "/images/projects/RobotArm/render.png",
+            alt: "Robot Arm Render"
+        },
+        media: [
+            // {
+            //     image: {
+            //         href: "/images/projects/RobotArm/render.png",
+            //         alt: "Robot Arm Render"
+            //     }
+            // },
+        ],
+        people: [],
+        documents: [],
+        description: [
+            "Any object can be manipulated freely in space through 6 degrees of freedom (6DOF). This framework encompasses three translational movements along the primary Cartesian axes, in conjunction with three rotational movements about these axes. HexaLimb is a 6DOF robotic manipulator designed to replicate this range of spatial manipulation using six revolute joints. The end-effector of HexaLimb has a modular design, allowing adaptability for various applications, such as integrating a gripper, tooltip, or a camera. The robotic arm has a spherical operational area with a 1-meter radius, positioned above the ground. Additionally, the arm can be attached to a mobile base to extend its range of motion.",
+            "The position and orientation of the end-effector are managed by six angular-encoded servo motors, controlled by a microcontroller. Each motor determines the joint angle for one revolute joint, with successive joints being connected by a rigid link. Using forward kinematics, the position and rotation of the end-effector can be determined based on the joint angles. Conversely, inverse kinematics allows for determining joint angles based on a desired end-effector position and rotation. Solving inverse kinematics is particularly challenging for 6DOF manipulators due to the potential for multiple solutions for a specific end-effector state. Furthermore the process can be analytically unsolvable for certain manipulator configurations. HexaLimb is designed to address this with an analytically solvable configuration, ensuring it can be used in real-time scenarios with moving targets.",
+            "A standalone Python library, RobotKin, has been developed for kinematic simulations of serial-link manipulators and mobile robots that follow the Denavit-Hartenberg convention. This tool can calculate forward and inverse kinematics, joint velocities, and accelerations, and includes path planning algorithms.",
+            "The model below demonstrates the kinematic behaviors of HexaLimb using Python logic ported to JavaScript.",
+            // "The following report details the calculations of HexaLimb mounted on a two-wheeled differential-drive mobile robot. A hypothetical navigation task through South Kensington, ending in the spatial adjustment of an object at the end point is simulated using image processing on a Google Maps image."
+        ]
+    },
     {
         id: "cheat-sheet",
         name: "CheatSheet",
@@ -243,6 +242,12 @@ export const projectsData = [
             aspectRatio: 1.5,
             maxDistance: 3.5,
             minDistance: 0.1,
+            lightProps: {
+                lightDirectionalIntensity: 2,
+                lightAmbientIntensity: 1,
+                darkAmbientIntensity: 0.2,
+                darkDirectionalIntensity: 1,
+            }
         },
         media: [
             {
@@ -466,10 +471,16 @@ export const projectsData = [
         },
         model: {
             href: '/3d/mobularay.draco.glb',
-            fov: 27,
+            fov: 40,
             aspectRatio: 2,
             maxDistance: 2,
             minDistance: 0.1,
+            lightProps: {
+                lightDirectionalIntensity: 2,
+                lightAmbientIntensity: 2,
+                darkAmbientIntensity: 0.2,
+                darkDirectionalIntensity: 1,
+            }
         },
         media: [
             {
@@ -625,6 +636,11 @@ export const projectsData = [
             aspectRatio: 2,
             minDistance: 0.1,
             maxDistance: 0.7,
+            lightProps: {
+                lightDirectionalIntensity: 2,
+                darkAmbientIntensity: 0.2,
+                darkDirectionalIntensity: 1,
+            }
         },
         media: [
             {

@@ -19,6 +19,8 @@ export function GlowSphere({ theme, position, radius }) {
         }
     }
 
+
+
     return (
         <mesh position={position}>
             <sphereGeometry args={[radius, 64, 64]} />

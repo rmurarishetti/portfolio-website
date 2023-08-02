@@ -1,32 +1,16 @@
-import { Suspense, useMemo, memo } from 'react';
+import { Suspense, memo } from 'react';
 import { Canvas } from '@react-three/fiber';
-import { Stage, Environment } from '@react-three/drei';
+import { Stage } from '@react-three/drei';
 import { Winch } from './Winch';
 import styles from './WinchScene.module.scss';
 import { useCorrectedTheme, useScrollPercentage } from '../../../helpers/hooks';
-
-function useThemeLights(theme) {
-    return useMemo(() => {
-        const ambientIntensity = theme === 'light' ? 3 : 0;
-        const pointColor = theme === 'light' ? '#C5AFFF' : '#7A00FC';
-        const pointIntensity = theme === 'light' ? 0 : 1;
-        const stageIntensity = theme === 'light' ? 3 : 0.2;
-        return { ambientIntensity, pointColor, pointIntensity, stageIntensity };
-    }, [theme]);
-}
-
-function environmentMap(theme) {
-    return theme === 'light' ?
-        '/3d/venice_sunset_1k.hdr' :
-        '/3d/dikhololo_night_1k.hdr';
-}
+import { ThemedLights, ThemedEnvironment } from '../themedProps';
 
 const MemoizedWinch = memo(Winch);
 
 function WinchScene({ scrollStart, scrollEnd }) {
     const [scrolRef, scrollPercentage] = useScrollPercentage();
     const theme = useCorrectedTheme();
-    const { ambientIntensity, pointColor, pointIntensity, stageIntensity } = useThemeLights(theme);
 
     return (
         <Canvas
@@ -36,25 +20,26 @@ function WinchScene({ scrollStart, scrollEnd }) {
             dpr={[1, 1.5]}
             camera={{ position: [0, 0, 0], fov: 30 }}
             ref={scrolRef}>
-            {/* <fog attach="fog" args={['black', 50, 60]} /> */}
-            <ambientLight intensity={ambientIntensity} />
-            <directionalLight position={[5, 0.2, -1]} color="#FFFFFF" intensity={0.1} />
-            <pointLight
-                castShadow
-                receiveShadow
-                position={[0, 50, 20]}
-                color={pointColor}
-                intensity={pointIntensity}
+            <ThemedLights
+                theme={theme}
+                lightAmbientIntensity={10}
+                lightDirectionalIntensity={2}
+                darkPointIntensity={0.6}
+                darkDirectionalIntensity={0.4}
+                darkAmbientIntensity={0}
+                lightThemePosition={[0, 0.3, 0.2]}
+                darkThemePosition={[0, 0.2, 0.3]}
             />
+            {/* <axesHelper args={[0.1]} /> */}
             <Suspense fallback={null}>
                 <Stage
                     preset="rembrandt"
-                    intensity={stageIntensity}
+                    intensity={0.05}
                     environment={null}
                     contactShadow
-                    shadows="accumulative"
+                    shadows
                     adjustCamera={false}>
-                    <Environment background={false} files={environmentMap(theme)} />
+                    <ThemedEnvironment />
                     <MemoizedWinch scroll={scrollPercentage} scrollStart={scrollStart} scrollEnd={scrollEnd} />
                 </Stage>
             </Suspense>

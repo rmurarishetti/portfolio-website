@@ -3,6 +3,7 @@ import countryPolyData from '../../../../data/countryPolyData.json';
 import { ConicPolygonGeometry } from '../../../../helpers/threeConicPolygon';
 import { colors } from '../../../../helpers/format';
 import * as THREE from 'three';
+import { useSpring, animated as a, config } from '@react-spring/three';
 
 // calculate vertices and faces
 const getPolygonGeometries = (coordinates, geometryType, radius) => {
@@ -30,26 +31,26 @@ export function Country({ name, radius, type = 'home', theme = 'light' }) {
         return [];
     }, [countryData, radius]);
 
-    const color = type === 'home' ? colors[theme].flightArc.home : colors[theme].flightArc.visited;
-    const opacity = type === 'home' ?
-        theme === 'dark' ? 0.4 : 0.5
-        : theme === 'dark' ? 0.5 : 0.3;
-
-    const materials = [
-        new THREE.MeshBasicMaterial({ color, opacity: 0.7, transparent: true, side: THREE.DoubleSide }),
-        new THREE.MeshBasicMaterial({ color, opacity, transparent: true, side: THREE.DoubleSide }),
-        new THREE.MeshBasicMaterial({ color, opacity, transparent: true, side: THREE.DoubleSide }),
-    ];
+    const { color, opacity } = useSpring({
+        color: type === 'home' ? colors[theme].flightArc.home : colors[theme].flightArc.visited,
+        opacity: type === 'home' ?
+            theme === 'dark' ? 0.4 : 0.5
+            : theme === 'dark' ? 0.5 : 0.3,
+        config: config.molasses
+    })
 
     return (
         <group>
             <Suspense fallback={null}>
                 {polygons.map((polygonGeometry, i) => (
-                    <mesh
+                    <a.mesh
                         key={polygonGeometry.uuid}
                         geometry={polygonGeometry}
-                        material={materials}
-                    />
+                    >
+                        <a.meshBasicMaterial attachArray="material" color={color} opacity={0.7} transparent side={THREE.DoubleSide} />
+                        <a.meshBasicMaterial attachArray="material" color={color} opacity={opacity} transparent side={THREE.DoubleSide} />
+                        <a.meshBasicMaterial attachArray="material" color={color} opacity={opacity} transparent side={THREE.DoubleSide} />
+                    </a.mesh>
                 ))}
             </Suspense>
         </group>

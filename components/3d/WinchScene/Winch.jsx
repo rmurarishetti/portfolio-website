@@ -25,29 +25,26 @@ export function Winch(props) {
     const shaftMaxSpeed = !shaftHovered && shaftActive;
     const shaftRotSpeed = 0.1 * (0.1 * shaftMutiplier + shaftMaxSpeed);
 
-    const shaftSpringProps = useSpring({
-        rotationX: targetRotationX,
-        config: { tension: 150, friction: 50 },
+    const { shellColor, shellOpacity, jawColor, jawEmissivity } = useSpring({
+        shellColor: shellHovered ? '#9e8bff' : '#555555',
+        shellOpacity: shellActive ? 1 : 0.5,
+        jawColor: shaftActive ? '#00EAFF' : '#EA00FF',
+        jawEmissivity: shaftHovered ? 0 : 1.5,
     });
-    const shellSpringProps = useSpring({
-        posY: shellClampedY,
+
+    const { shellPosition } = useSpring({
+        shellPosition: [-0.1278, shellClampedY, 0.01775],
         config: { tension: 80, friction: 18 },
     });
-    const { shellColor } = useSpring({ shellColor: shellHovered ? '#9e8bff' : '#555555' });
-    const { shellOpacity } = useSpring({ shellOpacity: shellActive ? 1 : 0.5 });
 
-    const { jawColor } = useSpring({ jawColor: shaftActive ? '#00EAFF' : '#FF0000' });
-    const { jawEmissivity } = useSpring({ jawEmissivity: shaftHovered ? 0 : 1.5 });
+    const { shaftRotation } = useSpring({
+        shaftRotation: [targetRotationX, 0, 0],
+        config: { tension: 150, friction: 50 },
+    });
+
 
     useFrame(() => {
         setTargetRotationX((prevRotation) => prevRotation + shaftRotSpeed);
-        // shaftRef.current.rotation.x += 0.1 * (0.1 * mutiplier + full);
-        if (shellRef.current) {
-            shellRef.current.position.y = shellSpringProps.posY.get();
-        }
-        if (shaftRef.current) {
-            shaftRef.current.rotation.x = shaftSpringProps.rotationX.get();
-        }
     });
 
     return (
@@ -642,7 +639,7 @@ export function Winch(props) {
                         />
                     </group>
                 </group>
-                <group name="Shaft" ref={shaftRef}>
+                <animated.group name="Shaft" ref={shaftRef} rotation={shaftRotation}>
                     <group
                         name="Shaft001"
                         position={[-0.022, 0, 0]}
@@ -704,7 +701,7 @@ export function Winch(props) {
                             material={materials["satin finish aluminum.016"]}
                         />
                     </group>
-                </group>
+                </animated.group>
                 <group name="Shell" >
                     <animated.group
                         ref={shellRef}
@@ -718,7 +715,7 @@ export function Winch(props) {
                             document.body.style.cursor = "default";
                         }}
                         name="Shell001"
-                        position={[-0.1278, shellTopY, 0.01775]}>
+                        position={shellPosition}>
                         <group
                             name="Guide_Rail-1"
                             position={[0.148, 0.00246151, -0.006]}

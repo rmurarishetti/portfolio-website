@@ -3,7 +3,7 @@ import { QuadraticBezierLine } from '@react-three/drei';
 import { coordinates2cartesian } from '../../../../../../helpers/math';
 import { Html } from '@react-three/drei';
 import { DateDiv } from '../../../../../badges';
-import styles from './CityLabel.module.scss'
+import styles from './CityLabel.module.scss';
 
 function CityLabel({ city, color, globeRadius, globeRef, onClick }) {
     const [occluded, occlude] = useState()

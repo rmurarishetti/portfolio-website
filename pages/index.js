@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { HomeCard } from '../components/cards';
 import { ThumbnailSwiper } from '../components/swipers';
-import { WinchScene, AdaptiveViewer } from '../components/3d';
+import { WinchScene } from '../components/3d';
 import styles from '../styles/Home.module.scss';
 import { projectsData } from '../data/projectsData';
 import { artsData } from '../data/artsData';

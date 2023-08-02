@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { useCursor } from '@react-three/drei';
-import { useSpring, animated } from '@react-spring/three'
 import { coordinates2cartesian } from '../../../../../helpers/math';
 import { colors } from '../../../../../helpers/format';
 import CityLabel from './CityLabel';
+import { useSpring, animated as a, config } from '@react-spring/three';
 
 
 export function CityPoint({ globeRadius, city, theme, type = "home", globeRef }) {
@@ -13,26 +13,31 @@ export function CityPoint({ globeRadius, city, theme, type = "home", globeRef })
     const [active, setActive] = useState(false);
     useCursor(hovered, 'pointer', 'auto')
 
-    const color = active || hovered ? colors[theme].city3d[type].active : colors[theme].city3d[type].default
+    // const color = active || hovered ? colors[theme].city3d[type].active : colors[theme].city3d[type].default
 
-    const size = type === "home" ? 0.03 : 0.02
-    const { scale } = useSpring({ scale: hovered ? 2 : 1 })
+    // const size = type === "home" ? 0.03 : 0.02
+    const color = active || hovered ? colors[theme].city3d[type].active : colors[theme].city3d[type].default
+    const { scale, animatedColor } = useSpring({
+        scale: hovered ? 2 : 1,
+        animatedColor: active || hovered ? colors[theme].city3d[type].active : colors[theme].city3d[type].default,
+        config: config.default
+    })
 
     return (
         <>
             {/* <axesHelper args={[1]} /> */}
-            <animated.mesh
+            <a.mesh
                 scale={scale}
                 position={position}
                 onClick={() => setActive((activeState) => !activeState)}
                 onPointerOver={() => { setHover(true) }}
                 onPointerOut={() => { setHover(false) }}>
-                <sphereGeometry args={[size, 10, 10]} />
-                <meshStandardMaterial
-                    color={color}
-                    emissive={color}
+                <sphereGeometry args={[type === "home" ? 0.03 : 0.02, 10, 10]} />
+                <a.meshStandardMaterial
+                    color={animatedColor}
+                    emissive={animatedColor}
                     emissiveIntensity={1} />
-            </animated.mesh>
+            </a.mesh>
             {(hovered || active) &&
                 <CityLabel
                     city={city}
