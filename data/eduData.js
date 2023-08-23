@@ -9,10 +9,10 @@ export const eduData = [
             {
                 position: "MEng Mechanical Engineering with Year in Industry",
                 start: new Date(2018, 8, 25),
-                end: new Date(2023, 6, 5),
+                end: new Date(2023, 6, 25),
                 description: [
                     "Core Modules: Aircraft Engine Technology, Robotics, Mechatronics, Stress Analysis, Finite Elements Analysis, Machine Dynamics & Vibrations, Embedded C for Microcontrollers, Machine Learning, Mathematics.",
-                    "Grade: Yrs 1, 2 & 3 - First Class Honours",
+                    "Grade: First Class Honours",
                     "Activities and societies: Triathlon, Space Society, Formula Student."
                 ],
                 skills: ["SolidWorks", "Manufacturing", "ANSYS", "Python", "MATLAB", "C", "Arduino", "CES", "GasTurb", "Adobe Suite"]
