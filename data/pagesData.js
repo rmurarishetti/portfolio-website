@@ -11,28 +11,12 @@ export const pagesData = [
         description: "Explore some of university and side projects.",
         link: "/projects"
     },
-    {
-        title: "Art",
-        emoji: "🖌",
-        description: "View my recent art pieces.",
-        link: "/art"
-    },
-    {
-        title: "Graphics",
-        emoji: "🖼",
-        description: "View some of the posters and logos I've made.",
-        link: "/graphics"
-    },
+    
     {
         title: "About",
         emoji: "👋",
         description: "Learn about my background, experiences and skills.",
         link: "/about"
     },
-    {
-        title: "Guestbook",
-        emoji: "✍️",
-        description: "Sign my website and leave some feedback, appreciation or even humor!",
-        link: "/guestbook"
-    },
+    
 ]

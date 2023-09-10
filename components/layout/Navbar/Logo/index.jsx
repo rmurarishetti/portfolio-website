@@ -27,7 +27,7 @@ function Logo() {
             <a className={styles.navLogo} onClick={handleClick}
             >
                 <div className={styles.background}>
-                    <div className={styles.text}>rn</div>
+                    <div className={styles.text}>rm</div>
                     <div className={styles.underline}>
                         <div className={styles.dot}></div>
                     </div>

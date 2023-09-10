@@ -3,84 +3,63 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { HomeCard } from '../components/cards';
 import { ThumbnailSwiper } from '../components/swipers';
-import { WinchScene } from '../components/3d';
 import styles from '../styles/Home.module.scss';
 import { projectsData } from '../data/projectsData';
-import { artsData } from '../data/artsData';
 import { pagesData } from '../data/pagesData';
-import profilePic from '../public/images/profile/profile.jpg';
-import { daysDiff } from '../helpers/math';
-import { GalleryWLightbox } from '../components/layout';
+import profilePic from '../public/images/profile/profile-pic.jpg';
 import { TextTransitionBadge } from '../components/badges';
 import { useAOS, useScrollPercentage } from '../helpers/hooks';
+import { WinchScene } from '../components/3d';
 
 export default function Home() {
   useAOS();
-  // const [scrolRef, percentage] = useScrollPercentage()
+  const [scrolRef, percentage] = useScrollPercentage()
 
   return (
     <>
       <Head>
-        <title>Rohit Nag</title>
-        <meta name="description" content="My personal portfolio of projects, artwork and graphics." />
-        <meta name="keywords" content="Mechnical Engineer, Developer, Designer, Portfolio" />
+        <title>Rohit Murarishetti</title>
+        <meta name="description" content="My personal portfolio of projects, experience and education." />
+        <meta name="keywords" content="Computer Science Engineer, Developer, Portfolio" />
       </Head>
       <div className={styles.header}>
         <div className={styles.text}>
           <h1 className={styles.title}>
-            Rohit Nag
+            Rohit Murarishetti
           </h1>
           <div className={styles.role}>
-            A Master&#39;s Mechanical Engineering student at&nbsp;
-            <a
-              href="https://www.imperial.ac.uk/ "
-              target="_blank"
-              rel="noreferrer">
-              Imperial College London
-            </a>.
+            A senior year Computer Science and Design student at the 
+            <Link href="https://www.sutd.edu.sg/"> Singapore University of Technology and Design.</Link>
           </div>
           <div className={styles.description}>
-            Passionate about merging <em>Engineering</em>, <em>Computing</em> and <em>Design</em> with an interest in embedded systems, physics modelling and AI.
-            <br />
-            Also a questionable&nbsp;
+            I identify myself to be a curious and aware individual. I welcome every opportunity that comes my way where I can 
+            &nbsp;
             <TextTransitionBadge
-              textArray={["UI / UX", "graphic", "product"]}
+              textArray={["learn", "share", "apply"]}
               speed={2000} />
-            &nbsp;designer on the side.
+            &nbsp; knowledge. 
+            <br/> <br/>
+
+            I take a deep interst in <em>consumer electronics</em>, <em>electric vehicles</em>, and <em>software engineering</em>, furthermore their potential impact on life in the 21st century. 
+            <br/>Moreover, I actively trade in the stock market, trying my luck at the bullish and bearish. 
+            <br/><br/>
+            I believe my diverse set of interests will help me present a unique perspective in the tasks I undertake.
+            
+            <br />
+            
           </div>
+          
         </div>
         <div className={styles.profile}>
           <Image
             src={profilePic}
-            alt="Picture of Rohit Nag"
+            alt="Picture of Rohit Murarishetti"
             placeholder='blur'
             objectFit='cover'
             layout='fill' />
         </div>
       </div>
 
-      <div className={styles.grid} data-aos="fade-up">
-        {pagesData.slice(1, -1).map((pageData) => {
-          return (
-            <HomeCard
-              key={pageData.title}
-              {...pageData} />
-          )
-        })}
-      </div>
-      <div
-        className={styles.winchSceneContainer}
-        data-aos="fade-up"
-      // ref={scrolRef}
-      >
-        <WinchScene scrollStart={0} scrollEnd={0.6} />
-        <Link href='/projects/lunar-deployer'>
-          <a className={styles.link}>
-            <div className={styles.parent}>Projects / Lunar Rover Deployer</div>
-            <div className={styles.arrow}>&rarr;</div>
-          </a>
-        </Link>
-      </div>
       <div className={styles.block}>
         <h2>Featured Projects</h2>
         <ThumbnailSwiper projectsData={projectsData.filter(projectData => projectData.featured)} />
@@ -91,30 +70,21 @@ export default function Home() {
           </a>
         </Link>
       </div>
-      {/* <KineticScene /> */}
-      <div className={[styles.block, styles.artBlock].join(' ')}>
-        <h2>Recent Artwork</h2>
-        <div className={styles.galleryContainer}>
-          <GalleryWLightbox data={artsData.sort(artData => daysDiff(new Date(), artData.date)).slice(0, 8)} />
-        </div>
-        <Link href={pagesData.filter((pageData => pageData.title == 'Art'))[0].link} >
-          <a className={styles.link}>
-            <div className={styles.parent}>View all artwork</div>
-            <div className={styles.arrow}>&rarr;&nbsp;</div>
-          </a>
-        </Link>
+
+      <div className={styles.grid} data-aos="fade-up">
+        {pagesData.slice(1).map((pageData) => {
+          return (
+            <HomeCard
+              key={pageData.title}
+              {...pageData} />
+          )
+        })}
       </div>
-      <div className={styles.guestbookNote} data-aos="fade-up">
-        <div className={styles.main}>
-          Feel free to leave some feedback or appreciation by signing my&nbsp;
-          <Link href='/guestbook'>
-            <a className={styles.link}>
-              <div className={styles.parent}>Guestbook</div>
-              <div className={styles.arrow}>&rarr;</div>
-            </a>
-          </Link>
-        </div>
+
+      <div data-aos="fade-up" ref={scrolRef}>
+        <WinchScene />
       </div>
+
     </>
   )
 }
