@@ -1,85 +1,66 @@
 export const xpData = [
     {
-        logo: "/images/icons/logos/microsoft_logo.svg",
-        id: 'ms',
-        company: "Microsoft",
-        location: "London, UK",
-        link: 'https://www.microsoft.com/en-gb/about/',
-        roles: [
-            {
-                position: "Software Engineer Intern",
-                start: new Date(2022, 6),
-                end: new Date(2022, 8, 30),
-                description: "Worked in the Microsoft Search Assistance & Intelligence (MSAI) team. Developed within the Windows OS code-base, specifically on the preprocessing of telemetry data for the training of File Explorer recommendations models.",
-                skills: ["C++", "C#", "XAML"]
-            }
-        ]
-    },
-    {
-        logo: "/images/icons/logos/rr_logo.svg",
-        id: 'rr',
-        company: "Rolls-Royce",
-        location: "Bristol, UK",
-        link: 'https://www.rolls-royce.com',
-        roles: [
-            {
-                position: "Systems Design Intern",
-                start: new Date(2022, 0, 3),
-                end: new Date(2022, 6, 3),
-                description: "Worked on the Rolls-Royce led 11-partner R&T project, COLIBRI, to improve design automation within the aerospace industry through introducing ML and AI.",
-                skills: ["C#", "Python", "MATLAB", "Siemens NX"]
-            },
-            {
-                position: "Automation & Controls Intern",
-                start: new Date(2021, 5, 4),
-                end: new Date(2021, 11, 25),
-                description: "Worked within the Artificial Chief Engineer (ACE) team, developing RR's new autonomous machinery control system for Naval vessels.",
-                skills: ["HTML", "JavaScript", "CSS", "Docker", "MATLAB"]
-            }
-        ]
-    },
-    {
-        logo: "/images/icons/logos/bp_logo.svg",
-        id: 'bp',
-        company: "BP",
-        location: "London, UK",
-        link: 'https://www.bp.com',
-        roles: [
-            {
-                position: "Spring Engineering Intern",
-                start: new Date(2020, 3),
-                end: new Date(2020, 8),
-                description: "Exposure to BP’s upstream activities and strategies to meet future carbon emission goals.",
-            },
-        ]
-    },
-    {
-        logo: "/images/icons/logos/beckett_logo.svg",
+        logo: "/images/icons/logos/br_logo.png",
         id: 'br',
-        company: "Beckett Rankine",
-        location: "London, UK",
-        link: 'https://beckettrankine.com',
+        company: "Broadridge Financial Solutions",
+        location: "Hyderabad, India",
+        link: 'https://www.broadridge.com/',
         roles: [
             {
-                position: "Marine Civil Engineering Insight",
-                start: new Date(2019, 2, 1),
-                end: new Date(2019, 2, 10),
-                description: "Explored different wave propagation prevention techniques used in ports.",
+                position: "Product Engineer Intern",
+                start: new Date(2023, 5),
+                end: new Date(2023, 8),
+                description: "Worked in the global innovation team at Broadridge. Assisted in the design and developed a sophisticated POC built on Next.Js for Broadridge to bring about a mechanism for disclosure of critical information regarding crypto assets. Managed a hackathon initiative for college students with 2000+ Participants, 1200+ Teams and over 300 Idea Proposals.",
+                skills: ["Next.Js", "Web3", "Product Design", "Typescript", "Alchemy"]
+            }
+        ]
+    },
+    {
+        logo: "/images/icons/logos/ncs_logo.jpeg",
+        id: 'ncs',
+        company: "NCS",
+        location: "Singapore",
+        link: 'https://www.ncs.co/en-sg/',
+        roles: [
+            {
+                position: "Software Engineering Intern",
+                start: new Date(2022, 7),
+                end: new Date(2022, 11),
+                description: "Worked on the Rolls-Royce led 11-partner R&T project, COLIBRI, to improve design automation within the aerospace industry through introducing ML and AI.",
+                skills: ["Angular", "MySQL", "PL/SQL", "HTML5", "CSS3", "REST"]
             },
         ]
     },
     {
-        logo: "/images/icons/logos/shell_logo.svg",
-        id: 'shell',
-        company: "Shell",
-        location: "Doha, Qatar",
-        link: 'https://www.shell.com',
+        logo: "/images/icons/logos/sutd_logo.jpeg",
+        id: 'its',
+        company: "iTrust-SUTD",
+        location: "Singapore, Singapore",
+        link: 'https://itrust.sutd.edu.sg/',
         roles: [
             {
-                position: "Well Engineering Insight",
-                start: new Date(2016, 3, 1),
-                end: new Date(2016, 3, 10),
-                description: "Work shadow within Qatar Shell’s upstream division - insight into subsurface data gathering and general well design.",
+                position: "Software Engineering Intern (Part Time)",
+                start: new Date(2021, 9),
+                end: new Date(2022, 2),
+                description: "Worked on a cyber fusion platform with unified security functions to protect critical infrastructure.",
+                skills: ["Python", "React.Js", "Cybersecurity", "Machine Learning"]
+            },
+        ]
+    },
+    
+    {
+        logo: "/images/icons/logos/astar_logo.jpeg",
+        id: 'ihpc',
+        company: "A*Star - Institute of High Performance Computing",
+        location: "Singapore, Singapore",
+        link: 'https://www.a-star.edu.sg/ihpc',
+        roles: [
+            {
+                position: "Graphical User Interface Intern",
+                start: new Date(2021, 4),
+                end: new Date(2021, 8),
+                description: "My work centered around building interactive Graphical User Interfaces and Dashboards for scientific weather insights.",
+                skills: ["GUI", "QtQML"]
             },
         ]
     }

@@ -3,7 +3,4 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://rohitnag.com/
-
-# Sitemaps
-Sitemap: https://rohitnag.com/sitemap.xml
+Host: https://rohitmurarishetti.com/

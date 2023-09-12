@@ -1,7 +1,8 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import styles from '../styles/About.module.scss';
 import Image from 'next/image';
-import aboutPic from '../public/images/profile/about.jpeg';
+import aboutPic from '../public/images/profile/about-pic.jpg';
 import { GlobeScene } from '../components/3d';
 import { HoverBadge } from '../components/badges';
 import { XpPane } from '../components/layout';
@@ -15,8 +16,8 @@ function About() {
     return (
         <>
             <Head>
-                <title>Rohit Nag | About</title>
-                <meta name="keywords" content="Engineer, Developer, Designer, Portfolio" />
+                <title>Rohit Murarishetti | About</title>
+                <meta name="keywords" content="Engineer, Developer, Entrepreneur, Portfolio" />
                 <meta name="description" content="My background, experiences and skills." />
             </Head>
             <div className={styles.aboutPage}>
@@ -41,25 +42,18 @@ function About() {
                             visitedCities={travelData.filter(city => city.type == 'visited')} />
                     </div>
                     <div className={styles.text}>
-                        Hi there! A brief introduction: I&apos;m a Master&apos;s Mechanical Engineering student at&nbsp;
-                        <a
-                            href="https://www.imperial.ac.uk"
-                            target="_blank"
-                            rel="noreferrer">
-                            Imperial College London
-                        </a>
-                        , specialising in Mechatronics and Aircraft Engine Technology. Currently, I&apos;m working on my Master&apos;s project on locating optimal peg-fixation positions for&nbsp;
-                        <a
-                            href="https://www.osstec.uk"
-                            target="_blank"
-                            rel="noreferrer">
-                            OSSTEC&apos;s
-                        </a>
-                        &nbsp;knee arthroplasty implants using modern and novel computational methods. My dream is to work on impactful solutions that combine engineering, design, and computing.
+                        Hi There! I am Rohit, a computer science and design senior at the <Link href="https://sutd.edu.sg">Singapore University of Technology and Design</Link>.
+                        I am an avid geek about electric cars and consumer electronics. I take a deep interest in knowing people around me and being aware about my surroundings.
+
+                        <br/><br/>
+                        I absolutely love watching documentaries about the geopolitics of the world and often fantasize about travelling to some of these places. I care a lot about personal finance and spend a lot of time identifying stocks I can invest in.
+                        As a photography enthusiast, you can find me obsessing over how photos are taken and what can you do better to take good pictures.
+                        <br/>
+
+                        <br/>
+                        I try to use every opportunity to <HoverBadge hoverText={'Bucket List: 🇮🇹, 🇨🇭, 🇦🇺'}>travel</HoverBadge> and wait to escape on my next vacation. I love being myself and appreciate the people who value me for my personality.
                     </div>
-                    <div className={styles.text}>
-                        Outside work, I enjoy drawing, playing <HoverBadge hoverText={'🏃‍♂️ 🚴‍♂️ 🎾 🏸 🏓 🏏'}> sports</HoverBadge> and <HoverBadge hoverText={'Bucket List: 🇯🇵, 🇧🇴, 🇵🇪, 🇪🇸'}>travelling</HoverBadge>. I&apos;m lucky to have grown up in Oman, Libya, Brunei, Qatar and the UK, all of which I consider home. Enjoy exploring the globe to find the cities I&apos;ve lived in and the ones I&apos;ve visited.
-                    </div>
+                    
                 </div>
                 <div className={styles.block} data-aos="fade-up">
                     <h2>Experience</h2>

@@ -10,6 +10,8 @@ import profilePic from '../public/images/profile/profile-pic.jpg';
 import { TextTransitionBadge } from '../components/badges';
 import { useAOS, useScrollPercentage } from '../helpers/hooks';
 import { WinchScene } from '../components/3d';
+import { XpPane } from '../components/layout';
+import { eduData } from '../data/eduData';
 
 export default function Home() {
   useAOS();
@@ -80,11 +82,15 @@ export default function Home() {
           )
         })}
       </div>
+      
+      <div className={styles.block} data-aos="fade-up">
+          <h2>Education</h2>
+          <XpPane xpData={eduData} />
+      </div>
 
       <div data-aos="fade-up" ref={scrolRef}>
         <WinchScene />
       </div>
-
     </>
   )
 }

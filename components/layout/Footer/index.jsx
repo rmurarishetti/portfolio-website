@@ -1,28 +1,24 @@
 import styles from './Footer.module.scss'
+import Link from 'next/link';
 import { websiteData } from '../../../data/websiteData';
 
 function Footer() {
     return (
         <footer className={styles.footer}>
             <div className={styles.links}>
-                <a
-                    href="https://www.linkedin.com/in/rohit-nag/"
+                <Link
+                    href="https://www.linkedin.com/in/rohitmurarishetti/"
                     target="_blank"
                     rel="noreferrer">
                     LinkedIn
-                </a>
-                <a
-                    href="https://www.instagram.com/rohitnag_art"
-                    target="_blank"
-                    rel="noreferrer">
-                    Instagram
-                </a>
-                <a
-                    href="https://github.com/RohitNag11"
+                </Link>
+                
+                <Link
+                    href="https://github.com/rmurarishetti"
                     target="_blank"
                     rel="noreferrer">
                     GitHub
-                </a>
+                </Link>
             </div>
             <div className={styles.main}>
                 <div className={styles.note}>Last updated: {websiteData.lastUpdated}</div>
