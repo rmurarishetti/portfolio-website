@@ -1,6 +1,4 @@
-import { useState, useEffect } from 'react';
 import styles from './IconButton.module.scss'
-import Image from 'next/image';
 import { useAOS } from "../../../helpers/hooks";
 
 function IconButton({ iconPath, active, id, handleSelected, animationDelay }) {
