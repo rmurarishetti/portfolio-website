@@ -12,7 +12,7 @@ export const eduData = [
                 end: new Date(),
                 description: [
                     "Awards: Honors List Recipient AY2020/21",
-                    "Grade: 4.52/5",
+                    "Grade: Honors with Highest Distinction",
                     "Activities and societies: Namaste Indian Cultural Club, Ringcomm SUTD, IEEE-SUTD."
                 ],
                 skills: ["Product Engineering","Python", "Java", "Software Engineering", "System Design", "Full Stack", "Machine Learning"]

@@ -182,7 +182,7 @@ function Projects() {
     return (
         <>
             <Head>
-                <title>Rohit Nag | Projects</title>
+                <title>Rohit Murarishetti | Projects</title>
                 <meta name="description" content="A collection of my engineering, hardware, ui/ux, design, and computing projects." />
                 <meta name="keywords" content="Engineer, Developer, Designer, Portfolio" />
             </Head>
