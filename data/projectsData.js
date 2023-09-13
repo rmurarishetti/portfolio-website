@@ -221,6 +221,99 @@ export const projectsData = [
         ],
         documents:[],
         people:[]
-    }
+    },
+    {
+        id:"hsclass",
+        name:"Hate Speech Classification",
+        subtitle:"Applying machine learning approaches to perform hate speech classification.",
+        start:new Date(2022, 4),
+        end:new Date(2022, 8),
+        featured: true,
+        type:"Machine Learning",
+        tags:["Python", "SVM", "Ensemble Methods"],
+        link:{
+            name:"Github Repo",
+            href:"https://github.com/rmurarishetti/hate-speech-classification"
+        },
+        thumbnail:{
+            href:"/images/projects/ddw/thumbnail.png",
+            alt:"ML Thumbnail"
+        },
+        media:[],
+        description:[
+            "Online hate speech is an important issue that breaks the cohesiveness of online social communities and even raises public safety concerns in our societies. Motivated by this rising issue, researchers have developed many traditional machine learning and deep learning methods to detect hate speech on online social platforms automatically."
+        ],
+        documents:[{
+            name:"Output Report",
+            href:"/documents/projects/50.007 Machine Learning_ Project - Skynet.pdf"
+        }],
+        people:[]
+    },
+    {
+        id:"esc",
+        name:"Paypal Digital Identity Verification",
+        subtitle:"My team and I worked with PayPal to develop a mobile first Digital Identity Verification Application for bringing greater access to financial products for Immigrant Populations.",
+        start:new Date(2022, 4),
+        end:new Date(2022, 8),
+        featured: true,
+        type:"Software",
+        tags:["Java", "Android", "Software Engineering", "Full Stack"],
+        link:{
+            name:"Github Repo",
+            href:"https://github.com/rmurarishetti/ESC_C5G7"
+        },
+        thumbnail:{
+            href:"/images/projects/esc/thumbnail.jpeg",
+            alt:"ESC Thumbnail"
+        },
+        media:[],
+        description:[
+            "As part of our coursework for the module 50.003 Elements of Software Construction, my team and I worked with PayPal to develop a mobile first Digital Identity Verification Application for bringing greater access to financial products for Immigrant Populations."
+        ],
+        documents:[{
+            name:"Project Presentation",
+            href:"/documents/projects/Final Presentation Slide Deck.pdf"
+        }],
+        people:[]
+    },
+    {
+        id:"bytewallet",
+        name:"ByteWallet",
+        subtitle:"Every byte counts. Money for your content delivered straight.",
+        start:new Date(2023, 8),
+        end:new Date(),
+        featured: true,
+        type:"Software",
+        tags:["Full Stack", "Web", "P2P Wallet", "Hackathon"],
+        link:{
+            name:"Github Repo",
+            href:"https://github.com/rmurarishetti/digitalWallet"
+        },
+        thumbnail:{
+            href:"/images/bytewallet/thumbnail.png",
+            alt:"ByteWallet Thumbnail"
+        },
+        media:[
+            {
+                video:{
+                    href:"https://youtu.be/dSsw4EdOUb0?feature=shared",
+                    alt: "ByteWallet Demo Video",
+                    aspectRatio: 16/9
+                }
+            }
+        ],
+        description:[
+            "ByteWallet is a comprehensive digital wallet solution that combines the simplicity of Next.js for frontend development, robust authentication mechanisms for security, Node.js Express for backend functionality, and Stripe for easy and secure top-ups. Here's what ByteWallet can do:",
 
+            "User Registration and Authentication: ByteWallet allows users to register securely and authenticate themselves. We take user security seriously, and our authentication system ensures that their money is safe.",
+            
+            "Top-Up with Stripe: Users can top up their ByteWallet accounts seamlessly using Stripe, one of the most trusted payment gateways. This feature provides a quick and reliable way for users to add funds to their wallets.",
+            
+            "Peer-to-Peer Transactions: ByteWallet enables users to send money to and receive money from each other.",
+            
+            "Transaction History: The platform includes a transaction history page where users can view all their past transactions. This feature offers transparency and helps users keep track of their financial activities."
+        ],
+        documents:[],
+        people:[]
+    }
 ]

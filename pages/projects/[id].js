@@ -60,7 +60,7 @@ function ProjectPage({ project }) {
     return (
         <>
             <Head>
-                <title>Rohit Nag | Projects | {project.name}</title>
+                <title>Rohit Murarishetti | Projects | {project.name}</title>
                 <meta name="keywords" content="Engineer, Developer, Designer, Portfolio" />
             </Head>
             <div className={styles.path}>
