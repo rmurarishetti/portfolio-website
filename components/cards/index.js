@@ -4,5 +4,6 @@ import TimerCard from "./TimerCard";
 import DocCard from "./DocCard";
 import GuestbookCard from "./GuestbookCard";
 import FlipCard from "./FlipCard";
+import ArtCard from "./ArtCard";
 
-export { HomeCard, ProjectCard, TimerCard, DocCard, GuestbookCard, FlipCard }; 
+export { HomeCard, ProjectCard, TimerCard, DocCard, GuestbookCard, FlipCard, ArtCard }; 

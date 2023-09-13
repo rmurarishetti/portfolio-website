@@ -3,7 +3,7 @@ import { ArtCard } from '../../cards';
 import { LightboxSwiper } from '../../swipers';
 import styles from './GalleryWLightbox.module.scss'
 
-function GalleryWLightbox({ data, showDetails = true }) {
+export default function GalleryWLightbox({ data, showDetails = true }) {
     const [index, setIndex] = useState(0)
     const [lightbox, setLightbox] = useState(false)
     const [lightboxTransparent, setLightboxTransparent] = useState(false)
@@ -54,5 +54,3 @@ function GalleryWLightbox({ data, showDetails = true }) {
         </>
     );
 }
-
-export default GalleryWLightbox;

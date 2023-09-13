@@ -7,4 +7,4 @@ import DocGalleryWLightbox from "./DocGalleryWLightbox";
 import XpPane from "./XpPane";
 import RatioImage from "./RatioImage";
 
-export { Footer, Navbar, FilterPane, DatePane, GalleryWLightbox, XpPane, RatioImage, DocGalleryWLightbox };
+export { Footer, Navbar, FilterPane, DatePane, GalleryWLightbox, XpPane, RatioImage, DocGalleryWLightbox};
