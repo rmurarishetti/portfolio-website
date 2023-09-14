@@ -37,17 +37,18 @@ export default function Home() {
           </div>
           <div className={styles.description} data-aos="fade-up">
             I welcome every opportunity that comes my way where I can 
-            &nbsp;
-            <TextTransitionBadge
-              textArray={["learn", "share", "apply"]}
-              speed={2000} />
-            &nbsp; knowledge. I thrive on exploring and unravelling the world around me.
+            learn, share and apply knowledge. I thrive on exploring and unravelling the world around me.
             <br/> <br/>
 
             I'm deeply passionate about all things tech and have an enduring fascination with electric automotives. 
             <br/>When I'm not engrossed in work, I find joy in investing in the stock market, riding the waves of bull and bear runs.  
             <br/><br/>
-            I believe my diverse set of interests will help me present a unique perspective in the tasks I undertake.
+            I am confident that my diverse &nbsp;
+            <TextTransitionBadge
+              textArray={["experiences", "interactions"]}
+              speed={2000} />
+            &nbsp;
+            will enable me to provide unique and valuable insights into my undertakings.
 
           </div>
           
