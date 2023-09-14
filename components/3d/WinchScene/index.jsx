@@ -1,4 +1,3 @@
-import { memo } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { useScrollPercentage } from '../../../helpers/hooks';
 
@@ -8,9 +7,9 @@ function WinchScene() {
 
     return (
         <Canvas
-            ref={scrolRef}>
+            width="10px" height="10px">
         </Canvas>
     );
 }
 
-export default memo(WinchScene);
+export default WinchScene;

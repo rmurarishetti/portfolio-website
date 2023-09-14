@@ -42,16 +42,14 @@ function About() {
                             visitedCities={travelData.filter(city => city.type == 'visited')} />
                     </div>
                     <div className={styles.text}>
-                        Hi There! I am Rohit, a computer science and design senior at the <Link href="https://sutd.edu.sg">Singapore University of Technology and Design</Link>.
-                        I am an avid geek about electric cars and consumer electronics. I take a deep interest in knowing people around me and being aware about my surroundings.
+                        Hi There! I am Rohit, originally from Hyderabad, India and currently pursuing a Bachelor's degree in Computer Science in Singapore.
+                        I'm all about that tech life and being a gadget junkie. I have a weakness for shiny new objects, especially if they're related to technology.
 
                         <br/><br/>
-                        I absolutely love watching documentaries about the geopolitics of the world and often fantasize about travelling to some of these places. I care a lot about personal finance and spend a lot of time identifying stocks I can invest in.
-                        As a photography enthusiast, you can find me obsessing over how photos are taken and what can you do better to take good pictures.
+                        While I'm not buried in coursework, you can find me with a backpack, ready to tick off countries I've visited. I've already visited 
+                        8 countries and I've got my sights set on seeing the whole wide world someday. My insatiable wanderlust is nourished by my love for geopolitics documentaries, which offer me fresh perspectives on our world.
                         <br/>
 
-                        <br/>
-                        I try to use every opportunity to <HoverBadge hoverText={'Bucket List: 🇮🇹, 🇨🇭, 🇦🇺'}>travel</HoverBadge> and wait to escape on my next vacation. I love being myself and appreciate the people who value me for my personality.
                     </div>
                     
                 </div>

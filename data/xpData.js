@@ -10,7 +10,7 @@ export const xpData = [
                 position: "Cofounder",
                 start: new Date(2023, 1),
                 end: new Date(),
-                description: "My first venture as an entreprenuer.\n\n Recieved seed funding of 9,000 SGD. \n\n Our energy-saving-as-a-service (ESAAS) platform provides smart plugs to collect data to learn energy usage patterns of F&B appliances and provide recommendations to the user to reduce consumption.",
+                description: "Our energy-saving-as-a-service (ESAAS) platform provides smart plugs to collect data to learn energy usage patterns of F&B appliances and provide recommendations to the user to reduce consumption. We've recieved about 9,000 SGD as a seed funding to kick off the venture.",
                 skills: ["IoT", "Cloud", "Product Design", "Capstone", "System Architecture"]
             }
         ]

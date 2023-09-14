@@ -6,6 +6,8 @@ import { ThumbnailSwiper } from '../components/swipers';
 import styles from '../styles/Home.module.scss';
 import { projectsData } from '../data/projectsData';
 import { pagesData } from '../data/pagesData';
+import { xpData } from '../data/xpData';
+import { navData } from '../data/navData';
 import profilePic from '../public/images/profile/profile-pic.jpg';
 import { TextTransitionBadge } from '../components/badges';
 import { useAOS, useScrollPercentage } from '../helpers/hooks';
@@ -30,25 +32,23 @@ export default function Home() {
             Rohit Murarishetti
           </h1>
           <div className={styles.role}>
-            A senior year Computer Science and Design student at the 
-            <Link href="https://www.sutd.edu.sg/"> Singapore University of Technology and Design.</Link>
+            A final year Computer Science student at the 
+            <Link href="https://www.sutd.edu.sg/"> Singapore University of Technology and Design</Link> (SUTD).
           </div>
-          <div className={styles.description}>
-            I identify myself to be a curious and aware individual. I welcome every opportunity that comes my way where I can 
+          <div className={styles.description} data-aos="fade-up">
+            I welcome every opportunity that comes my way where I can 
             &nbsp;
             <TextTransitionBadge
               textArray={["learn", "share", "apply"]}
               speed={2000} />
-            &nbsp; knowledge. 
+            &nbsp; knowledge. I thrive on exploring and unravelling the world around me.
             <br/> <br/>
 
-            I take a deep interst in <em>consumer electronics</em>, <em>electric vehicles</em>, and <em>software engineering</em>, furthermore their potential impact on life in the 21st century. 
-            <br/>Moreover, I actively trade in the stock market, trying my luck at the bullish and bearish. 
+            I'm deeply passionate about all things tech and have an enduring fascination with electric automotives. 
+            <br/>When I'm not engrossed in work, I find joy in investing in the stock market, riding the waves of bull and bear runs.  
             <br/><br/>
             I believe my diverse set of interests will help me present a unique perspective in the tasks I undertake.
-            
-            <br />
-            
+
           </div>
           
         </div>
@@ -59,6 +59,7 @@ export default function Home() {
             placeholder='blur'
             objectFit='cover'
             layout='fill' />
+            <WinchScene/>
         </div>
       </div>
 
@@ -74,7 +75,7 @@ export default function Home() {
       </div>
 
       <div className={styles.grid} data-aos="fade-up">
-        {pagesData.slice(1).map((pageData) => {
+        {navData.slice(1).map((pageData) => {
           return (
             <HomeCard
               key={pageData.title}
@@ -88,8 +89,9 @@ export default function Home() {
           <XpPane xpData={eduData} />
       </div>
 
-      <div data-aos="fade-up" ref={scrolRef}>
-        <WinchScene />
+      <div className={styles.block} data-aos="fade-up">
+          <h2>Experience</h2>
+          <XpPane xpData={xpData} />
       </div>
     </>
   )

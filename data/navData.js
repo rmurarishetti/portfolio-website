@@ -1,4 +1,4 @@
-export const pagesData = [
+export const navData = [
     {
         title: "Home",
         emoji: "🏠",
@@ -19,5 +19,18 @@ export const pagesData = [
         link: "/about"
     },
 
+    {
+        title:"Github",
+        emoji:"🧑🏻‍💻",
+        description:"My github profile, repositories and stats.",
+        link:"https://github.com/rmurarishetti"
+    },
+
+    {
+        title:"LinkedIn",
+        emoji:"📑",
+        description:"My LinkedIn page, professional experience and network.",
+        link:"https://linkedin.com/in/rohitmurarishetti"
+    }
     
 ]
