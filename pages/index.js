@@ -40,8 +40,8 @@ export default function Home() {
             learn, share and apply knowledge. I thrive on exploring and unravelling the world around me.
             <br/> <br/>
 
-            I'm deeply passionate about all things tech and have an enduring fascination with electric automotives. 
-            <br/>When I'm not engrossed in work, I find joy in investing in the stock market, riding the waves of bull and bear runs.  
+            I&apos;m deeply passionate about all things tech and have an enduring fascination with electric automotives. 
+            <br/>When I&apos;m not engrossed in work, I find joy in investing in the stock market, riding the waves of bull and bear runs.  
             <br/><br/>
             I am confident that my diverse &nbsp;
             <TextTransitionBadge

@@ -42,12 +42,12 @@ function About() {
                             visitedCities={travelData.filter(city => city.type == 'visited')} />
                     </div>
                     <div className={styles.text}>
-                        Hi There! I am Rohit, originally from Hyderabad, India and currently pursuing a Bachelor's degree in Computer Science in Singapore.
-                        I'm all about that tech life and being a gadget junkie. I have a weakness for shiny new objects, especially if they're related to technology.
+                        Hi There! I am Rohit, originally from Hyderabad, India and currently pursuing a Bachelor&apos;s degree in Computer Science in Singapore.
+                        I&apos;m all about that tech life and being a gadget junkie. I have a weakness for shiny new objects, especially if they&apos;re related to technology.
 
                         <br/><br/>
-                        While I'm not buried in coursework, you can find me with a backpack, ready to tick off countries I've visited. I've already visited 
-                        8 countries and I've got my sights set on seeing the whole wide world someday. My insatiable wanderlust is nourished by my love for geopolitics documentaries, which offer me fresh perspectives on our world.
+                        While I&apos;m not buried in coursework, you can find me with a backpack, ready to tick off countries I&apos;ve visited. I&apos;ve already visited 
+                        8 countries and I&apos;ve got my sights set on seeing the whole wide world someday. My insatiable wanderlust is nourished by my love for geopolitics documentaries, which offer me fresh perspectives on our world.
                         <br/>
 
                     </div>
