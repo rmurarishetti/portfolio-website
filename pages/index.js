@@ -9,9 +9,7 @@ import { pagesData } from '../data/pagesData';
 import { xpData } from '../data/xpData';
 import { navData } from '../data/navData';
 import profilePic from '../public/images/profile/profile-pic.jpg';
-import { TextTransitionBadge } from '../components/badges';
 import { useAOS, useScrollPercentage } from '../helpers/hooks';
-import { WinchScene } from '../components/3d';
 import { XpPane } from '../components/layout';
 import { eduData } from '../data/eduData';
 
@@ -36,18 +34,13 @@ export default function Home() {
             <Link href="https://www.sutd.edu.sg/"> Singapore University of Technology and Design</Link> (SUTD).
           </div>
           <div className={styles.description} data-aos="fade-up">
-            I welcome every opportunity that comes my way where I can 
-            learn, share and apply knowledge. I thrive on exploring and unravelling the world around me.
+            I thrive on exploring and unravelling the world around me. The world is my classroom, and I&apos;m always eager to learn, share, and grow.
             <br/> <br/>
 
             I&apos;m deeply passionate about all things tech and have an enduring fascination with electric automotives. 
             <br/>When I&apos;m not engrossed in work, I find joy in investing in the stock market, riding the waves of bull and bear runs.  
             <br/><br/>
-            I am confident that my diverse &nbsp;
-            <TextTransitionBadge
-              textArray={["experiences", "interactions"]}
-              speed={2000} />
-            &nbsp;
+            I am confident that my diverse experiences
             will enable me to provide unique and valuable insights into my undertakings.
 
           </div>
@@ -60,7 +53,6 @@ export default function Home() {
             placeholder='blur'
             objectFit='cover'
             layout='fill' />
-            <WinchScene/>
         </div>
       </div>
 

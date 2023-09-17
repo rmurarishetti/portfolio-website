@@ -315,5 +315,91 @@ export const projectsData = [
         ],
         documents:[],
         people:[]
-    }
+    },
+    {
+        id:"nlp",
+        name:"Prompt Engineering Adversarial Questions",
+        subtitle:"Engineered adversarial questions targeting topics that are not excessively written or heard about in western media, content or datasets using popular techniques that are used to trick question answering systems.",
+        start:new Date(2023, 0),
+        end:new Date(2023, 4),
+        featured: true,
+        type:"Machine Learning",
+        tags:["LLMs", "Natural Language Processing", "Prompt Engineering", "ChatGPT"],
+        link:{
+            name:"Final Report",
+            href:"https://docs.google.com/document/d/1kjd1jLhX6eTq1aDB7qsE8EBDFRb1IqApI_n9ZNSp9gk/edit?usp=sharing"
+        },
+        thumbnail:{
+            href:"/images/projects/nlp/thumbnail.png",
+            alt:"NLP Thumbnail"
+        },
+        media:[],
+        description:[
+            "In our proposal, we aimed to write 50 adversarial questions targeting topics that are not excessively written or heard about in western media, content or datasets. Through this agenda we wanted to make sure that the large datasets that our models are trained against are inclusive of information that represent people around the world better through more diverse information that are used to train question answering models.",
+             "We evaluated all the questions we've written using today's most popular large language models, like ChatGPT, YouAI, and Bard by Google. We believe these models are trained extensively on massive datasets and are built around question-answering. These models are hard to be trained on our local machines, so we thought that testing against these models would let us gauge the performance of our questions and understand how they would generalize against other models that do not have such a large parameter base or exposure to extensively large datasets.",
+             "Our findings show us that these models have gotten extremely good in question answering and its only going to get harder to write questions which can effectively stump computers. We’ve been successful in stumping computers with a good chunk of our questions but the computers do manage to answer a good portion of the questions despite their difficulty due to the fact that they’re continuously learning and have been exposed to extremely large datasets."
+        ],
+        documents:[{
+            name:"Project Report",
+            href:"/documents/projects/Final_Project_NLP.pdf"
+        }],
+        people:[]
+    },
+    {
+        id:"chord",
+        name:"Chord: Distributed Hash Table",
+        subtitle:"The Chord DHT protocol is a distributed hash table (DHT) protocol that was first proposed in 2001. It is a scalable and efficient way to store and retrieve data in a distributed network.",
+        start:new Date(2023, 3),
+        end:new Date(2023, 4),
+        featured: true,
+        type:"Software",
+        tags:["Networks", "Decentralised Storage", "Distributed Systems"],
+        link:{
+            name:"Github Repo",
+            href:"https://github.com/rmurarishetti/Chord-DHT"
+        },
+        thumbnail:{
+            href:"/images/projects/chord/thumbnail.jpeg",
+            alt:"Chord Thumbnail"
+        },
+        media:[],
+        description:[
+            "The Chord DHT protocol is a distributed hash table (DHT) protocol that was first proposed in 2001. It is a scalable and efficient way to store and retrieve data in a distributed network. Chord uses a ring topology to organize nodes, and each node maintains a small routing table that allows it to quickly locate other nodes in the ring.",
+            "Each node in a Chord DHT network is assigned a unique identifier (ID), which is a hash of the node's IP address and port number. The nodes are then arranged in a logical ring, with each node's predecessor and successor being the two nodes with the closest IDs.",
+
+            "Each node also maintains a finger table, which is a list of pointers to other nodes in the ring. The finger table is used to quickly locate nodes that are responsible for storing specific data keys."
+        ],
+        documents:[],
+        people:[]
+    },
+    {
+        id:"btclient",
+        name:"BitTorrent Client: Decentralised File Share",
+        subtitle:"BitTorrent is a peer-to-peer (P2P) file sharing protocol that allows users to distribute data and electronic files over the Internet in a decentralized manner. ",
+        start:new Date(2023, 2),
+        end:new Date(2023, 4),
+        featured: true,
+        type:"Software",
+        tags:["Networks", "Decentralised Storage", "Distributed Systems"],
+        link:{
+            name:"Github Repo",
+            href:"https://github.com/rmurarishetti/BTClient"
+        },
+        thumbnail:{
+            href:"/images/projects/btclient/thumbnail.png",
+            alt:"BTClient Thumbnail"
+        },
+        media:[],
+        description:[
+            "A BitTorrent client is a computer program that implements the BitTorrent protocol. BitTorrent clients are available for a variety of computing platforms and operating systems. Some popular BitTorrent clients include:",
+
+            "μTorrent qBittorrent Deluge Vuze Transmission To use a BitTorrent client, you first need to find a torrent file for the file that you want to download. Torrent files contain information about the file that you want to download, such as its name, size, and hash. Once you have found a torrent file, you can open it in your BitTorrent client to start the download process.",
+            
+            "BitTorrent clients are very efficient at transferring large files. They are able to do this by using a number of techniques, such as:",
+            
+            "Chunking: BitTorrent divides files into small pieces called chunks. This makes it easier to download the file from multiple users simultaneously. Seeding: BitTorrent users who have already downloaded a file can choose to seed the file. This makes the file available to other users to download. Pipelining: BitTorrent clients can download multiple chunks of a file simultaneously. This speeds up the download process."
+        ],
+        documents:[],
+        people:[]
+    },
 ]
