@@ -11,6 +11,13 @@ export const pagesData = [
         description: "Explore some of university and side projects.",
         link: "/projects"
     },
+
+    {
+        title: "Resume",
+        emoji: "📝",
+        description: "View my resume.",
+        link: "https://drive.google.com/file/d/1t3xOWwNSIExds-BvPvbHi8hfWcdrfcFO/view?usp=drive_link"
+    },
     
     {
         title: "About",
@@ -18,6 +25,8 @@ export const pagesData = [
         description: "Learn about my background, experiences and skills.",
         link: "/about"
     },
+
+    
 
     
 ]
