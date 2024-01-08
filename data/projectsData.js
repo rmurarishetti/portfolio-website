@@ -84,8 +84,8 @@ export const projectsData = [
         subtitle:"Algorithm to predict maximum health insurance coverage for people based on various lifestyle choices like smoking, age, gender, and the number of dependents.",
         start:new Date(2021, 9),
         end:new Date(2021, 10),
-        featured: true,
-        type:"Machine Learning",
+        featured: false,
+        type:"AI",
         tags:["Health Tech", "Machine Learning", "Prediction Algorithms"],
         link:{
             name:"Collab Notebook",
@@ -128,7 +128,7 @@ export const projectsData = [
         subtitle:"Optimised a regular slow wireless charger to charge 48% through improved thermals.",
         start:new Date(2021, 9),
         end:new Date(2021, 10),
-        featured: true,
+        featured: false,
         type:"Engineering",
         tags:["Energy Systems", "Thermal Optimization", "Consumer Electronics"],
         link:{
@@ -228,8 +228,8 @@ export const projectsData = [
         subtitle:"Applying machine learning approaches to perform hate speech classification.",
         start:new Date(2022, 4),
         end:new Date(2022, 8),
-        featured: true,
-        type:"Machine Learning",
+        featured: false,
+        type:"AI",
         tags:["Python", "SVM", "Ensemble Methods"],
         link:{
             name:"Github Repo",
@@ -280,8 +280,8 @@ export const projectsData = [
         id:"bytewallet",
         name:"ByteWallet",
         subtitle:"Every byte counts. Money for your content delivered straight.",
-        start:new Date(2023, 8),
-        end:new Date(),
+        start:new Date(2023, 7),
+        end:new Date(2023, 8),
         featured: true,
         type:"Software",
         tags:["Full Stack", "Web", "P2P Wallet", "Hackathon"],
@@ -323,7 +323,7 @@ export const projectsData = [
         start:new Date(2023, 0),
         end:new Date(2023, 4),
         featured: true,
-        type:"Machine Learning",
+        type:"AI",
         tags:["LLMs", "Natural Language Processing", "Prompt Engineering", "ChatGPT"],
         link:{
             name:"Final Report",
@@ -373,7 +373,7 @@ export const projectsData = [
         people:[]
     },
     {
-        id:"btclient",
+        id:"DNS-Chord",
         name:"BitTorrent Client: Decentralised File Share",
         subtitle:"BitTorrent is a peer-to-peer (P2P) file sharing protocol that allows users to distribute data and electronic files over the Internet in a decentralized manner. ",
         start:new Date(2023, 2),
@@ -402,4 +402,87 @@ export const projectsData = [
         documents:[],
         people:[]
     },
+    {
+        id:"dns",
+        name:"DNS on Chord",
+        subtitle:"Revolutionizing DNS: Leveraging Chord's peer-to-peer magic for faster, more resilient lookups.",
+        start:new Date(2023, 8),
+        end:new Date(2023, 11),
+        featured: true,
+        type:"Software",
+        tags:["Networks", "Decentralised Storage", "Distributed Systems","Open Source"],
+        link:{
+            name:"Github Repo",
+            href:"https://github.com/fauzxan/dns-chord"
+        },
+        thumbnail:{
+            href:"/images/projects/dns/thumbnail.png",
+            alt:"DNS-Chord Thumbnail"
+        },
+        media:[],
+        description:[
+            "The traditional DNS, our internet's address book, suffers from sluggish performance and vulnerability to hiccups. My project rewrites the playbook with a revolutionary dance partner – the Chord protocol.", 
+            "Imagine thousands of nodes tangoing, holding copies of the address book and seamlessly directing inquiries, eliminating single points of failure and latency. No more waiting on a central server, queries waltz through the network, finding answers in a harmonious ballet of distributed power.", 
+            "This approach not only guarantees lightning-fast lookups but also builds an internet immune to crashes and outages, where resilience replaces fragility. In essence, I'm paving the way for a future where DNS isn't just efficient, it's graceful, scalable, and unstoppable.",
+            "And the best part? I've distilled the magic of this system into an open-source Golang package, inviting everyone to join the dance and build a faster, more resilient internet future together.",
+            "This project is a part of the SUTD 50.041 Distributed Systems and Computing module."
+        ],
+        documents:[{
+            name:"Project Report",
+            href:"/documents/projects/Project Report.pdf"
+        }],
+        people:[
+            {
+                gender: 'male',
+                name: "Sanat Khandekar",
+                linkedin: "https://www.linkedin.com/in/sanatkhandekar"
+            },
+            {
+                gender: 'male',
+                name: "Fauzaan Mohammed",
+                linkedin: "https://www.linkedin.com/in/fauzxan/"
+            },
+            {
+                gender: 'male',
+                name: "Anirudh HC",
+                linkedin: "https://www.linkedin.com/in/anirudh-hc/"
+            },
+            {
+                gender: 'male',
+                name: "Han Wei Guang",
+                linkedin: "https://www.linkedin.com/in/wei-guang-han-6462001a4/"
+            }
+        ]
+    }, 
+    {
+        id:"hrag",
+        name:"Hungy RAG",
+        subtitle:"Beyond 'Hangry': Hungry RAG's LLM brain satisfies your taste buds and curiosity, unearthing the perfect local bites every time.",
+        start:new Date(2023, 8),
+        end:new Date(2023, 11),
+        featured: true,
+        type:"AI",
+        tags:["LLMs", "Generative AI", "Elastic Search", "Search Engine"],
+        link:{
+            name:"Github Repo",
+            href:"https://github.com/waishun78/hungry-rag"
+        },
+        thumbnail:{
+            href:"/images/projects/hrag/thumbnail.png",
+            alt:"Hungry-RAG Thumbnail"
+        },
+        media:[],
+        description:[
+            "Craving the perfect pizza, but drowning in a sea of online options? Fear not, fellow foodie, for Hungry RAG comes to the rescue! This innovative project harnesses the power of Open Source LLMs, like the mighty Vicuna 7B, to understand your deepest culinary desires. Imagine a Google Maps meets Yelp on steroids, fueled by AI magic.",
+            
+            "Hungry RAG doesn't just point you to the nearest restaurant; it delves into your preferences, dietary needs, and mood to conjure up personalized recommendations that would make Gordon Ramsay himself drool. Think succulent sushi for the adventurous, cozy ramen for the soul-seeker, or a hidden gem burger joint for the off-the-beaten-path explorer.",
+            
+            "But Hungry RAG doesn't stop there. It uses Elasticsearch, a powerful search engine, to unearth hidden treasures nestled in your own backyard. No more endless scrolling through generic results! This culinary matchmaker takes you on a delectable journey, introducing you to local flavors and hidden gems you never knew existed."
+        ],
+        documents:[{
+            name:"Project Report",
+            href:"/documents/projects/IR Report.pdf"
+        }],
+        people:[],
+    }
 ]

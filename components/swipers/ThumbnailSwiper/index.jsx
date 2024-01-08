@@ -27,7 +27,7 @@ function ThumbnailSwiper({ projectsData, activeIndex = 0 }) {
             keyboard={{ enabled: true }}
             loop={true}
             centeredSlides={true}
-            initialSlide={0}
+            initialSlide={5}
             mousewheel
             grabCursor
             onSlideChange={(swiper) => {
