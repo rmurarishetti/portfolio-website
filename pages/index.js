@@ -30,8 +30,8 @@ export default function Home() {
             Rohit Murarishetti
           </h1>
           <div className={styles.role}>
-            A final year Computer Science student at the 
-            <Link href="https://www.sutd.edu.sg/"> Singapore University of Technology and Design</Link> (SUTD).
+            Software and Devops Engineering for Weborion at 
+            <Link href="https://www.cloudsine.tech/"> Cloudsine AI</Link> (Cloudsine).
           </div>
           <div className={styles.description} data-aos="fade-up">
             I thrive on exploring and unravelling the world around me. The world is my classroom, and I&apos;m always eager to learn, share, and grow.
