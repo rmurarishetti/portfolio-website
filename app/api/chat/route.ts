@@ -44,7 +44,8 @@ Current work at CloudsineAI:
 - Agentic AI governance platform — observability over AI system topology, threat attack graphs
 - GenAI security firewall for IoT/RTSP protocols (Go + ModSecurity)
 - Agentic AI vulnerability triage system
-- $150K+ in closed contracts, $60K+ AWS cost savings, 99.95% uptime
+- Weborion Monitor (flagship product): $150K+ in closed contracts, lead product engineer & DevOps lead
+- $60K+ AWS cost savings, 99.95% uptime
 
 Notable projects:
 - Elgo — IoT energy savings platform (AWS, Next.js, SageMaker), ~$9K seed funding

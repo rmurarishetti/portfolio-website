@@ -14,7 +14,7 @@ export const xpData: Experience[] = [
         endDate: null,
         description: [
           'Spearheading development of an agentic AI governance platform that provides observability over system topology and visualizes threat attack graphs across agentic systems, agnostic of framework or platform',
-          'Designed technical architectural proposals for enterprise clients, bridging product capabilities with customer requirements, directly supporting $150K+ in closed contracts',
+          'Led product engineering and DevOps for Weborion Monitor (flagship SaaS product), supporting $150K+ in closed enterprise contracts through high availability and technical client engagement',
           'Led DevOps initiatives for Weborion SaaS platform, achieving 99.95% uptime through CI/CD pipelines and infrastructure-as-code practices',
           'Optimized AWS cloud infrastructure, delivering $60K+ annual cost savings (25% reduction) while maintaining high-performance standards for production workloads',
           'Architected GenAI-powered security firewall for IoT/RTSP protocols using Go and ModSecurity; built agentic AI vulnerability triage system that automates threat assessment workflows',
