@@ -105,9 +105,9 @@ function AnimSection({ children, delay = 0 }: { children: React.ReactNode; delay
 
 const cloudsineHighlights = [
   {
-    label: 'Agentic AI Governance Platform',
+    label: 'Weborion Monitor (Flagship Product)',
     detail:
-      'Provides deep observability over AI system topology and visualizes threat attack graphs across multi-agent systems. Framework and platform agnostic. Supports $150K+ in closed enterprise contracts.',
+      'Led product engineering and DevOps for Cloudsine\'s flagship web monitoring SaaS platform. Maintained high availability and supported enterprise client engagements, directly contributing to $150K+ in closed contracts.',
     metric: '$150K+',
     metricLabel: 'in contracts',
   },
