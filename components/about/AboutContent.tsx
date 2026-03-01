@@ -30,7 +30,7 @@ export default function AboutContent() {
       {/* Header / Bio */}
       <section className="pt-28 pb-24 md:pt-36 md:pb-28 border-b border-[var(--color-border)]">
         <div className="max-w-[1100px] mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-12 items-start">
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-12 items-center">
             <div>
               <motion.p
                 initial={{ opacity: 0 }}
@@ -95,15 +95,15 @@ export default function AboutContent() {
               </motion.div>
             </div>
 
-            {/* Profile photo */}
+            {/* Profile photo — fills section height */}
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.15, duration: 0.5 }}
-              className="relative w-36 h-36 md:w-52 md:h-52 rounded-2xl overflow-hidden border border-[var(--color-border-accent)] flex-shrink-0 ring-1 ring-[var(--color-accent)]/20"
+              className="relative w-48 h-48 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-2xl overflow-hidden border border-[var(--color-border-accent)] flex-shrink-0 ring-1 ring-[var(--color-accent)]/20"
             >
               <Image
-                src="/images/profile/profile-pic.jpg"
+                src="/images/profile/profile-pic-2.jpg"
                 alt="Rohit Murarishetti"
                 fill
                 className="object-cover"

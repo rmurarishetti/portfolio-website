@@ -47,6 +47,11 @@ export const travelData: TravelCity[] = [
     startDate: '2026-02',
     type: 'visited',
     travelledFrom: 'Grindelwald',
+    images: [
+      '/images/travel/europe-2026/zurich-1.jpg',
+      '/images/travel/europe-2026/zurich-2.jpg',
+      '/images/travel/europe-2026/zurich-3.jpg',
+    ],
   },
   {
     city: 'Grindelwald',
@@ -110,11 +115,6 @@ export const travelData: TravelCity[] = [
     type: 'visited',
     description: 'First time in Europe. Solo trip.',
     travelledFrom: 'Singapore',
-    images: [
-      '/images/travel/europe-2026/geneva-1.jpg',
-      '/images/travel/europe-2026/geneva-2.jpg',
-      '/images/travel/europe-2026/geneva-3.jpg',
-    ],
   },
 
   // ─── 2025 ──────────────────────────────────────────────────────────────────
@@ -310,11 +310,6 @@ export const travelData: TravelCity[] = [
     type: 'visited',
     description: 'Dubai and Abu Dhabi.',
     travelledFrom: 'India',
-    images: [
-      '/images/travel/uae-2015/1.jpg',
-      '/images/travel/uae-2015/2.jpg',
-      '/images/travel/uae-2015/3.jpg',
-    ],
   },
 
   // ─── 2014 ──────────────────────────────────────────────────────────────────
@@ -327,11 +322,6 @@ export const travelData: TravelCity[] = [
     type: 'visited',
     description: 'Second international trip. Hong Kong and Macao.',
     travelledFrom: 'India',
-    images: [
-      '/images/travel/hongkong-2014/1.jpg',
-      '/images/travel/hongkong-2014/2.jpg',
-      '/images/travel/hongkong-2014/3.jpg',
-    ],
   },
 
   // ─── 2013 ──────────────────────────────────────────────────────────────────
@@ -344,11 +334,6 @@ export const travelData: TravelCity[] = [
     type: 'visited',
     description: 'First international trip ever.',
     travelledFrom: 'India',
-    images: [
-      '/images/travel/singapore-malaysia-2013/1.jpg',
-      '/images/travel/singapore-malaysia-2013/2.jpg',
-      '/images/travel/singapore-malaysia-2013/3.jpg',
-    ],
   },
   {
     city: 'Kuala Lumpur',
