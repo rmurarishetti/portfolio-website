@@ -1,0 +1,248 @@
+@import "tailwindcss";
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   Design System: Lapis & Cream
+   Light: warm cream canvas + deep lapis ultramarine accent
+   Dark:  midnight navy canvas + luminous lapis + warm cream text
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+@theme {
+  /* ─── Light mode (default) ─── */
+  --color-canvas: #FAF8F3;
+  --color-surface: #FFFFFF;
+  --color-surface-raised: #F5F2EC;
+
+  --color-border: rgba(30, 74, 155, 0.08);
+  --color-border-accent: rgba(30, 74, 155, 0.15);
+
+  --color-text-primary: #1A1A2E;
+  --color-text-secondary: #5A5A72;
+  --color-text-muted: #8E8EA0;
+
+  --color-accent: #1E4A9B;
+  --color-accent-bright: #2B5DB8;
+  --color-accent-dim: #153672;
+  --color-accent-glow: rgba(30, 74, 155, 0.10);
+
+  --color-gold: #C9A84C;
+  --color-gold-dim: rgba(201, 168, 76, 0.12);
+
+  --color-warm: #D4652A;
+  --color-warm-bright: #E87B35;
+  --color-warm-dim: rgba(212, 101, 42, 0.10);
+
+  --color-teal: #0D9488;
+  --color-teal-bright: #14B8A6;
+  --color-teal-dim: rgba(13, 148, 136, 0.10);
+
+  --color-ai: #0E7490;
+  --color-ai-bright: #06B6D4;
+  --color-ai-dim: rgba(14, 116, 144, 0.08);
+
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+
+  /* ─── Project type colors ─── */
+  --color-type-ai: #1E4A9B;
+  --color-type-software: #0E7490;
+  --color-type-engineering: #7C3AED;
+  --color-type-medtech: #059669;
+  --color-type-research: #D97706;
+
+  /* ─── Glass ─── */
+  --glass-bg: rgba(255, 255, 255, 0.65);
+  --glass-border: rgba(30, 74, 155, 0.10);
+  --glass-blur: 16px;
+  --glass-saturate: 180%;
+
+  /* ─── Fonts ─── */
+  --font-display: var(--font-fraunces), Georgia, serif;
+  --font-sans: var(--font-jakarta), system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), "JetBrains Mono", monospace;
+
+  /* ─── Hero (light mode) ─── */
+  --hero-canvas: #FAF8F3;
+  --hero-text: #1A1A2E;
+  --hero-muted: #5A5A72;
+  --hero-orb-1: #E87B35;
+  --hero-orb-2: #1E4A9B;
+  --hero-orb-3: #0D9488;
+  --hero-cta-bg: #1E4A9B;
+  --hero-cta-text: #FFFFFF;
+  --hero-border: rgba(30, 74, 155, 0.12);
+  --hero-metric: #1A1A2E;
+
+  /* ─── Animation ─── */
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ─── Dark mode overrides ─── */
+.dark {
+  --color-canvas: #090D18;
+  --color-surface: #0F1322;
+  --color-surface-raised: #161B2E;
+
+  --color-border: rgba(122, 178, 232, 0.08);
+  --color-border-accent: rgba(122, 178, 232, 0.15);
+
+  --color-text-primary: #F0EBE1;
+  --color-text-secondary: #9CA3AF;
+  --color-text-muted: #4B5563;
+
+  --color-accent: #7AB2E8;
+  --color-accent-bright: #93C5FD;
+  --color-accent-dim: #1E3A5F;
+  --color-accent-glow: rgba(122, 178, 232, 0.10);
+
+  --color-gold: #D4A847;
+  --color-gold-dim: rgba(212, 168, 71, 0.12);
+
+  --color-warm: #D4A847;
+  --color-warm-bright: #E8C35A;
+  --color-warm-dim: rgba(212, 168, 71, 0.10);
+
+  --color-teal: #2DD4BF;
+  --color-teal-bright: #5EEAD4;
+  --color-teal-dim: rgba(45, 212, 191, 0.10);
+
+  --color-ai: #22D3EE;
+  --color-ai-bright: #67E8F9;
+  --color-ai-dim: rgba(34, 211, 238, 0.08);
+
+  --color-success: #4ADE80;
+  --color-warning: #FBBF24;
+
+  --color-type-ai: #7AB2E8;
+  --color-type-software: #22D3EE;
+  --color-type-engineering: #A78BFA;
+  --color-type-medtech: #34D399;
+  --color-type-research: #FBBF24;
+
+  --glass-bg: rgba(15, 19, 34, 0.70);
+  --glass-border: rgba(122, 178, 232, 0.10);
+
+  /* ─── Hero (dark mode) ─── */
+  --hero-canvas: #090D18;
+  --hero-text: #F0EBE1;
+  --hero-muted: #8B8FA3;
+  --hero-orb-1: #7AB2E8;
+  --hero-orb-2: #D4A847;
+  --hero-orb-3: #2DD4BF;
+  --hero-cta-bg: #7AB2E8;
+  --hero-cta-text: #090D18;
+  --hero-border: rgba(255, 255, 255, 0.10);
+  --hero-metric: #F0EBE1;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   Base Styles
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--color-canvas);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  transition: background-color 0.3s var(--ease-smooth), color 0.3s var(--ease-smooth);
+}
+
+/* ─── Selection ─── */
+::selection {
+  background-color: var(--color-accent-glow);
+  color: var(--color-accent);
+}
+
+/* ─── Focus ring ─── */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ─── Scrollbar ─── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-canvas);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border-accent);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-muted);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   Glass Utility
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
+  border: 1px solid var(--glass-border);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   Hero Gradient Orbs — Pure CSS Animation
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+@keyframes orb-drift-1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(60px, -40px) scale(1.1); }
+  66% { transform: translate(-30px, 30px) scale(0.95); }
+}
+
+@keyframes orb-drift-2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(-50px, 50px) scale(1.05); }
+  66% { transform: translate(40px, -20px) scale(0.9); }
+}
+
+@keyframes orb-drift-3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, 60px) scale(1.08); }
+  66% { transform: translate(-60px, -30px) scale(0.92); }
+}
+
+.hero-orb-1 {
+  animation: orb-drift-1 20s ease-in-out infinite;
+}
+.hero-orb-2 {
+  animation: orb-drift-2 25s ease-in-out infinite;
+}
+.hero-orb-3 {
+  animation: orb-drift-3 18s ease-in-out infinite;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   Grain Texture Overlay (for dark sections)
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.grain-overlay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   Typography Utilities
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.font-display {
+  font-family: var(--font-display);
+}

@@ -1,5 +1,5 @@
 export const formatDuration = (start, end = new Date()) => {
-    const ms = Math.floor(end.getTime() - start.getTime());
+    let ms = Math.floor(end.getTime() - start.getTime());
     if (ms < 0) ms = -ms;
     const time = {
         yr: Math.floor(ms / 31536000000),
