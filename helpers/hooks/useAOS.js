@@ -1,16 +1,4 @@
-import { useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css'; // You can also use <link> in _document.js
-
-const useAOS = () => {
-    useEffect(() => {
-        AOS.init({
-            mirror: true,
-            once: true,
-            duration: 1000,
-            easing: 'ease-in-out',
-        });
-    }, []);
-};
+// AOS removed — animations now handled by Framer Motion
+const useAOS = () => {};
 
 export { useAOS };

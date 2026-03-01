@@ -1,27 +1,17 @@
 import { useState, useEffect } from "react";
-import TextTransition, { presets } from "react-text-transition";
 
+// Simplified — react-text-transition removed, replaced with basic cycling
 function TextTransitionBadge({ textArray, speed }) {
     const [index, setIndex] = useState(0);
 
     useEffect(() => {
         const timer = setInterval(() => {
-            setIndex(index => index + 1)
+            setIndex(i => (i + 1) % textArray.length);
         }, speed);
-        return () => {
-            clearTimeout(timer);
-        };
-    });
+        return () => clearInterval(timer);
+    }, [textArray, speed]);
 
-    return (
-        <TextTransition
-            inline
-            springConfig={presets.slow}
-            direction='down'
-            style={{ display: 'inline' }}>
-            <em>{index ? textArray[index % textArray.length] : ''}</em>
-        </TextTransition>
-    );
+    return <em>{textArray[index]}</em>;
 }
 
 export default TextTransitionBadge;

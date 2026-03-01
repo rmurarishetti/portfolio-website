@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <style>
+      :root {
+        --bg: #FAF8F3;
+        --text: #1E4A9B;
+        --orb1: #E87B35;
+        --orb2: #0E7490;
+        --glass: rgba(255,255,255,0.55);
+        --glass-border: rgba(30,74,155,0.15);
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #090D18;
+          --text: #F0EBE1;
+          --orb1: #7AB2E8;
+          --orb2: #D4A847;
+          --glass: rgba(15,19,34,0.6);
+          --glass-border: rgba(122,178,232,0.2);
+        }
+      }
+    </style>
+    <filter id="blur1" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="60"/>
+    </filter>
+    <filter id="blur2" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="50"/>
+    </filter>
+    <clipPath id="rounded">
+      <rect width="512" height="512" rx="112"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#rounded)">
+    <!-- Background -->
+    <rect width="512" height="512" fill="var(--bg)"/>
+
+    <!-- Color orbs -->
+    <circle cx="140" cy="160" r="160" fill="var(--orb1)" opacity="0.35" filter="url(#blur1)"/>
+    <circle cx="380" cy="360" r="140" fill="var(--orb2)" opacity="0.3" filter="url(#blur2)"/>
+
+    <!-- Glass overlay -->
+    <rect x="48" y="48" width="416" height="416" rx="80" fill="var(--glass)" stroke="var(--glass-border)" stroke-width="2"/>
+
+    <!-- RM text -->
+    <text x="256" y="296" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="220" fill="var(--text)" letter-spacing="-8">RM</text>
+  </g>
+</svg>
